@@ -1,0 +1,285 @@
+{
+  "generatedNote": "Fake data for development. Not real prices.",
+  "products": [
+    {
+      "id": "p01",
+      "brand": "Alvedon",
+      "title": "Alvedon 500 mg 20 st filmdragerade tabletter",
+      "ean": "2000000000015",
+      "packCount": 20,
+      "offers": {
+        "apotea": {
+          "price": 39,
+          "inStock": true
+        },
+        "hjartat": {
+          "price": 42,
+          "inStock": true
+        },
+        "apoteket": {
+          "price": 45,
+          "inStock": true
+        },
+        "doz": {
+          "price": 38,
+          "inStock": true
+        },
+        "kronans": {
+          "price": 44,
+          "inStock": true
+        }
+      }
+    },
+    {
+      "id": "p02",
+      "brand": "Alvedon",
+      "title": "Alvedon 500 mg 10 st filmdragerade tabletter",
+      "ean": "2000000000022",
+      "packCount": 10,
+      "offers": {
+        "apotea": {
+          "price": 25,
+          "inStock": true
+        },
+        "hjartat": {
+          "price": 27,
+          "inStock": true
+        },
+        "apoteket": {
+          "price": 29,
+          "inStock": true
+        },
+        "doz": {
+          "price": 24,
+          "inStock": true
+        },
+        "kronans": {
+          "price": 28,
+          "inStock": true
+        }
+      }
+    },
+    {
+      "id": "p03",
+      "brand": "Ipren",
+      "title": "Ipren 200 mg 30 tabletter",
+      "ean": "2000000000039",
+      "packCount": 30,
+      "offers": {
+        "apotea": {
+          "price": 55,
+          "inStock": true
+        },
+        "hjartat": {
+          "price": 59,
+          "inStock": true
+        },
+        "apoteket": {
+          "price": 62,
+          "inStock": true
+        },
+        "doz": {
+          "price": 54,
+          "inStock": false
+        },
+        "kronans": {
+          "price": 58,
+          "inStock": true
+        }
+      }
+    },
+    {
+      "id": "p04",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay Anthelios UVMune 400 SPF50+ 50 ml",
+      "ean": "2000000000046",
+      "size": {
+        "value": 50,
+        "unit": "ml"
+      },
+      "offers": {
+        "apotea": {
+          "price": 229,
+          "inStock": true
+        },
+        "hjartat": {
+          "price": 249,
+          "inStock": true
+        },
+        "apoteket": {
+          "price": 245,
+          "inStock": true
+        },
+        "doz": {
+          "price": 239,
+          "inStock": true
+        },
+        "kronans": {
+          "price": 255,
+          "inStock": true
+        },
+        "lyko": {
+          "price": 219,
+          "inStock": true
+        }
+      }
+    },
+    {
+      "id": "p05",
+      "brand": "CeraVe",
+      "title": "CeraVe Moisturising Cream 340 g",
+      "ean": "2000000000053",
+      "size": {
+        "value": 340,
+        "unit": "g"
+      },
+      "offers": {
+        "apotea": {
+          "price": 169,
+          "inStock": true
+        },
+        "hjartat": {
+          "price": 179,
+          "inStock": true
+        },
+        "apoteket": {
+          "price": 185,
+          "inStock": true
+        },
+        "doz": {
+          "price": 165,
+          "inStock": true
+        },
+        "kronans": {
+          "price": 189,
+          "inStock": true
+        },
+        "lyko": {
+          "price": 159,
+          "inStock": true
+        }
+      }
+    },
+    {
+      "id": "p06",
+      "brand": "Nivea",
+      "title": "Nivea Creme 150 ml",
+      "ean": "2000000000060",
+      "size": {
+        "value": 150,
+        "unit": "ml"
+      },
+      "offers": {
+        "apotea": {
+          "price": 49,
+          "inStock": true
+        },
+        "hjartat": {
+          "price": 55,
+          "inStock": true
+        },
+        "apoteket": {
+          "price": 52,
+          "inStock": true
+        },
+        "kronans": {
+          "price": 54,
+          "inStock": true
+        },
+        "lyko": {
+          "price": 45,
+          "inStock": true
+        }
+      }
+    },
+    {
+      "id": "p07",
+      "brand": "Star Nutrition",
+      "title": "Star Nutrition Whey-80 1 kg Chocolate",
+      "ean": "2000000000077",
+      "size": {
+        "value": 1,
+        "unit": "kg"
+      },
+      "offers": {
+        "gymgrossisten": {
+          "price": 319,
+          "inStock": true
+        }
+      }
+    },
+    {
+      "id": "p08",
+      "brand": "Body Science",
+      "title": "Body Science Whey 100% 1 kg Chocolate",
+      "ean": "2000000000084",
+      "size": {
+        "value": 1,
+        "unit": "kg"
+      },
+      "offers": {
+        "apotea": {
+          "price": 329,
+          "inStock": true
+        },
+        "gymgrossisten": {
+          "price": 349,
+          "inStock": true
+        }
+      }
+    },
+    {
+      "id": "p09",
+      "brand": "Nocco",
+      "title": "Nocco BCAA Caribbean 330 ml",
+      "ean": "2000000000091",
+      "size": {
+        "value": 330,
+        "unit": "ml"
+      },
+      "offers": {
+        "apotea": {
+          "price": 25,
+          "inStock": true
+        },
+        "gymgrossisten": {
+          "price": 22,
+          "inStock": true
+        }
+      }
+    },
+    {
+      "id": "p10",
+      "brand": "Möller's",
+      "title": "Möller's Omega-3 Dobbel 112 kapslar",
+      "ean": "2000000000107",
+      "packCount": 112,
+      "offers": {
+        "apotea": {
+          "price": 189,
+          "inStock": true
+        },
+        "hjartat": {
+          "price": 199,
+          "inStock": true
+        },
+        "apoteket": {
+          "price": 205,
+          "inStock": true
+        },
+        "doz": {
+          "price": 185,
+          "inStock": true
+        },
+        "kronans": {
+          "price": 209,
+          "inStock": true
+        },
+        "gymgrossisten": {
+          "price": 219,
+          "inStock": true
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+/**
+ * HTTP contract between apps/ui and packages/server. The server validates requests with
+ * these schemas; the UI (and its mock handlers) builds against the same types.
+ */
+import { z } from 'zod';
+import { Basket, BasketItem, OptimizeOptions, SplitResult } from './basket';
+import { MerchantId, MerchantInfo } from './merchants';
+import { MatchResult } from './product';
+import { ShippingPolicy } from './shipping';
+import { Settings } from './settings';
+
+// GET /api/merchants
+export const MerchantsResponse = z.object({
+  merchants: z.array(
+    MerchantInfo.extend({
+      enabled: z.boolean(),
+      shipping: ShippingPolicy.optional(),
+      probeSupported: z.boolean(),
+    }),
+  ),
+});
+export type MerchantsResponse = z.infer<typeof MerchantsResponse>;
+
+// POST /api/search
+export const SearchRequest = z.object({
+  query: z.string().min(1),
+  merchants: z.array(MerchantId).optional(),
+  acceptSubstitutes: z.boolean().default(false),
+});
+export type SearchRequest = z.infer<typeof SearchRequest>;
+
+export const MerchantSearchStatus = z.object({
+  merchantId: MerchantId,
+  status: z.enum(['ok', 'timeout', 'error', 'unavailable']),
+  message: z.string().optional(),
+  tookMs: z.number(),
+});
+export type MerchantSearchStatus = z.infer<typeof MerchantSearchStatus>;
+
+export const SearchResponse = z.object({
+  query: z.string(),
+  /** Best match per merchant first; then further candidates. */
+  results: z.array(MatchResult),
+  /** true when matching is uncertain and the user should pick. */
+  needsConfirmation: z.boolean(),
+  merchants: z.array(MerchantSearchStatus),
+});
+export type SearchResponse = z.infer<typeof SearchResponse>;
+
+// GET /api/baskets, GET/PUT/DELETE /api/baskets/:id
+export const BasketsResponse = z.object({ baskets: z.array(Basket) });
+export type BasketsResponse = z.infer<typeof BasketsResponse>;
+
+export const PutBasketRequest = z.object({
+  name: z.string(),
+  items: z.array(BasketItem),
+});
+export type PutBasketRequest = z.infer<typeof PutBasketRequest>;
+
+// POST /api/baskets/:id/optimize
+export const OptimizeRequest = z.object({
+  options: OptimizeOptions.optional(),
+  /** Run checkout probes for the stores in the result (slower). */
+  probe: z.boolean().default(false),
+});
+export type OptimizeRequest = z.infer<typeof OptimizeRequest>;
+
+export const OptimizeResponse = z.object({
+  split: SplitResult,
+  /** Candidate matrix the split was computed from, for the comparison table. */
+  candidates: z.array(
+    z.object({
+      itemId: z.string(),
+      matches: z.array(MatchResult),
+    }),
+  ),
+  merchants: z.array(MerchantSearchStatus),
+});
+export type OptimizeResponse = z.infer<typeof OptimizeResponse>;
+
+// GET/PUT /api/settings
+export const SettingsResponse = Settings;
+export type SettingsResponse = z.infer<typeof SettingsResponse>;
+
+// POST /api/catalog/refresh
+export const CatalogRefreshRequest = z.object({ merchants: z.array(MerchantId).optional() });
+export type CatalogRefreshRequest = z.infer<typeof CatalogRefreshRequest>;
+
+export const ApiError = z.object({ error: z.string(), details: z.unknown().optional() });
+export type ApiError = z.infer<typeof ApiError>;

@@ -14,3 +14,17 @@ Desktop.ini
 
 # Logs
 *.log
+
+# Node / build
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+
+# Local data
+*.db
+*.db-journal
+.cache/
+
+# Generated
+packages/registry/src/generated.ts
