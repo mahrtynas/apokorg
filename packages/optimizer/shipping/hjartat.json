@@ -1,0 +1,42 @@
+{
+  "merchantId": "hjartat",
+  "options": [
+    {
+      "id": "leverans-till-apotek",
+      "name": "Leverans till apotek",
+      "kind": "store-pickup",
+      "fee": 0
+    },
+    {
+      "id": "postnord-ombud",
+      "name": "PostNord ombud eller paketbox",
+      "kind": "pickup-point",
+      "fee": 29,
+      "freeFrom": 299
+    },
+    {
+      "id": "instabox",
+      "name": "Instabox paketskåp",
+      "kind": "parcel-box",
+      "fee": 29,
+      "freeFrom": 299
+    },
+    {
+      "id": "postnord-varubrev",
+      "name": "PostNord varubrev",
+      "kind": "mailbox",
+      "fee": 29,
+      "freeFrom": 299
+    },
+    {
+      "id": "airmee-home",
+      "name": "Airmee hemleverans",
+      "kind": "home",
+      "fee": 49,
+      "freeFrom": 299
+    }
+  ],
+  "lastVerified": "2026-10-21",
+  "source": "https://www.apotekhjartat.se/kundservice/frakt-leverans/",
+  "notes": "Fees and thresholds from the public shipping page. PostNord home delivery (59 kr, no threshold stated) and Bring Express (49 kr, free from 399) are left out because Airmee is cheaper where both exist. Prescription orders ship free, which is not modelled."
+}

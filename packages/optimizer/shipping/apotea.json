@@ -1,0 +1,12 @@
+{
+  "merchantId": "apotea",
+  "options": [
+    { "id": "postnord-ombud", "name": "PostNord ombud", "kind": "pickup-point", "fee": 0 },
+    { "id": "instabox", "name": "Instabox paketbox", "kind": "parcel-box", "fee": 0 },
+    { "id": "postnord-varubrev", "name": "PostNord brevlåda", "kind": "mailbox", "fee": 0 },
+    { "id": "budbee-home", "name": "Budbee hemleverans", "kind": "home", "fee": 0 }
+  ],
+  "lastVerified": "2026-10-21",
+  "source": "https://www.apotea.se/frakt-och-leverans",
+  "notes": "Apotea advertises free shipping on all orders (\"Fri frakt & snabba leveranser\"); the page lists no per-option fees and no threshold. The only fee shown is 39 kr for PostNord Företagsfrakt to business addresses, which is not modelled."
+}

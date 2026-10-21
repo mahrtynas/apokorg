@@ -1,0 +1,21 @@
+{
+  "merchantId": "doz",
+  "options": [
+    {
+      "id": "postnord-ombud",
+      "name": "PostNord ombud",
+      "kind": "pickup-point",
+      "fee": 39,
+      "freeFrom": 199
+    },
+    {
+      "id": "home",
+      "name": "Hemleverans",
+      "kind": "home",
+      "fee": 69
+    }
+  ],
+  "lastVerified": "2026-10-21",
+  "source": "docs/plan.md (Research findings)",
+  "notes": "Free-shipping threshold 199 kr from the research findings. The DOZ site could not be fetched on 2026-10-21 (expired TLS certificate), so the fees are conservative guesses, and home delivery is assumed to have no free threshold."
+}

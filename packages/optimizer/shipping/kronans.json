@@ -1,0 +1,20 @@
+{
+  "merchantId": "kronans",
+  "options": [
+    {
+      "id": "postnord-ombud",
+      "name": "PostNord ombud",
+      "kind": "pickup-point",
+      "fee": 49
+    },
+    {
+      "id": "home",
+      "name": "Hemleverans",
+      "kind": "home",
+      "fee": 79
+    }
+  ],
+  "lastVerified": "2026-10-21",
+  "source": "https://www.kronansapotek.se/",
+  "notes": "Unknown. The home page only says \"Fri frakt på receptbelagt\" (prescription items), and no public shipping page was found. These are conservative guesses with no free-shipping threshold. The A-kronans task or a checkout probe should replace them."
+}

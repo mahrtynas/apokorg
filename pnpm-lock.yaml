@@ -51,6 +51,15 @@ importers:
         specifier: ^4.6.7
         version: 4.6.7
 
+  packages/optimizer:
+    dependencies:
+      '@apokorg/core':
+        specifier: workspace:*
+        version: link:../core
+      highs:
+        specifier: ^1.15.4
+        version: 1.15.4
+
   packages/registry:
     dependencies:
       '@apokorg/adapter-mock':
@@ -822,6 +831,10 @@ packages:
   has-flag@4.0.0:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
     engines: {node: '>=8'}
+
+  highs@1.15.4:
+    resolution: {integrity: sha512-vsC03XHDqWAVrEFUt22h8e4CDDMb+LAFa0bycjPUq2kadRigK5pNLVIlwspKvMxxVtrr4NAucZHP/CAgigxiDQ==}
+    engines: {node: '>=18'}
 
   ignore@5.3.2:
     resolution: {integrity: sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==}
@@ -1927,6 +1940,8 @@ snapshots:
   globals@14.0.0: {}
 
   has-flag@4.0.0: {}
+
+  highs@1.15.4: {}
 
   ignore@5.3.2: {}
 
