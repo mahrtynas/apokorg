@@ -1,0 +1,3907 @@
+{
+ "results": {
+  "count": 139,
+  "items": [
+   {
+    "type": "Product",
+    "id": "247938",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "247938"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin Teva, filmdragerad tablett 80 mg, 100 tablett(er)"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-teva-filmdragerad-tablett-80-mg-100-tabletter-blister-247938/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       644.98
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "5714372010509"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "100 tablett(er)"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       644.98
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       644.98
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "247935",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "247935"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin Teva, filmdragerad tablett 20 mg, 30 tablett(er)"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-teva-filmdragerad-tablett-20-mg-30-tabletter-blister-247935/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       50.59
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7046263705705"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "30 tablett(er)"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       50.59
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       50.59
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OutOfStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "247331",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "247331"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin SUN, filmdragerad tablett 20 mg, 98 tablett(er)"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-sun-filmdragerad-tablett-20-mg-98-tabletter-blister-247331/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       46.8
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "8901296028100"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "98 tablett(er)"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       46.8
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       46.8
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OutOfStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "257150",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "257150"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin Viatris, filmdragerad tablett 40 mg, 30 tablett(er)"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-viatris-filmdragerad-tablett-40-mg-30-tabletter-blister-257150/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       230.06
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7046263888330"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "30 tablett(er)"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       230.06
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       230.06
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OutOfStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1150991",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1150991"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin Teva, filmdragerad tablett 10 mg, 100 tablett(er)"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-teva-filmdragerad-tablett-10-mg-100-tabletter-blister-1150991/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       205.74
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7046264289419"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "100 tablett(er)"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       205.74
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       205.74
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OutOfStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "257154",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "257154"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin Viatris, filmdragerad tablett 10 mg, 30 tablett(er)"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-viatris-filmdragerad-tablett-10-mg-30-tabletter-blister-257154/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       74
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7046264740798"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "30 tablett(er)"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       74
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       74
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OutOfStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "247325",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "247325"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin SUN, filmdragerad tablett 20 mg, 90 tablett(er)"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-sun-filmdragerad-tablett-20-mg-90-tabletter-blister-247325/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       46.8
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "8901296028094"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "90 tablett(er)"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       46.8
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       46.8
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OutOfStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "247329",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "247329"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin SUN, filmdragerad tablett 40 mg, 98 tablett(er)"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-sun-filmdragerad-tablett-40-mg-98-tabletter-blister-247329/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       46.8
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "8901296028131"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "98 tablett(er)"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       46.8
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       46.8
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OutOfStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1542997",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1542997"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin Xiromed, filmdragerad tablett 10 mg, 105 tablett(er)"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-xiromed-filmdragerad-tablett-10-mg-105-tabletter-burk-1542997/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       69.82
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340187102580"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "105 tablett(er)"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       69.82
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       64.57
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStoreOnly"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1578315",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1578315"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin Oresund Pharma, filmdragerad tablett 40 mg, 100 tablett(er)"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-oresund-pharma-filmdragerad-tablett-40-mg-100-tabletter-burk-1578315/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       85.05
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "5745000432257"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "100 tablett(er)"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       85.05
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       85.05
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "853999",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "853999"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin Accord, filmdragerad tablett 20 mg, 100 styck"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-accord-filmdragerad-tablett-20-mg-100-styck-blister-853999/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       420
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "5055565745946"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "100 styck"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       420
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       420
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "247327",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "247327"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin SUN, filmdragerad tablett 80 mg, 98 tablett(er)"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-sun-filmdragerad-tablett-80-mg-98-tabletter-blister-247327/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       317.92
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "8901296028162"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "98 tablett(er)"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       317.92
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       317.92
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OutOfStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "257146",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "257146"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin Viatris, filmdragerad tablett 20 mg, 30 tablett(er)"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-viatris-filmdragerad-tablett-20-mg-30-tabletter-blister-257146/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       187.63
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7046261799157"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "30 tablett(er)"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       187.63
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       187.63
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OutOfStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "853996",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "853996"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin Accord, filmdragerad tablett 10 mg, 100 styck"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-accord-filmdragerad-tablett-10-mg-100-styck-blister-853996/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       208.83
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "5055565745939"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "100 styck"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       208.83
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       208.83
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "953995",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "953995"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin Farmacia, filmdragerad tablett 80 mg, 100 tablett(er)"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-farmacia-filmdragerad-tablett-80-mg-100-tabletter-blister-953995/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       91.49
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7046264466780"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "100 tablett(er)"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       91.49
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       91.49
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OutOfStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "257148",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "257148"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin Viatris, filmdragerad tablett 20 mg, 100 tablett(er)"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-viatris-filmdragerad-tablett-20-mg-100-tabletter-blister-257148/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       58.48
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7046264693292"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "100 tablett(er)"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       58.48
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       58.48
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1578313",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1578313"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin Oresund Pharma, filmdragerad tablett 80 mg, 100 tablett(er)"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-oresund-pharma-filmdragerad-tablett-80-mg-100-tabletter-burk-1578313/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       98.31
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "5745000432271"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "100 tablett(er)"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       98.31
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       98.31
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "247330",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "247330"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin SUN, filmdragerad tablett 40 mg, 90 tablett(er)"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-sun-filmdragerad-tablett-40-mg-90-tabletter-blister-247330/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       46.8
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "8901296028148"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "90 tablett(er)"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       46.8
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       46.8
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OutOfStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "257151",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "257151"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin Viatris, filmdragerad tablett 80 mg, 100 tablett(er)"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-viatris-filmdragerad-tablett-80-mg-100-tabletter-blister-257151/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       83.49
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7046260950214"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "100 tablett(er)"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       83.49
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       83.49
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStoreOnly"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "687986",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "687986"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin Xiromed, filmdragerad tablett 20 mg, 98 styck"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-xiromed-filmdragerad-tablett-20-mg-98-styck-blister-687986/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       69.08
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7046264938966"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "98 styck"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       69.08
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       69.08
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStoreOnly"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "257152",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "257152"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin Viatris, filmdragerad tablett 80 mg, 30 tablett(er)"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-viatris-filmdragerad-tablett-80-mg-30-tabletter-blister-257152/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       218.68
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7046261768719"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "30 tablett(er)"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       218.68
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       218.68
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OutOfStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1585438",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1585438"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin Teva B.V., filmdragerad tablett 80 mg, 100 styck"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-teva-bv-filmdragerad-tablett-80-mg-100-styck-blister-1585438/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       357.49
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "5714372011902"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "100 styck"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       357.49
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       357.37
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OutOfStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "247936",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "247936"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin Teva, filmdragerad tablett 20 mg, 100 tablett(er)"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-teva-filmdragerad-tablett-20-mg-100-tabletter-blister-247936/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       499.43
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "5714372010462"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "100 tablett(er)"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       499.43
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       59.49
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "257153",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "257153"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin Viatris, filmdragerad tablett 10 mg, 100 tablett(er)"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-viatris-filmdragerad-tablett-10-mg-100-tabletter-blister-257153/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       60.49
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7046264481172"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "100 tablett(er)"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       60.49
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       60.49
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1585436",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1585436"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin Teva B.V., filmdragerad tablett 20 mg, 105 styck"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-teva-bv-filmdragerad-tablett-20-mg-105-styck-blister-1585436/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       211.57
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "5714372011865"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "105 styck"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       211.57
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       211.43
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OutOfStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1583869",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1583869"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin Amarox, filmdragerad tablett 10 mg, 100 tablett(er)"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-amarox-filmdragerad-tablett-10-mg-100-tabletter-blister-1583869/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       62.74
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "5060608565641"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "100 tablett(er)"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       62.74
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       59.59
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStoreOnly"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "247937",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "247937"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin Teva, filmdragerad tablett 40 mg, 100 tablett(er)"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-teva-filmdragerad-tablett-40-mg-100-tabletter-blister-247937/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       65.49
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "5714372010486"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "100 tablett(er)"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       65.49
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       65.49
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "247326",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "247326"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin SUN, filmdragerad tablett 40 mg, 100 tablett(er)"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-sun-filmdragerad-tablett-40-mg-100-tabletter-blister-247326/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       64.82
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "8718531945654"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "100 tablett(er)"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       64.82
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       64.82
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "687983",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "687983"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin Xiromed, filmdragerad tablett 80 mg, 28 styck"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-xiromed-filmdragerad-tablett-80-mg-28-styck-blister-687983/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       216.93
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7046264575178"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "28 styck"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       216.93
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       216.93
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OutOfStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "886994",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "886994"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Atorvastatin Accord, filmdragerad tablett 40 mg, 100 tablett(er)"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": []
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/atorvastatin-accord-filmdragerad-tablett-40-mg-100-tabletter-blister-886994/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       81.49
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "5055565745977"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "100 tablett(er)"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       81.49
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       81.49
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

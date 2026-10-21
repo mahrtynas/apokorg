@@ -1,0 +1,3967 @@
+{
+ "results": {
+  "count": 196,
+  "items": [
+   {
+    "type": "Product",
+    "id": "1565178",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1565178"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Apoteket Tandkräm Classic, 75 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Apoteket"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/apoteket-tandkram-75-ml-tub-1565178/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/215214m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       19
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7313272152142"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "75 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       14.25
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1565183",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1565183"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Apoteket Tandkräm Whitening, 75 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Apoteket"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/apoteket-tandkram-75-ml-tub-1565183/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/215215m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       19
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7313272152159"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "75 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       14.25
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1386005",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1386005"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Sensodyne Tandkräm Repair & Protect, 75 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Sensodyne"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/sensodyne-repair-och-protect-75-ml-lada-1386005/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/703530m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       49
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "5054563097620"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "75 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "Köp 2 få 25% "
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       2
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       65
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       49
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1565184",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1565184"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Apoteket Tandkräm Gel, 75 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Apoteket"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/apoteket-tandkram-gel-75-ml-tub-1565184/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/215217m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       19
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7313272152173"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "75 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       14.25
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "100505",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "100505"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Sensodyne Original tandkräm, 75 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Sensodyne"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/sensodyne-75-ml-tub-100505/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/272369m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       35
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "8710464116446"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "75 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "Köp 2 få 25% "
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       2
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       49
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       35
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1563774",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1563774"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Colgate Tandkräm Karies Kontroll, 75 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Colgate"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/colgate-karies-kontroll-75-ml-tub-1563774/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/705542m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       18.75
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "8718951560109"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "75 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% "
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       2
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       18.75
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1571624",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1571624"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Colgate Tandkräm Max White Purple, 75 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Colgate"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/colgate-tandkarm-max-white-pur-75-ml-lada-1571624/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/B02393m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       35
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       26.25
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "8718951540033"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "75 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% "
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       2
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       45
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       26.25
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1386007",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1386007"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Sensodyne Repair & Protect Extra Fresh tandkräm, 75 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Sensodyne"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/sensodyne-r-och-p-extra-fresh-75-ml-lada-1386007/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/703532m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       45
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "5054563102751"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "75 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "Köp 2 få 25% "
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       2
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       65
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       45
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1563775",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1563775"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Colgate Tandkräm Karies Kontroll, 20 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Colgate"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/colgate-karies-kontroll-20-ml-tub-1563775/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/705543m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       12
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       9
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "59054627"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "20 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% "
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       2
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       17
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       9
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "212873",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "212873"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Duraphat, tandkräm 5 mg/g, 1 X 51 g"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Duraphat"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/duraphat-tandkram-5-mg-per-g-1-x-51-g-tub-212873/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/024392m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       99
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ex"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7046260389090"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "1 X 51 g"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       129
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       99
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1567626",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1567626"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Colgate Sensitive Enamel Repair, 75 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Colgate"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/colgate-sensitive-enamel-75-ml-ask-1567626/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/B00313m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       35
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       26.25
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "8718951634244"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "75 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% "
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       2
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       49
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       26.25
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "653021",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "653021"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Sensodyne Rapid Relief tandkräm, 75 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Sensodyne"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/sensodyne-rapid-relief-tandkram-75-ml-75-ml-tub-653021/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/700172m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       45
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "5054563032119"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "75 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "Köp 2 få 25% "
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       2
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       65
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       45
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1575673",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1575673"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Colgate Tandkräm Gum Protection + Sensitive, 75 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Colgate"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/colgate-tandkram-gum-protectio-75-ml-ask-1575673/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/B04836m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       39
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       29.25
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "8718951486300"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "75 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% "
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       2
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       45
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       39
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1125059",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1125059"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Sensodyne Extra Fresh Gel tandkräm, 75 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Sensodyne"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/sensodyne-extra-fresh-75-ml-tub-1125059/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/702522m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       35
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "5054563076083"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "75 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "Köp 2 få 25% "
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       2
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       49
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       35
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1567731",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1567731"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Colgate Ultra Tandkräm Ultra Active Foam, 75 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Colgate"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/colgate-ultra-tandkram-75-ml-ask-1567731/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/B00335m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       69
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       51.75
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "8718951505629"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "75 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% "
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       2
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       95
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       51.75
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1573162",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1573162"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Colgate Tandkräm Total Original, 75 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Colgate"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/colgate-tandkram-total-origina-75-ml-ask-1573162/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/B03399m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       35
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       26.25
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "8718951684119"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "75 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% "
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       2
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       41.9
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       26.25
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "895990",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "895990"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Sensodyne Gentle Whitening, 75 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Sensodyne"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/sensodyne-gentle-whitening-75-ml-tub-895990/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/701368m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       35
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "5054563039989"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "75 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "Köp 2 få 25% "
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       2
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       49
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       35
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1574819",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1574819"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Colgate Tandkräm Total Original, 20 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Colgate"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/colgate-tandkram-total-origina-20-ml-ask-1574819/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/B04343m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       12
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       9
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "8718951692299"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "20 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% "
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       2
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       18
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       9
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1565179",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1565179"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Apoteket Tandkräm Barn 0-6 år, 75 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Apoteket"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/apoteket-tandkram-barn-0-6ar-75-ml-tub-1565179/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/215219m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       19
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7313272152197"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "75 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       19
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1563132",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1563132"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Colgate Sensation White, 75 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Colgate"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/colgate-sensation-white-75-ml-tub-1563132/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/705244m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       18.75
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "8718951553224"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "75 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% "
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       2
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       29
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       18.75
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1565182",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1565182"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Apoteket Tandkräm Sensitive, 75 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Apoteket"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/apoteket-tandkram-75-ml-tub-1565182/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/215216m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       19
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7313272152166"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "75 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       14.25
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1577813",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1577813"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Colgate Tandkräm Max White Clinical, 75 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Colgate"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/colgate-tandkram-max-white-cli-75-ml-lada-1577813/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/B05736m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       65
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       48.75
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "8718951710368"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "75 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% "
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       2
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       69
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       65
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1559140",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1559140"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "FLUX Coolmint XL, 1000 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "FLUX"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/flux-coolmint-xl-1000-ml-flaska-1559140/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/704238m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       99
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7350087735184"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "1000 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       129
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       99
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1573164",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1573164"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Colgate Tandkräm Total Whitening, 75 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Colgate"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/colgate-tandkram-total-whiteni-75-ml-ask-1573164/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/B03401m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       35
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       26.25
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "8718951683990"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "75 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% "
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       2
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       41.9
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       26.25
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OnlineOnly"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "493911",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "493911"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Zendium Sensitive, 75 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Zendium"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/zendium-sensitive-75-ml-tub-493911/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/688766m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       29
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "8710908842528"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "75 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       39
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       29
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1571547",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1571547"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Colgate Tandkräm Max White Ultimate, 75 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Colgate"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/colgate-tandkram-max-white-ult-75-ml-ask-1571547/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/B02345m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       159
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       119.25
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "8718951319059"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "75 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% "
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       2
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       169
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       119.25
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OnlineOnly"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1585046",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1585046"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Colgate Tandkräm Total Karies + Erosion Defence, 75 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Colgate"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/colgate-tandkram-total-karies-75-ml-ask-1585046/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/B09282m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       49
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       36.75
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "8718951821460"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "75 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% "
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       2
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       49
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       36.75
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "853004",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "853004"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "GUM Sensivital +  Tandkräm, 75 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "GUM"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/gum-sensivital-plus-tandkram-75-ml-lada-853004/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/701111m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       35
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7630019902984"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "75 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       41.9
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       35
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OnlineOnly"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1567627",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1567627"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Colgate Enamel Repair, 20 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Colgate"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/colgate-20-ml-ask-1567627/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/B00314m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       13
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       9.75
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "8718951640887"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "20 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% "
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       2
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       14.9
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       9.75
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OnlineOnly"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1300990",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1300990"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Parodontax Tandkräm Ultra Clean, 75 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "parodontax"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/parodontax-ultra-clean-75-ml-lada-1300990/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/703227m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       39
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "5054563099617"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "75 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "Köp 2 få 25% "
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       2
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       49
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       39
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}
