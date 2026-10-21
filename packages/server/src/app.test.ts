@@ -357,4 +357,20 @@ describe('CORS', () => {
     });
     expect(evil.headers['access-control-allow-origin']).toBeUndefined();
   });
+
+  it('allows PUT and DELETE in preflight (basket save/delete from the browser)', async () => {
+    const app = await makeApp();
+    const res = await app.inject({
+      method: 'OPTIONS',
+      url: '/api/baskets/b1',
+      headers: {
+        origin: 'http://localhost:5173',
+        'access-control-request-method': 'PUT',
+        'access-control-request-headers': 'content-type',
+      },
+    });
+    const allowed = String(res.headers['access-control-allow-methods']);
+    expect(allowed).toContain('PUT');
+    expect(allowed).toContain('DELETE');
+  });
 });

@@ -99,7 +99,11 @@ export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
         } as FastifyServerOptions['logger']);
 
   const app = Fastify({ logger });
-  await app.register(cors, { origin: CORS_ORIGINS });
+  // @fastify/cors only allows GET/HEAD/POST by default; baskets and settings use PUT/DELETE.
+  await app.register(cors, {
+    origin: CORS_ORIGINS,
+    methods: ['GET', 'HEAD', 'POST', 'PUT', 'DELETE'],
+  });
 
   app.setErrorHandler((err, req, reply) => {
     if (err instanceof z.ZodError) {
