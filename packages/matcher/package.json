@@ -1,0 +1,22 @@
+{
+  "name": "@apokorg/matcher",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.0.0",
+    "@apokorg/adapter-kit": "workspace:*",
+    "@apokorg/core": "workspace:*",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@apokorg/adapter-mock": "workspace:*"
+  }
+}
