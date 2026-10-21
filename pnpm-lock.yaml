@@ -36,6 +36,18 @@ importers:
         specifier: workspace:*
         version: link:../core
 
+  packages/adapters/hjartat:
+    dependencies:
+      '@apokorg/adapter-kit':
+        specifier: workspace:*
+        version: link:../../adapter-kit
+      '@apokorg/core':
+        specifier: workspace:*
+        version: link:../../core
+      zod:
+        specifier: ^4.6.7
+        version: 4.6.7
+
   packages/adapters/mock:
     dependencies:
       '@apokorg/adapter-kit':
