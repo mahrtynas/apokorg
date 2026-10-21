@@ -335,6 +335,77 @@ describe('POST /api/catalog/refresh', () => {
   });
 });
 
+describe('product-first search', () => {
+  it('groups offers from all stores into distinct products', async () => {
+    const app = await makeApp();
+    const res = await app.inject({
+      method: 'POST',
+      url: '/api/products/search',
+      ...json({ query: 'alvedon' }),
+    });
+    expect(res.statusCode).toBe(200);
+    const body = api.ProductSearchResponse.parse(res.json());
+    // Mock catalog: Alvedon 20 st and 10 st, each at the 5 pharmacies.
+    expect(body.products.map((p) => p.packCount)).toEqual([20, 10]);
+    expect(body.products[0]!.merchantIds).toHaveLength(5);
+    expect(body.products[0]!.minPrice).toBe(38);
+  });
+
+  it('locates the chosen product at every store, pinned by EAN', async () => {
+    const app = await makeApp();
+    const search = api.ProductSearchResponse.parse(
+      (
+        await app.inject({
+          method: 'POST',
+          url: '/api/products/search',
+          ...json({ query: 'alvedon' }),
+        })
+      ).json(),
+    );
+    const product = search.products[1]!; // the 10 st pack
+    const res = await app.inject({
+      method: 'POST',
+      url: '/api/products/locate',
+      ...json({ query: 'alvedon', product: { title: product.title, ean: product.ean } }),
+    });
+    expect(res.statusCode).toBe(200);
+    const body = api.SearchResponse.parse(res.json());
+    const exact = body.results.filter((r) => r.kind === 'exact');
+    expect(exact.map((r) => r.offer.merchantId).sort()).toEqual([
+      'apotea',
+      'apoteket',
+      'doz',
+      'hjartat',
+      'kronans',
+    ]);
+    expect(exact.every((r) => r.offer.ean === product.ean && r.confidence === 1)).toBe(true);
+    expect(body.needsConfirmation).toBe(false);
+  });
+
+  it('finds an item by EAN when its query alone does not list it', async () => {
+    // A store whose search only finds CeraVe when asked for its EAN.
+    const real = loadAdapters({ mock: true }).find((a) => a.info.id === 'doz')!;
+    const [cerave] = await real.search('cerave');
+    const eanOnly: MerchantAdapter = {
+      ...real,
+      search: async (q) => (q === cerave!.ean ? [cerave!] : []),
+    };
+    const app = await makeApp({ adapters: [eanOnly] });
+    const res = await app.inject({
+      method: 'POST',
+      url: '/api/products/locate',
+      ...json({ query: 'cerave', product: { title: cerave!.title, ean: cerave!.ean } }),
+    });
+    const body = api.SearchResponse.parse(res.json());
+    expect(body.results).toEqual([
+      expect.objectContaining({
+        kind: 'exact',
+        offer: expect.objectContaining({ ean: cerave!.ean }),
+      }),
+    ]);
+  });
+});
+
 describe('CORS', () => {
   it('allows the Vite dev origin and Tauri, not others', async () => {
     const app = await makeApp();

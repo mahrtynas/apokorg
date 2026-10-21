@@ -65,13 +65,28 @@ export function ItemsTable({
               return (
                 <tr key={item.id} className="border-b border-slate-100 last:border-0">
                   <td className="py-2">
-                    <div className="font-medium">{item.query}</div>
-                    <div className="mt-0.5">
-                      {pinnedCount > 0 ? (
-                        <Badge tone="green">{t.items.pinned(pinnedCount)}</Badge>
-                      ) : (
-                        <Badge>{t.items.autoMatched}</Badge>
+                    <div className="flex items-center gap-3">
+                      {item.imageUrl && (
+                        <img
+                          src={item.imageUrl}
+                          alt=""
+                          loading="lazy"
+                          className="h-10 w-10 shrink-0 rounded object-contain"
+                        />
                       )}
+                      <div className="min-w-0">
+                        <div className="font-medium">{item.title ?? item.query}</div>
+                        <div className="mt-0.5 flex flex-wrap items-center gap-1.5">
+                          {pinnedCount > 0 ? (
+                            <Badge tone="green">{t.items.pinned(pinnedCount)}</Badge>
+                          ) : (
+                            <Badge>{t.items.autoMatched}</Badge>
+                          )}
+                          {item.title && (
+                            <span className="text-xs text-slate-500">“{item.query}”</span>
+                          )}
+                        </div>
+                      </div>
                     </div>
                   </td>
                   <td className="py-2">

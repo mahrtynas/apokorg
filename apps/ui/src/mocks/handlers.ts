@@ -4,7 +4,8 @@
  */
 import { delay, http, HttpResponse } from 'msw';
 import { api, MerchantId, OptimizeOptions, ShippingPolicy } from '@apokorg/core';
-import type { Basket, Settings } from '@apokorg/core';
+import type { Basket, BasketItem, Settings } from '@apokorg/core';
+import { groupProducts } from '@apokorg/matcher';
 import type { z } from 'zod';
 import { API_URL } from '../api/client';
 import { createMockState, mockMerchants, type MockState } from './data';
@@ -78,6 +79,42 @@ export function createHandlers(state: MockState = createMockState(), opts: Handl
       const matched = matchSearches(body.data.query, searches);
       return HttpResponse.json<api.SearchResponse>({
         query: body.data.query,
+        results: flattenMatches(matched.byMerchant),
+        needsConfirmation: matched.needsConfirmation,
+        merchants: searches.map((s) => s.status),
+      });
+    }),
+
+    http.post(url('/api/products/search'), async ({ request }) => {
+      await wait();
+      const body = api.ProductSearchRequest.safeParse(await request.json());
+      if (!body.success) return badRequest(body.error);
+      const searches = await searchMerchants(
+        body.data.query,
+        body.data.merchants ?? enabled(),
+        failing,
+      );
+      return HttpResponse.json<api.ProductSearchResponse>({
+        query: body.data.query,
+        products: groupProducts(searches.flatMap((s) => s.offers)),
+        merchants: searches.map((s) => s.status),
+      });
+    }),
+
+    http.post(url('/api/products/locate'), async ({ request }) => {
+      await wait();
+      const body = api.LocateRequest.safeParse(await request.json());
+      if (!body.success) return badRequest(body.error);
+      const { query, product } = body.data;
+      const searches = await searchMerchants(query, body.data.merchants ?? enabled(), failing);
+      const pinned: BasketItem['pinned'] = {};
+      for (const s of searches) {
+        const hit = product.ean && s.offers.find((o) => o.ean === product.ean);
+        if (hit) pinned[s.merchantId] = hit.merchantProductId;
+      }
+      const matched = matchSearches(product.title, searches, pinned);
+      return HttpResponse.json<api.SearchResponse>({
+        query,
         results: flattenMatches(matched.byMerchant),
         needsConfirmation: matched.needsConfirmation,
         merchants: searches.map((s) => s.status),

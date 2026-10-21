@@ -45,6 +45,17 @@ export const client = {
   search: (req: z.input<typeof api.SearchRequest>) =>
     request(api.SearchResponse, 'POST', '/api/search', api.SearchRequest.parse(req)),
 
+  productSearch: (req: z.input<typeof api.ProductSearchRequest>) =>
+    request(
+      api.ProductSearchResponse,
+      'POST',
+      '/api/products/search',
+      api.ProductSearchRequest.parse(req),
+    ),
+
+  locate: (req: z.input<typeof api.LocateRequest>) =>
+    request(api.SearchResponse, 'POST', '/api/products/locate', api.LocateRequest.parse(req)),
+
   baskets: () => request(api.BasketsResponse, 'GET', '/api/baskets'),
 
   basket: (id: string) => request(Basket, 'GET', `/api/baskets/${encodeURIComponent(id)}`),

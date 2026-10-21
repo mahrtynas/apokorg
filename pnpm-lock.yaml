@@ -51,6 +51,9 @@ importers:
       '@apokorg/adapter-mock':
         specifier: workspace:*
         version: link:../../packages/adapters/mock
+      '@apokorg/matcher':
+        specifier: workspace:*
+        version: link:../../packages/matcher
       '@tailwindcss/vite':
         specifier: ^4.3.3
         version: 4.3.3(vite@7.3.7(@types/node@22.20.5)(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.23.15))

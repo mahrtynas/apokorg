@@ -11,6 +11,10 @@ export const BasketItem = z.object({
   acceptSubstitutes: z.boolean().default(false),
   /** User-confirmed merchantProductId per merchant. Overrides automatic matching. */
   pinned: z.partialRecord(MerchantId, z.string()).default({}),
+  /** The product the user chose in product-first search. Optional for older items. */
+  ean: z.string().optional(),
+  title: z.string().optional(),
+  imageUrl: z.url().optional(),
 });
 export type BasketItem = z.infer<typeof BasketItem>;
 

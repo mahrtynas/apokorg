@@ -19,3 +19,4 @@ export {
   type MessagesClient,
 } from './llm';
 export { queryKey, rememberChoice, forgetChoice, recallPinned, type MatchMemory } from './memory';
+export { groupProducts, titleKey } from './group';

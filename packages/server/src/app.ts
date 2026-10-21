@@ -16,7 +16,13 @@ import { defaultMatcher, defaultOptimizer, defaultShippingPolicies } from './dep
 import { defaultNeedsConfirmation, type Matcher } from './matching';
 import type { Optimizer, ShippingPolicySource } from './optimizing';
 import { Repo } from './repo';
-import { DEFAULT_SEARCH_TIMEOUT_MS, searchStores, type StoreSearchResult } from './search';
+import { groupProducts } from '@apokorg/matcher';
+import {
+  DEFAULT_SEARCH_TIMEOUT_MS,
+  searchItem,
+  searchStores,
+  type StoreSearchResult,
+} from './search';
 
 /** Origins allowed by CORS: the Vite dev server and the Tauri webview. */
 export const CORS_ORIGINS = [
@@ -167,6 +173,40 @@ export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
     };
   });
 
+  app.post('/api/products/search', async (req): Promise<api.ProductSearchResponse> => {
+    const body = api.ProductSearchRequest.parse(req.body);
+    const merchantIds = body.merchants ?? currentSettings().enabledMerchants;
+    const stores = await searchStores(merchantIds, adapters, body.query, repo, timeoutMs);
+    return {
+      query: body.query,
+      products: groupProducts(stores.flatMap((s) => s.offers)),
+      merchants: stores.map((s) => s.status),
+    };
+  });
+
+  app.post('/api/products/locate', async (req): Promise<api.SearchResponse> => {
+    const body = api.LocateRequest.parse(req.body);
+    const merchantIds = body.merchants ?? currentSettings().enabledMerchants;
+    const { ean, title } = body.product;
+    const stores = await searchItem(merchantIds, adapters, body.query, ean, repo, timeoutMs);
+    // The chosen product's EAN identifies it exactly: pin it wherever a store lists it.
+    const pinned: Partial<Record<MerchantId, string>> = {};
+    if (ean) {
+      for (const s of stores) {
+        const hit = s.offers.find((o) => o.ean === ean);
+        if (hit) pinned[s.status.merchantId] = hit.merchantProductId;
+      }
+    }
+    // Match against the product's title, not the loose query, so near-misses become substitutes.
+    const results = await matchForQuery(title, stores, body.acceptSubstitutes, pinned);
+    return {
+      query: body.query,
+      results,
+      needsConfirmation: (matcher.needsConfirmation ?? defaultNeedsConfirmation)(results),
+      merchants: stores.map((s) => s.status),
+    };
+  });
+
   app.get('/api/baskets', async (): Promise<api.BasketsResponse> => ({
     baskets: repo.listBaskets(),
   }));
@@ -221,7 +261,14 @@ export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
     const merchantIds = settings.enabledMerchants.filter((m) => !excluded.has(m));
     const perItem = await Promise.all(
       basket.items.map(async (item) => {
-        const stores = await searchStores(merchantIds, adapters, item.query, repo, timeoutMs);
+        const stores = await searchItem(
+          merchantIds,
+          adapters,
+          item.query,
+          item.ean,
+          repo,
+          timeoutMs,
+        );
         const matches = await matchForQuery(
           item.query,
           stores,

@@ -11,7 +11,7 @@ async function waitForBasket() {
 }
 
 describe('basket builder', () => {
-  it('adds an item and pins the confirmed match', async () => {
+  it('picks a product, finds it at every store and pins the confirmed matches', async () => {
     const state = mockApi();
     const user = userEvent.setup();
     renderApp('basket');
@@ -19,31 +19,35 @@ describe('basket builder', () => {
 
     await user.type(screen.getByRole('searchbox', { name: t.search.queryLabel }), 'whey{Enter}');
 
-    // Two whey products fit equally well, so the server asks for confirmation.
-    expect(await screen.findByText(t.search.needsConfirmation)).toBeInTheDocument();
-    const gym = screen.getByRole('radio', {
-      name: 'Gymgrossisten: Star Nutrition Whey-80 1 kg Chocolate',
-    });
-    expect(gym).not.toBeChecked();
-    await user.click(gym);
-    expect(gym).toBeChecked();
+    // Step 1: distinct products, independent of store.
+    expect(await screen.findByText(t.search.pickProduct)).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: 'Star Nutrition Whey-80 1 kg Chocolate' }),
+    ).toBeInTheDocument();
+    await user.click(screen.getByRole('button', { name: 'Body Science Whey 100% 1 kg Chocolate' }));
 
+    // Step 2: the chosen product at each store that has it, preselected.
+    expect(await screen.findByText(t.search.confirmStores)).toBeInTheDocument();
+    expect(
+      screen.getByRole('radio', { name: 'Gymgrossisten: Body Science Whey 100% 1 kg Chocolate' }),
+    ).toBeChecked();
     await user.click(screen.getByRole('button', { name: t.search.confirmAndAdd }));
 
-    const row = (await screen.findByRole('cell', { name: /^whey/ })).closest('tr')!;
+    const row = (await screen.findByRole('cell', { name: /^Body Science Whey/ })).closest('tr')!;
     expect(within(row).getByText(t.items.pinned(2))).toBeInTheDocument();
     await waitFor(() => {
       const added = state.baskets.get(SEED_BASKET_ID)!.items.at(-1)!;
-      expect(added.query).toBe('whey');
-      expect(added.acceptSubstitutes).toBe(false);
-      expect(added.pinned).toEqual({
-        apotea: 'apotea-p08',
-        gymgrossisten: 'gymgrossisten-p07',
+      expect(added).toMatchObject({
+        query: 'whey',
+        title: 'Body Science Whey 100% 1 kg Chocolate',
+        acceptSubstitutes: false,
+        pinned: { apotea: 'apotea-p08', gymgrossisten: 'gymgrossisten-p08' },
       });
+      expect(added.ean).toMatch(/^\d{13}$/);
     });
   });
 
-  it('adds a clear match without pinning, and edits quantity and substitutes', async () => {
+  it('goes back from step 2, and edits quantity and substitutes', async () => {
     const state = mockApi();
     const user = userEvent.setup();
     renderApp('basket');
@@ -51,8 +55,11 @@ describe('basket builder', () => {
 
     await user.type(screen.getByRole('searchbox', { name: t.search.queryLabel }), 'nocco bcaa');
     await user.click(screen.getByRole('button', { name: t.search.submit }));
-    await user.click(await screen.findByRole('button', { name: t.search.add }));
-    expect(screen.queryByText(t.search.needsConfirmation)).not.toBeInTheDocument();
+    const card = await screen.findByRole('button', { name: 'Nocco BCAA Caribbean 330 ml' });
+    await user.click(card);
+    await user.click(await screen.findByRole('button', { name: t.search.back }));
+    await user.click(await screen.findByRole('button', { name: 'Nocco BCAA Caribbean 330 ml' }));
+    await user.click(await screen.findByRole('button', { name: t.search.confirmAndAdd }));
 
     const qty = await screen.findByRole('spinbutton', { name: t.items.qtyLabel('nocco bcaa') });
     await user.clear(qty);
@@ -61,7 +68,11 @@ describe('basket builder', () => {
 
     await waitFor(() => {
       const item = state.baskets.get(SEED_BASKET_ID)!.items.find((i) => i.query === 'nocco bcaa');
-      expect(item).toMatchObject({ qty: 3, acceptSubstitutes: true, pinned: {} });
+      expect(item).toMatchObject({
+        qty: 3,
+        acceptSubstitutes: true,
+        pinned: { apotea: 'apotea-p09', gymgrossisten: 'gymgrossisten-p09' },
+      });
     });
 
     await user.click(screen.getByRole('button', { name: t.items.removeLabel('nocco bcaa') }));
