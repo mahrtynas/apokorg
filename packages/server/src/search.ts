@@ -76,3 +76,31 @@ export async function searchStores(
     merchantIds.map((id) => searchStore(id, adapters.get(id), query, repo, timeoutMs)),
   );
 }
+
+/**
+ * Searches for one basket item: its query, plus its EAN when known, so a product the user
+ * chose is still found at stores whose search for the query doesn't list it. Per store, the
+ * offers are merged (first occurrence wins) and the store counts as ok if either search was.
+ */
+export async function searchItem(
+  merchantIds: MerchantId[],
+  adapters: Map<MerchantId, MerchantAdapter>,
+  query: string,
+  ean: string | undefined,
+  repo: Repo,
+  timeoutMs: number = DEFAULT_SEARCH_TIMEOUT_MS,
+): Promise<StoreSearchResult[]> {
+  const queries = ean && ean !== query ? [query, ean] : [query];
+  const runs = await Promise.all(
+    queries.map((q) => searchStores(merchantIds, adapters, q, repo, timeoutMs)),
+  );
+  return merchantIds.map((_, i) => {
+    const results = runs.map((run) => run[i]!);
+    const seen = new Set<string>();
+    const offers = results
+      .flatMap((r) => r.offers)
+      .filter((o) => !seen.has(o.merchantProductId) && seen.add(o.merchantProductId));
+    const status = results.find((r) => r.status.status === 'ok')?.status ?? results[0]!.status;
+    return { offers, status };
+  });
+}

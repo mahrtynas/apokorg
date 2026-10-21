@@ -51,6 +51,12 @@ const en = {
     noResults: 'No store had a match for that search.',
     storeHasNoResults: 'No match',
     pickFor: (store: string) => `Product at ${store}`,
+    pickProduct: 'Pick the product you want',
+    storeCount: (n: number) => (n === 1 ? '1 store' : `${n} stores`),
+    priceRange: (min: string, max: string) => (min === max ? min : `${min}–${max}`),
+    locating: 'Looking for it in every store…',
+    confirmStores: 'Check the product found at each store, then confirm.',
+    back: 'Back to results',
   },
   items: {
     heading: 'Items',

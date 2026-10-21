@@ -26,6 +26,14 @@ export function useSearch() {
   return useMutation({ mutationFn: client.search });
 }
 
+export function useProductSearch() {
+  return useMutation({ mutationFn: client.productSearch });
+}
+
+export function useLocate() {
+  return useMutation({ mutationFn: client.locate });
+}
+
 export function useSaveBasket() {
   const qc = useQueryClient();
   return useMutation({

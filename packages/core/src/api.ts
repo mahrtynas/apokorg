@@ -5,7 +5,7 @@
 import { z } from 'zod';
 import { Basket, BasketItem, OptimizeOptions, SplitResult } from './basket';
 import { MerchantId, MerchantInfo } from './merchants';
-import { MatchResult } from './product';
+import { MatchResult, ProductOffer, Size } from './product';
 import { ShippingPolicy } from './shipping';
 import { Settings } from './settings';
 
@@ -46,6 +46,50 @@ export const SearchResponse = z.object({
   merchants: z.array(MerchantSearchStatus),
 });
 export type SearchResponse = z.infer<typeof SearchResponse>;
+
+/**
+ * One distinct product across stores: offers grouped by EAN, or by brand, name, strength,
+ * size and pack when there is no EAN. Built by `groupProducts` in packages/matcher.
+ */
+export const ProductCandidate = z.object({
+  key: z.string(),
+  title: z.string(),
+  brand: z.string().optional(),
+  ean: z.string().optional(),
+  size: Size.optional(),
+  packCount: z.number().int().positive().optional(),
+  imageUrl: z.url().optional(),
+  minPrice: z.number().nonnegative(),
+  maxPrice: z.number().nonnegative(),
+  merchantIds: z.array(MerchantId),
+  offers: z.array(ProductOffer),
+});
+export type ProductCandidate = z.infer<typeof ProductCandidate>;
+
+// POST /api/products/search: step 1 of adding an item, pick a product independent of store.
+export const ProductSearchRequest = z.object({
+  query: z.string().min(1),
+  merchants: z.array(MerchantId).optional(),
+});
+export type ProductSearchRequest = z.infer<typeof ProductSearchRequest>;
+
+export const ProductSearchResponse = z.object({
+  query: z.string(),
+  /** Most relevant first. */
+  products: z.array(ProductCandidate),
+  merchants: z.array(MerchantSearchStatus),
+});
+export type ProductSearchResponse = z.infer<typeof ProductSearchResponse>;
+
+// POST /api/products/locate: step 2, find the chosen product at every store. Returns SearchResponse.
+export const LocateRequest = z.object({
+  /** The user's original query; searched again alongside the product's EAN. */
+  query: z.string().min(1),
+  product: z.object({ title: z.string(), ean: z.string().optional() }),
+  merchants: z.array(MerchantId).optional(),
+  acceptSubstitutes: z.boolean().default(false),
+});
+export type LocateRequest = z.infer<typeof LocateRequest>;
 
 // GET /api/baskets, GET/PUT/DELETE /api/baskets/:id
 export const BasketsResponse = z.object({ baskets: z.array(Basket) });
