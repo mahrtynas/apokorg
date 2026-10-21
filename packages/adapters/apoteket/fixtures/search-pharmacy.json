@@ -1,0 +1,2515 @@
+{
+ "results": {
+  "count": 19,
+  "items": [
+   {
+    "type": "Product",
+    "id": "243170",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "243170"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Alvedon, filmdragerad tablett 500 mg, 20 st"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Alvedon"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/alvedon-filmdragerad-tablett-500-mg-20-st-blister-243170/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/097610m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       34
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ex"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7046260976108"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "20 st"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       52
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       34
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1559782",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1559782"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Alvedon Novum, filmdragerad tablett 500 mg, 20 st"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Alvedon"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/alvedon-novum-filmdragerad-tablett-500-mg-20-st-blister-1559782/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/379421m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       49
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ex"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "5054563073181"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "20 st"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       65
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       49
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1564517",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1564517"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Alvedon, oral suspension 24 mg/ml, 100 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Alvedon"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/alvedon-oral-suspension-24-mg-per-ml-100-ml-flaska-1564517/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/126168m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       55
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ex"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "5054563932891"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "100 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       75
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       55
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "56868",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "56868"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Alvedon, suppositorium 125 mg, 10 st"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Alvedon"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/alvedon-suppositorium-125-mg-10-st-strip-56868/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/156547m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       49
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ex"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7046261565479"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "10 st"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       65
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       49
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "238450",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "238450"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Alvedon, brustablett 500 mg, 20 st"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Alvedon"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/alvedon-brustablett-500-mg-20-st-burk-238450/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/156341m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       49
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ex"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7046261563413"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "20 st"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       69
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       48
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "206753",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "206753"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Alvedon, munsönderfallande tablett 500 mg, 16 st"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Alvedon"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/alvedon-munsonderfallande-tablett-500-mg-16-st-blister-206753/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/007012m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       56
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ex"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7046260070127"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "16 st"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       85
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       56
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "56869",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "56869"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Alvedon, suppositorium 60 mg, 10 st"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Alvedon"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/alvedon-suppositorium-60-mg-10-st-strip-56869/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/196014m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       45
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ex"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7046261960144"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "10 st"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       65
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       45
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "105519",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "105519"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Alvedon, suppositorium 250 mg, 10 st"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Alvedon"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/alvedon-suppositorium-250-mg-10-st-strip-105519/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/445775m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       49
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ex"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7046264457757"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "10 st"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       65
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       49
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "211951",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "211951"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Alvedon, munsönderfallande tablett 250 mg, 12 st"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Alvedon"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/alvedon-munsonderfallande-tablett-250-mg-12-st-blister-211951/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/007487m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       49
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ex"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7046260074873"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "12 st"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       75
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       49
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "213263",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "213263"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Alvedon, brustablett 500 mg, 3 x 30 styck"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Alvedon"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/alvedon-brustablett-500-mg-3-x-30-styck-burk-213263/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/016176m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       130.63
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "5054563048271"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "3 x 30 styck"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       130.63
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       130.63
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "244354",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "244354"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Alvedon, filmdragerad tablett 500 mg, 50 x 1 styck"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Alvedon"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/alvedon-filmdragerad-tablett-500-mg-50-x-1-styck-blister-244354/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/097644m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       83.94
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "5054563048257"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "50 x 1 styck"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       83.94
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       83.94
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "244451",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "244451"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Alvedon, filmdragerad tablett 500 mg, 100 styck"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Alvedon"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/alvedon-filmdragerad-tablett-500-mg-100-styck-blister-244451/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/097621m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       97.2
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "5054563048264"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "100 styck"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       97.2
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       97.2
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "243122",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "243122"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Alvedon forte, filmdragerad tablett 1 g, 50 x 1 styck"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Alvedon"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/alvedon-forte-filmdragerad-tablett-1-g-50-x-1-styck-blister-243122/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/097677m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       106
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "5054563048219"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "50 x 1 styck"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       106
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       106
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "243121",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "243121"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Alvedon forte, filmdragerad tablett 1 g, 100 x 1 styck"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Alvedon"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/alvedon-forte-filmdragerad-tablett-1-g-100-x-1-styck-blister-243121/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/097666m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       100.52
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "5054563048202"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "100 x 1 styck"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       100.52
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       100.52
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "56866",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "56866"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Alvedon, suppositorium 500 mg, 50 styck"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Alvedon"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/alvedon-suppositorium-500-mg-50-styck-strip-56866/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       117.35
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "5054563048240"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "50 styck"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       117.35
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       117.35
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OutOfStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1558552",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1558552"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Alvedon, filmdragerad tablett 500 mg, 105 styck"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Alvedon"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/alvedon-filmdragerad-tablett-500-mg-105-styck-burk-1558552/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       99.41
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "5054563112224"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "105 styck"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       99.41
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       99.41
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "56861",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "56861"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Alvedon, oral lösning 24 mg/ml, 1000 milliliter"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Alvedon"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/alvedon-oral-losning-24-mg-per-ml-1000-milliliter-flaska-56861/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/536755m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       147.72
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "5054563048288"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "1000 milliliter"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       147.72
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       147.72
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OutOfStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1566158",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1566158"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Alvedon, oral suspension 24 mg/ml, 200 milliliter"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Alvedon"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/alvedon-oral-suspension-24-mg-per-ml-200-milliliter-flaska-1566158/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       82.63
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "5054563932938"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "200 milliliter"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       82.63
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       82.63
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "243931",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "243931"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "Alvedon, filmdragerad tablett 500 mg, 100 styck"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "Alvedon"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/alvedon-filmdragerad-tablett-500-mg-100-styck-burk-243931/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/Validoo/097633m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       97.2
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Rx"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "5054563048189"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "100 styck"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       97.2
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       97.2
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OutOfStock"
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

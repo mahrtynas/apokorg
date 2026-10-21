@@ -1,0 +1,3967 @@
+{
+ "results": {
+  "count": 195,
+  "items": [
+   {
+    "type": "Product",
+    "id": "1582391",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1582391"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS Soft Tint Blush Stick Mjuk, 1 st"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-soft-tint-blush-1-st-ask-1582391/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/B07874m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       249
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       186.75
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074731022"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "1 st"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% medlem"
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       1
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       249
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       186.75
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1567026",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1567026"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN Minerals Vatn Volume Mascara Vatn Volume, 1 st"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-1-st-lada-1567026/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/B00027m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       229
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       171.75
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074750160"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "1 st"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% medlem"
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       1
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       229
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       171.75
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "991012",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "991012"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS  Foundation - Freja, 7 g"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-foundation-7-g-burk-ej-metall-991012/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/701805m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       329
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       246.75
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074710362"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "7 g"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% medlem"
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       1
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       329
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       329
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1574335",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1574335"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN Minerals Blush Plommon, 5 g"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-blush-plommon-5-g-ask-1574335/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/B03992m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       279
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       209.25
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074730155"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "5 g"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% medlem"
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       1
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       279
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       279
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OnlineOnly"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1568384",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1568384"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN Minerals Moisturizing Mineral Skin Tint SPF 30 Djurgården Light Neutral, 27 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-27-ml-tub-1568384/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/B00599m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       279
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       209.25
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074714179"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "27 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% medlem"
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       1
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       239
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       209.25
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "250383",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "250383"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN Minerals Mascara Vatn, 1 st"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-mascara-1-st-lada-250383/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/209977m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       229
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       171.75
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074750030"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "1 st"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% medlem"
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       1
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       229
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       229
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "249668",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "249668"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN Rouge Havtorn, 5,9 g"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-rouge-59-g-ask-249668/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/209498m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       279
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       209.25
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074730216"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "5,9 g"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% medlem"
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       1
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       279
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       279
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "991005",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "991005"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS  Foundation - Svea, 7 g"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-foundation-7-g-burk-ej-metall-991005/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/701798m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       329
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       246.75
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074710393"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "7 g"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% medlem"
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       1
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       329
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       329
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1583443",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1583443"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS Mini Mascara Vatn Volume 38°C, 3,5 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-mini-mascara-vat-35-ml-lada-1583443/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/B08397m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       129
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       96.75
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074750535"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "3,5 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% medlem"
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       1
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       129
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       129
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OnlineOnly"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1574336",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1574336"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN Minerals Blush Rönnbär, 5 g"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-blush-ronnbar-5-g-ask-1574336/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/B03993m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       279
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       209.25
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074730148"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "5 g"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% medlem"
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       1
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       279
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       279
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OnlineOnly"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1568385",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1568385"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN Minerals Moisturizing Skin Tint SPF 30 Långholmen Light/Medium Neutral, 27 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-27-ml-tub-1568385/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/B00600m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       279
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       209.25
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074714186"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "27 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% medlem"
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       1
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       279
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       209.25
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1574354",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1574354"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN Minerals Lipliner Lena, 1 st"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-lipliner-lena-1-st-lada-1574354/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/B04011m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       169
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       126.75
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074763078"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "1 st"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% medlem"
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       1
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       169
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       169
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OnlineOnly"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1582390",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1582390"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS Soft Tint Blush Stick Blom, 4,6 g"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-soft-tint-blush-46-g-ask-1582390/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/B07873m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       249
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       186.75
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074731046"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "4,6 g"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% medlem"
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       1
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       249
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       249
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OnlineOnly"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "695999",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "695999"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN Minerals Mascara Magna Lengthening, 12 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-mascara-12-ml-ask-695999/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/700290m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       229
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       171.75
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074750092"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "12 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% medlem"
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       1
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       229
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       171.75
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "991007",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "991007"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS  Foundation - Disa, 7 g"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-foundation-7-g-burk-ej-metall-991007/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/701800m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       329
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       246.75
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074710379"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "7 g"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% medlem"
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       1
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       329
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       246.75
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1574338",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1574338"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN Minerals Blush Nypon, 5 g"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-blush-nypon-5-g-ask-1574338/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/B03995m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       279
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       209.25
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074730131"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "5 g"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% medlem"
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       1
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       279
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       279
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OnlineOnly"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "492918",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "492918"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN Minerals Mascara Magna, 13 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-mascara-13-ml-ask-492918/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/688719m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       229
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       171.75
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074750085"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "13 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% medlem"
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       1
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       229
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       171.75
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1217993",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1217993"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN Minerals Mineral Moisturizing Day Cream, 50 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-day-cream-50-ml-tub-1217993/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/702840m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       249
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       186.75
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074771189"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "50 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% medlem"
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       1
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       249
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       249
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OnlineOnly"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "249661",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "249661"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN Rouge Smultron, 5,9 g"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-rouge-59-g-ask-249661/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/209488m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       279
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       209.25
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074730117"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "5,9 g"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% medlem"
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       1
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       279
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       279
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1568605",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1568605"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN Minerals Foundation - Inga, 7 g"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-7-g-burk-ej-metall-1568605/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/B00740m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       329
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       246.75
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074710430"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "7 g"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% medlem"
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       1
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       329
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       329
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OnlineOnly"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1145991",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1145991"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN Minerals Mascara Gull, 11,5 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-mascara-gull-115-ml-lada-1145991/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/702746m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       229
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       171.75
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074750108"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "11,5 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% medlem"
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       1
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       229
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       171.75
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1582398",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1582398"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS Soft Tint Blush Stick Kram, 1 st"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-soft-tint-blush-1-st-ask-1582398/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/B07881m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       249
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       186.75
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074731039"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "1 st"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% medlem"
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       1
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       249
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       249
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OnlineOnly"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1567678",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1567678"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN Minerals Moisturizing Mineral Skin Tint SPF 30 Gamla Stan Light, 27 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-27-ml-tub-1567678/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/B00320m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       279
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       209.25
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074714117"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "27 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% medlem"
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       1
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       279
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       209.25
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1585161",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1585161"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS Soft Tint Blush Stick Dröm, 1 st"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-soft-tint-blush-1-st-ask-1585161/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/static/dist/img/missing_image.svg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       249
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074731015"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "1 st"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       ""
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       249
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       0
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       249
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OnlineOnly"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1068994",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1068994"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS Mascara Silfr Svart, 10 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-mascara-silfr-10-ml-lada-1068994/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/702215m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       229
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       171.75
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074750115"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "10 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% medlem"
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       1
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       229
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       171.75
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1574344",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1574344"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS Hydra Soft Foundation Disa, 30 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-hydra-soft-found-30-ml-tub-1574344/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/B04001m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       379
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       284.25
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074712571"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "30 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% medlem"
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       1
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       379
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       379
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OnlineOnly"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1582392",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1582392"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS Soft Tint Blush Stick Kyss, 1 st"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-soft-tint-blush-1-st-ask-1582392/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/B07875m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       249
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       186.75
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074731053"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "1 st"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% medlem"
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       1
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       249
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       249
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OnlineOnly"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1068993",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1068993"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS Mascara Silfr Brun, 10 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-mascara-silfr-br-10-ml-lada-1068993/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/702214m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       229
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       171.75
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074750122"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "10 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% medlem"
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       1
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       229
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       171.75
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1582397",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1582397"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS Celebrate Bronze & Glow Face Palette, 1 st"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-celebrate-bronze-1-st-ask-1582397/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/B07880m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       399
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       299.25
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074718023"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "1 st"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% medlem"
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       1
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       399
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       399
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "OnlineOnly"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Product",
+    "id": "1563640",
+    "attributes": [
+     {
+      "name": "Id",
+      "type": "string",
+      "values": [
+       "1563640"
+      ]
+     },
+     {
+      "name": "Name",
+      "type": "string",
+      "values": [
+       "IDUN Minerals Moisturizing Mineral Skin Tint SPF 30 Norrmalm Medium, 27 ml"
+      ]
+     },
+     {
+      "name": "Brand",
+      "type": "string",
+      "values": [
+       "IDUN MINERALS"
+      ]
+     },
+     {
+      "name": "ProductURL",
+      "type": "string",
+      "values": [
+       "/produkt/idun-minerals-skin-tint-medium-27-ml-tub-1563640/"
+      ]
+     },
+     {
+      "name": "ImageURL",
+      "type": "string",
+      "values": [
+       "/produktbilder/custom/705449m.jpg"
+      ]
+     },
+     {
+      "name": "Price",
+      "type": "number",
+      "values": [
+       279
+      ]
+     },
+     {
+      "name": "CampaignPrice",
+      "type": "number",
+      "values": [
+       209.25
+      ]
+     },
+     {
+      "name": "InStock",
+      "type": "boolean",
+      "values": [
+       true
+      ]
+     },
+     {
+      "name": "PrescriptionRequired",
+      "type": "boolean",
+      "values": [
+       false
+      ]
+     },
+     {
+      "name": "Type",
+      "type": "string",
+      "values": [
+       "Ha"
+      ]
+     },
+     {
+      "name": "Ean",
+      "type": "string",
+      "values": [
+       "7340074714131"
+      ]
+     },
+     {
+      "name": "PackageText",
+      "type": "string",
+      "values": [
+       "27 ml"
+      ]
+     },
+     {
+      "name": "CampaignLabel",
+      "type": "string",
+      "values": [
+       "25% medlem"
+      ]
+     },
+     {
+      "name": "CampaignLabelType",
+      "type": "number",
+      "values": [
+       1
+      ]
+     },
+     {
+      "name": "InStorePrice",
+      "type": "number",
+      "values": [
+       279
+      ]
+     },
+     {
+      "name": "PercentDiscount",
+      "type": "number",
+      "values": [
+       25
+      ]
+     },
+     {
+      "name": "LowestPriceLast30Days",
+      "type": "number",
+      "values": [
+       279
+      ]
+     },
+     {
+      "name": "Availability",
+      "type": "string",
+      "values": [
+       "InStock"
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}
