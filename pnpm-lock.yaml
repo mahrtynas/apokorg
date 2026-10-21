@@ -181,6 +181,12 @@ importers:
       '@apokorg/core':
         specifier: workspace:*
         version: link:../core
+      '@apokorg/matcher':
+        specifier: workspace:*
+        version: link:../matcher
+      '@apokorg/optimizer':
+        specifier: workspace:*
+        version: link:../optimizer
       '@apokorg/registry':
         specifier: workspace:*
         version: link:../registry
