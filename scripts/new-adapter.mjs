@@ -42,6 +42,7 @@ await writeFile(join(target, 'fixtures', '.gitkeep'), '');
 for (const file of await walk(target)) {
   await writeFile(file, replace(await readFile(file, 'utf8')));
 }
+await mkdir(join(root, 'docs/stores'), { recursive: true });
 if (!(await exists(docTarget))) {
   await writeFile(docTarget, replace(await readFile(join(template, 'store.md'), 'utf8')));
 }
