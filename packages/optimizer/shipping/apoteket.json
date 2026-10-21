@@ -1,0 +1,34 @@
+{
+  "merchantId": "apoteket",
+  "options": [
+    {
+      "id": "hamta-pa-apotek",
+      "name": "Hämta på Apoteket eller apoteksombud",
+      "kind": "store-pickup",
+      "fee": 0
+    },
+    {
+      "id": "postnord-ombud",
+      "name": "PostNord utlämningsställe",
+      "kind": "pickup-point",
+      "fee": 39,
+      "freeFrom": 300
+    },
+    {
+      "id": "instabox",
+      "name": "Instabox paketskåp",
+      "kind": "parcel-box",
+      "fee": 39,
+      "freeFrom": 300
+    },
+    {
+      "id": "airmee-home",
+      "name": "Airmee hemleverans",
+      "kind": "home",
+      "fee": 69
+    }
+  ],
+  "lastVerified": "2026-10-21",
+  "source": "https://www.apoteket.se/villkor/leveransalternativ/",
+  "notes": "The page confirms free pickup at Apoteket/apoteksombud and free standard delivery over 300 kr, but shows the per-option fees only at checkout. The 39 kr standard fee and the 69 kr home fee (with no threshold) are conservative guesses until a checkout probe confirms them."
+}

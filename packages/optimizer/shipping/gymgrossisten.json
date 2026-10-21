@@ -1,0 +1,28 @@
+{
+  "merchantId": "gymgrossisten",
+  "options": [
+    {
+      "id": "postnord-ombud",
+      "name": "PostNord ombud",
+      "kind": "pickup-point",
+      "fee": 49,
+      "freeFrom": 499
+    },
+    {
+      "id": "instabox",
+      "name": "Instabox Express",
+      "kind": "parcel-box",
+      "fee": 49,
+      "freeFrom": 499
+    },
+    {
+      "id": "budbee-home",
+      "name": "Budbee hemleverans",
+      "kind": "home",
+      "fee": 79
+    }
+  ],
+  "lastVerified": "2026-10-21",
+  "source": "https://www.gymgrossisten.com/leveransvillkor.html",
+  "notes": "The site banner says \"Fri frakt över 499 kr\". The delivery terms say prices are shown only at checkout, so the fees are conservative guesses, and home delivery is assumed to have no free threshold."
+}

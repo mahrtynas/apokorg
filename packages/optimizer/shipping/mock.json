@@ -1,0 +1,15 @@
+{
+  "merchantId": "mock",
+  "options": [
+    {
+      "id": "pickup",
+      "name": "Mock ombud",
+      "kind": "pickup-point",
+      "fee": 39,
+      "freeFrom": 299
+    },
+    { "id": "home", "name": "Mock hemleverans", "kind": "home", "fee": 59 }
+  ],
+  "lastVerified": "2026-10-21",
+  "notes": "Development only, for the mock adapter."
+}
