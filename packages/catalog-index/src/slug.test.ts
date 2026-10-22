@@ -39,8 +39,12 @@ describe('store product filters', () => {
   const keep = (id: keyof typeof CATALOG_SOURCES, url: string) =>
     CATALOG_SOURCES[id].productUrlFilter(new URL(url));
 
-  it('apotea: one slug segment', () => {
+  it('apotea: one path segment', () => {
     expect(keep('apotea', 'https://www.apotea.se/1541-of-london-pocket-moustache-comb')).toBe(true);
+    expect(keep('apotea', 'https://www.apotea.se/braunseries3rakapparat3010bt')).toBe(true);
+    expect(keep('apotea', 'https://www.apotea.se/dotarem-inj-vatska-losning-279.3-mg-ml')).toBe(
+      true,
+    );
     expect(keep('apotea', 'https://www.apotea.se/sok/alvedon')).toBe(false);
     expect(keep('apotea', 'https://www.apotea.se/')).toBe(false);
     expect(
@@ -53,6 +57,16 @@ describe('store product filters', () => {
         new URL('https://www.apotea.se/sitemap/files/sitemap-images-1'),
       ),
     ).toBe(false);
+  });
+
+  it('doz: dozapotek.se slugs ending in a product id', () => {
+    const url = 'https://dozapotek.se/alvedon-filmdragerad-tablett-500-mg-20-st-109264';
+    expect(keep('doz', url)).toBe(true);
+    expect(keep('doz', 'https://dozapotek.se/kopvillkor-pa-dozapotek')).toBe(false);
+    expect(keep('doz', 'https://www.doz.se/alvedon-500-mg-20-st-109264')).toBe(false);
+    expect(CATALOG_SOURCES.doz.slugToTitle!(new URL(url))).toBe(
+      'alvedon filmdragerad tablett 500 mg 20 st',
+    );
   });
 
   it('gymgrossisten: /<slug>/<sku>.html only', () => {

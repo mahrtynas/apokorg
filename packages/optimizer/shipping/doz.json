@@ -2,20 +2,47 @@
   "merchantId": "doz",
   "options": [
     {
+      "id": "hamta-pa-apotek",
+      "name": "Hämta på DOZ Apotek",
+      "kind": "store-pickup",
+      "fee": 0
+    },
+    {
       "id": "postnord-ombud",
-      "name": "PostNord ombud",
+      "name": "PostNord ombud eller paketbox",
       "kind": "pickup-point",
       "fee": 39,
       "freeFrom": 199
     },
     {
-      "id": "home",
-      "name": "Hemleverans",
+      "id": "postnord-varubrev",
+      "name": "PostNord varubrev",
+      "kind": "mailbox",
+      "fee": 39,
+      "freeFrom": 199
+    },
+    {
+      "id": "instabox",
+      "name": "Instabox",
+      "kind": "parcel-box",
+      "fee": 39,
+      "freeFrom": 199
+    },
+    {
+      "id": "budbee-box",
+      "name": "Budbee paketskåp",
+      "kind": "parcel-box",
+      "fee": 39,
+      "freeFrom": 199
+    },
+    {
+      "id": "budbee-home",
+      "name": "Budbee hemleverans",
       "kind": "home",
-      "fee": 69
+      "fee": 29
     }
   ],
-  "lastVerified": "2026-10-21",
-  "source": "docs/plan.md (Research findings)",
-  "notes": "Free-shipping threshold 199 kr from the research findings. The DOZ site could not be fetched on 2026-10-21 (expired TLS certificate), so the fees are conservative guesses, and home delivery is assumed to have no free threshold."
+  "lastVerified": "2026-10-22",
+  "source": "https://dozapotek.se/leveransalternativ",
+  "notes": "From A-doz (PR #22): service-point, mailbox and parcel-box options are free over 199 kr; their fee under 199 kr is not published (39 kr is a guess), and the checkout is under /checkout/, which robots.txt disallows. Budbee home delivery is 29 kr with no free threshold mentioned. Wolt is left out (fee not published)."
 }

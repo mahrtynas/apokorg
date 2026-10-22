@@ -5,14 +5,21 @@
       "id": "postnord-ombud",
       "name": "PostNord ombud",
       "kind": "pickup-point",
-      "fee": 49,
+      "fee": 59,
       "freeFrom": 499
     },
     {
       "id": "instabox",
       "name": "Instabox Express",
       "kind": "parcel-box",
-      "fee": 49,
+      "fee": 59,
+      "freeFrom": 499
+    },
+    {
+      "id": "postnord-varubrev",
+      "name": "PostNord varubrev",
+      "kind": "mailbox",
+      "fee": 59,
       "freeFrom": 499
     },
     {
@@ -22,7 +29,7 @@
       "fee": 79
     }
   ],
-  "lastVerified": "2026-10-21",
-  "source": "https://www.gymgrossisten.com/leveransvillkor.html",
-  "notes": "The site banner says \"Fri frakt över 499 kr\". The delivery terms say prices are shown only at checkout, so the fees are conservative guesses, and home delivery is assumed to have no free threshold."
+  "lastVerified": "2026-10-22",
+  "source": "https://www.gymgrossisten.com/leveransvillkor.html and product-page OfferShippingDetails",
+  "notes": "From A-gymgrossisten (PR #21): free shipping from 499 kr (banner and terms agree). Every product page's OfferShippingDetails microdata gives a 59 kr shipping rate to SE, used for the standard options. Home delivery fees are unknown (checkout is disallowed by robots.txt), so 79 kr with no threshold is a conservative guess."
 }

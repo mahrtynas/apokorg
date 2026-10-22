@@ -3,7 +3,7 @@
  * Researched against the live robots.txt and sitemaps on 2026-10-22.
  */
 import type { CatalogSource } from './refresh';
-import { segmentTitle } from './slug';
+import { segmentTitle, slugToTitle } from './slug';
 
 const segments = (url: URL) => url.pathname.split('/').filter(Boolean);
 
@@ -19,24 +19,30 @@ export const CATALOG_SOURCES: Record<CatalogStoreId, CatalogSource> = {
   /**
    * robots.txt: `Disallow: /sok/*`, `Sitemap: https://www.apotea.se/sitemap/sitemaps`.
    * The index lists brands, categories, images-N, pages and products-N (no extension, plain XML).
-   * Product URLs are one slug segment: `/1541-of-london-dressing-comb-fine-tooth`.
+   * Product URLs are one segment: `/1541-of-london-dressing-comb-fine-tooth`. Everything in
+   * sitemap-products-N is a product, and some slugs have no dash, dots or underscores
+   * (`/braunseries3rakapparat3010bt`, `/dotarem-inj-vatska-losning-279.3-mg-ml`), so any
+   * one-segment path counts (A-apotea, PR #20: the slug rule dropped 99 of 56,857).
    */
   apotea: {
     sitemapUrl: 'https://www.apotea.se/sitemap/sitemaps',
     sitemapFilter: (url) => /\/sitemap-products-\d+$/.test(url.pathname),
-    productUrlFilter: (url) => url.host === 'www.apotea.se' && isSlugPath(url),
+    productUrlFilter: (url) => url.host === 'www.apotea.se' && segments(url).length === 1,
   },
 
   /**
-   * NOT VERIFIED: www.doz.se and doz.se served an expired TLS certificate on 2026-10-21 and
-   * 2026-10-22 (SEC_E_CERT_EXPIRED), and the Wayback Machine was offline, so neither robots.txt
-   * nor the sitemaps could be read. TLS verification is deliberately not disabled; a refresh
-   * fails until the certificate is renewed. This uses the robots.txt `Sitemap:` lines and keeps
-   * one-segment slug URLs; A-doz must confirm the URL shape and tighten the filter.
+   * The store moved to dozapotek.se (valid TLS; the expired certificate belongs to the old
+   * www.doz.se). Verified by A-doz on 2026-10-22 (PR #22). Product URLs are one slug segment
+   * ending in a product id: `/alvedon-filmdragerad-tablett-500-mg-20-st-109264`. The id suffix
+   * keeps out CMS pages such as `/kopvillkor-pa-dozapotek`, and is dropped from the title.
    */
   doz: {
-    sitemapUrl: 'https://www.doz.se/robots.txt',
-    productUrlFilter: (url) => url.host === 'www.doz.se' && isSlugPath(url),
+    sitemapUrl: 'https://dozapotek.se/media/sitemap/sitemap.xml',
+    productUrlFilter: (url) =>
+      url.host === 'dozapotek.se' &&
+      isSlugPath(url) &&
+      /-(\d{6,}|[a-z]\d{3,})$/i.test(segments(url)[0]!),
+    slugToTitle: (url) => slugToTitle(url).replace(/ (\d{6,}|[a-z]\d{3,})$/i, ''),
   },
 
   /**
