@@ -136,6 +136,21 @@ importers:
         specifier: ^4.6.7
         version: 4.6.7
 
+  packages/adapters/gymgrossisten:
+    dependencies:
+      '@apokorg/adapter-kit':
+        specifier: workspace:*
+        version: link:../../adapter-kit
+      '@apokorg/catalog-index':
+        specifier: workspace:*
+        version: link:../../catalog-index
+      '@apokorg/core':
+        specifier: workspace:*
+        version: link:../../core
+      '@apokorg/matcher':
+        specifier: workspace:*
+        version: link:../../matcher
+
   packages/adapters/hjartat:
     dependencies:
       '@apokorg/adapter-kit':
