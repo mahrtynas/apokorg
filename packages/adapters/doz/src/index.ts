@@ -15,43 +15,19 @@ import {
   parsePrice,
   parseSize,
 } from '@apokorg/adapter-kit';
-import {
-  searchCandidates,
-  slugToTitle,
-  type CatalogDb,
-  type CatalogSource,
-} from '@apokorg/catalog-index';
+import { CATALOG_SOURCES, searchCandidates, type CatalogDb } from '@apokorg/catalog-index';
 
 export const BASE_URL = 'https://dozapotek.se';
 export const MERCHANT_ID = 'doz';
 
-/** Product pages fetched per search. At one request per second this keeps a search under 8 s. */
-export const MAX_PRODUCT_FETCHES = 5;
-
-/** Product slugs end in the varunummer (`-097610`), a long article number, or e.g. `-l1078`. */
-const PRODUCT_ID_SUFFIX = /-(\d{6,}|[a-z]\d{3,})$/i;
-
 /**
- * Sitemap source, verified against the live robots.txt and sitemaps on 2026-10-22.
- * `CATALOG_SOURCES.doz` in catalog-index still points at www.doz.se and should be replaced by
- * this (see the A-doz PR); it lives here until then so tests and test:live use the real shape.
- * robots.txt: `Sitemap: https://dozapotek.se/media/sitemap/sitemap.xml` → sitemap-1-1.xml and
- * sitemap-1-2.xml, which mix categories, brands, CMS pages and ~28 000 products.
+ * Product pages fetched per search. DOZ pages are about 1.8 MB, so 5 fetches took about 6.5 s,
+ * close to the server's 8 s per-store limit; 3 leaves margin.
  */
-export const catalogSource: CatalogSource = {
-  sitemapUrl: `${BASE_URL}/media/sitemap/sitemap.xml`,
-  productUrlFilter: (url) => {
-    const segs = url.pathname.split('/').filter(Boolean);
-    return (
-      url.host === 'dozapotek.se' &&
-      segs.length === 1 &&
-      /^[a-z0-9]+(?:-[a-z0-9]+)+$/i.test(segs[0]!) &&
-      PRODUCT_ID_SUFFIX.test(segs[0]!)
-    );
-  },
-  // Drop the trailing product id: "alvedon ... 20 styck 097610" → "alvedon ... 20 styck".
-  slugToTitle: (url) => slugToTitle(url).replace(/ (\d{6,}|[a-z]\d{3,})$/i, ''),
-};
+export const MAX_PRODUCT_FETCHES = 3;
+
+/** The sitemap source lives in catalog-index; re-exported for tests and test:live. */
+export const catalogSource = CATALOG_SOURCES.doz;
 
 /**
  * EAN from an image filename such as `7046260976108_1_1.png` or `07046261094726_C1L1.tif_12.png`

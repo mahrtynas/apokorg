@@ -3,7 +3,7 @@
 - Base URL: https://dozapotek.se (`https://www.dozapotek.se` 301-redirects here; product URLs are canonical without `www`)
 - Category: pharmacy
 - Search strategy: catalog-index
-- Checked: 2026-10-22. The TLS certificate on `dozapotek.se` and `www.dozapotek.se` was valid that day. The expired certificate seen on 2026-10-21/22 belongs to the old `www.doz.se` host, which `CATALOG_SOURCES.doz` still points at.
+- Checked: 2026-10-22. The TLS certificate on `dozapotek.se` and `www.dozapotek.se` was valid that day. The expired certificate seen on 2026-10-21/22 belongs to the old `www.doz.se` host.
 
 ## Search
 
@@ -24,7 +24,7 @@ Search therefore uses the catalog index:
 - Slug titles: the default `slugToTitle` with the trailing id removed ("alvedon filmdragerad tablett 500 mg 20 styck").
 - A live refresh took 2.9 s (3 requests) and indexed 28 317 products.
 
-The working source is `catalogSource` in `packages/adapters/doz/src/index.ts`. `CATALOG_SOURCES.doz` in catalog-index should be changed to match (see the A-doz PR).
+The source is `CATALOG_SOURCES.doz` in `packages/catalog-index/src/stores.ts` (fixed to `dozapotek.se` in #25). Each search fetches at most 3 product pages: pages are about 1.8 MB, and 5 fetches took about 6.5 s against the server's 8 s per-store limit.
 
 ## Product page
 
