@@ -1,0 +1,15 @@
+<!doctype html>
+<!-- Stand-in for the payment iframe in /kassa/ step 3. The probe never touches it. -->
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <title>Klarna</title>
+  </head>
+  <body>
+    <form action="/klarna/purchase">
+      <label>Mejladress <input type="email" name="email" /></label>
+      <label>Postnummer <input name="postal_code" /></label>
+      <button type="submit">Betala köp</button>
+    </form>
+  </body>
+</html>

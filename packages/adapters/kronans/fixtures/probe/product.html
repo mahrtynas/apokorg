@@ -1,0 +1,45 @@
+<!doctype html>
+<!--
+  Product page for the probe test, trimmed to what the probe touches: the JSON-LD offer and the
+  add-to-cart button (data-testid and accessible name as on kronansapotek.se, 2026-10-22).
+  The button posts to the fixture server's /cart/add, standing in for the site's cart API.
+-->
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <title>Kronans Apotek Tandkräm Frisk Mint</title>
+    <script type="application/ld+json" data-gatsby-head="true">
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "Kronans Apotek Tandkräm Frisk Mint Tandkräm, 75 milliliter",
+          "sku": "788053",
+          "offers": {
+            "@type": "Offer",
+            "price": 24,
+            "priceCurrency": "SEK",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [] }
+      ]
+    </script>
+  </head>
+  <body>
+    <h1 id="product-content-title">Kronans Apotek Tandkräm Frisk Mint</h1>
+    <h2>Tandkräm, 75 milliliter</h2>
+    <button
+      type="button"
+      data-testid="788053-buy-button"
+      aria-label="Köp Kronans Apotek Tandkräm Frisk Mint, 24 kronor"
+    >
+      Köp
+    </button>
+    <script>
+      document.querySelector('[data-testid="788053-buy-button"]').addEventListener('click', () => {
+        fetch('/cart/add?id=788053', { method: 'POST' });
+      });
+    </script>
+  </body>
+</html>

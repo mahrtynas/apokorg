@@ -16,6 +16,7 @@ import {
   parseSize,
 } from '@apokorg/adapter-kit';
 import { z } from 'zod';
+import { probe } from './probe';
 
 export const BASE_URL = 'https://www.kronansapotek.se';
 export const SEARCH_URL =
@@ -368,6 +369,7 @@ const adapter: MerchantAdapter = {
   async getProduct(url, opts) {
     return parseProduct(await fetchText(url, { signal: opts?.signal }), url);
   },
+  probe,
 };
 
 export default adapter;
