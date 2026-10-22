@@ -1,5 +1,13 @@
 /** Typed access to the tables in db.ts. Everything read back is re-validated with zod. */
-import { Basket, BasketItem, MerchantId, ProbeResult, ProductOffer, Settings } from '@apokorg/core';
+import {
+  Basket,
+  BasketItem,
+  MerchantId,
+  ProbeResult,
+  ProductOffer,
+  Settings,
+  ShippingPolicy,
+} from '@apokorg/core';
 import { z } from 'zod';
 import type { Db } from './db';
 
@@ -111,6 +119,32 @@ export class Repo {
            merchant_product_id = excluded.merchant_product_id, confirmed_at = excluded.confirmed_at`,
       )
       .run(queryKey(query), merchantId, merchantProductId, new Date(this.now()).toISOString());
+  }
+
+  // ---- shipping overrides ----
+
+  /** Shipping rules the user edited in settings, keyed by store. They win over the JSON rules. */
+  getShippingOverrides(): Map<MerchantId, ShippingPolicy> {
+    const rows = this.db.prepare('SELECT policy_json FROM shipping_overrides').all() as unknown as {
+      policy_json: string;
+    }[];
+    const out = new Map<MerchantId, ShippingPolicy>();
+    for (const r of rows) {
+      const parsed = ShippingPolicy.safeParse(JSON.parse(r.policy_json));
+      if (parsed.success) out.set(parsed.data.merchantId, parsed.data);
+    }
+    return out;
+  }
+
+  putShippingOverride(policy: ShippingPolicy): ShippingPolicy {
+    this.db
+      .prepare(
+        `INSERT INTO shipping_overrides (merchant_id, policy_json, updated_at) VALUES (?, ?, ?)
+         ON CONFLICT(merchant_id) DO UPDATE SET
+           policy_json = excluded.policy_json, updated_at = excluded.updated_at`,
+      )
+      .run(policy.merchantId, JSON.stringify(policy), new Date(this.now()).toISOString());
+    return policy;
   }
 
   // ---- offer cache (TTL 6 h) ----

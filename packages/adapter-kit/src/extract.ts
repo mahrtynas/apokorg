@@ -1,4 +1,5 @@
 /** Helpers for pulling structured data out of HTML without a full DOM. */
+import { readJsStringConcat } from './js-string';
 
 /** All JSON-LD blocks on a page, with @graph arrays flattened. Invalid blocks are skipped. */
 export function extractJsonLd(html: string): Record<string, unknown>[] {
@@ -33,14 +34,20 @@ export function findJsonLd(html: string, type: string): Record<string, unknown> 
 
 /**
  * Extracts a JSON object assigned to a global, e.g. `window.INITIAL_DATA = {...};` or
- * `window.CURRENT_PAGE = JSON.parse("...")`. Uses brace matching, so it handles nested objects.
+ * `window.CURRENT_PAGE = JSON.parse('...' + '...')`. Object literals use brace matching, so nested
+ * objects work; `JSON.parse` arguments are decoded as JS string literals first.
  */
 export function extractWindowJson<T = unknown>(html: string, name: string): T | undefined {
-  const idx = html.search(new RegExp(`window\\.${name}\\s*=\\s*`));
-  if (idx < 0) return undefined;
-  const start = html.indexOf('{', idx);
-  if (start < 0) return undefined;
-  const json = sliceBalanced(html, start);
+  const m = new RegExp(`window\\.${name}\\s*=\\s*(JSON\\.parse\\(\\s*)?`).exec(html);
+  if (!m) return undefined;
+  let json: string | undefined;
+  if (m[1]) {
+    json = readJsStringConcat(html, m.index + m[0].length);
+  } else {
+    const start = html.indexOf('{', m.index);
+    if (start < 0) return undefined;
+    json = sliceBalanced(html, start);
+  }
   if (!json) return undefined;
   try {
     return JSON.parse(json) as T;

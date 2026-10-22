@@ -49,6 +49,13 @@ export const MIGRATIONS: readonly string[] = [
     PRIMARY KEY (merchant_id, postcode, order_band)
   );
   `,
+  `
+  CREATE TABLE shipping_overrides (
+    merchant_id TEXT PRIMARY KEY,
+    policy_json TEXT NOT NULL,
+    updated_at  TEXT NOT NULL
+  );
+  `,
 ];
 
 /** Default data directory: %APPDATA%/apokorg on Windows, XDG data home elsewhere. */

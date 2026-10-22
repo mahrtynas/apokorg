@@ -22,7 +22,7 @@ describe('settings', () => {
     await waitFor(() => expect(state.settings.postcode).toBe('41101'));
     expect(state.settings.enabledMerchants).not.toContain('lyko');
     expect(state.settings.anthropicApiKey).toBe('sk-ant-secret-1234');
-    expect(await screen.findByText(t.settings.apiKeySaved('••••1234'))).toBeInTheDocument();
+    expect(await screen.findByText(t.settings.apiKeySaved('****1234'))).toBeInTheDocument();
     expect(screen.queryByDisplayValue('sk-ant-secret-1234')).not.toBeInTheDocument();
   });
 
