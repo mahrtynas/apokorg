@@ -27,8 +27,12 @@ export const SELECTORS = {
     `${FRAME}internal:role=radiogroup[name="Leveransalternativ"i] >> internal:role=radio >> nth=${i}`,
   /** The row around a radio: the nearest element that also holds the fee. */
   optionRow: `xpath=ancestor-or-self::*[contains(., 'kr')][1]`,
-  /** The k-th element in a row with text of its own (name, delivery time, fee, …). */
-  rowText: (k: number) => `xpath=.//*[text()[normalize-space()]] >> nth=${k}`,
+  /**
+   * The k-th element in a row with text of its own (name, delivery time, fee, …), skipping
+   * the invisible screen-reader prefix "(Vald) leveransalternativ".
+   */
+  rowText: (k: number) =>
+    `xpath=.//*[text()[normalize-space()][1][not(starts-with(normalize-space(.), 'Leveransalternativ')) and not(starts-with(normalize-space(.), 'Vald '))]] >> nth=${k}`,
   /** The whole widget, for the free-shipping threshold. */
   widget: `${FRAME}body`,
   removeItem: 'internal:role=button[name=/^Ta bort/i] >> nth=0',
@@ -161,14 +165,22 @@ async function readOptions(page: GuardedPage): Promise<DeliveryOption[]> {
     if (!(await exists(page, radio, i === 0 ? 10_000 : 500))) break;
     const row = `${radio} >> ${SELECTORS.optionRow}`;
     const parts: string[] = [];
-    for (let k = 0; k < MAX_ROWS; k++) {
+    // Hidden elements count as missing; stop after two misses in a row.
+    for (let k = 0, misses = 0; k < MAX_ROWS && misses < 2; k++) {
       const part = `${row} >> ${SELECTORS.rowText(k)}`;
-      if (!(await exists(page, part, 300))) break;
+      if (!(await exists(page, part, 300))) {
+        misses++;
+        continue;
+      }
+      misses = 0;
       parts.push((await page.textContent(part)) ?? '');
     }
     const option = parseOptionParts(parts);
     if (!option) {
-      throw new LayoutChanged(`can't read delivery option ${i}: ${JSON.stringify(parts)}`);
+      const text = await page.textContent(row);
+      throw new LayoutChanged(
+        `can't read delivery option ${i}: ${JSON.stringify(parts)} in ${JSON.stringify(text)}`,
+      );
     }
     let id = option.id;
     for (let n = 2; ids.has(id); n++) id = `${option.id}-${n}`;

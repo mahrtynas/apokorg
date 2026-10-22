@@ -45,6 +45,7 @@
           const n = document.createElement('span');
           const sr = document.createElement('span');
           sr.className = 'sr-only';
+          sr.style.cssText = 'position:absolute;width:0;height:0;overflow:hidden';
           sr.textContent = i === 1 ? 'Vald leveransalternativ' : 'Leveransalternativ';
           n.append(sr, name);
           const e = document.createElement('small');
