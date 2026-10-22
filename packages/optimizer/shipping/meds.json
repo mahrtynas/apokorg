@@ -1,0 +1,42 @@
+{
+  "merchantId": "meds",
+  "options": [
+    {
+      "id": "postnord-ombud",
+      "name": "PostNord ombud",
+      "kind": "pickup-point",
+      "fee": 39,
+      "freeFrom": 299
+    },
+    {
+      "id": "dhl-ombud",
+      "name": "DHL ombud",
+      "kind": "pickup-point",
+      "fee": 39,
+      "freeFrom": 299
+    },
+    {
+      "id": "instabox",
+      "name": "Instabox paketskåp",
+      "kind": "parcel-box",
+      "fee": 39,
+      "freeFrom": 299
+    },
+    {
+      "id": "postnord-brevlada",
+      "name": "PostNord brevlåda",
+      "kind": "mailbox",
+      "fee": 39,
+      "freeFrom": 299
+    },
+    {
+      "id": "budbee-home",
+      "name": "Budbee hemleverans",
+      "kind": "home",
+      "fee": 39
+    }
+  ],
+  "lastVerified": "2026-10-22",
+  "source": "https://www.meds.se/leverans/",
+  "notes": "From A-meds: MEDS publishes no shipping fees or free-shipping threshold. The FAQ says the cost depends on the option and the order value and is shown in the checkout, and the footer says 'Smidigt, säkert och fraktfritt'. The checkout only shows delivery options after an email and mobile number are entered in the Walley iframe, so they could not be checked. All fees and the 299 kr threshold are guesses (common Swedish pharmacy level). The 39 kr for Budbee comes from MEDS's internal 'Frakt Budbee hemleverans' item page, which is weak evidence. Prescription orders always ship free. Also offered: CityMail and Early Bird (mailbox), PostNord home, Airmee home and Gordon (chilled medicines only), not modelled. Uncollected parcels cost 49 kr."
+}

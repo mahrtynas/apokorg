@@ -13,7 +13,7 @@ const isSlugPath = (url: URL) => {
   return segs.length === 1 && /^[a-z0-9]+(?:-[a-z0-9]+)+$/i.test(segs[0]!);
 };
 
-export type CatalogStoreId = 'apotea' | 'doz' | 'gymgrossisten';
+export type CatalogStoreId = 'apotea' | 'doz' | 'gymgrossisten' | 'meds';
 
 export const CATALOG_SOURCES: Record<CatalogStoreId, CatalogSource> = {
   /**
@@ -63,5 +63,25 @@ export const CATALOG_SOURCES: Record<CatalogStoreId, CatalogSource> = {
       );
     },
     slugToTitle: segmentTitle(0),
+  },
+
+  /**
+   * robots.txt: `Disallow: /sok/`, `/error/`, `/kvitto/`; `Sitemap: https://www.meds.se/sitemap/`.
+   * The index lists `/sitemap/1` to `/sitemap/9`, each mixing products, brand and category pages
+   * (always with a trailing slash: `/alvedon/`, `/feber-vark/huvudvark/`) and CMS pages, so there is
+   * no sitemapFilter. Products are one segment without a trailing slash:
+   * `/alvedon-filmdragerad-tablett-500-mg-20-st`. Prescription medicines also appear as
+   * `/<manufacturer>/<name>-<ean>` (`/orifarm-generics-a-s/diazepam-…-5711313001589`); they need
+   * BankID to buy, so the two-segment form is left out. `/frakt-*` pages are internal shipping
+   * items (A-meds, checked 2026-10-22). Some prescription slugs end in the EAN, dropped from the title.
+   */
+  meds: {
+    sitemapUrl: 'https://www.meds.se/sitemap/',
+    productUrlFilter: (url) =>
+      url.host === 'www.meds.se' &&
+      segments(url).length === 1 &&
+      !url.pathname.endsWith('/') &&
+      !/^frakt-/i.test(segments(url)[0]!),
+    slugToTitle: (url) => slugToTitle(url).replace(/ \d{8,14}$/, ''),
   },
 };

@@ -1,6 +1,7 @@
 import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
+import { CATALOG_SOURCES } from '@apokorg/catalog-index';
 import { afterEach, describe, expect, it } from 'vitest';
 import { defaultCatalog } from './catalog';
 
@@ -14,11 +15,14 @@ describe('defaultCatalog', () => {
     const dir = mkdtempSync(join(tmpdir(), 'apokorg-catalog-'));
     dirs.push(dir);
     const catalog = defaultCatalog(dir);
-    expect(catalog.status()).toEqual([
-      { merchantId: 'apotea', productCount: 0, refreshing: false },
-      { merchantId: 'doz', productCount: 0, refreshing: false },
-      { merchantId: 'gymgrossisten', productCount: 0, refreshing: false },
-    ]);
+    // Every catalog store is reported, so a new CATALOG_SOURCES entry doesn't break this test.
+    expect(catalog.status()).toEqual(
+      Object.keys(CATALOG_SOURCES).map((merchantId) => ({
+        merchantId,
+        productCount: 0,
+        refreshing: false,
+      })),
+    );
     expect(catalog.isStale('apotea')).toBe(true);
     catalog.close?.();
   });

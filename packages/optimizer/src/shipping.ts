@@ -6,9 +6,10 @@ import gymgrossisten from '../shipping/gymgrossisten.json' with { type: 'json' }
 import hjartat from '../shipping/hjartat.json' with { type: 'json' };
 import kronans from '../shipping/kronans.json' with { type: 'json' };
 import lyko from '../shipping/lyko.json' with { type: 'json' };
+import meds from '../shipping/meds.json' with { type: 'json' };
 import mock from '../shipping/mock.json' with { type: 'json' };
 
-const RAW: unknown[] = [apotea, hjartat, apoteket, doz, kronans, gymgrossisten, lyko, mock];
+const RAW: unknown[] = [apotea, hjartat, apoteket, doz, kronans, gymgrossisten, lyko, meds, mock];
 
 /** A rule is stale once it is more than this many days old. */
 export const STALE_AFTER_DAYS = 90;
