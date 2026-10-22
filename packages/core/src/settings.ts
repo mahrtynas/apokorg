@@ -26,9 +26,9 @@ export type Settings = z.infer<typeof Settings>;
 
 export const MASKED_API_KEY_PREFIX = '****';
 
-/** How the server shows a stored API key: `****wxyz`. */
+/** How the server shows a stored API key: `****wxyz`. Keys under 12 characters are fully masked. */
 export function maskApiKey(key: string): string {
-  return MASKED_API_KEY_PREFIX + key.slice(-4);
+  return key.length >= 12 ? MASKED_API_KEY_PREFIX + key.slice(-4) : MASKED_API_KEY_PREFIX;
 }
 
 /** true when a PUT sends the masked form back, which means "keep the stored key". */
