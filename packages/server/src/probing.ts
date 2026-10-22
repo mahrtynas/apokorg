@@ -1,7 +1,7 @@
 /**
  * Checkout probes go through packages/checkout-probe, which hands probe scripts only a guarded
  * page. It is imported on first use, so the browser driver isn't loaded unless a probe runs, and
- * builds that leave it out (the desktop sidecar, for now) still start.
+ * a build that leaves it out still starts.
  */
 import type { MerchantAdapter, ProbeRequest, ProbeResult } from '@apokorg/core';
 import type { ProbeWithCacheOptions } from '@apokorg/checkout-probe';

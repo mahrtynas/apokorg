@@ -214,13 +214,34 @@ export function createHandlers(state: MockState = createMockState(), opts: Handl
       return HttpResponse.json(publicSettings(state.settings));
     }),
 
+    http.get(url('/api/catalog/status'), async () => {
+      await wait();
+      return HttpResponse.json({
+        catalogs: [...state.catalogs.values()],
+      } satisfies api.CatalogStatusResponse);
+    }),
+
     http.post(url('/api/catalog/refresh'), async ({ request }) => {
       await wait();
       const body = api.CatalogRefreshRequest.safeParse(await request.json().catch(() => ({})));
-      const res: api.CatalogRefreshResponse = {
-        accepted: true,
-        merchants: body.success ? (body.data.merchants ?? []) : [],
-      };
+      const requested = body.success ? body.data.merchants : undefined;
+      const merchants = [...state.catalogs.keys()].filter(
+        (m) => !requested || requested.includes(m),
+      );
+      // Refreshing now; done (with a made-up product count) shortly after.
+      for (const m of merchants) {
+        const c = state.catalogs.get(m)!;
+        state.catalogs.set(m, { ...c, refreshing: true });
+        setTimeout(() => {
+          state.catalogs.set(m, {
+            merchantId: m,
+            productCount: 1000 + m.length * 100,
+            refreshedAt: new Date().toISOString(),
+            refreshing: false,
+          });
+        }, 50);
+      }
+      const res: api.CatalogRefreshResponse = { accepted: true, merchants };
       return HttpResponse.json(res, { status: 202 });
     }),
 
