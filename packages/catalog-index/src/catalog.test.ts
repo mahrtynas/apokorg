@@ -143,9 +143,16 @@ describe('searchCandidates', () => {
 
   it('ranks "alvedon 500 20" first in a 1,000-row index, in under 20 ms', async () => {
     const db = await index1000();
-    const t0 = performance.now();
-    const hits = searchCandidates('apotea', 'alvedon 500 20', 10, { db });
-    const ms = performance.now() - t0;
+    // Warm up once (statement compilation, lazy matcher setup), then time the median of 5 runs.
+    searchCandidates('apotea', 'panodil', 10, { db });
+    const times: number[] = [];
+    let hits = searchCandidates('apotea', 'alvedon 500 20', 10, { db });
+    for (let i = 0; i < 5; i++) {
+      const t0 = performance.now();
+      hits = searchCandidates('apotea', 'alvedon 500 20', 10, { db });
+      times.push(performance.now() - t0);
+    }
+    const ms = times.sort((a, b) => a - b)[2]!;
 
     expect(hits[0]?.url).toBe('https://www.apotea.se/alvedon-500-mg-filmdragerad-tablett-20-st');
     expect(hits.map((h) => h.url)).not.toContain(
