@@ -44,8 +44,11 @@ const unitPrice = (m: MatchResult, memberOf: MerchantId[]) =>
     ? m.offer.memberPrice
     : m.offer.price;
 
+/** Same rule as packages/optimizer: store pickup only counts with 'include-store-pickup'. */
 const allowedOption = (o: DeliveryOption, options: OptimizeOptions) =>
-  options.delivery !== 'home-only' || o.kind === 'home';
+  options.delivery === 'home-only'
+    ? o.kind === 'home'
+    : options.delivery === 'include-store-pickup' || o.kind !== 'store-pickup';
 
 const hasDelivery = (policy: ShippingPolicy | undefined, options: OptimizeOptions) =>
   !!policy && policy.options.some((o) => allowedOption(o, options));

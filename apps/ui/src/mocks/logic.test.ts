@@ -39,8 +39,20 @@ describe('greedy split stand-in', () => {
     expect(split.assignments.map((a) => a.merchantId)).toEqual(['doz', 'lyko']);
     const sum = split.perMerchant.reduce((s, m) => s + m.subtotal + m.shipping, 0);
     expect(split.total).toBeCloseTo(sum);
+    expect(split.perMerchant.every((m) => m.delivery.kind !== 'store-pickup')).toBe(true);
+  });
+
+  it('counts free store pickup only with include-store-pickup', async () => {
+    const candidates = await candidatesFor(['alvedon 20 st', 'cerave']);
+    const cheapest = greedySplit(candidates, OptimizeOptions.parse({}), shipping);
+    expect(cheapest.bestSingleMerchant?.merchantId).not.toBe('hjartat');
     // Hjärtat's free store pickup beats DOZ's cheaper items plus mailbox fee.
-    expect(split.bestSingleMerchant?.merchantId).toBe('hjartat');
+    const withPickup = greedySplit(
+      candidates,
+      OptimizeOptions.parse({ delivery: 'include-store-pickup' }),
+      shipping,
+    );
+    expect(withPickup.bestSingleMerchant?.merchantId).toBe('hjartat');
   });
 
   it('respects maxMerchants', async () => {

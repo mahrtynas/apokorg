@@ -123,6 +123,42 @@ describe('optimize', () => {
     expect(homeOnly.perMerchant[0]!.delivery.kind).toBe('home');
   });
 
+  it('cheapest leaves out store pickup unless include-store-pickup is chosen', async () => {
+    // apoteket: free store pickup, pickup point 39 free from 300.  item: apoteket 100, lyko 110.
+    // lyko: pickup point 19.
+    // cheapest:             apoteket 100 + 39 = 139 > lyko 110 + 19 = 129, so lyko.
+    // include-store-pickup: apoteket 100 + 0 = 100.
+    const candidates = [
+      item('item1', [
+        { merchantId: 'apoteket', price: 100 },
+        { merchantId: 'lyko', price: 110 },
+      ]),
+    ];
+    const policies = [
+      policy('apoteket', [pickup(0, undefined, { kind: 'store-pickup' }), pickup(39, 300)]),
+      policy('lyko', [pickup(19)]),
+    ];
+    const cheapest = await optimize(candidates, policies, {});
+    expect(cheapest.total).toBe(129);
+    expect(cheapest.perMerchant[0]).toMatchObject({ merchantId: 'lyko' });
+
+    const withPickup = await optimize(candidates, policies, { delivery: 'include-store-pickup' });
+    expect(withPickup.total).toBe(100);
+    expect(withPickup.perMerchant[0]!.delivery.kind).toBe('store-pickup');
+  });
+
+  it('applies a multi-buy deal to each full set', async () => {
+    // 5 items at 40 kr, "3 for 99" (33 each): 3 × 33 + 2 × 40 = 179, plus free pickup.
+    const candidates = [
+      item('item1', [{ merchantId: 'apotea', price: 40, multiBuy: { qty: 3, unitPrice: 33 } }], {
+        qty: 5,
+      }),
+    ];
+    const r = await optimize(candidates, [policy('apotea', [pickup(0)])], {});
+    expect(r.assignments[0]!.lineTotal).toBe(179);
+    expect(r.total).toBe(179);
+  });
+
   it('picks the cheaper option of one store, by kind', async () => {
     // hjartat item 100: pickup 29 beats home 49 under 'cheapest'.
     const candidates = [item('item1', [{ merchantId: 'hjartat', price: 100 }])];

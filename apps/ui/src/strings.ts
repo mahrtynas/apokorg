@@ -96,6 +96,7 @@ const en = {
     delivery: 'Delivery',
     deliveryCheapest: 'Cheapest option',
     deliveryHomeOnly: 'Home delivery only',
+    deliveryIncludeStorePickup: 'Cheapest, including store pickup',
     verify: 'Verify shipping at checkout',
     verifying: 'Checking delivery fees at checkout. This can take a minute…',
     verifiedBadge: 'Verified at checkout',

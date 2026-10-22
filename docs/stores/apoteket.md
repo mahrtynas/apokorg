@@ -72,7 +72,7 @@ Source: https://www.apoteket.se/villkor/leveransalternativ/ and the "Fri frakt" 
 - Prescription medicines ship free whatever the method (not relevant here).
 - Other options: Instabox locker, PostNord service point, PostNord mailbox, Early Bird morning delivery, Airmee, PostNord home, local-pharmacy home delivery, Bring same-evening express, Gordon, cold delivery. Fees for these are **not published**; the page says they are shown in checkout after entering the postcode.
 - Some options (Early Bird, mailbox for large parcels) are not available when the order contains medicines.
-- There is always a free option (apoteksombud), so a store minimum fee of 0 kr is possible if the user accepts pick-up.
+- There is always a free option (apoteksombud), so a store minimum fee of 0 kr is possible if the user accepts pick-up. The shipping JSON models apoteksombud as a free `pickup-point` (it is an agent inside another shop) and pickup at an Apoteket pharmacy as `store-pickup`, which only counts with the `include-store-pickup` delivery choice.
 
 Mirror in `packages/optimizer/shipping/apoteket.json` (owned by task O).
 

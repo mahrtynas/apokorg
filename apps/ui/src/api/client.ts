@@ -62,7 +62,7 @@ export const client = {
 
   putBasket: (id: string, req: z.input<typeof api.PutBasketRequest>) =>
     request(
-      Basket,
+      api.PutBasketResponse,
       'PUT',
       `/api/baskets/${encodeURIComponent(id)}`,
       api.PutBasketRequest.parse(req),
@@ -83,15 +83,19 @@ export const client = {
   putSettings: (settings: z.input<typeof api.SettingsResponse>) =>
     request(api.SettingsResponse, 'PUT', '/api/settings', api.SettingsResponse.parse(settings)),
 
-  /**
-   * Not in core's api.ts yet (proposed contract addition):
-   * PUT /api/merchants/:id/shipping with a ShippingPolicy body, returns the stored policy.
-   */
   putShipping: (merchantId: MerchantId, policy: ShippingPolicy) =>
     request(
-      ShippingPolicy,
+      api.PutShippingResponse,
       'PUT',
       `/api/merchants/${merchantId}/shipping`,
-      ShippingPolicy.parse(policy),
+      api.PutShippingRequest.parse(policy),
+    ),
+
+  confirmMatch: (req: api.ConfirmMatchRequest) =>
+    request(
+      api.ConfirmMatchResponse,
+      'POST',
+      '/api/matches/confirm',
+      api.ConfirmMatchRequest.parse(req),
     ),
 };

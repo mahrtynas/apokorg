@@ -3,11 +3,14 @@
  * placeholder below with a one-line change in deps.ts.
  */
 import type { BasketItem, MatchResult, ProductOffer } from '@apokorg/core';
+import type { LlmJudge } from '@apokorg/matcher';
 
 export interface MatchOptions {
   acceptSubstitutes: boolean;
   /** User-confirmed merchantProductId per merchant. Always wins. */
   pinned: BasketItem['pinned'];
+  /** Tie-breaker for near-equal candidates; set when the user saved an API key. */
+  llm?: LlmJudge;
 }
 
 export interface Matcher {

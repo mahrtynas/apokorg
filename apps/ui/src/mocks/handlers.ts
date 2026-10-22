@@ -3,7 +3,14 @@
  * so the UI runs (and is tested) without packages/server.
  */
 import { delay, http, HttpResponse } from 'msw';
-import { api, MerchantId, OptimizeOptions, ShippingPolicy } from '@apokorg/core';
+import {
+  api,
+  isMaskedApiKey,
+  maskApiKey,
+  MerchantId,
+  OptimizeOptions,
+  ShippingPolicy,
+} from '@apokorg/core';
 import type { Basket, BasketItem, Settings } from '@apokorg/core';
 import { groupProducts } from '@apokorg/matcher';
 import type { z } from 'zod';
@@ -32,12 +39,8 @@ function badRequest(error: z.ZodError) {
 const notFound = () =>
   HttpResponse.json({ error: 'Not found' } satisfies api.ApiError, { status: 404 });
 
-function maskKey(key: string | undefined): string | undefined {
-  return key ? `••••${key.slice(-4)}` : undefined;
-}
-
 function publicSettings(s: Settings): Settings {
-  return { ...s, anthropicApiKey: maskKey(s.anthropicApiKey) };
+  return { ...s, anthropicApiKey: s.anthropicApiKey ? maskApiKey(s.anthropicApiKey) : undefined };
 }
 
 export function createHandlers(state: MockState = createMockState(), opts: HandlerOptions = {}) {
@@ -200,17 +203,32 @@ export function createHandlers(state: MockState = createMockState(), opts: Handl
       const body = api.SettingsResponse.safeParse(await request.json());
       if (!body.success) return badRequest(body.error);
       const next = { ...body.data };
-      // A masked key coming back unchanged means "keep the stored one".
-      if (next.anthropicApiKey === maskKey(state.settings.anthropicApiKey)) {
+      // Absent or still masked: keep the stored key. Empty string: remove it.
+      const key = next.anthropicApiKey;
+      if (key === undefined || isMaskedApiKey(key)) {
         next.anthropicApiKey = state.settings.anthropicApiKey;
+      } else if (key.trim() === '') {
+        next.anthropicApiKey = undefined;
       }
       state.settings = next;
       return HttpResponse.json(publicSettings(state.settings));
     }),
 
-    http.post(url('/api/catalog/refresh'), async () => {
+    http.post(url('/api/catalog/refresh'), async ({ request }) => {
       await wait();
-      return new HttpResponse(null, { status: 202 });
+      const body = api.CatalogRefreshRequest.safeParse(await request.json().catch(() => ({})));
+      const res: api.CatalogRefreshResponse = {
+        accepted: true,
+        merchants: body.success ? (body.data.merchants ?? []) : [],
+      };
+      return HttpResponse.json(res, { status: 202 });
+    }),
+
+    http.post(url('/api/matches/confirm'), async ({ request }) => {
+      await wait();
+      const body = api.ConfirmMatchRequest.safeParse(await request.json());
+      if (!body.success) return badRequest(body.error);
+      return HttpResponse.json({ ok: true } satisfies api.ConfirmMatchResponse);
     }),
   ];
 }

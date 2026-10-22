@@ -11,6 +11,7 @@ export interface OfferSpec {
   merchantId: MerchantId;
   price: number;
   memberPrice?: number;
+  multiBuy?: { qty: number; unitPrice: number };
   inStock?: boolean;
   kind?: MatchKind;
 }
@@ -23,6 +24,7 @@ export function match(itemId: string, spec: OfferSpec): MatchResult {
       title: `${itemId} at ${spec.merchantId}`,
       price: spec.price,
       ...(spec.memberPrice !== undefined ? { memberPrice: spec.memberPrice } : {}),
+      ...(spec.multiBuy ? { multiBuy: spec.multiBuy } : {}),
       inStock: spec.inStock ?? true,
       url: `https://example.com/${spec.merchantId}/${itemId}`,
       fetchedAt: '2026-10-21T00:00:00Z',

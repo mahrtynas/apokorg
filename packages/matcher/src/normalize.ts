@@ -143,6 +143,33 @@ export const STOPWORDS = new Set([
   'forpackning',
 ]);
 
+/**
+ * Words that name a different product line of the same brand: "Alvedon Novum" or "Alvedon Forte"
+ * is not plain Alvedon. A listing with one of these that the query lacks is a substitute.
+ */
+export const VARIANT_WORDS = new Set([
+  'novum',
+  'forte',
+  'junior',
+  'barn',
+  'kids',
+  'mini',
+  'minor',
+  'extra',
+  'brus',
+  'brustablett',
+  'brustabletter',
+  'zapp',
+  'smalttablett',
+  'smalttabletter',
+  'munsonderfallande',
+  'depot',
+  'retard',
+  'comp',
+  'rapid',
+  'duo',
+]);
+
 /** A token that is a number glued to a unit, e.g. "500mg", "150ml", "20st". */
 export const MEASURE_TOKEN_RE = /^\d+(?:\.\d+)?(?:mg|ug|ie|ml|l|g|kg|st)$/;
 

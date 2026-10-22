@@ -1,5 +1,6 @@
 // Writes packages/registry/src/generated.ts from the folders in packages/adapters/.
 // Generated (and gitignored) so parallel adapter branches never conflict on a shared list.
+import { existsSync } from 'node:fs';
 import { readdir, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
@@ -7,6 +8,8 @@ const root = new URL('..', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '
 const adaptersDir = join(root, 'packages/adapters');
 const ids = (await readdir(adaptersDir, { withFileTypes: true }))
   .filter((e) => e.isDirectory() && !e.name.startsWith('_') && e.name !== 'mock')
+  // A folder left behind by a branch switch (node_modules only) has no src/index.ts.
+  .filter((e) => existsSync(join(adaptersDir, e.name, 'src/index.ts')))
   .map((e) => e.name)
   .sort();
 
