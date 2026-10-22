@@ -53,6 +53,9 @@ const JSON_LD_PRICE = `(() => {
 /** What the page shows, for failure messages. Read-only. */
 const PAGE_STATE = `(() => ({
   url: location.pathname,
+  title: document.title,
+  h1: document.querySelector('h1')?.textContent?.trim() ?? null,
+  buyButtons: document.querySelectorAll('[data-testid$="-buy-button"]').length,
   cartEmpty: /Din varukorg är tom/i.test(document.body.innerText),
   iframes: [...document.querySelectorAll('iframe')].map((f) => f.title || f.src).slice(0, 8),
   text: document.body.innerText.replace(/\\s+/g, ' ').slice(0, 300),
@@ -114,7 +117,9 @@ async function addToCart(
   const id = productIdFromUrl(url);
   if (!id) throw new LayoutChanged(`no product id in ${url}`);
   await page.goto(url);
-  await page.waitFor(SELECTORS.buyButton(id));
+  if (!(await exists(page, SELECTORS.buyButton(id), 15_000))) {
+    throw new LayoutChanged(`no buy button on the product page: ${await describePage(page)}`);
+  }
   const price = parsePrice((await page.evaluateJson<string | null>(JSON_LD_PRICE)) ?? undefined);
   if (price == null) throw new LayoutChanged(`no price on ${url}`);
   // The button is server-rendered; a click before Gatsby hydrates the page does nothing.
