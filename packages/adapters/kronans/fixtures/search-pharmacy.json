@@ -1,0 +1,2080 @@
+{
+ "q": "alvedon",
+ "primaryList": {
+  "totalHits": 22,
+  "productGroups": [
+   {
+    "key": "productGroup097610",
+    "products": [
+     {
+      "key": "097610",
+      "brand": "Alvedon",
+      "title": "Alvedon 500 mg",
+      "link": "/Alvedon/p/097610/",
+      "sellingPrice": {
+       "min": 34,
+       "max": 34
+      },
+      "listPrice": {
+       "min": 34,
+       "max": 34
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "52",
+         "label": "52"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7046260976108",
+         "label": "7046260976108"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "EX",
+         "label": "EX"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Paracetamol, Filmdragerad tablett, 20 styck",
+         "label": "Paracetamol, Filmdragerad tablett, 20 styck"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/097610/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "097610-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/Alvedon/p/097610/",
+        "listPrice": 34,
+        "sellingPrice": 34,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup379421",
+    "products": [
+     {
+      "key": "379421",
+      "brand": "Alvedon",
+      "title": "Alvedon Novum 500 mg",
+      "link": "/alvedon-novum/p/379421/",
+      "sellingPrice": {
+       "min": 49,
+       "max": 49
+      },
+      "listPrice": {
+       "min": 49,
+       "max": 49
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "65",
+         "label": "65"
+        }
+       ],
+       "ean": [
+        {
+         "id": "5054563073181",
+         "label": "5054563073181"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "EX",
+         "label": "EX"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "49.9",
+         "label": "49.9"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Paracetamol, Filmdragerad tablett, 20 tablett(er)",
+         "label": "Paracetamol, Filmdragerad tablett, 20 tablett(er)"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/379421/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "379421-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/alvedon-novum/p/379421/",
+        "listPrice": 49,
+        "sellingPrice": 49,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup126168",
+    "products": [
+     {
+      "key": "126168",
+      "brand": "Alvedon",
+      "title": "Alvedon 24 mg/ml",
+      "link": "/alvedon-flytande-24-mgml/p/126168/",
+      "sellingPrice": {
+       "min": 55,
+       "max": 55
+      },
+      "listPrice": {
+       "min": 55,
+       "max": 55
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "75",
+         "label": "75"
+        }
+       ],
+       "ean": [
+        {
+         "id": "5054563932891",
+         "label": "5054563932891"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "EX",
+         "label": "EX"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Paracetamol, Oral suspension, 100 milliliter",
+         "label": "Paracetamol, Oral suspension, 100 milliliter"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/126168/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "126168-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/alvedon-flytande-24-mgml/p/126168/",
+        "listPrice": 55,
+        "sellingPrice": 55,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup007012",
+    "products": [
+     {
+      "key": "007012",
+      "brand": "Alvedon",
+      "title": "Alvedon 500 mg",
+      "link": "/Alvedon/p/007012/",
+      "sellingPrice": {
+       "min": 56,
+       "max": 56
+      },
+      "listPrice": {
+       "min": 56,
+       "max": 56
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "85",
+         "label": "85"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7046260070127",
+         "label": "7046260070127"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "EX",
+         "label": "EX"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Paracetamol, Munsönderfallande tablett, 16 styck",
+         "label": "Paracetamol, Munsönderfallande tablett, 16 styck"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/007012/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "007012-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/Alvedon/p/007012/",
+        "listPrice": 56,
+        "sellingPrice": 56,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup156341",
+    "products": [
+     {
+      "key": "156341",
+      "brand": "Alvedon",
+      "title": "Alvedon 500 mg",
+      "link": "/alvedon-500-mg/p/156341/",
+      "sellingPrice": {
+       "min": 48,
+       "max": 48
+      },
+      "listPrice": {
+       "min": 48,
+       "max": 48
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "69",
+         "label": "69"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7046261563413",
+         "label": "7046261563413"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "EX",
+         "label": "EX"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Paracetamol, Brustablett, 20 styck",
+         "label": "Paracetamol, Brustablett, 20 styck"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/156341/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "156341-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/alvedon-500-mg/p/156341/",
+        "listPrice": 48,
+        "sellingPrice": 48,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup010777",
+    "products": [
+     {
+      "key": "010777",
+      "brand": "Alvedon",
+      "title": "Alvedon 500 mg",
+      "link": "/Alvedon/p/010777/",
+      "sellingPrice": {
+       "min": 46,
+       "max": 46
+      },
+      "listPrice": {
+       "min": 46,
+       "max": 46
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "77",
+         "label": "77"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7046260107779",
+         "label": "7046260107779"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "EX",
+         "label": "EX"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Paracetamol, Suppositorium, 10 styck",
+         "label": "Paracetamol, Suppositorium, 10 styck"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/010777/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "010777-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/Alvedon/p/010777/",
+        "listPrice": 46,
+        "sellingPrice": 46,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup156547",
+    "products": [
+     {
+      "key": "156547",
+      "brand": "Alvedon®",
+      "title": "Alvedon 125 mg",
+      "link": "/Alvedon/p/156547/",
+      "sellingPrice": {
+       "min": 49,
+       "max": 49
+      },
+      "listPrice": {
+       "min": 49,
+       "max": 49
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "66",
+         "label": "66"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7046261565479",
+         "label": "7046261565479"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "EX",
+         "label": "EX"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Paracetamol, Suppositorium, 10 styck",
+         "label": "Paracetamol, Suppositorium, 10 styck"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/156547/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "156547-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/Alvedon/p/156547/",
+        "listPrice": 49,
+        "sellingPrice": 49,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup007487",
+    "products": [
+     {
+      "key": "007487",
+      "brand": "Alvedon",
+      "title": "Alvedon 250 mg",
+      "link": "/Alvedon/p/007487/",
+      "sellingPrice": {
+       "min": 49,
+       "max": 49
+      },
+      "listPrice": {
+       "min": 49,
+       "max": 49
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "77",
+         "label": "77"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7046260074873",
+         "label": "7046260074873"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "EX",
+         "label": "EX"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Paracetamol, Munsönderfallande tablett, 12 styck",
+         "label": "Paracetamol, Munsönderfallande tablett, 12 styck"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/007487/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "007487-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/Alvedon/p/007487/",
+        "listPrice": 49,
+        "sellingPrice": 49,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup445775",
+    "products": [
+     {
+      "key": "445775",
+      "brand": "Alvedon®",
+      "title": "Alvedon 250 mg",
+      "link": "/Alvedon/p/445775/",
+      "sellingPrice": {
+       "min": 48,
+       "max": 48
+      },
+      "listPrice": {
+       "min": 48,
+       "max": 48
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "66",
+         "label": "66"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7046264457757",
+         "label": "7046264457757"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "EX",
+         "label": "EX"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Paracetamol, Suppositorium, 10 styck",
+         "label": "Paracetamol, Suppositorium, 10 styck"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/445775/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "445775-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/Alvedon/p/445775/",
+        "listPrice": 48,
+        "sellingPrice": 48,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup196014",
+    "products": [
+     {
+      "key": "196014",
+      "brand": "Alvedon®",
+      "title": "Alvedon 60 mg",
+      "link": "/Alvedon/p/196014/",
+      "sellingPrice": {
+       "min": 45,
+       "max": 45
+      },
+      "listPrice": {
+       "min": 45,
+       "max": 45
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "65",
+         "label": "65"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7046261960144",
+         "label": "7046261960144"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "EX",
+         "label": "EX"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Paracetamol, Suppositorium, 10 styck",
+         "label": "Paracetamol, Suppositorium, 10 styck"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/196014/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "196014-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/Alvedon/p/196014/",
+        "listPrice": 45,
+        "sellingPrice": 45,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup097666",
+    "products": [
+     {
+      "key": "097666",
+      "brand": "Alvedon® forte",
+      "title": "Alvedon forte 1 g",
+      "link": "/Alvedon-forte/p/097666/",
+      "sellingPrice": {
+       "min": 100.52,
+       "max": 100.52
+      },
+      "listPrice": {
+       "min": 100.52,
+       "max": 100.52
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "0",
+         "label": "0"
+        }
+       ],
+       "ean": [
+        {
+         "id": "5054563048202",
+         "label": "5054563048202"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "RX",
+         "label": "RX"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Paracetamol, Filmdragerad tablett, 100 x 1 styck",
+         "label": "Paracetamol, Filmdragerad tablett, 100 x 1 styck"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/097666/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "097666-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/Alvedon-forte/p/097666/",
+        "listPrice": 100.52,
+        "sellingPrice": 100.52,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup016176",
+    "products": [
+     {
+      "key": "016176",
+      "brand": "Alvedon®",
+      "title": "Alvedon 500 mg",
+      "link": "/Alvedon/p/016176/",
+      "sellingPrice": {
+       "min": 130.63,
+       "max": 130.63
+      },
+      "listPrice": {
+       "min": 130.63,
+       "max": 130.63
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "0",
+         "label": "0"
+        }
+       ],
+       "ean": [
+        {
+         "id": "5054563048271",
+         "label": "5054563048271"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "RX",
+         "label": "RX"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Paracetamol, Brustablett, 3 x 30 styck",
+         "label": "Paracetamol, Brustablett, 3 x 30 styck"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "variants": [
+       {
+        "key": "016176-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/Alvedon/p/016176/",
+        "listPrice": 130.63,
+        "sellingPrice": 130.63,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup097621",
+    "products": [
+     {
+      "key": "097621",
+      "brand": "Alvedon®",
+      "title": "Alvedon 500 mg",
+      "link": "/Alvedon/p/097621/",
+      "sellingPrice": {
+       "min": 97.2,
+       "max": 97.2
+      },
+      "listPrice": {
+       "min": 97.2,
+       "max": 97.2
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "0",
+         "label": "0"
+        }
+       ],
+       "ean": [
+        {
+         "id": "5054563048264",
+         "label": "5054563048264"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "RX",
+         "label": "RX"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Paracetamol, Filmdragerad tablett, 100 styck",
+         "label": "Paracetamol, Filmdragerad tablett, 100 styck"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "variants": [
+       {
+        "key": "097621-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/Alvedon/p/097621/",
+        "listPrice": 97.2,
+        "sellingPrice": 97.2,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup097677",
+    "products": [
+     {
+      "key": "097677",
+      "brand": "Alvedon® forte",
+      "title": "Alvedon forte 1 g",
+      "link": "/Alvedon-forte/p/097677/",
+      "sellingPrice": {
+       "min": 104,
+       "max": 104
+      },
+      "listPrice": {
+       "min": 104,
+       "max": 104
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "0",
+         "label": "0"
+        }
+       ],
+       "ean": [
+        {
+         "id": "5054563048219",
+         "label": "5054563048219"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "RX",
+         "label": "RX"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "104.5",
+         "label": "104.5"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Paracetamol, Filmdragerad tablett, 50 x 1 styck",
+         "label": "Paracetamol, Filmdragerad tablett, 50 x 1 styck"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "variants": [
+       {
+        "key": "097677-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/Alvedon-forte/p/097677/",
+        "listPrice": 104,
+        "sellingPrice": 104,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup120621",
+    "products": [
+     {
+      "key": "120621",
+      "brand": "Alvedon®",
+      "title": "Alvedon 500 mg",
+      "link": "/Alvedon/p/120621/",
+      "sellingPrice": {
+       "min": 99.41,
+       "max": 99.41
+      },
+      "listPrice": {
+       "min": 99.41,
+       "max": 99.41
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "0",
+         "label": "0"
+        }
+       ],
+       "ean": [
+        {
+         "id": "5054563112224",
+         "label": "5054563112224"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "RX",
+         "label": "RX"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Paracetamol, Filmdragerad tablett, 105 styck",
+         "label": "Paracetamol, Filmdragerad tablett, 105 styck"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "variants": [
+       {
+        "key": "120621-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/Alvedon/p/120621/",
+        "listPrice": 99.41,
+        "sellingPrice": 99.41,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup547302",
+    "products": [
+     {
+      "key": "547302",
+      "brand": "Alvedon",
+      "title": "Alvedon 24 mg/ml",
+      "link": "/Alvedon/p/547302/",
+      "sellingPrice": {
+       "min": 82.63,
+       "max": 82.63
+      },
+      "listPrice": {
+       "min": 82.63,
+       "max": 82.63
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "0",
+         "label": "0"
+        }
+       ],
+       "ean": [
+        {
+         "id": "5054563932938",
+         "label": "5054563932938"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "RX",
+         "label": "RX"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Paracetamol, Oral suspension, 200 milliliter",
+         "label": "Paracetamol, Oral suspension, 200 milliliter"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "variants": [
+       {
+        "key": "547302-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/Alvedon/p/547302/",
+        "listPrice": 82.63,
+        "sellingPrice": 82.63,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup488347",
+    "products": [
+     {
+      "key": "488347",
+      "brand": "Alvedon",
+      "title": "Alvedon 500 mg",
+      "link": "/alvedon-500mg-filmdragerad-tablett/p/488347/",
+      "sellingPrice": {
+       "min": 27,
+       "max": 27
+      },
+      "listPrice": {
+       "min": 27,
+       "max": 27
+      },
+      "inStock": false,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "36.9",
+         "label": "36.9"
+        }
+       ],
+       "ean": [
+        {
+         "id": "5054563209634",
+         "label": "5054563209634"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "EX",
+         "label": "EX"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Paracetamol, Filmdragerad tablett, 10 styck",
+         "label": "Paracetamol, Filmdragerad tablett, 10 styck"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/488347/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "488347-v1",
+        "inStock": false,
+        "stockNumber": 0,
+        "link": "/alvedon-500mg-filmdragerad-tablett/p/488347/",
+        "listPrice": 27,
+        "sellingPrice": 27,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 0
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup536755",
+    "products": [
+     {
+      "key": "536755",
+      "brand": "Alvedon®",
+      "title": "Alvedon 24 mg/ml",
+      "link": "/Alvedon/p/536755/",
+      "sellingPrice": {
+       "min": 147.72,
+       "max": 147.72
+      },
+      "listPrice": {
+       "min": 147.72,
+       "max": 147.72
+      },
+      "inStock": false,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "0",
+         "label": "0"
+        }
+       ],
+       "ean": [
+        {
+         "id": "25367553",
+         "label": "25367553"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "RX",
+         "label": "RX"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Paracetamol, Oral lösning, 1 000 milliliter",
+         "label": "Paracetamol, Oral lösning, 1 000 milliliter"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "variants": [
+       {
+        "key": "536755-v1",
+        "inStock": false,
+        "stockNumber": 0,
+        "link": "/Alvedon/p/536755/",
+        "listPrice": 147.72,
+        "sellingPrice": 147.72,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 0
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup067635",
+    "products": [
+     {
+      "key": "067635",
+      "brand": "Alvedon®",
+      "title": "Alvedon 665 mg",
+      "link": "/Alvedon-/p/067635/",
+      "sellingPrice": {
+       "min": 87.6,
+       "max": 87.6
+      },
+      "listPrice": {
+       "min": 87.6,
+       "max": 87.6
+      },
+      "inStock": false,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "0",
+         "label": "0"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7046260114470",
+         "label": "7046260114470"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "RX",
+         "label": "RX"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Paracetamol, Tablett med modifierad frisättning, 100 styck",
+         "label": "Paracetamol, Tablett med modifierad frisättning, 100 styck"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "variants": [
+       {
+        "key": "067635-v1",
+        "inStock": false,
+        "stockNumber": 0,
+        "link": "/Alvedon-/p/067635/",
+        "listPrice": 87.6,
+        "sellingPrice": 87.6,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 0
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup097633",
+    "products": [
+     {
+      "key": "097633",
+      "brand": "Alvedon®",
+      "title": "Alvedon 500 mg",
+      "link": "/Alvedon/p/097633/",
+      "sellingPrice": {
+       "min": 97.2,
+       "max": 97.2
+      },
+      "listPrice": {
+       "min": 97.2,
+       "max": 97.2
+      },
+      "inStock": false,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "0",
+         "label": "0"
+        }
+       ],
+       "ean": [
+        {
+         "id": "5054563048189",
+         "label": "5054563048189"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "RX",
+         "label": "RX"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Paracetamol, Filmdragerad tablett, 100 styck",
+         "label": "Paracetamol, Filmdragerad tablett, 100 styck"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "variants": [
+       {
+        "key": "097633-v1",
+        "inStock": false,
+        "stockNumber": 0,
+        "link": "/Alvedon/p/097633/",
+        "listPrice": 97.2,
+        "sellingPrice": 97.2,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 0
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup097644",
+    "products": [
+     {
+      "key": "097644",
+      "brand": "Alvedon®",
+      "title": "Alvedon 500 mg",
+      "link": "/Alvedon/p/097644/",
+      "sellingPrice": {
+       "min": 83.94,
+       "max": 83.94
+      },
+      "listPrice": {
+       "min": 83.94,
+       "max": 83.94
+      },
+      "inStock": false,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "0",
+         "label": "0"
+        }
+       ],
+       "ean": [
+        {
+         "id": "5054563048257",
+         "label": "5054563048257"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "RX",
+         "label": "RX"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Paracetamol, Filmdragerad tablett, 50 x 1 styck",
+         "label": "Paracetamol, Filmdragerad tablett, 50 x 1 styck"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "variants": [
+       {
+        "key": "097644-v1",
+        "inStock": false,
+        "stockNumber": 0,
+        "link": "/Alvedon/p/097644/",
+        "listPrice": 83.94,
+        "sellingPrice": 83.94,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 0
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup438497",
+    "products": [
+     {
+      "key": "438497",
+      "brand": "Alvedon®",
+      "title": "Alvedon 500 mg",
+      "link": "/Alvedon/p/438497/",
+      "sellingPrice": {
+       "min": 117.35,
+       "max": 117.35
+      },
+      "listPrice": {
+       "min": 117.35,
+       "max": 117.35
+      },
+      "inStock": false,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "0",
+         "label": "0"
+        }
+       ],
+       "ean": [
+        {
+         "id": "5054563048240",
+         "label": "5054563048240"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "RX",
+         "label": "RX"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Paracetamol, Suppositorium, 50 styck",
+         "label": "Paracetamol, Suppositorium, 50 styck"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "variants": [
+       {
+        "key": "438497-v1",
+        "inStock": false,
+        "stockNumber": 0,
+        "link": "/Alvedon/p/438497/",
+        "listPrice": 117.35,
+        "sellingPrice": 117.35,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 0
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,3338 @@
+{
+ "q": "tandkräm",
+ "primaryList": {
+  "totalHits": 116,
+  "productGroups": [
+   {
+    "key": "productGroup788053",
+    "products": [
+     {
+      "key": "788053",
+      "brand": "Kronans Apotek",
+      "title": "Kronans Apotek Tandkräm Frisk Mint",
+      "link": "/kronans-apotek-tandkram-frisk-mint/p/788053/",
+      "rating": 4.2,
+      "sellingPrice": {
+       "min": 24,
+       "max": 24
+      },
+      "listPrice": {
+       "min": 24,
+       "max": 24
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "29",
+         "label": "29"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7312489992909",
+         "label": "7312489992909"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Tandkräm 100 ml",
+         "label": "Tandkräm 100 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/788053/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "788053-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/kronans-apotek-tandkram-frisk-mint/p/788053/",
+        "listPrice": 24,
+        "sellingPrice": 24,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup788064",
+    "products": [
+     {
+      "key": "788064",
+      "brand": "Kronans Apotek",
+      "title": "Kronans Apotek Tandkräm Sensitive",
+      "link": "/kronans-apotek-tandkram-sensitive/p/788064/",
+      "rating": 4.3,
+      "sellingPrice": {
+       "min": 24,
+       "max": 24
+      },
+      "listPrice": {
+       "min": 24,
+       "max": 24
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "29",
+         "label": "29"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7312489992916",
+         "label": "7312489992916"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Tandkräm 100 ml",
+         "label": "Tandkräm 100 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/788064/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "788064-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/kronans-apotek-tandkram-sensitive/p/788064/",
+        "listPrice": 24,
+        "sellingPrice": 24,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup785360",
+    "products": [
+     {
+      "key": "785360",
+      "brand": "Sensodyne",
+      "title": "Sensodyne Repair and Protect",
+      "link": "/Sensodyne-Repair--Protect/p/785360/",
+      "rating": 4.8,
+      "sellingPrice": {
+       "min": 34.93,
+       "max": 34.93
+      },
+      "listPrice": {
+       "min": 49.9,
+       "max": 49.9
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-30%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "68",
+         "label": "68"
+        }
+       ],
+       "ean": [
+        {
+         "id": "5054563097620",
+         "label": "5054563097620"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "50",
+         "label": "50"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "34.93",
+         "label": "34.93"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "30%",
+         "label": "30%"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Tandkräm 75 ml",
+         "label": "Tandkräm 75 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/785360/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "785360-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/Sensodyne-Repair--Protect/p/785360/",
+        "listPrice": 49.9,
+        "sellingPrice": 34.93,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup785349",
+    "products": [
+     {
+      "key": "785349",
+      "brand": "Sensodyne",
+      "title": "Sensodyne Repair & Protect Whitening Tandkräm",
+      "link": "/Sensodyne-Repair--Protect-Whitening/p/785349/",
+      "rating": 4.7,
+      "sellingPrice": {
+       "min": 35.7,
+       "max": 35.7
+      },
+      "listPrice": {
+       "min": 51,
+       "max": 51
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-30%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "68",
+         "label": "68"
+        }
+       ],
+       "ean": [
+        {
+         "id": "5054563097545",
+         "label": "5054563097545"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "53",
+         "label": "53"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "35.7",
+         "label": "35.7"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "30%",
+         "label": "30%"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Tandkräm mot ilningar i tänderna 75 ml",
+         "label": "Tandkräm mot ilningar i tänderna 75 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/785349/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "785349-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/Sensodyne-Repair--Protect-Whitening/p/785349/",
+        "listPrice": 51,
+        "sellingPrice": 35.7,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup785326",
+    "products": [
+     {
+      "key": "785326",
+      "brand": "Sensodyne",
+      "title": "Sensodyne Sensodyne ProEmalj Daily Protection",
+      "link": "/sensodyne-proemalj-daily-protection/p/785326/",
+      "rating": 4.8,
+      "sellingPrice": {
+       "min": 30.03,
+       "max": 30.03
+      },
+      "listPrice": {
+       "min": 42.9,
+       "max": 42.9
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-30%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "58",
+         "label": "58"
+        }
+       ],
+       "ean": [
+        {
+         "id": "5054563094766",
+         "label": "5054563094766"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "43.9",
+         "label": "43.9"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "30.03",
+         "label": "30.03"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "30%",
+         "label": "30%"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Tandkräm för en starkare emalj 75 ml",
+         "label": "Tandkräm för en starkare emalj 75 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/785326/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "785326-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/sensodyne-proemalj-daily-protection/p/785326/",
+        "listPrice": 42.9,
+        "sellingPrice": 30.03,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup784150",
+    "products": [
+     {
+      "key": "784150",
+      "brand": "Parodontax",
+      "title": "Parodontax Complete Protection Extra Fresh Tandkräm",
+      "link": "/parodontax-complete-protection-extra-fresh-tandkram/p/784150/",
+      "sellingPrice": {
+       "min": 30.8,
+       "max": 30.8
+      },
+      "listPrice": {
+       "min": 44,
+       "max": 44
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-30%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "51",
+         "label": "51"
+        }
+       ],
+       "ean": [
+        {
+         "id": "5054563098696",
+         "label": "5054563098696"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "44",
+         "label": "44"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "30.8",
+         "label": "30.8"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "30%",
+         "label": "30%"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Tandkräm 75 ml",
+         "label": "Tandkräm 75 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/784150/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "784150-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/parodontax-complete-protection-extra-fresh-tandkram/p/784150/",
+        "listPrice": 44,
+        "sellingPrice": 30.8,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup798271",
+    "products": [
+     {
+      "key": "798271",
+      "brand": "Colgate",
+      "title": "Colgate Sensitive Instant Relief",
+      "link": "/colgate-sensitive-instant-relief/p/798271/",
+      "rating": 4.9,
+      "sellingPrice": {
+       "min": 27.75,
+       "max": 27.75
+      },
+      "listPrice": {
+       "min": 37,
+       "max": 37
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-25%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "51",
+         "label": "51"
+        }
+       ],
+       "ean": [
+        {
+         "id": "8718951634244",
+         "label": "8718951634244"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "37.9",
+         "label": "37.9"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "27.75",
+         "label": "27.75"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "25%",
+         "label": "25%"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Tandkräm 75 ml",
+         "label": "Tandkräm 75 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/798271/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "798271-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/colgate-sensitive-instant-relief/p/798271/",
+        "listPrice": 37,
+        "sellingPrice": 27.75,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup784919",
+    "products": [
+     {
+      "key": "784919",
+      "brand": "Parodontax",
+      "title": "Parodontax Ultra Clean Tandkräm",
+      "link": "/parodontax-ultra-clean-tandkram/p/784919/",
+      "rating": 4.7,
+      "sellingPrice": {
+       "min": 25.9,
+       "max": 25.9
+      },
+      "listPrice": {
+       "min": 37,
+       "max": 37
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-30%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "49",
+         "label": "49"
+        }
+       ],
+       "ean": [
+        {
+         "id": "5054563099617",
+         "label": "5054563099617"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "26.53",
+         "label": "26.53"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "25.9",
+         "label": "25.9"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Tandkräm 75 ml",
+         "label": "Tandkräm 75 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/784919/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "784919-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/parodontax-ultra-clean-tandkram/p/784919/",
+        "listPrice": 37,
+        "sellingPrice": 25.9,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup272369",
+    "products": [
+     {
+      "key": "272369",
+      "brand": "Sensodyne",
+      "title": "Sensodyne Original",
+      "link": "/sensodyne-original/p/272369/",
+      "rating": 4.8,
+      "sellingPrice": {
+       "min": 24.5,
+       "max": 24.5
+      },
+      "listPrice": {
+       "min": 35,
+       "max": 35
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-30%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "49",
+         "label": "49"
+        }
+       ],
+       "ean": [
+        {
+         "id": "8710464116446",
+         "label": "8710464116446"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "36.9",
+         "label": "36.9"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "24.5",
+         "label": "24.5"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "30%",
+         "label": "30%"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Tandkräm mot ilningar i tänderna 75 ml",
+         "label": "Tandkräm mot ilningar i tänderna 75 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/272369/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "272369-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/sensodyne-original/p/272369/",
+        "listPrice": 35,
+        "sellingPrice": 24.5,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup785370",
+    "products": [
+     {
+      "key": "785370",
+      "brand": "Sensodyne",
+      "title": "Sensodyne Repair & Protect Extra Fresh Tandkräm",
+      "link": "/Sensodyne-Repair--Protect-Extra-Fresh/p/785370/",
+      "rating": 4.7,
+      "sellingPrice": {
+       "min": 32.13,
+       "max": 32.13
+      },
+      "listPrice": {
+       "min": 45.9,
+       "max": 45.9
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-30%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "68",
+         "label": "68"
+        }
+       ],
+       "ean": [
+        {
+         "id": "5054563102751",
+         "label": "5054563102751"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "45.9",
+         "label": "45.9"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "32.13",
+         "label": "32.13"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "30%",
+         "label": "30%"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Tandkräm mot ilningar i tänderna 75 ml",
+         "label": "Tandkräm mot ilningar i tänderna 75 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/785370/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "785370-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/Sensodyne-Repair--Protect-Extra-Fresh/p/785370/",
+        "listPrice": 45.9,
+        "sellingPrice": 32.13,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup793424",
+    "products": [
+     {
+      "key": "793424",
+      "brand": "Parodontax",
+      "title": "Parodontax  Complete Protection Whitening Tandkräm",
+      "link": "/parodontax--complete-protection-whitening-tandkram/p/793424/",
+      "rating": 4.8,
+      "sellingPrice": {
+       "min": 30.8,
+       "max": 30.8
+      },
+      "listPrice": {
+       "min": 44,
+       "max": 44
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-30%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "51",
+         "label": "51"
+        }
+       ],
+       "ean": [
+        {
+         "id": "5054563118240",
+         "label": "5054563118240"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "31.43",
+         "label": "31.43"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "30.8",
+         "label": "30.8"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Tandkräm 75 ml",
+         "label": "Tandkräm 75 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/793424/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "793424-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/parodontax--complete-protection-whitening-tandkram/p/793424/",
+        "listPrice": 44,
+        "sellingPrice": 30.8,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup775357",
+    "products": [
+     {
+      "key": "775357",
+      "brand": "Sensodyne",
+      "title": "Sensodyne Gentle Whitening Tandkräm",
+      "link": "/sensodyne-gentle-whitening-tandkram/p/775357/",
+      "rating": 4.5,
+      "sellingPrice": {
+       "min": 24.5,
+       "max": 24.5
+      },
+      "listPrice": {
+       "min": 35,
+       "max": 35
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-30%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "49",
+         "label": "49"
+        }
+       ],
+       "ean": [
+        {
+         "id": "5054563039989",
+         "label": "5054563039989"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "36.9",
+         "label": "36.9"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "24.5",
+         "label": "24.5"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "30%",
+         "label": "30%"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Tandkräm med skonsam whitening effekt 75 ml",
+         "label": "Tandkräm med skonsam whitening effekt 75 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/775357/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "775357-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/sensodyne-gentle-whitening-tandkram/p/775357/",
+        "listPrice": 35,
+        "sellingPrice": 24.5,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup799614",
+    "products": [
+     {
+      "key": "799614",
+      "brand": "Sensodyne",
+      "title": "Sensodyne ProEmalj Junior 6-12 år",
+      "link": "/sensodyne-proemalj-junior-6-12-ar/p/799614/",
+      "rating": 4.6,
+      "sellingPrice": {
+       "min": 17.5,
+       "max": 17.5
+      },
+      "listPrice": {
+       "min": 25,
+       "max": 25
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-30%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "30.9",
+         "label": "30.9"
+        }
+       ],
+       "ean": [
+        {
+         "id": "5054563219619",
+         "label": "5054563219619"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "25",
+         "label": "25"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "17.5",
+         "label": "17.5"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "30%",
+         "label": "30%"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Tandkräm för barn 50 ml",
+         "label": "Tandkräm för barn 50 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/799614/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "799614-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/sensodyne-proemalj-junior-6-12-ar/p/799614/",
+        "listPrice": 25,
+        "sellingPrice": 17.5,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup024392",
+    "products": [
+     {
+      "key": "024392",
+      "brand": "Duraphat",
+      "title": "Duraphat 5 mg/g",
+      "link": "/duraphat-tandkram-5-mg-g/p/024392/",
+      "rating": 4.7,
+      "sellingPrice": {
+       "min": 99,
+       "max": 99
+      },
+      "listPrice": {
+       "min": 99,
+       "max": 99
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "129",
+         "label": "129"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7046260389090",
+         "label": "7046260389090"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "EX",
+         "label": "EX"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "104",
+         "label": "104"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Natriumfluorid, Tandkräm, 1 x 51 gram",
+         "label": "Natriumfluorid, Tandkräm, 1 x 51 gram"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/024392/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "024392-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/duraphat-tandkram-5-mg-g/p/024392/",
+        "listPrice": 99,
+        "sellingPrice": 99,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup782443",
+    "products": [
+     {
+      "key": "782443",
+      "brand": "GUM",
+      "title": "GUM Paroex Tandkräm 0,06%",
+      "link": "/gum-paroex-tandkram/p/782443/",
+      "rating": 4.7,
+      "sellingPrice": {
+       "min": 37,
+       "max": 37
+      },
+      "listPrice": {
+       "min": 37,
+       "max": 37
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "45",
+         "label": "45"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7630019907194",
+         "label": "7630019907194"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Tandkräm 75 ml",
+         "label": "Tandkräm 75 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/782443/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "782443-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/gum-paroex-tandkram/p/782443/",
+        "listPrice": 37,
+        "sellingPrice": 37,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup799509",
+    "products": [
+     {
+      "key": "799509",
+      "brand": "Colgate",
+      "title": "Colgate Max White Ultimate",
+      "link": "/colgate-max-white-ultimate/p/799509/",
+      "rating": 4.5,
+      "sellingPrice": {
+       "min": 119.25,
+       "max": 119.25
+      },
+      "listPrice": {
+       "min": 159,
+       "max": 159
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-25%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "179",
+         "label": "179"
+        }
+       ],
+       "ean": [
+        {
+         "id": "8718951319059",
+         "label": "8718951319059"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "159",
+         "label": "159"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "119.25",
+         "label": "119.25"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "25%",
+         "label": "25%"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Tandkräm 75  ml",
+         "label": "Tandkräm 75  ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/799509/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "799509-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/colgate-max-white-ultimate/p/799509/",
+        "listPrice": 159,
+        "sellingPrice": 119.25,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup781100",
+    "products": [
+     {
+      "key": "781100",
+      "brand": "Sensodyne",
+      "title": "Sensodyne Extra Fresh Gel",
+      "link": "/sensodyne-extra-fresh-gel/p/781100/",
+      "rating": 4.6,
+      "sellingPrice": {
+       "min": 23.73,
+       "max": 23.73
+      },
+      "listPrice": {
+       "min": 33.9,
+       "max": 33.9
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-30%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "51",
+         "label": "51"
+        }
+       ],
+       "ean": [
+        {
+         "id": "5054563076083",
+         "label": "5054563076083"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "33.9",
+         "label": "33.9"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "23.73",
+         "label": "23.73"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "30%",
+         "label": "30%"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Tandkräm mot ilningar i tänderna 75 ml",
+         "label": "Tandkräm mot ilningar i tänderna 75 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/781100/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "781100-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/sensodyne-extra-fresh-gel/p/781100/",
+        "listPrice": 33.9,
+        "sellingPrice": 23.73,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup760409",
+    "products": [
+     {
+      "key": "760409",
+      "brand": "Zendium",
+      "title": "Zendium Classic",
+      "link": "/zendium-classic/p/760409/",
+      "rating": 4.8,
+      "sellingPrice": {
+       "min": 29,
+       "max": 29
+      },
+      "listPrice": {
+       "min": 29,
+       "max": 29
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "40.9",
+         "label": "40.9"
+        }
+       ],
+       "ean": [
+        {
+         "id": "8710908843044",
+         "label": "8710908843044"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "29.9",
+         "label": "29.9"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Tandkräm  75ml",
+         "label": "Tandkräm  75ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/760409/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "760409-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/zendium-classic/p/760409/",
+        "listPrice": 29,
+        "sellingPrice": 29,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup784333",
+    "products": [
+     {
+      "key": "784333",
+      "brand": "Sensodyne",
+      "title": "Sensodyne Clinical White",
+      "link": "/sensodyne-clinical-white/p/784333/",
+      "rating": 4.4,
+      "sellingPrice": {
+       "min": 48.3,
+       "max": 48.3
+      },
+      "listPrice": {
+       "min": 69,
+       "max": 69
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-30%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "83",
+         "label": "83"
+        }
+       ],
+       "ean": [
+        {
+         "id": "5054563270689",
+         "label": "5054563270689"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "69",
+         "label": "69"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "48.3",
+         "label": "48.3"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "30%",
+         "label": "30%"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Tandkräm 75 ml",
+         "label": "Tandkräm 75 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/784333/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "784333-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/sensodyne-clinical-white/p/784333/",
+        "listPrice": 69,
+        "sellingPrice": 48.3,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup792445",
+    "products": [
+     {
+      "key": "792445",
+      "brand": "Colgate",
+      "title": "Colgate Max White Ultra",
+      "link": "/colgate-max-white-ultra/p/792445/",
+      "rating": 4.2,
+      "sellingPrice": {
+       "min": 52.5,
+       "max": 52.5
+      },
+      "listPrice": {
+       "min": 70,
+       "max": 70
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-25%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "100",
+         "label": "100"
+        }
+       ],
+       "ean": [
+        {
+         "id": "8718951505629",
+         "label": "8718951505629"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "71",
+         "label": "71"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "52.5",
+         "label": "52.5"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "25%",
+         "label": "25%"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Whitening tandkräm 75 ml",
+         "label": "Whitening tandkräm 75 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/792445/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "792445-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/colgate-max-white-ultra/p/792445/",
+        "listPrice": 70,
+        "sellingPrice": 52.5,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup01302083",
+    "products": [
+     {
+      "key": "01302083",
+      "brand": "Dentway",
+      "title": "Dentway Colour Correcting Tandkräm",
+      "link": "/dentway-colour-correcting-tandkram/p/01302083/",
+      "sellingPrice": {
+       "min": 325,
+       "max": 325
+      },
+      "listPrice": {
+       "min": 325,
+       "max": 325
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "345",
+         "label": "345"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7300009081981",
+         "label": "7300009081981"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Tandkräm för vitare tänder 60 ml",
+         "label": "Tandkräm för vitare tänder 60 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/01302083/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "01302083-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/dentway-colour-correcting-tandkram/p/01302083/",
+        "listPrice": 325,
+        "sellingPrice": 325,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup784164",
+    "products": [
+     {
+      "key": "784164",
+      "brand": "Zendium",
+      "title": "Zendium Tandkräm Sensitive Whitener",
+      "link": "/zendium-tandkram-sensitive-whitener/p/784164/",
+      "rating": 4.8,
+      "sellingPrice": {
+       "min": 29,
+       "max": 29
+      },
+      "listPrice": {
+       "min": 29,
+       "max": 29
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "38.9",
+         "label": "38.9"
+        }
+       ],
+       "ean": [
+        {
+         "id": "8710908842887",
+         "label": "8710908842887"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "29.9",
+         "label": "29.9"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Tandkräm för känsliga tänder/ilningar 75 ml",
+         "label": "Tandkräm för känsliga tänder/ilningar 75 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/784164/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "784164-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/zendium-tandkram-sensitive-whitener/p/784164/",
+        "listPrice": 29,
+        "sellingPrice": 29,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroupI0023882",
+    "products": [
+     {
+      "key": "I0023882",
+      "brand": "Parodontax",
+      "title": "Parodontax Intensive Gum Repair Intense Clean",
+      "link": "/parodontax-intensive-gum-repair-intense-clean/p/I0023882/",
+      "sellingPrice": {
+       "min": 55.93,
+       "max": 55.93
+      },
+      "listPrice": {
+       "min": 79.9,
+       "max": 79.9
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-30%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "79.9",
+         "label": "79.9"
+        }
+       ],
+       "ean": [
+        {
+         "id": "5054563314130",
+         "label": "5054563314130"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "79.9",
+         "label": "79.9"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "55.93",
+         "label": "55.93"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "30%",
+         "label": "30%"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Tandkräm 75 ml",
+         "label": "Tandkräm 75 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/I0023882/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "I0023882-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/parodontax-intensive-gum-repair-intense-clean/p/I0023882/",
+        "listPrice": 79.9,
+        "sellingPrice": 55.93,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup785383",
+    "products": [
+     {
+      "key": "785383",
+      "brand": "GUM",
+      "title": "GUM Original White Tandkräm",
+      "link": "/gum-original-white-tandkram/p/785383/",
+      "rating": 4.4,
+      "sellingPrice": {
+       "min": 32.9,
+       "max": 32.9
+      },
+      "listPrice": {
+       "min": 32.9,
+       "max": 32.9
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "39",
+         "label": "39"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7630019907316",
+         "label": "7630019907316"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "40.9",
+         "label": "40.9"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Tandkräm 75 ml",
+         "label": "Tandkräm 75 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/785383/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "785383-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/gum-original-white-tandkram/p/785383/",
+        "listPrice": 32.9,
+        "sellingPrice": 32.9,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup758609",
+    "products": [
+     {
+      "key": "758609",
+      "brand": "Brilliant Smile Sweden",
+      "title": "Brilliant Smile Sweden",
+      "link": "/Brilliant-Smile-Sweden/p/758609/",
+      "rating": 3.7,
+      "sellingPrice": {
+       "min": 129,
+       "max": 129
+      },
+      "listPrice": {
+       "min": 129,
+       "max": 129
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "179",
+         "label": "179"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7350061050265",
+         "label": "7350061050265"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Tandblekningstandkräm, Whitening tandkräm 65 ml",
+         "label": "Tandblekningstandkräm, Whitening tandkräm 65 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/758609/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "758609-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/Brilliant-Smile-Sweden/p/758609/",
+        "listPrice": 129,
+        "sellingPrice": 129,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup759428",
+    "products": [
+     {
+      "key": "759428",
+      "brand": "Zendium",
+      "title": "Zendium Sensitive",
+      "link": "/zendium-sensitive/p/759428/",
+      "rating": 4.7,
+      "sellingPrice": {
+       "min": 29.9,
+       "max": 29.9
+      },
+      "listPrice": {
+       "min": 29.9,
+       "max": 29.9
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "40.9",
+         "label": "40.9"
+        }
+       ],
+       "ean": [
+        {
+         "id": "8710908842528",
+         "label": "8710908842528"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Tandkräm 75 ml",
+         "label": "Tandkräm 75 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/759428/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "759428-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/zendium-sensitive/p/759428/",
+        "listPrice": 29.9,
+        "sellingPrice": 29.9,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroupI0023881",
+    "products": [
+     {
+      "key": "I0023881",
+      "brand": "Parodontax",
+      "title": "Parodontax Intensive Gum Repair White & Polish",
+      "link": "/parodontax-intensive-gum-repair-white-polish/p/I0023881/",
+      "sellingPrice": {
+       "min": 55.93,
+       "max": 55.93
+      },
+      "listPrice": {
+       "min": 79.9,
+       "max": 79.9
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-30%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "79.9",
+         "label": "79.9"
+        }
+       ],
+       "ean": [
+        {
+         "id": "5054563314093",
+         "label": "5054563314093"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "79.9",
+         "label": "79.9"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "55.93",
+         "label": "55.93"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "30%",
+         "label": "30%"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Tandtandkräm 75 ml",
+         "label": "Tandtandkräm 75 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/I0023881/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "I0023881-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/parodontax-intensive-gum-repair-white-polish/p/I0023881/",
+        "listPrice": 79.9,
+        "sellingPrice": 55.93,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup796820",
+    "products": [
+     {
+      "key": "796820",
+      "brand": "Colgate",
+      "title": "Colgate Karies Kontroll",
+      "link": "/colgate-karies-kontroll/p/796820/",
+      "rating": 4.6,
+      "sellingPrice": {
+       "min": 16.5,
+       "max": 16.5
+      },
+      "listPrice": {
+       "min": 22,
+       "max": 22
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-25%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "25.9",
+         "label": "25.9"
+        }
+       ],
+       "ean": [
+        {
+         "id": "8718951560109",
+         "label": "8718951560109"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "22",
+         "label": "22"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "16.5",
+         "label": "16.5"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "25%",
+         "label": "25%"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Tandkräm 75 ml",
+         "label": "Tandkräm 75 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/796820/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "796820-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/colgate-karies-kontroll/p/796820/",
+        "listPrice": 22,
+        "sellingPrice": 16.5,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup769899",
+    "products": [
+     {
+      "key": "769899",
+      "brand": "Jordan",
+      "title": "Jordan Junior Tandkräm 6-12 år",
+      "link": "/jordan-junior-tandkram-6-12-ar/p/769899/",
+      "rating": 4.7,
+      "sellingPrice": {
+       "min": 14.17,
+       "max": 14.17
+      },
+      "listPrice": {
+       "min": 18.9,
+       "max": 18.9
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-25%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "28.9",
+         "label": "28.9"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7046110075562",
+         "label": "7046110075562"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "19.9",
+         "label": "19.9"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "14.17",
+         "label": "14.17"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "25%",
+         "label": "25%"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Barntandkräm, 1 st",
+         "label": "Barntandkräm, 1 st"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/769899/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "769899-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/jordan-junior-tandkram-6-12-ar/p/769899/",
+        "listPrice": 18.9,
+        "sellingPrice": 14.17,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup753638",
+    "products": [
+     {
+      "key": "753638",
+      "brand": "SB12",
+      "title": "SB12 Tandkräm",
+      "link": "/sb12-tandkram/p/753638/",
+      "sellingPrice": {
+       "min": 84,
+       "max": 84
+      },
+      "listPrice": {
+       "min": 84,
+       "max": 84
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "109",
+         "label": "109"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7350028703715",
+         "label": "7350028703715"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "86",
+         "label": "86"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Tandkräm, 100 ml",
+         "label": "Tandkräm, 100 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/753638/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "753638-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/sb12-tandkram/p/753638/",
+        "listPrice": 84,
+        "sellingPrice": 84,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}
