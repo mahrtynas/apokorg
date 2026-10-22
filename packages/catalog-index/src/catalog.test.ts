@@ -158,10 +158,6 @@ describe('searchCandidates', () => {
     expect(hits.map((h) => h.url)).not.toContain(
       'https://www.apotea.se/panodil-500-mg-filmdragerad-tablett-20-st',
     );
-    // Printed so a slow CI run shows its timings.
-    console.log(
-      `search ms (${process.platform} ${process.version}): ${times.map((t) => t.toFixed(2)).join(' ')}`,
-    );
     expect(ms).toBeLessThan(20);
   });
 

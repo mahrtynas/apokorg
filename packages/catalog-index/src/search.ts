@@ -39,9 +39,11 @@ export function searchCandidates(
   const terms = [...new Set(normalize(query).split(' ').filter(Boolean))];
   if (terms.length === 0 || limit <= 0) return [];
 
+  // CROSS JOIN fixes the join order: FTS first, then products by rowid. Older SQLite (3.51 in
+  // Node 22) otherwise scans every product of the store and runs MATCH per row, ~1000x slower.
   const stmt = db.prepare(
     `SELECT p.url, p.title, p.search_text, p.lastmod, bm25(products_fts) AS rank
-     FROM products_fts JOIN products p ON p.id = products_fts.rowid
+     FROM products_fts CROSS JOIN products p ON p.id = products_fts.rowid
      WHERE products_fts MATCH ? AND p.merchant_id = ?
      ORDER BY rank LIMIT ${POOL}`,
   );
