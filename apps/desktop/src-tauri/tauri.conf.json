@@ -3,6 +3,7 @@
   "productName": "apokorg",
   "version": "0.1.0",
   "identifier": "se.apokorg.desktop",
+  "mainBinaryName": "apokorg",
   "build": {
     "frontendDist": "../../ui/dist",
     "devUrl": "http://localhost:5173",
