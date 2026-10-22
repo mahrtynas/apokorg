@@ -38,4 +38,5 @@ How the sidecar is built (`apps/desktop/scripts/build-sidecar.ts`): esbuild bund
 
 - Mock mode (fake stores, no network): start the app with `--mock`, or set `APOKORG_MOCK=1`. In dev, `APOKORG_MOCK=1 pnpm --filter @apokorg/desktop dev` puts the dev server in mock mode.
 - App data and the server log (`server.log`) live in `%APPDATA%\se.apokorg.desktop`.
+- Smart App Control: the app and installer are not code-signed, so Windows 11 machines with Smart App Control on block them, and block the local build too (cargo's build scripts are fresh unsigned executables). Build in CI on such a machine. The long-term fix is code signing, e.g. Azure Trusted Signing.
 - The `Desktop installer` workflow builds the installer on `windows-latest` when run by hand or on a `v*` tag, and uploads it as an artifact.
