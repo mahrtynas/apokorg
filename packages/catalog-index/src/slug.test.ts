@@ -81,4 +81,30 @@ describe('store product filters', () => {
       false,
     );
   });
+
+  it('meds: one segment without a trailing slash, no shipping items', () => {
+    const url = 'https://www.meds.se/alvedon-filmdragerad-tablett-500-mg-20-st';
+    expect(keep('meds', url)).toBe(true);
+    expect(keep('meds', 'https://www.meds.se/BABOR-lip-balm-1-styck')).toBe(true);
+    expect(keep('meds', 'https://www.meds.se/alvedon/')).toBe(false);
+    expect(keep('meds', 'https://www.meds.se/feber-vark/huvudvark/')).toBe(false);
+    expect(keep('meds', 'https://www.meds.se/frakt-budbee-hemleverans')).toBe(false);
+    expect(
+      keep(
+        'meds',
+        'https://www.meds.se/orifarm-generics-a-s/diazepam-orifarm-10-mg-100-styck-tablett-5711313001589',
+      ),
+    ).toBe(false);
+    expect(keep('meds', 'https://www.meds.se/sok/alvedon')).toBe(false);
+    expect(keep('meds', 'https://www.meds.se/')).toBe(false);
+    expect(keep('meds', 'https://meds.se/alvedon-filmdragerad-tablett-500-mg-20-st')).toBe(false);
+    expect(CATALOG_SOURCES.meds.slugToTitle!(new URL(url))).toBe(
+      'alvedon filmdragerad tablett 500 mg 20 st',
+    );
+    expect(
+      CATALOG_SOURCES.meds.slugToTitle!(
+        new URL('https://www.meds.se/inderal-10-mg-100-styck-filmdragerad-tablett-5056227206560'),
+      ),
+    ).toBe('inderal 10 mg 100 styck filmdragerad tablett');
+  });
 });
