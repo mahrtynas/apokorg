@@ -2,7 +2,7 @@
  * Matching goes through the `Matcher` interface so packages/matcher (task M) can replace the
  * placeholder below with a one-line change in deps.ts.
  */
-import type { BasketItem, MatchResult, ProductOffer } from '@apokorg/core';
+import type { BasketItem, MatchResult, ProductOffer, Size } from '@apokorg/core';
 import type { LlmJudge } from '@apokorg/matcher';
 
 export interface MatchOptions {
@@ -11,6 +11,8 @@ export interface MatchOptions {
   pinned: BasketItem['pinned'];
   /** Tie-breaker for near-equal candidates; set when the user saved an API key. */
   llm?: LlmJudge;
+  /** The chosen product's container size and pack count, so smaller packs are scaled up. */
+  want?: { size?: Size; packCount?: number };
 }
 
 export interface Matcher {

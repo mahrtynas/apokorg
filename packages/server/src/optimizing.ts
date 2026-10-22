@@ -39,6 +39,9 @@ export const placeholderShippingPolicies: ShippingPolicySource = (ids) =>
     notes: 'Placeholder in packages/server until packages/optimizer lands.',
   }));
 
+/** Units of the offer bought for an item: its qty times the match's packs. */
+const units = (c: ItemCandidates, m: MatchResult) => c.qty * (m.packs ?? 1);
+
 const unitPrice = (m: MatchResult, memberOf: MerchantId[]) =>
   memberOf.includes(m.offer.merchantId) && m.offer.memberPrice !== undefined
     ? m.offer.memberPrice
@@ -100,7 +103,11 @@ export const placeholderOptimizer: Optimizer = {
       for (const c of candidates) {
         const pick = allowed(c)
           .filter((m) => !onlyStores || onlyStores.has(m.offer.merchantId))
-          .sort((a, b) => unitPrice(a, options.memberOf) - unitPrice(b, options.memberOf))[0];
+          .sort(
+            (a, b) =>
+              unitPrice(a, options.memberOf) * units(c, a) -
+              unitPrice(b, options.memberOf) * units(c, b),
+          )[0];
         if (!pick) {
           unavailable.push(c.itemId);
           continue;
@@ -110,8 +117,8 @@ export const placeholderOptimizer: Optimizer = {
           merchantId: pick.offer.merchantId,
           offer: pick.offer,
           kind: pick.kind,
-          qty: c.qty,
-          lineTotal: round(unitPrice(pick, options.memberOf) * c.qty),
+          qty: units(c, pick),
+          lineTotal: round(unitPrice(pick, options.memberOf) * units(c, pick)),
         });
       }
       return { assignments, unavailable };

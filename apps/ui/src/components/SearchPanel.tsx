@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import type { api, BasketItem, MatchResult, MerchantId } from '@apokorg/core';
 import { useLocate, useProductSearch } from '../api/hooks';
 import { formatSek, formatUnitPrice } from '../format';
+import { packPrice } from '../lib/comparison';
 import { newId } from '../lib/id';
 import { t } from '../strings';
 import {
@@ -16,7 +17,7 @@ import {
 } from './ui';
 
 type Pinned = BasketItem['pinned'];
-type Chosen = Pick<api.ProductCandidate, 'title' | 'ean' | 'imageUrl'>;
+type Chosen = Pick<api.ProductCandidate, 'title' | 'ean' | 'imageUrl' | 'size' | 'packCount'>;
 
 interface Group {
   status: api.MerchantSearchStatus;
@@ -81,7 +82,12 @@ export function SearchPanel({
     setPicked({});
     locate.mutate({
       query: q,
-      product: { title: product.title, ean: product.ean },
+      product: {
+        title: product.title,
+        ean: product.ean,
+        size: product.size,
+        packCount: product.packCount,
+      },
       acceptSubstitutes,
     });
   };
@@ -93,6 +99,8 @@ export function SearchPanel({
         title: editing.title ?? editing.query,
         ean: editing.ean,
         imageUrl: editing.imageUrl,
+        size: editing.size,
+        packCount: editing.packCount,
       });
     }
     // Once per item being edited (the panel is keyed by it).
@@ -139,6 +147,8 @@ export function SearchPanel({
       title: chosen.title,
       ean: chosen.ean,
       imageUrl: chosen.imageUrl,
+      size: chosen.size,
+      packCount: chosen.packCount,
     });
     reset();
   };
@@ -311,8 +321,13 @@ export function SearchPanel({
                                 </span>
                                 <span className="flex flex-wrap items-center gap-1.5 text-xs text-slate-500">
                                   <span className="font-medium text-slate-800">
-                                    {formatSek(m.offer.price)}
+                                    {formatSek(packPrice(m))}
                                   </span>
+                                  {m.packs && (
+                                    <span title={t.packs.hint(m.packs)}>
+                                      {t.packs.times(m.packs, formatSek(m.offer.price))}
+                                    </span>
+                                  )}
                                   {formatUnitPrice(m.offer.unitPrice)}
                                   <KindBadge kind={m.kind} />
                                   {!m.offer.inStock && <Badge>{t.match.outOfStock}</Badge>}

@@ -10,7 +10,7 @@ import {
   useMerchantName,
 } from '../components/ui';
 import { formatSek, formatUnitPrice } from '../format';
-import { buildComparison } from '../lib/comparison';
+import { buildComparison, packPrice } from '../lib/comparison';
 import { t } from '../strings';
 
 export function ComparisonPage({ basket, loading }: { basket?: Basket; loading: boolean }) {
@@ -85,8 +85,13 @@ export function ComparisonPage({ basket, loading }: { basket?: Basket; loading: 
                       } ${m.offer.inStock ? '' : 'text-slate-400'}`}
                     >
                       <div className={`font-medium ${m.offer.inStock ? '' : 'line-through'}`}>
-                        {formatSek(m.offer.price)}
+                        {formatSek(packPrice(m))}
                       </div>
+                      {m.packs && (
+                        <div className="text-xs text-slate-500" title={t.packs.hint(m.packs)}>
+                          {t.packs.times(m.packs, formatSek(m.offer.price))}
+                        </div>
+                      )}
                       {m.offer.unitPrice && (
                         <div className="text-xs text-slate-500">
                           {formatUnitPrice(m.offer.unitPrice)}

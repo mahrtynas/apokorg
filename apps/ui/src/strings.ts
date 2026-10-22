@@ -58,6 +58,11 @@ const en = {
     confirmStores: 'Check the product found at each store, then confirm.',
     back: 'Back to results',
   },
+  packs: {
+    /** "24 × 22,00 kr", when a store sells the chosen multipack only in smaller packs. */
+    times: (packs: number, each: string) => `${packs} × ${each}`,
+    hint: (packs: number) => `Sold in smaller packs here: ${packs} make up the pack you chose.`,
+  },
   items: {
     heading: 'Items',
     query: 'Item',

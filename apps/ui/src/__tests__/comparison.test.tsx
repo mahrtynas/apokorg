@@ -1,5 +1,6 @@
 import { screen, within } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
+import { buildComparison, packPrice } from '../lib/comparison';
 import { t } from '../strings';
 import { renderApp, sekText } from '../test/render';
 import { mockApi } from '../test/setup';
@@ -31,5 +32,43 @@ describe('comparison table', () => {
 
     const kronans = await screen.findByRole('columnheader', { name: /Kronans Apotek/ });
     expect(within(kronans).getByText(t.status.error)).toBeInTheDocument();
+  });
+});
+
+describe('buildComparison', () => {
+  it('compares a single can scaled up to the chosen 24-pack', () => {
+    const offer = (merchantId: 'meds' | 'gymgrossisten', price: number) => ({
+      merchantId,
+      merchantProductId: `${merchantId}-nocco`,
+      title: 'NOCCO BCAA Arancia',
+      price,
+      inStock: true,
+      url: `https://example.com/${merchantId}`,
+      fetchedAt: '2026-10-22T00:00:00.000Z',
+    });
+    const item = {
+      id: 'n1',
+      query: 'nocco arancia',
+      qty: 1,
+      acceptSubstitutes: false,
+      pinned: {},
+    };
+    const rows = buildComparison(
+      [item],
+      [
+        {
+          itemId: 'n1',
+          matches: [
+            { offer: offer('meds', 22), kind: 'exact', confidence: 1, reasons: [], packs: 24 },
+            { offer: offer('gymgrossisten', 499), kind: 'exact', confidence: 1, reasons: [] },
+          ],
+        },
+      ],
+      ['meds', 'gymgrossisten'],
+    );
+    const [meds, gym] = rows[0]!.cells;
+    expect(packPrice(meds!.match!)).toBe(528);
+    expect(meds!.cheapest).toBe(false);
+    expect(gym!.cheapest).toBe(true);
   });
 });

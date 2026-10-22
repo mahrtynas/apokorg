@@ -12,6 +12,11 @@ export interface ComparisonRow {
   cells: ComparisonCell[];
 }
 
+/** Price of one of the chosen product: a single can for a 24-pack costs 24 cans. */
+export function packPrice(m: MatchResult): number {
+  return m.offer.price * (m.packs ?? 1);
+}
+
 /** Can the optimizer use this offer for this item? In stock, and a substitute only if allowed. */
 export function isEligible(item: BasketItem, m: MatchResult): boolean {
   return m.offer.inStock && (m.kind !== 'substitute' || item.acceptSubstitutes);
@@ -29,9 +34,7 @@ export function buildComparison(
     for (const m of matches) {
       if (!best.has(m.offer.merchantId)) best.set(m.offer.merchantId, m);
     }
-    const eligiblePrices = [...best.values()]
-      .filter((m) => isEligible(item, m))
-      .map((m) => m.offer.price);
+    const eligiblePrices = [...best.values()].filter((m) => isEligible(item, m)).map(packPrice);
     const min = eligiblePrices.length ? Math.min(...eligiblePrices) : undefined;
     return {
       item,
@@ -40,7 +43,7 @@ export function buildComparison(
         return {
           merchantId,
           match,
-          cheapest: !!match && isEligible(item, match) && match.offer.price === min,
+          cheapest: !!match && isEligible(item, match) && packPrice(match) === min,
         };
       }),
     };
