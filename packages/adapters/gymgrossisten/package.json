@@ -1,0 +1,20 @@
+{
+  "name": "@apokorg/adapter-gymgrossisten",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run --exclude src/live.test.ts --passWithNoTests",
+    "test:live": "vitest run src/live.test.ts"
+  },
+  "dependencies": {
+    "@apokorg/core": "workspace:*",
+    "@apokorg/adapter-kit": "workspace:*",
+    "@apokorg/catalog-index": "workspace:*",
+    "@apokorg/matcher": "workspace:*"
+  }
+}

@@ -1,0 +1,60 @@
+<!doctype html>
+<!--
+  /kassa/ for the probe test, rebuilt from the A-kronans checkout test (2026-10-22): the cart
+  rows with "Ta bort <product>", the Ingrid delivery iframe (step 2) and the payment iframe
+  (step 3), which the probe must never touch. No personal data.
+-->
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <title>Kassa | Kronans Apotek</title>
+  </head>
+  <body>
+    <h1>Kassa</h1>
+    <button type="button">Logga in med BankID</button>
+    <section aria-label="Varukorg"><ul id="cart"></ul></section>
+    <section>
+      <h2>Leverans</h2>
+      <iframe
+        title="Kassasektion med postnummerinmatning och leveransalternativ"
+        src="/ingrid/"
+        width="600"
+        height="900"
+      ></iframe>
+    </section>
+    <section>
+      <h2>Betalning</h2>
+      <iframe title="Klarna betalning" name="klarna-checkout" src="/klarna/"></iframe>
+    </section>
+    <script>
+      const NAMES = { 788053: 'Kronans Apotek Tandkräm Frisk Mint' };
+      async function render() {
+        const cart = await (await fetch('/cart')).json();
+        const list = document.getElementById('cart');
+        list.textContent = '';
+        const ids = Object.keys(cart);
+        if (ids.length === 0) {
+          const p = document.createElement('li');
+          p.textContent = 'Din varukorg är tom';
+          list.append(p);
+          return;
+        }
+        for (const id of ids) {
+          const li = document.createElement('li');
+          li.textContent = `${NAMES[id] ?? id} × ${cart[id]} `;
+          const remove = document.createElement('button');
+          remove.type = 'button';
+          remove.setAttribute('aria-label', `Ta bort ${NAMES[id] ?? id}`);
+          remove.textContent = '×';
+          remove.addEventListener('click', async () => {
+            await fetch(`/cart/remove?id=${id}`, { method: 'POST' });
+            render();
+          });
+          li.append(remove);
+          list.append(li);
+        }
+      }
+      render();
+    </script>
+  </body>
+</html>
