@@ -34,7 +34,12 @@ export const ShippingPolicy = z.object({
 });
 export type ShippingPolicy = z.infer<typeof ShippingPolicy>;
 
-export const DeliveryPreference = z.enum(['cheapest', 'home-only']);
+/**
+ * cheapest             – cheapest option that ships the order: pickup point, parcel box, mailbox or home
+ * home-only            – home delivery only
+ * include-store-pickup – like cheapest, but collecting the order in a physical store also counts
+ */
+export const DeliveryPreference = z.enum(['cheapest', 'home-only', 'include-store-pickup']);
 export type DeliveryPreference = z.infer<typeof DeliveryPreference>;
 
 /** Result of a checkout probe for one store and order value. */

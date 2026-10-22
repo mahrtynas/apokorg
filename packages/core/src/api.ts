@@ -21,6 +21,12 @@ export const MerchantsResponse = z.object({
 });
 export type MerchantsResponse = z.infer<typeof MerchantsResponse>;
 
+// PUT /api/merchants/:id/shipping: replaces the store's shipping rule and returns the stored one.
+export const PutShippingRequest = ShippingPolicy;
+export type PutShippingRequest = z.infer<typeof PutShippingRequest>;
+export const PutShippingResponse = ShippingPolicy;
+export type PutShippingResponse = z.infer<typeof PutShippingResponse>;
+
 // POST /api/search
 export const SearchRequest = z.object({
   query: z.string().min(1),
@@ -101,6 +107,20 @@ export const PutBasketRequest = z.object({
 });
 export type PutBasketRequest = z.infer<typeof PutBasketRequest>;
 
+/** PUT returns the saved basket. */
+export const PutBasketResponse = Basket;
+export type PutBasketResponse = z.infer<typeof PutBasketResponse>;
+
+// POST /api/matches/confirm: remember that this store product is the right one for the query.
+export const ConfirmMatchRequest = z.object({
+  query: z.string().min(1),
+  merchantId: MerchantId,
+  merchantProductId: z.string().min(1),
+});
+export type ConfirmMatchRequest = z.infer<typeof ConfirmMatchRequest>;
+export const ConfirmMatchResponse = z.object({ ok: z.literal(true) });
+export type ConfirmMatchResponse = z.infer<typeof ConfirmMatchResponse>;
+
 // POST /api/baskets/:id/optimize
 export const OptimizeRequest = z.object({
   options: OptimizeOptions.optional(),
@@ -122,13 +142,19 @@ export const OptimizeResponse = z.object({
 });
 export type OptimizeResponse = z.infer<typeof OptimizeResponse>;
 
-// GET/PUT /api/settings
+// GET/PUT /api/settings. Responses mask the API key; see `Settings.anthropicApiKey`.
 export const SettingsResponse = Settings;
 export type SettingsResponse = z.infer<typeof SettingsResponse>;
 
 // POST /api/catalog/refresh
 export const CatalogRefreshRequest = z.object({ merchants: z.array(MerchantId).optional() });
 export type CatalogRefreshRequest = z.infer<typeof CatalogRefreshRequest>;
+/** 202: the refresh runs in the background. */
+export const CatalogRefreshResponse = z.object({
+  accepted: z.literal(true),
+  merchants: z.array(MerchantId),
+});
+export type CatalogRefreshResponse = z.infer<typeof CatalogRefreshResponse>;
 
 export const ApiError = z.object({ error: z.string(), details: z.unknown().optional() });
 export type ApiError = z.infer<typeof ApiError>;

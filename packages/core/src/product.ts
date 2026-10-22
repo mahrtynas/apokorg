@@ -31,6 +31,12 @@ export const ProductOffer = z.object({
   originalPrice: z.number().nonnegative().optional(),
   /** Club/member price. Only used when the user marks themselves a member. */
   memberPrice: z.number().nonnegative().optional(),
+  /** Multi-buy deal: "3 for 99 kr" is { qty: 3, unitPrice: 33 }. `price` stays the single-item price. */
+  multiBuy: z
+    .object({ qty: z.number().int().min(2), unitPrice: z.number().nonnegative() })
+    .optional(),
+  /** Last day of a campaign price, when the merchant shows one. Useful for cache expiry. */
+  priceValidUntil: z.iso.date().optional(),
   /** Price per base unit (kr/l, kr/kg, kr/st) when it can be computed. */
   unitPrice: z
     .object({ value: z.number().nonnegative(), per: z.enum(['l', 'kg', 'st']) })
