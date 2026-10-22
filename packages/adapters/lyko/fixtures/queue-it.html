@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!-- Hand-written stand-in for a Queue-it waiting room (lyko.queue-it.net), modelled on
+     Queue-it's standard queue page. No live queue was entered to record it. -->
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <title>Lyko - Du står i kö</title>
+  <link rel="stylesheet" href="//static.queue-it.net/css/queue.css" />
+  <script src="//static.queue-it.net/script/queue.min.js"></script>
+</head>
+<body class="queue-it">
+  <div id="MainPart_divWarningBox"></div>
+  <h1 id="MainPart_h1Title">Du står nu i kö</h1>
+  <p id="MainPart_pQueueStatus">Det är många som besöker Lyko just nu. När det blir din tur skickas du vidare till butiken.</p>
+  <div id="MainPart_divProgressbar" class="progressbar"></div>
+  <span id="MainPart_lbWhichIsIn">Beräknad väntetid: mer än en timme</span>
+  <script>
+    window.queueViewModel = { customerId: 'lyko', eventId: 'lykose', queueId: '00000000-0000-0000-0000-000000000000' };
+  </script>
+</body>
+</html>

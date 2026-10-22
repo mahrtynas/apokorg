@@ -1,0 +1,6 @@
+# Tauri / cargo output
+src-tauri/target/
+src-tauri/gen/
+# Sidecar build output (scripts/build-sidecar.ts)
+src-tauri/binaries/
+dist/

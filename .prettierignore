@@ -3,3 +3,5 @@ pnpm-lock.yaml
 dist/
 coverage/
 packages/adapters/_template/
+apps/desktop/src-tauri/target/
+apps/desktop/src-tauri/gen/

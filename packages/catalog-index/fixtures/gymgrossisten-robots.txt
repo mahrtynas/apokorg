@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /search*
+Disallow: /checkout
+
+Sitemap: https://www.bodystore.dk/sitemap_index.xml
+Sitemap: https://www.fitnesstukku.fi/sitemap_index.xml
+Sitemap: https://www.gymgrossisten.com/sitemap_index.xml
+Sitemap: https://www.gymgrossisten.no/sitemap_index.xml
