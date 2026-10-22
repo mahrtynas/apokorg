@@ -124,6 +124,18 @@ importers:
         specifier: workspace:*
         version: link:../core
 
+  packages/adapters/apotea:
+    dependencies:
+      '@apokorg/adapter-kit':
+        specifier: workspace:*
+        version: link:../../adapter-kit
+      '@apokorg/catalog-index':
+        specifier: workspace:*
+        version: link:../../catalog-index
+      '@apokorg/core':
+        specifier: workspace:*
+        version: link:../../core
+
   packages/adapters/apoteket:
     dependencies:
       '@apokorg/adapter-kit':
