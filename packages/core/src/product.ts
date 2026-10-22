@@ -62,5 +62,10 @@ export const MatchResult = z.object({
   /** 0..1 */
   confidence: z.number().min(0).max(1),
   reasons: z.array(z.string()).default([]),
+  /**
+   * How many of this offer make up one of the chosen product when the store sells it in
+   * smaller packs: a single can stands in for a 24-pack as 24 cans. Absent means 1.
+   */
+  packs: z.number().int().min(2).optional(),
 });
 export type MatchResult = z.infer<typeof MatchResult>;

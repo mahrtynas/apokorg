@@ -91,7 +91,13 @@ export type ProductSearchResponse = z.infer<typeof ProductSearchResponse>;
 export const LocateRequest = z.object({
   /** The user's original query; searched again alongside the product's EAN. */
   query: z.string().min(1),
-  product: z.object({ title: z.string(), ean: z.string().optional() }),
+  product: z.object({
+    title: z.string(),
+    ean: z.string().optional(),
+    /** The chosen product's container size and pack count; smaller packs are scaled to it. */
+    size: Size.optional(),
+    packCount: z.number().int().positive().optional(),
+  }),
   merchants: z.array(MerchantId).optional(),
   acceptSubstitutes: z.boolean().default(false),
 });
