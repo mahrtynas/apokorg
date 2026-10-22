@@ -1,10 +1,10 @@
 # Smoke test for a built app (used by .github/workflows/desktop.yml): starts it in mock mode,
 # searches through its sidecar, closes the window like a user would, and checks that no
 # sidecar process is left behind.
-param([string]$App = "$PSScriptRoot\..\src-tauri\target\release\apokorg.exe")
+param([string]$Exe = "$PSScriptRoot\..\src-tauri\target\release\apokorg.exe")
 $ErrorActionPreference = 'Stop'
 
-$app = Start-Process -FilePath $App -ArgumentList '--mock' -PassThru
+$app = Start-Process -FilePath $Exe -ArgumentList '--mock' -PassThru
 
 $server = $null
 for ($i = 0; $i -lt 60 -and -not $server; $i++) {
