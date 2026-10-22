@@ -252,6 +252,11 @@ export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
     return basket;
   });
 
+  app.get('/api/matches/history', async (req): Promise<api.MatchHistoryResponse> => {
+    const { query } = z.object({ query: z.string().min(1).optional() }).parse(req.query);
+    return { entries: repo.getMatchHistory(query) };
+  });
+
   app.post('/api/matches/confirm', async (req): Promise<api.ConfirmMatchResponse> => {
     const body = api.ConfirmMatchRequest.parse(req.body);
     repo.confirmMatch(body.query, body.merchantId, body.merchantProductId);

@@ -148,6 +148,12 @@ const en = {
     catalogRefreshing: 'Refreshing…',
     catalogFailed: (msg: string) => `Last refresh failed: ${msg}`,
     refreshCatalogs: 'Refresh catalogs',
+    historyHeading: 'Accepted matches',
+    historyHint:
+      'Every product you confirmed as the match for a search, kept for good. It will be used to test and tune matching.',
+    historyCount: (n: number) => (n === 1 ? '1 accepted match' : `${n} accepted matches`),
+    historyShowing: (n: number) => `Showing the latest ${n}.`,
+    historyEmpty: 'Nothing yet. Matches you confirm when adding items appear here.',
   },
   deliveryKind: {
     'pickup-point': 'Pickup point',

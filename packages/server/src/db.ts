@@ -56,6 +56,18 @@ export const MIGRATIONS: readonly string[] = [
     updated_at  TEXT NOT NULL
   );
   `,
+  `
+  CREATE TABLE match_history (
+    id                  INTEGER PRIMARY KEY AUTOINCREMENT,
+    query               TEXT NOT NULL,
+    query_key           TEXT NOT NULL,
+    merchant_id         TEXT NOT NULL,
+    merchant_product_id TEXT NOT NULL,
+    offer_json          TEXT,
+    accepted_at         TEXT NOT NULL
+  );
+  CREATE INDEX match_history_query ON match_history (query_key);
+  `,
 ];
 
 /** Default data directory: %APPDATA%/apokorg on Windows, XDG data home elsewhere. */

@@ -144,8 +144,28 @@ export function createHandlers(state: MockState = createMockState(), opts: Handl
         ...body.data,
         updatedAt: new Date().toISOString(),
       };
+      // Like the server: every new or changed pin is an accepted match.
+      const before = state.baskets.get(basket.id);
+      for (const item of basket.items) {
+        const old = before?.items.find((i) => i.query === item.query)?.pinned ?? {};
+        for (const [merchantId, productId] of Object.entries(item.pinned)) {
+          if (!productId || old[merchantId as MerchantId] === productId) continue;
+          state.history.unshift({
+            query: item.query,
+            merchantId: merchantId as MerchantId,
+            merchantProductId: productId,
+            ...(item.title ? { title: item.title } : {}),
+            acceptedAt: new Date().toISOString(),
+          });
+        }
+      }
       state.baskets.set(basket.id, basket);
       return HttpResponse.json(basket);
+    }),
+
+    http.get(url('/api/matches/history'), async () => {
+      await wait();
+      return HttpResponse.json({ entries: state.history } satisfies api.MatchHistoryResponse);
     }),
 
     http.delete(url('/api/baskets/:id'), async ({ params }) => {

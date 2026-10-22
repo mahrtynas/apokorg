@@ -129,6 +129,7 @@ export interface MockState {
   baskets: Map<string, Basket>;
   shipping: Map<MerchantId, ShippingPolicy>;
   catalogs: Map<MerchantId, api.CatalogStatusResponse['catalogs'][number]>;
+  history: api.MatchHistoryEntry[];
 }
 
 export const SEED_BASKET_ID = 'seed-basket';
@@ -168,5 +169,6 @@ export function createMockState(): MockState {
         { merchantId, productCount: 0, refreshing: false },
       ]),
     ),
+    history: [],
   };
 }

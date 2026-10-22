@@ -101,6 +101,8 @@ export const client = {
       api.CatalogRefreshRequest.parse(req),
     ),
 
+  matchHistory: () => request(api.MatchHistoryResponse, 'GET', '/api/matches/history'),
+
   confirmMatch: (req: api.ConfirmMatchRequest) =>
     request(
       api.ConfirmMatchResponse,
