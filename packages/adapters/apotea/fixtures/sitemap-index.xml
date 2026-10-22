@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://www.apotea.se/sitemap/files/sitemap-brands</loc>
+    <lastmod>2026-10-22</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.apotea.se/sitemap/files/sitemap-categories</loc>
+    <lastmod>2026-10-16</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.apotea.se/sitemap/files/sitemap-images-1</loc>
+    <lastmod>2026-10-22</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.apotea.se/sitemap/files/sitemap-images-2</loc>
+    <lastmod>2026-10-22</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.apotea.se/sitemap/files/sitemap-pages</loc>
+    <lastmod>2026-10-22</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.apotea.se/sitemap/files/sitemap-products-1</loc>
+    <lastmod>2026-10-22</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.apotea.se/sitemap/files/sitemap-products-2</loc>
+    <lastmod>2026-10-22</lastmod>
+  </sitemap>
+</sitemapindex>
