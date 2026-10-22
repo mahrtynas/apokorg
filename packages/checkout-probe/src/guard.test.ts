@@ -57,7 +57,8 @@ beforeEach(async () => {
     onViolation: (err) => violations.push(err),
   });
   await guarded.goto(`${server.url}/checkout.html`);
-});
+  // The first context after a cold browser start is slow on a busy CI runner.
+}, 30_000);
 
 afterEach(async () => {
   await context?.close();
