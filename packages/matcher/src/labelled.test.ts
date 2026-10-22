@@ -144,6 +144,37 @@ const cases: Case[] = [
     expect: { a20: 'exact', a10: 'substitute' },
   },
   {
+    name: 'alvedon novum is a substitute for plain alvedon',
+    query: 'Alvedon 500 mg tabletter 20 st',
+    offers: [
+      offer('apoteket', 'plain', 'Alvedon 500 mg filmdragerad tablett 20 st'),
+      offer('apoteket', 'novum', 'Alvedon Novum 500 mg tablett 20 st'),
+      offer('hjartat', 'plain', 'Alvedon 500mg 20st'),
+      offer('hjartat', 'novum', 'Alvedon Novum 500 mg 20 st'),
+    ],
+    opts: subs,
+    expect: { plain: 'exact', novum: 'substitute' },
+  },
+  {
+    name: 'alvedon novum query matches novum, not plain',
+    query: 'alvedon novum 500 20 st',
+    offers: [
+      offer('apoteket', 'plain', 'Alvedon 500 mg filmdragerad tablett 20 st'),
+      offer('apoteket', 'novum', 'Alvedon Novum 500 mg tablett 20 st'),
+    ],
+    opts: subs,
+    expect: { novum: 'exact', plain: 'substitute' },
+  },
+  {
+    name: 'alvedon novum is left out when substitutes are off',
+    query: 'Alvedon 500 mg 20 st',
+    offers: [
+      offer('apoteket', 'plain', 'Alvedon 500 mg filmdragerad tablett 20 st'),
+      offer('apoteket', 'novum', 'Alvedon Novum 500 mg tablett 20 st'),
+    ],
+    expect: { plain: 'exact', novum: null },
+  },
+  {
     name: 'SPF50 50 ml vs 30 ml',
     query: 'la roche posay anthelios uvmune spf50 50 ml',
     offers: [

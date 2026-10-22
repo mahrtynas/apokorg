@@ -3,6 +3,7 @@ import { loadAdapters } from '@apokorg/registry';
 import type { FastifyInstance } from 'fastify';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { buildApp, type AppOptions } from './app';
+import type { MatchOptions } from './matching';
 import { openDb } from './db';
 import { OFFER_TTL_MS } from './repo';
 
@@ -443,5 +444,93 @@ describe('CORS', () => {
     const allowed = String(res.headers['access-control-allow-methods']);
     expect(allowed).toContain('PUT');
     expect(allowed).toContain('DELETE');
+  });
+});
+
+describe('POST /api/matches/confirm', () => {
+  it('pins the confirmed product for later searches of the query', async () => {
+    const app = await makeApp();
+    const res = await app.inject({
+      method: 'POST',
+      url: '/api/matches/confirm',
+      ...json({ query: 'Alvedon', merchantId: 'apotea', merchantProductId: 'apotea-p02' }),
+    });
+    expect(api.ConfirmMatchResponse.parse(res.json())).toEqual({ ok: true });
+
+    const search = await app.inject({
+      method: 'POST',
+      url: '/api/search',
+      ...json({ query: 'alvedon', merchants: ['apotea'] }),
+    });
+    expect(api.SearchResponse.parse(search.json()).results[0]).toMatchObject({
+      offer: { merchantProductId: 'apotea-p02' },
+      confidence: 1,
+    });
+  });
+});
+
+describe('PUT /api/merchants/:id/shipping', () => {
+  const policy = {
+    merchantId: 'apotea',
+    options: [{ id: 'home', name: 'Hem', kind: 'home', fee: 19, freeFrom: 199 }],
+    lastVerified: '2026-10-22',
+  };
+
+  it('stores the edited rule and uses it in merchants and optimize', async () => {
+    const app = await makeApp();
+    const put = await app.inject({
+      method: 'PUT',
+      url: '/api/merchants/apotea/shipping',
+      ...json(policy),
+    });
+    expect(api.PutShippingResponse.parse(put.json())).toEqual(policy);
+
+    const merchants = api.MerchantsResponse.parse(
+      (await app.inject({ method: 'GET', url: '/api/merchants' })).json(),
+    );
+    expect(merchants.merchants.find((m) => m.id === 'apotea')?.shipping).toEqual(policy);
+  });
+
+  it('rejects a body for another store, or an unknown store, with 400', async () => {
+    const app = await makeApp();
+    const mismatch = await app.inject({
+      method: 'PUT',
+      url: '/api/merchants/doz/shipping',
+      ...json(policy),
+    });
+    expect(mismatch.statusCode).toBe(400);
+    const unknown = await app.inject({
+      method: 'PUT',
+      url: '/api/merchants/nope/shipping',
+      ...json({ ...policy, merchantId: 'nope' }),
+    });
+    expect(unknown.statusCode).toBe(400);
+  });
+});
+
+describe('LLM judge', () => {
+  it('is built from the stored API key and passed to the matcher', async () => {
+    const createJudge = vi.fn((s: { anthropicApiKey?: string }) =>
+      s.anthropicApiKey ? { pick: vi.fn() } : undefined,
+    );
+    const matchOffers = vi.fn((_q: string, _o: unknown[], _opts: MatchOptions) => []);
+    const app = await makeApp({ createJudge, matcher: { matchOffers } });
+    const search = () =>
+      app.inject({ method: 'POST', url: '/api/search', ...json({ query: 'alvedon' }) });
+
+    await search();
+    expect(matchOffers.mock.calls[0]![2]).toMatchObject({ llm: undefined });
+
+    const settings = (await app.inject({ method: 'GET', url: '/api/settings' })).json();
+    await app.inject({
+      method: 'PUT',
+      url: '/api/settings',
+      ...json({ ...settings, anthropicApiKey: 'sk-ant-api03-test-key-wxyz' }),
+    });
+    await search();
+    await search();
+    expect(createJudge).toHaveBeenLastCalledWith({ anthropicApiKey: 'sk-ant-api03-test-key-wxyz' });
+    expect(createJudge).toHaveBeenCalledTimes(2);
+    expect(matchOffers.mock.calls[2]![2]).toMatchObject({ llm: { pick: expect.any(Function) } });
   });
 });

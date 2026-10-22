@@ -2,11 +2,13 @@ import {
   OptimizeOptions,
   type Assignment,
   type DeliveryOption,
+  type DeliveryPreference,
   type ItemCandidates,
   type MatchResult,
   type MerchantId,
   type MerchantTotal,
   type ProbeResult,
+  type ProductOffer,
   type ShippingPolicy,
   type SplitResult,
 } from '@apokorg/core';
@@ -99,7 +101,7 @@ function buildProblem(
     const policy = policyById.get(merchantId) ?? fallbackShippingPolicy(merchantId);
     const probe = probes.get(merchantId);
     let opts = probe ? applyProbe(policy.options, probe) : policy.options;
-    if (options.delivery === 'home-only') opts = opts.filter((o) => o.kind === 'home');
+    opts = opts.filter((o) => allowedDelivery(o, options.delivery));
     if (opts.length === 0) {
       storeIndex.set(merchantId, -1);
       return undefined;
@@ -122,11 +124,29 @@ function buildProblem(
         members.has(offer.merchantId) && offer.memberPrice !== undefined
           ? Math.min(offer.memberPrice, offer.price)
           : offer.price;
-      offers.push({ item: i, store, match, unitPrice, lineTotal: round2(unitPrice * item.qty) });
+      const lineTotal = round2(lineCost(unitPrice, item.qty, offer.multiBuy));
+      offers.push({ item: i, store, match, unitPrice, lineTotal });
     }
   });
 
   return { items: candidates, offers, stores };
+}
+
+/** Store pickup means travelling to a shop, so only `include-store-pickup` counts it. */
+function allowedDelivery(o: DeliveryOption, preference: DeliveryPreference): boolean {
+  if (preference === 'home-only') return o.kind === 'home';
+  if (preference === 'cheapest') return o.kind !== 'store-pickup';
+  return true;
+}
+
+/**
+ * Cost of `qty` items. A multi-buy deal ("3 for 99 kr") applies to each full set, the rest pay
+ * the single price. A member price below the deal price still wins.
+ */
+function lineCost(unitPrice: number, qty: number, multiBuy: ProductOffer['multiBuy']): number {
+  if (!multiBuy || multiBuy.unitPrice >= unitPrice) return unitPrice * qty;
+  const sets = Math.floor(qty / multiBuy.qty);
+  return sets * multiBuy.qty * multiBuy.unitPrice + (qty - sets * multiBuy.qty) * unitPrice;
 }
 
 /**
@@ -308,7 +328,9 @@ function cheapestOption(options: DeliveryOption[], subtotal: number): DeliveryOp
  *
  * - Out-of-stock offers are never used; substitutes only when the item accepts them.
  * - memberPrice is used for stores in `options.memberOf`.
- * - `delivery: 'home-only'` keeps only home delivery options.
+ * - `delivery: 'home-only'` keeps only home delivery options; `'cheapest'` leaves out store
+ *   pickup, which `'include-store-pickup'` allows.
+ * - Multi-buy deals apply to each full set of items.
  * - `overrides` (checkout probe results) replace a store's JSON options; see applyProbe.
  * - Items that cannot be supplied are listed in `unavailableItemIds`; the rest still solve.
  */

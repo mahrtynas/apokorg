@@ -2,12 +2,15 @@ import cors from '@fastify/cors';
 import {
   api,
   type ItemCandidates,
+  isMaskedApiKey,
+  maskApiKey,
   type MatchResult,
   type MerchantAdapter,
   type MerchantId,
   OptimizeOptions,
   type ProbeResult,
   Settings,
+  type ShippingPolicy,
 } from '@apokorg/core';
 import Fastify, { type FastifyInstance, type FastifyServerOptions } from 'fastify';
 import { z } from 'zod';
@@ -16,7 +19,7 @@ import { defaultMatcher, defaultOptimizer, defaultShippingPolicies } from './dep
 import { defaultNeedsConfirmation, type Matcher } from './matching';
 import type { Optimizer, ShippingPolicySource } from './optimizing';
 import { Repo } from './repo';
-import { groupProducts } from '@apokorg/matcher';
+import { createClaudeJudge, groupProducts, type LlmJudge } from '@apokorg/matcher';
 import {
   DEFAULT_SEARCH_TIMEOUT_MS,
   searchItem,
@@ -52,16 +55,10 @@ export interface AppOptions {
   searchTimeoutMs?: number;
   /** Fastify logger config. Redaction of the API key is always added. Default: off. */
   logger?: boolean | Record<string, unknown>;
+  /** Builds the LLM tie-breaker from the stored API key. Default: Claude via packages/matcher. */
+  createJudge?: (settings: Pick<Settings, 'anthropicApiKey'>) => LlmJudge | undefined;
   /** Clock for cache TTLs; injectable for tests. */
   now?: () => number;
-}
-
-const MASK_PREFIX = '****';
-
-/** "sk-ant-abc…wxyz" → "****wxyz". Short keys are fully masked. */
-export function maskApiKey(key: string | undefined): string | undefined {
-  if (!key) return undefined;
-  return key.length >= 12 ? `${MASK_PREFIX}${key.slice(-4)}` : MASK_PREFIX;
 }
 
 const STATUS_RANK: Record<api.MerchantSearchStatus['status'], number> = {
@@ -91,10 +88,16 @@ class NotFound extends Error {}
 export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
   const matcher = opts.matcher ?? defaultMatcher;
   const optimizer = opts.optimizer ?? defaultOptimizer;
-  const shippingPolicies = opts.shippingPolicies ?? defaultShippingPolicies;
+  const baseShippingPolicies = opts.shippingPolicies ?? defaultShippingPolicies;
+  const createJudge = opts.createJudge ?? createClaudeJudge;
   const timeoutMs = opts.searchTimeoutMs ?? DEFAULT_SEARCH_TIMEOUT_MS;
   const repo = new Repo(opts.db, { now: opts.now });
   const adapters = new Map<MerchantId, MerchantAdapter>(opts.adapters.map((a) => [a.info.id, a]));
+  /** JSON rules, with the user's edits from settings on top. */
+  const shippingPolicies: ShippingPolicySource = (ids) => {
+    const overrides = repo.getShippingOverrides();
+    return baseShippingPolicies(ids).map((p) => overrides.get(p.merchantId) ?? p);
+  };
 
   const logger: FastifyServerOptions['logger'] =
     opts.logger === undefined || opts.logger === false
@@ -130,8 +133,16 @@ export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
 
   const publicSettings = (s: Settings): api.SettingsResponse => ({
     ...s,
-    anthropicApiKey: maskApiKey(s.anthropicApiKey),
+    anthropicApiKey: s.anthropicApiKey ? maskApiKey(s.anthropicApiKey) : undefined,
   });
+
+  // One judge per key, so the client isn't rebuilt on every search.
+  let judge: { key: string | undefined; llm: LlmJudge | undefined } | undefined;
+  const currentJudge = (): LlmJudge | undefined => {
+    const key = currentSettings().anthropicApiKey;
+    if (!judge || judge.key !== key) judge = { key, llm: createJudge({ anthropicApiKey: key }) };
+    return judge.llm;
+  };
 
   const matchForQuery = async (
     query: string,
@@ -143,6 +154,7 @@ export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
     return matcher.matchOffers(query, offers, {
       acceptSubstitutes,
       pinned: { ...repo.getConfirmedMatches(query), ...pinned },
+      llm: currentJudge(),
     });
   };
 
@@ -158,6 +170,16 @@ export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
         probeSupported: typeof a.probe === 'function',
       })),
     };
+  });
+
+  app.put('/api/merchants/:id/shipping', async (req): Promise<api.PutShippingResponse> => {
+    const { id } = z.object({ id: z.string() }).parse(req.params);
+    const policy: ShippingPolicy = api.PutShippingRequest.parse(req.body);
+    if (!adapters.has(id as MerchantId)) throw new NotFound(`Unknown store ${id}`);
+    if (policy.merchantId !== id) {
+      throw Object.assign(new Error('merchantId does not match the URL'), { statusCode: 400 });
+    }
+    return repo.putShippingOverride(policy);
   });
 
   app.post('/api/search', async (req): Promise<api.SearchResponse> => {
@@ -220,7 +242,13 @@ export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
     return basket;
   });
 
-  app.put('/api/baskets/:id', async (req) => {
+  app.post('/api/matches/confirm', async (req): Promise<api.ConfirmMatchResponse> => {
+    const body = api.ConfirmMatchRequest.parse(req.body);
+    repo.confirmMatch(body.query, body.merchantId, body.merchantProductId);
+    return { ok: true };
+  });
+
+  app.put('/api/baskets/:id', async (req): Promise<api.PutBasketResponse> => {
     const { id } = IdParams.parse(req.params);
     const body = api.PutBasketRequest.parse(req.body);
     const basket = repo.putBasket(id, body.name, body.items);
@@ -314,7 +342,7 @@ export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
     const existingKey = currentSettings().anthropicApiKey;
     // Absent or still masked: keep the stored key. Empty string: remove it.
     let key = incoming.anthropicApiKey;
-    if (key === undefined || key.startsWith(MASK_PREFIX)) key = existingKey;
+    if (key === undefined || isMaskedApiKey(key)) key = existingKey;
     else if (key.trim() === '') key = undefined;
     else key = key.trim();
     const next: Settings = { ...incoming, anthropicApiKey: key };
@@ -325,7 +353,8 @@ export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
   app.post('/api/catalog/refresh', async (req, reply) => {
     const body = api.CatalogRefreshRequest.parse(req.body ?? {});
     // Stub until the catalog-index task (CI-x) lands.
-    return reply.code(202).send({ accepted: true, merchants: body.merchants ?? [] });
+    const res: api.CatalogRefreshResponse = { accepted: true, merchants: body.merchants ?? [] };
+    return reply.code(202).send(res);
   });
 
   return app;

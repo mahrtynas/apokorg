@@ -161,7 +161,12 @@ export function chooseDelivery(
     (o) => (o.minOrder ?? 0) <= subtotal,
   );
   const home = options.filter((o) => o.kind === 'home');
-  const pool = preference === 'home-only' && home.length ? home : options;
+  // Store pickup means travelling to a shop: only 'include-store-pickup' counts it.
+  const shipped =
+    preference === 'include-store-pickup'
+      ? options
+      : options.filter((o) => o.kind !== 'store-pickup');
+  const pool = preference === 'home-only' && home.length ? home : shipped;
   const priced = (pool.length ? pool : [FALLBACK_DELIVERY]).map((o) => ({
     delivery: o,
     shipping: o.freeFrom !== undefined && subtotal >= o.freeFrom ? 0 : o.fee,

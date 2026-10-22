@@ -82,6 +82,7 @@ export function SplitPage({ basket, loading }: { basket?: Basket; loading: boole
             >
               <option value="cheapest">{t.split.deliveryCheapest}</option>
               <option value="home-only">{t.split.deliveryHomeOnly}</option>
+              <option value="include-store-pickup">{t.split.deliveryIncludeStorePickup}</option>
             </select>
           </label>
           <Button

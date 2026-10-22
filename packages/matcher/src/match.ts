@@ -1,5 +1,5 @@
 import type { BasketItem, MatchKind, MatchResult, MerchantId, ProductOffer } from '@apokorg/core';
-import { normalize } from './normalize';
+import { normalize, VARIANT_WORDS } from './normalize';
 import {
   formatSize,
   offerFeatures,
@@ -151,6 +151,12 @@ export function scoreOffer(
   }
   const extras = f.tokens.filter((t) => !used.has(t));
   if (extras.length > 0) confidence -= Math.min(0.15, 0.03 * extras.length);
+  const variants = extras.filter((t) => VARIANT_WORDS.has(t));
+  if (variants.length > 0) {
+    kind = 'substitute';
+    confidence -= 0.2;
+    reasons.push(`variant not in query: ${variants.join(', ')}`);
+  }
 
   // Strength (mg, µg, IE)
   if (q.strength) {
