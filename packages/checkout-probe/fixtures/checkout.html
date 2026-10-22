@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <title>Kassa (fixture)</title>
+    <script>
+      window.__clicks = [];
+      document.addEventListener(
+        'click',
+        (e) => {
+          const el = e.target.closest('[data-term], [data-id]');
+          if (el) window.__clicks.push(el.dataset.term || el.dataset.id);
+        },
+        true,
+      );
+      document.addEventListener('submit', (e) => e.preventDefault());
+    </script>
+  </head>
+  <body>
+    <h1>Kassa</h1>
+    <p>Frakt: <span id="fee">49 kr</span></p>
+
+    <section id="denylist">
+      <!-- One button per CLICK_DENYLIST entry, in the casing a store would use. -->
+      <button data-term="slutför">Slutför köp</button>
+      <button data-term="betala">BETALA</button>
+      <button data-term="lägg order">Lägg order</button>
+      <button data-term="bekräfta köp">Bekräfta köp</button>
+      <button data-term="köp nu">Köp nu</button>
+      <button data-term="genomför köp">Genomför köp</button>
+      <button data-term="skicka order">Skicka order</button>
+      <button data-term="lägg beställning">Lägg beställning</button>
+      <button data-term="bekräfta beställning">Bekräfta beställning</button>
+      <button data-term="bekräfta order">Bekräfta order</button>
+      <button data-term="skicka beställning">Skicka beställning</button>
+      <button data-term="place order">Place order</button>
+      <button data-term="pay">Pay now</button>
+      <button data-term="confirm purchase">Confirm purchase</button>
+      <button data-term="complete purchase">Complete Purchase</button>
+      <button data-term="checkout with">Checkout with Klarna</button>
+      <button data-term="buy now">Buy now</button>
+      <button data-term="submit order">Submit order</button>
+      <button data-term="complete order">Complete order</button>
+      <button data-term="confirm order">Confirm order</button>
+    </section>
+
+    <section id="disguised">
+      <!-- Denylisted through value, aria-label, a child element, the form action or a link. -->
+      <form action="/cart"><input data-id="input-value" type="submit" value="Betala 199 kr" /></form>
+      <button data-id="aria-label" aria-label="Slutför köp"><svg width="10" height="10"></svg></button>
+      <button data-id="child"><span id="child-span">Lägg&nbsp;order</span></button>
+      <button data-id="no-diacritics">Slutfor kop</button>
+      <form action="/checkout/place-order" method="post">
+        <button data-id="form-action" type="submit">Fortsätt</button>
+      </form>
+      <form action="/kassa/bekrafta-kop" method="post">
+        <button data-id="form-action-sv" type="submit">Nästa</button>
+      </form>
+      <a data-id="link" href="/order/confirm">Gå vidare</a>
+    </section>
+
+    <section id="allowed">
+      <button data-id="continue" type="button">Fortsätt</button>
+      <button data-id="add-to-cart" type="button">Lägg i varukorg</button>
+      <button data-id="to-checkout" type="button">Till kassan</button>
+      <label data-id="shipping-label"
+        ><input type="radio" name="shipping" value="ombud" /> Ombud 49 kr</label
+      >
+      <button
+        data-id="sneaky"
+        type="button"
+        onclick="
+          fetch('/api/checkout/place-order', { method: 'POST', body: '{}' }).catch(() => {});
+          fetch('/api/orders', { method: 'POST', body: '{}' }).catch(() => {});
+          navigator.sendBeacon('/order/confirm', 'x');
+          const i = new Image(); i.src = '/checkout/complete?pixel=1'; document.body.append(i);
+          fetch('/api/cart', { method: 'POST', body: '{}' }).catch(() => {});
+        "
+      >
+        Uppdatera
+      </button>
+    </section>
+
+    <form id="fields" action="/checkout/shipping">
+      <label for="postcode">Postnummer</label>
+      <input id="postcode" name="shipping_address[zip]" autocomplete="postal-code" />
+
+      <label>E-postadress <input id="email" type="email" name="email" autocomplete="email" /></label>
+
+      <input id="zip-only" name="zip" placeholder="Postnummer" />
+
+      <!-- One field per forbidden kind. -->
+      <label>Personnummer <input data-kind="personnummer" name="pno" /></label>
+      <input data-kind="ssn" name="ssn" />
+      <input data-kind="card" name="cardnumber" autocomplete="cc-number" />
+      <input data-kind="card-sv" placeholder="Kortnummer" />
+      <input data-kind="expiry" name="exp" autocomplete="cc-exp" />
+      <input data-kind="cvc" name="cvc" />
+      <input data-kind="cvv-label" aria-label="CVV" />
+      <input data-kind="phone" type="tel" name="contact" />
+      <label>Mobilnummer <input data-kind="phone-sv" name="mobile" /></label>
+      <input data-kind="first-name" name="firstName" autocomplete="given-name" />
+      <label>Efternamn <input data-kind="last-name" /></label>
+      <input data-kind="full-name" aria-label="Namn" />
+      <input data-kind="address" name="street" autocomplete="address-line1" />
+      <label>Gatuadress <input data-kind="address-sv" /></label>
+      <input data-kind="city" name="city" />
+      <label>Postort <input data-kind="postort" /></label>
+      <input data-kind="password" type="password" name="pw" />
+      <input data-kind="password-sv" placeholder="Lösenord" />
+    </form>
+
+    <iframe
+      id="klarna-checkout-iframe"
+      name="klarna-checkout-iframe"
+      title="Klarna Checkout"
+      src="/klarna/checkout.html"
+      width="400"
+      height="200"
+    ></iframe>
+  </body>
+</html>
