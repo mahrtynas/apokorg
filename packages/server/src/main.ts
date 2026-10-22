@@ -8,6 +8,7 @@
  */
 import { loadAdapters } from '@apokorg/registry';
 import { buildApp } from './app';
+import { defaultCatalog } from './catalog';
 import { defaultDataDir, openDataDb } from './db';
 import { Repo } from './repo';
 
@@ -20,11 +21,13 @@ async function main(): Promise<void> {
     throw new Error(`Invalid APOKORG_PORT: ${process.env.APOKORG_PORT}`);
   }
 
-  const db = openDataDb(defaultDataDir());
+  const dataDir = defaultDataDir();
+  const db = openDataDb(dataDir);
   new Repo(db).purgeExpired();
   const app = await buildApp({
     db,
     adapters: loadAdapters({ mock }),
+    catalog: defaultCatalog(dataDir),
     // Logs go to stderr so stdout carries only the READY line.
     logger: { level: process.env.APOKORG_LOG_LEVEL ?? 'info', stream: process.stderr },
   });

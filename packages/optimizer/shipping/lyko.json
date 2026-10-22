@@ -2,27 +2,44 @@
   "merchantId": "lyko",
   "options": [
     {
-      "id": "postnord-ombud",
-      "name": "PostNord ombud eller paketbox",
-      "kind": "pickup-point",
+      "id": "ekonomifrakt",
+      "name": "Ekonomifrakt (brevlåda eller Instabox, Lyko väljer)",
+      "kind": "mailbox",
       "fee": 49,
       "freeFrom": 300
+    },
+    {
+      "id": "postnord",
+      "name": "PostNord ombud eller paketbox",
+      "kind": "pickup-point",
+      "fee": 49
     },
     {
       "id": "instabox",
       "name": "Instabox",
       "kind": "parcel-box",
-      "fee": 49,
-      "freeFrom": 300
+      "fee": 49
+    },
+    {
+      "id": "budbee-box",
+      "name": "Budbee Box",
+      "kind": "parcel-box",
+      "fee": 49
     },
     {
       "id": "budbee-home",
       "name": "Budbee hemleverans",
       "kind": "home",
       "fee": 79
+    },
+    {
+      "id": "hamtas-i-butik",
+      "name": "Hämtas i butik (Instabox i Lyko-butik)",
+      "kind": "store-pickup",
+      "fee": 49
     }
   ],
-  "lastVerified": "2026-10-21",
-  "source": "https://lyko.com/sv/info/kopvillkor",
-  "notes": "The purchase terms say \"FRI FRAKT när du handlar för minst 300 kr\", but you must pick a fee-free method, and fees are shown only at checkout. The fees are conservative guesses, and home delivery is assumed never to be free."
+  "lastVerified": "2026-10-22",
+  "source": "https://lyko.com/sv/info/kopvillkor, see docs/stores/lyko.md",
+  "notes": "The terms (updated 2025-02-04) say Ekonomifrakt is \"alltid gratis vid köp över 300kr\"; that is the option behind \"fri frakt från 300 kr\". No other option states a free threshold, and no fees are published (\"Avgift för respektive fraktsätt visas i kassan\"), so every fee is a conservative guess. The checkout shows fees only after an email inside the Qliro iframe, so a probe can't verify them under the current guard. Expresshantering is a paid add-on and not modelled."
 }

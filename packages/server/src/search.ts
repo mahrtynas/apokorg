@@ -50,11 +50,13 @@ export async function searchStore(
     return { offers: own, status: { merchantId, status: 'ok', tookMs: took() } };
   } catch (err) {
     const timedOut = err instanceof TimeoutError;
+    // A store's waiting room (Lyko's Queue-it) means "try later", not a broken adapter.
+    const queued = err instanceof Error && err.name === 'QueueError';
     return {
       offers: [],
       status: {
         merchantId,
-        status: timedOut ? 'timeout' : 'error',
+        status: timedOut ? 'timeout' : queued ? 'unavailable' : 'error',
         message: err instanceof Error ? err.message : String(err),
         tookMs: took(),
       },

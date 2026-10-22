@@ -42,7 +42,11 @@ describe('shipping JSON', () => {
     expect(getShippingPolicy('apoteket')!.options).toContainEqual(
       expect.objectContaining({ id: 'apoteksombud', kind: 'pickup-point', fee: 0 }),
     );
-    expect(freeFrom('lyko')).toBe(300);
+    expect(freeFrom('kronans')).toBe(299);
+    // Lyko: only Ekonomifrakt (mailbox or Instabox, Lyko's choice) is free over 300 kr.
+    expect(getShippingPolicy('lyko')!.options.find((o) => o.id === 'ekonomifrakt')?.freeFrom).toBe(
+      300,
+    );
     expect(freeFrom('gymgrossisten')).toBe(499);
   });
 });
