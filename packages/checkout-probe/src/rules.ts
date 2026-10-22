@@ -45,8 +45,15 @@ export const CLICK_DENYLIST: readonly string[] = [
 ];
 
 // A term matches at the start of a word and may continue: "betala" also refuses "Betalas",
-// "pay" also refuses "Payment". Over-refusing is the safe direction.
-const DENY_RE = new RegExp(`(?:^| )(?:${CLICK_DENYLIST.map(normalize).join('|')})`);
+// "pay" also refuses "Payment", "lägg order" refuses "Lägg ordern". Over-refusing is the safe
+// direction, except that a very short last word must end there: "köp nu" would otherwise
+// refuse add-to-cart buttons like "Köp Nurofen".
+const denyPattern = (term: string) => {
+  const t = normalize(term);
+  const last = t.slice(t.lastIndexOf(' ') + 1);
+  return last.length < 3 ? `${t}(?= |$)` : t;
+};
+const DENY_RE = new RegExp(`(?:^| )(?:${CLICK_DENYLIST.map(denyPattern).join('|')})`);
 
 /** Returns the denylisted term found in `text`, or null. */
 export function matchDenylist(text: string): string | null {
