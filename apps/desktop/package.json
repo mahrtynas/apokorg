@@ -1,0 +1,23 @@
+{
+  "name": "@apokorg/desktop",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tauri dev --config src-tauri/tauri.dev.json",
+    "dev:services": "node scripts/dev-services.ts",
+    "build": "tauri build",
+    "build:frontend": "pnpm --filter @apokorg/ui build && node scripts/build-sidecar.ts",
+    "build:sidecar": "node scripts/build-sidecar.ts",
+    "tauri": "tauri",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@apokorg/server": "workspace:*",
+    "@apokorg/ui": "workspace:*",
+    "@tauri-apps/cli": "^2.12.4",
+    "esbuild": "^0.28.2",
+    "highs": "^1.15.4",
+    "postject": "1.0.0-alpha.6"
+  }
+}
