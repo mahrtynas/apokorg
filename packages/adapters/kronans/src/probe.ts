@@ -52,6 +52,7 @@ const JSON_LD_PRICE = `(() => {
 
 /** What the page shows, for failure messages. Read-only. */
 const PAGE_STATE = `(() => ({
+  url: location.pathname,
   cartEmpty: /Din varukorg är tom/i.test(document.body.innerText),
   iframes: [...document.querySelectorAll('iframe')].map((f) => f.title || f.src).slice(0, 8),
   text: document.body.innerText.replace(/\\s+/g, ' ').slice(0, 300),
@@ -116,11 +117,17 @@ async function addToCart(
   await page.waitFor(SELECTORS.buyButton(id));
   const price = parsePrice((await page.evaluateJson<string | null>(JSON_LD_PRICE)) ?? undefined);
   if (price == null) throw new LayoutChanged(`no price on ${url}`);
+  // The button is server-rendered; a click before Gatsby hydrates the page does nothing.
+  await waitForLoad(page, signal);
   if (await exists(page, SELECTORS.cookieDecline, 5_000)) {
     await page.click(SELECTORS.cookieDecline);
-    await pause(1_000, signal);
+    await pause(2_000, signal);
+    await waitForLoad(page, signal);
   }
   for (let i = 0; i < qty; i++) {
+    if (!(await exists(page, SELECTORS.buyButton(id), 15_000))) {
+      throw new LayoutChanged(`no buy button: ${await describePage(page)}`);
+    }
     await page.click(SELECTORS.buyButton(id));
     if (!(await exists(page, SELECTORS.cartDrawer, 10_000))) {
       throw new LayoutChanged(`add-to-cart showed no cart: ${await describePage(page)}`);
@@ -220,6 +227,17 @@ async function exists(page: GuardedPage, selector: string, timeoutMs: number): P
   } catch {
     return false;
   }
+}
+
+/** Waits for the page's load event, then a little longer for hydration to finish. */
+async function waitForLoad(page: GuardedPage, signal?: AbortSignal): Promise<void> {
+  for (let i = 0; i < 30; i++) {
+    // Throws while the page is navigating (e.g. reloading after the cookie choice).
+    const state = await page.evaluateJson<string>('document.readyState').catch(() => 'loading');
+    if (state === 'complete') break;
+    await pause(500, signal);
+  }
+  await pause(2_000, signal);
 }
 
 function pause(ms: number, signal?: AbortSignal): Promise<void> {
