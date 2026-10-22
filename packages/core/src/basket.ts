@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import { MerchantId } from './merchants';
-import { MatchKind, MatchResult, ProductOffer } from './product';
+import { MatchKind, MatchResult, ProductOffer, Size } from './product';
 import { DeliveryOption, DeliveryPreference } from './shipping';
 
 export const BasketItem = z.object({
@@ -15,6 +15,9 @@ export const BasketItem = z.object({
   ean: z.string().optional(),
   title: z.string().optional(),
   imageUrl: z.url().optional(),
+  /** Container size and pack count of the chosen product, so smaller packs can be scaled up. */
+  size: Size.optional(),
+  packCount: z.number().int().positive().optional(),
 });
 export type BasketItem = z.infer<typeof BasketItem>;
 
@@ -48,6 +51,7 @@ export const Assignment = z.object({
   merchantId: MerchantId,
   offer: ProductOffer,
   kind: MatchKind,
+  /** Units of `offer` bought: the item's qty times the match's `packs`. */
   qty: z.number().int().positive(),
   lineTotal: z.number().nonnegative(),
 });
