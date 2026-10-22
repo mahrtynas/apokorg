@@ -40,5 +40,16 @@ it('debug timings', async () => {
   );
   const rows = stmt.all('"alvedon"* OR "500"* OR "20"*', 'apotea') as { search_text: string }[];
   t('tokenize x200', () => rows.map((r) => tokenize(r.search_text)));
+  const cross = db.prepare(
+    sql.replace('FROM products_fts JOIN products p', 'FROM products_fts CROSS JOIN products p'),
+  );
+  t('cross-and', () => cross.all('"alvedon"* "500"* "20"*', 'apotea'));
+  t('cross-or', () => cross.all('"alvedon"* OR "500"* OR "20"*', 'apotea'));
+  t('plan', () => db.prepare('EXPLAIN QUERY PLAN ' + sql).all('x', 'apotea'));
+  console.log(
+    'DBG PLAN',
+    JSON.stringify(db.prepare('EXPLAIN QUERY PLAN ' + sql).all('x', 'apotea')),
+  );
+  console.log('DBG VERSION', JSON.stringify(db.prepare('select sqlite_version() v').all()));
   t('count', () => db.prepare('SELECT count(*) AS n FROM products').all());
 });
