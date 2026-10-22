@@ -24,16 +24,20 @@ async function main(): Promise<void> {
   const dataDir = defaultDataDir();
   const db = openDataDb(dataDir);
   new Repo(db).purgeExpired();
+  const catalog = defaultCatalog(dataDir);
   const app = await buildApp({
     db,
     adapters: loadAdapters({ mock }),
-    catalog: defaultCatalog(dataDir),
+    catalog,
+    // Mock mode promises no network access.
+    refreshStaleCatalogsOnStart: !mock,
     // Logs go to stderr so stdout carries only the READY line.
     logger: { level: process.env.APOKORG_LOG_LEVEL ?? 'info', stream: process.stderr },
   });
 
   const shutdown = async () => {
     await app.close();
+    catalog.close?.();
     db.close();
     process.exit(0);
   };

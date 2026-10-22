@@ -5,10 +5,11 @@
  * `externalBin` picks it up.
  *
  * The server uses the built-in `node:sqlite`, so there is no native addon to ship. The only
- * non-JS file is the HiGHS solver's `highs.wasm`, which goes in as a SEA asset.
+ * non-JS file is the HiGHS solver's `highs.wasm`, which goes in as a SEA asset. playwright-core
+ * (for checkout probes, driving the installed Edge) is bundled too; see `playwrightPlugin`.
  */
 import { execFileSync } from 'node:child_process';
-import { copyFileSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
+import { copyFileSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -36,6 +37,36 @@ const highsPlugin: Plugin = {
   },
 };
 
+const playwrightRoot = dirname(
+  createRequire(join(repo, 'packages', 'checkout-probe', 'package.json')).resolve(
+    'playwright-core/package.json',
+  ),
+);
+const PLAYWRIGHT_JSON_RE =
+  /require\(import_path\d*\.default\.join\(packageRoot, "(package|browsers)\.json"\)\)/g;
+
+/**
+ * A SEA's `require` only loads built-in modules, and playwright-core reads its own
+ * package.json and browsers.json from disk at runtime. This inlines those two files. The
+ * chromium-bidi modules are only loaded for Firefox (BiDi); probes use Edge over CDP.
+ */
+const playwrightPlugin: Plugin = {
+  name: 'playwright-sea',
+  setup(b) {
+    b.onResolve({ filter: /^chromium-bidi\// }, (args) => ({ path: args.path, external: true }));
+    b.onLoad({ filter: /[\\/]playwright-core[\\/]lib[\\/].*\.js$/ }, (args) => {
+      const src = readFileSync(args.path, 'utf8');
+      if (!src.includes('packageRoot')) return undefined;
+      return {
+        contents: src.replace(PLAYWRIGHT_JSON_RE, (_m, file: string) =>
+          readFileSync(join(playwrightRoot, `${file}.json`), 'utf8'),
+        ),
+        loader: 'js',
+      };
+    });
+  },
+};
+
 function targetTriple(): string {
   if (process.env.TAURI_ENV_TARGET_TRIPLE) return process.env.TAURI_ENV_TARGET_TRIPLE;
   const out = execFileSync('rustc', ['-vV'], { encoding: 'utf8' });
@@ -59,11 +90,7 @@ await build({
   platform: 'node',
   target: 'node24',
   format: 'cjs',
-  plugins: [highsPlugin],
-  // playwright-core can't live in a single executable (optional chromium-bidi modules, and it
-  // reads its own files at runtime). The server imports checkout-probe lazily, so without it
-  // a probe fails cleanly and the optimizer keeps the JSON shipping rules.
-  external: ['@apokorg/checkout-probe'],
+  plugins: [highsPlugin, playwrightPlugin],
   logLevel: 'warning',
 });
 // Lets `node dist/sidecar/server.cjs` run outside the SEA too, for debugging.

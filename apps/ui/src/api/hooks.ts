@@ -7,6 +7,7 @@ export const keys = {
   merchants: ['merchants'] as const,
   baskets: ['baskets'] as const,
   settings: ['settings'] as const,
+  catalogs: ['catalogs'] as const,
   optimize: (basketId: string, req: unknown) => ['optimize', basketId, req] as const,
 };
 
@@ -20,6 +21,23 @@ export function useBaskets() {
 
 export function useSettings() {
   return useQuery({ queryKey: keys.settings, queryFn: client.settings });
+}
+
+/** Polls every 3 s while a catalog refresh is queued or running. */
+export function useCatalogStatus() {
+  return useQuery({
+    queryKey: keys.catalogs,
+    queryFn: client.catalogStatus,
+    refetchInterval: (q) => (q.state.data?.catalogs.some((c) => c.refreshing) ? 3000 : false),
+  });
+}
+
+export function useRefreshCatalogs() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: client.refreshCatalogs,
+    onSuccess: () => qc.invalidateQueries({ queryKey: keys.catalogs }),
+  });
 }
 
 export function useSearch() {

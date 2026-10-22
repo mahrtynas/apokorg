@@ -7,9 +7,16 @@ import {
   type DeliveryOption,
   type MerchantId,
 } from '@apokorg/core';
-import { useMerchants, useSaveSettings, useSaveShipping, useSettings } from '../api/hooks';
-import { Badge, Button, Card, ErrorBox, Spinner } from '../components/ui';
-import { daysSince } from '../format';
+import {
+  useCatalogStatus,
+  useMerchants,
+  useRefreshCatalogs,
+  useSaveSettings,
+  useSaveShipping,
+  useSettings,
+} from '../api/hooks';
+import { Badge, Button, Card, ErrorBox, Spinner, useMerchantName } from '../components/ui';
+import { daysSince, formatDate, formatNumber } from '../format';
 import { t } from '../strings';
 
 const STALE_DAYS = 90;
@@ -24,6 +31,7 @@ export function SettingsPage() {
   return (
     <div className="flex flex-col gap-6">
       <SettingsForm initial={settings.data} merchants={merchants.data.merchants} />
+      <CatalogsCard />
       <Card>
         <h2 className="mb-3 text-base font-semibold">{t.settings.shippingHeading}</h2>
         <div className="flex flex-col gap-4">
@@ -33,6 +41,49 @@ export function SettingsPage() {
         </div>
       </Card>
     </div>
+  );
+}
+
+function CatalogsCard() {
+  const status = useCatalogStatus();
+  const refresh = useRefreshCatalogs();
+  const name = useMerchantName();
+  if (status.isPending) return null;
+  if (status.error) return <ErrorBox error={status.error} />;
+  const catalogs = status.data.catalogs;
+  const busy = refresh.isPending || catalogs.some((c) => c.refreshing);
+  return (
+    <Card>
+      <div className="mb-1 flex items-center justify-between gap-3">
+        <h2 className="text-base font-semibold">{t.settings.catalogsHeading}</h2>
+        <Button disabled={busy} onClick={() => refresh.mutate({})}>
+          {t.settings.refreshCatalogs}
+        </Button>
+      </div>
+      <p className="mb-3 text-sm text-slate-600">{t.settings.catalogsHint}</p>
+      {refresh.error && <ErrorBox error={refresh.error} />}
+      <ul className="flex flex-col gap-1.5 text-sm">
+        {catalogs.map((c) => (
+          <li
+            key={c.merchantId}
+            className="flex flex-wrap items-center gap-2"
+            data-catalog={c.merchantId}
+          >
+            <span className="w-32 font-medium">{name(c.merchantId)}</span>
+            {c.refreshedAt ? (
+              <span>
+                {t.settings.catalogProducts(formatNumber(c.productCount))},{' '}
+                {t.settings.catalogRefreshedAt(formatDate(c.refreshedAt))}
+              </span>
+            ) : (
+              <span className="text-slate-500">{t.settings.catalogNever}</span>
+            )}
+            {c.refreshing && <Badge tone="blue">{t.settings.catalogRefreshing}</Badge>}
+            {c.lastError && <Badge tone="red">{t.settings.catalogFailed(c.lastError)}</Badge>}
+          </li>
+        ))}
+      </ul>
+    </Card>
   );
 }
 

@@ -91,6 +91,16 @@ export const client = {
       api.PutShippingRequest.parse(policy),
     ),
 
+  catalogStatus: () => request(api.CatalogStatusResponse, 'GET', '/api/catalog/status'),
+
+  refreshCatalogs: (req: api.CatalogRefreshRequest = {}) =>
+    request(
+      api.CatalogRefreshResponse,
+      'POST',
+      '/api/catalog/refresh',
+      api.CatalogRefreshRequest.parse(req),
+    ),
+
   confirmMatch: (req: api.ConfirmMatchRequest) =>
     request(
       api.ConfirmMatchResponse,

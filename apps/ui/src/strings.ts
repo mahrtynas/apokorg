@@ -139,6 +139,15 @@ const en = {
     addOption: 'Add option',
     noShipping: 'No shipping rule yet.',
     invalid: 'Some values are invalid.',
+    catalogsHeading: 'Product catalogs',
+    catalogsHint:
+      'These stores are searched through a local copy of their product list, downloaded from their sitemaps. It refreshes automatically when older than 7 days.',
+    catalogProducts: (n: string) => `${n} products`,
+    catalogNever: 'Not downloaded yet',
+    catalogRefreshedAt: (date: string) => `updated ${date}`,
+    catalogRefreshing: 'Refreshing…',
+    catalogFailed: (msg: string) => `Last refresh failed: ${msg}`,
+    refreshCatalogs: 'Refresh catalogs',
   },
   deliveryKind: {
     'pickup-point': 'Pickup point',

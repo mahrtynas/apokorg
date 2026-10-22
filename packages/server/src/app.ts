@@ -61,6 +61,8 @@ export interface AppOptions {
   createJudge?: (settings: Pick<Settings, 'anthropicApiKey'>) => LlmJudge | undefined;
   /** Sitemap catalog refreshes. Default: packages/catalog-index on `catalog.db`. */
   catalog?: CatalogService;
+  /** Refresh stale catalogs of enabled stores in the background once the server is ready. */
+  refreshStaleCatalogsOnStart?: boolean;
   /** Checkout probes. Default: packages/checkout-probe in headless Edge. */
   probe?: ProbeService;
   /** Clock for cache TTLs; injectable for tests. */
@@ -383,6 +385,10 @@ export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
     return publicSettings(next);
   });
 
+  app.get('/api/catalog/status', async (): Promise<api.CatalogStatusResponse> => ({
+    catalogs: catalog.status(),
+  }));
+
   app.post('/api/catalog/refresh', async (req, reply) => {
     const body = api.CatalogRefreshRequest.parse(req.body ?? {});
     // Only stores indexed from sitemaps; the refresh runs in the background, one store at a time.
@@ -398,6 +404,18 @@ export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
     const res: api.CatalogRefreshResponse = { accepted: true, merchants };
     return reply.code(202).send(res);
   });
+
+  if (opts.refreshStaleCatalogsOnStart) {
+    app.addHook('onReady', async () => {
+      const enabled = new Set(currentSettings().enabledMerchants);
+      for (const id of catalog.merchants.filter((m) => enabled.has(m) && catalog.isStale(m))) {
+        catalog.refresh(id).then(
+          (r) => app.log.info({ catalog: r }, 'stale catalog refreshed at startup'),
+          (err: unknown) => app.log.error({ err, merchantId: id }, 'catalog refresh failed'),
+        );
+      }
+    });
+  }
 
   return app;
 }

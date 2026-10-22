@@ -4,6 +4,7 @@
  */
 import { MOCK_MERCHANTS } from '@apokorg/adapter-mock';
 import type {
+  api,
   Basket,
   MerchantCategory,
   MerchantId,
@@ -127,6 +128,7 @@ export interface MockState {
   settings: Settings;
   baskets: Map<string, Basket>;
   shipping: Map<MerchantId, ShippingPolicy>;
+  catalogs: Map<MerchantId, api.CatalogStatusResponse['catalogs'][number]>;
 }
 
 export const SEED_BASKET_ID = 'seed-basket';
@@ -160,5 +162,11 @@ export function createMockState(): MockState {
     },
     baskets: new Map([[seedBasket.id, seedBasket]]),
     shipping: new Map(seedShipping().map((p) => [p.merchantId, p])),
+    catalogs: new Map(
+      (['apotea', 'doz', 'gymgrossisten'] as const).map((merchantId) => [
+        merchantId,
+        { merchantId, productCount: 0, refreshing: false },
+      ]),
+    ),
   };
 }

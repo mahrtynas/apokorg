@@ -37,3 +37,24 @@ describe('settings', () => {
     expect(within(apotea).getByDisplayValue('2026-09-30')).toBeInTheDocument();
   });
 });
+
+describe('product catalogs', () => {
+  it('shows catalog status and refreshes on request', async () => {
+    const state = mockApi();
+    const user = userEvent.setup();
+    renderApp('settings');
+
+    const heading = await screen.findByRole('heading', { name: t.settings.catalogsHeading });
+    const card = heading.closest('div')!.parentElement!;
+    expect(within(card).getAllByText(t.settings.catalogNever)).toHaveLength(3);
+
+    await user.click(within(card).getByRole('button', { name: t.settings.refreshCatalogs }));
+    await waitFor(() => expect(state.catalogs.get('apotea')?.refreshedAt).toBeDefined());
+    // Polling picks up the finished refresh.
+    await waitFor(
+      () => expect(within(card).queryAllByText(t.settings.catalogNever)).toHaveLength(0),
+      { timeout: 5000 },
+    );
+    expect(within(card).getByText(/1[\s ]?600 products/)).toBeInTheDocument();
+  });
+});

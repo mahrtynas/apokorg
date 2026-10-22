@@ -14,13 +14,24 @@ afterEach(async () => {
 });
 
 /** Never crawls: records which stores a refresh was started for. */
-function fakeCatalog(refreshed: string[] = []): CatalogService {
+function fakeCatalog(refreshed: string[] = [], stale: string[] = []): CatalogService {
   return {
     merchants: ['apotea', 'doz', 'gymgrossisten'],
     refresh: async (merchantId) => {
       refreshed.push(merchantId);
       return { merchantId, products: 1, sitemapsFetched: 1, sitemapsSkipped: 0, durationMs: 1 };
     },
+    isStale: (merchantId) => stale.includes(merchantId),
+    status: () => [
+      {
+        merchantId: 'apotea',
+        productCount: 56857,
+        refreshedAt: '2026-10-22T10:00:00.000Z',
+        refreshing: false,
+      },
+      { merchantId: 'doz', productCount: 0, refreshing: true },
+      { merchantId: 'gymgrossisten', productCount: 0, refreshing: false, lastError: 'HTTP 503' },
+    ],
   };
 }
 
@@ -657,5 +668,48 @@ describe('checkout probes in optimize', () => {
     });
     expect(res.statusCode).toBe(200);
     expect(called).toBe(false);
+  });
+});
+
+describe('catalog status and startup refresh', () => {
+  it('GET /api/catalog/status returns each catalog store', async () => {
+    const app = await makeApp();
+    const res = await app.inject({ method: 'GET', url: '/api/catalog/status' });
+    const body = api.CatalogStatusResponse.parse(res.json());
+    expect(body.catalogs.map((c) => c.merchantId)).toEqual(['apotea', 'doz', 'gymgrossisten']);
+    expect(body.catalogs[2]).toMatchObject({ lastError: 'HTTP 503' });
+  });
+
+  it('refreshes stale catalogs of enabled stores once ready', async () => {
+    const refreshed: string[] = [];
+    const db = openDb(':memory:');
+    const app = await makeApp({
+      db,
+      catalog: fakeCatalog(refreshed, ['apotea', 'doz']),
+      refreshStaleCatalogsOnStart: true,
+    });
+    // DOZ disabled in settings: only Apotea (stale and enabled) is refreshed.
+    const settings = (await app.inject({ method: 'GET', url: '/api/settings' })).json();
+    expect(refreshed).toEqual(['apotea', 'doz']);
+    refreshed.length = 0;
+    await app.inject({
+      method: 'PUT',
+      url: '/api/settings',
+      ...json({ ...settings, enabledMerchants: ['apotea', 'gymgrossisten'] }),
+    });
+    const second = await makeApp({
+      db,
+      catalog: fakeCatalog(refreshed, ['apotea', 'doz']),
+      refreshStaleCatalogsOnStart: true,
+    });
+    await second.ready();
+    expect(refreshed).toEqual(['apotea']);
+  });
+
+  it('does nothing at startup unless asked', async () => {
+    const refreshed: string[] = [];
+    const app = await makeApp({ catalog: fakeCatalog(refreshed, ['apotea']) });
+    await app.ready();
+    expect(refreshed).toEqual([]);
   });
 });
