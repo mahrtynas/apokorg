@@ -1,0 +1,74 @@
+<!doctype html>
+<!--
+  The Ingrid delivery widget inside /kassa/, rebuilt from the A-kronans checkout test
+  (2026-10-22, postcode 11738, 24 kr order): textbox "Postnummer", button "Fortsätt", then
+  radiogroup "Leveransalternativ" with three options and "Visa alla" for the rest.
+  With ?broken in the parent's server mode, "Fortsätt" shows nothing (the failure test).
+-->
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <title>Leverans</title>
+  </head>
+  <body>
+    <form id="postcode-form" action="/ingrid/session">
+      <label for="pc">Postnummer</label>
+      <input id="pc" name="postal_code" inputmode="numeric" autocomplete="postal-code" />
+      <button type="submit">Fortsätt</button>
+    </form>
+    <div id="options"></div>
+    <script>
+      const OPTIONS = [
+        ['Instabox paketskåp', '19kr med Instabox', 'Imorgon'],
+        ['Hämta Express på apotek', '0kr med Kronans Apotek', 'Klar om ca 2 timmar'],
+        ['Budbee hemleverans', '39kr med Budbee', 'Ikväll 16–22.30'],
+        ['PostNord ombud', '19kr med PostNord', '1–2 vardagar'],
+        ['PostNord brevlåda', '19kr med PostNord', '1–3 vardagar'],
+        ['PostNord paketbox', '19kr med PostNord', '1–2 vardagar'],
+        ['Leverans till apotek', '0kr med Kronans Apotek', '2–4 vardagar'],
+      ];
+      function show(all) {
+        const box = document.getElementById('options');
+        box.textContent = '';
+        const group = document.createElement('div');
+        group.setAttribute('role', 'radiogroup');
+        group.setAttribute('aria-label', 'Leveransalternativ');
+        OPTIONS.slice(0, all ? OPTIONS.length : 3).forEach(([name, price, eta], i) => {
+          const label = document.createElement('label');
+          const radio = document.createElement('input');
+          radio.type = 'radio';
+          radio.name = 'delivery';
+          radio.checked = i === 0;
+          radio.setAttribute('aria-label', `Leveransalternativ ${name}`);
+          const n = document.createElement('span');
+          n.textContent = name;
+          const p = document.createElement('span');
+          p.textContent = price;
+          const e = document.createElement('small');
+          e.textContent = eta;
+          label.append(radio, n, p, e);
+          if (!price.startsWith('0')) {
+            const free = document.createElement('small');
+            free.textContent = 'Fri frakt från 299 kr eller vid receptköp';
+            label.append(free);
+          }
+          group.append(label);
+        });
+        box.append(group);
+        if (!all) {
+          const more = document.createElement('button');
+          more.type = 'button';
+          more.textContent = 'Visa alla';
+          more.addEventListener('click', () => show(true));
+          box.append(more);
+        }
+      }
+      document.getElementById('postcode-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const mode = await (await fetch('/mode')).text();
+        if (mode === 'broken') return;
+        if (document.getElementById('pc').value.replace(/\s/g, '') === '11738') show(false);
+      });
+    </script>
+  </body>
+</html>

@@ -120,6 +120,26 @@ Tried on: 2026-10-22, Orca's embedded browser
 - Verdict: probe supported
 ```
 
+## Checkout probe
+
+`src/probe.ts`, exposed as `adapter.probe` (task P-kronans, 2026-10-22). It uses only the `GuardedPage`, and all selectors are in `SELECTORS` at the top of the file.
+
+**robots.txt disallows `/kassa/`** (and `/order/`). The user approved probing `/kassa/` for personal use under these terms: one probe at a time, only when checkout-verified shipping is requested, and results cached for 24 h (`probeWithCache`). The probe never goes to `/order/`.
+
+Steps:
+
+1. For each item: open the product page, read the price from JSON-LD (for `orderValue`), and click `[data-testid="<varunummer>-buy-button"]` once per unit, 2 s apart.
+2. Go to `/kassa/` and wait for the Ingrid iframe (`iframe[title*="leveransalternativ" i]`). Selectors step into it with `internal:control=enter-frame`.
+3. Fill the textbox "Postnummer" with the request's postcode and click "Fortsätt". No email is asked for here, because the email field belongs to the payment iframe, which the probe never touches.
+4. Wait for the radiogroup "Leveransalternativ", and click "Visa alla" if it is there.
+5. For each radio, read the text of the nearest ancestor containing "kr" (the option row) and parse it with `parseOptionText`. The text before the fee is the name. "Fri frakt från 299 kr" becomes `freeFrom`, and "Gratis" or "0kr" becomes fee 0. `kind` comes from the name (`deliveryKind`: apotek → store-pickup, brevlåda → mailbox, skåp/box → parcel-box, hem/Budbee → home, otherwise pickup-point).
+6. In `finally`, empty the cart: reload `/kassa/`, click "Ta bort …" until no row is left, and require "Din varukorg är tom". If the cart can't be emptied, the probe fails with `layout-changed`.
+
+Limitations:
+
+- The guard's denylist matches the start of words, so an add-to-cart button named "Köp Nu…" (e.g. Nurofen, Nutrilett) or a product URL with "pay…" is refused. The probe then fails as `forbidden-action`. Use another item for those stores' probes; the guard is deliberately not weakened.
+- The offline fixtures (`fixtures/probe/`) are rebuilt from the accessibility names recorded in the checkout test above, not saved from the live DOM, because the exploration session couldn't be run (see the PR). The row text format ("19kr med Instabox" plus "Fri frakt från 299 kr…") is from that test. The row markup is a guess, which the live run (`pnpm --filter @apokorg/adapter-kronans probe:live`) confirms or corrects.
+
 ## Quirks
 
 - `presentCustom` must be sent, or there is no EAN, prescription flag or subtitle.

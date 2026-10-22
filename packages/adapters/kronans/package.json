@@ -8,12 +8,16 @@
   },
   "scripts": {
     "typecheck": "tsc -p tsconfig.json",
-    "test": "vitest run --exclude src/live.test.ts --passWithNoTests",
-    "test:live": "vitest run src/live.test.ts"
+    "test": "vitest run --exclude src/live.test.ts --exclude src/probe.live.test.ts --passWithNoTests",
+    "test:live": "vitest run src/live.test.ts",
+    "probe:live": "vitest run src/probe.live.test.ts"
   },
   "dependencies": {
-    "@apokorg/core": "workspace:*",
     "@apokorg/adapter-kit": "workspace:*",
+    "@apokorg/core": "workspace:*",
     "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@apokorg/checkout-probe": "workspace:*"
   }
 }
