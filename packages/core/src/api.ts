@@ -156,5 +156,22 @@ export const CatalogRefreshResponse = z.object({
 });
 export type CatalogRefreshResponse = z.infer<typeof CatalogRefreshResponse>;
 
+// GET /api/catalog/status: the sitemap catalogs behind stores whose site search is off-limits.
+export const CatalogStatusResponse = z.object({
+  catalogs: z.array(
+    z.object({
+      merchantId: MerchantId,
+      /** Products in the local index; 0 before the first refresh. */
+      productCount: z.number().int().nonnegative(),
+      refreshedAt: z.iso.datetime().optional(),
+      /** True while a refresh for this store is queued or running. */
+      refreshing: z.boolean(),
+      /** Message of the last failed refresh, cleared by the next successful one. */
+      lastError: z.string().optional(),
+    }),
+  ),
+});
+export type CatalogStatusResponse = z.infer<typeof CatalogStatusResponse>;
+
 export const ApiError = z.object({ error: z.string(), details: z.unknown().optional() });
 export type ApiError = z.infer<typeof ApiError>;
