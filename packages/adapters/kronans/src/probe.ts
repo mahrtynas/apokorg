@@ -16,8 +16,6 @@ export const SELECTORS = {
   /** Cookiebot's dialog ("Samtycke"); declined, since items don't reach the cart while it's open. */
   cookieDecline:
     '#CybotCookiebotDialogBodyButtonDecline, #CybotCookiebotDialogBodyLevelButtonLevelOptinDeclineAll >> nth=0',
-  /** The cart drawer that opens after add-to-cart. */
-  cartDrawer: 'internal:text=/Till kassan/i >> nth=0',
   /** Add-to-cart (accessible name "Köp <product>, <price> kronor"), not a purchase. */
   buyButton: (id: string) => `[data-testid="${id}-buy-button"] >> nth=0`,
   deliveryFrame: 'iframe[title*="leveransalternativ" i]',
@@ -144,10 +142,8 @@ async function addToCart(
       if ((err as { code?: string }).code !== 'layout-changed') throw err;
       throw new LayoutChanged(`buy button not clickable: ${await describePage(page)}`);
     }
-    if (!(await exists(page, SELECTORS.cartDrawer, 10_000))) {
-      throw new LayoutChanged(`add-to-cart showed no cart: ${await describePage(page)}`);
-    }
-    // The cart updates in the background; give it time before the next click or page.
+    // No drawer opens; only the header count changes. An add that didn't land shows up as
+    // an empty cart on /kassa/. The cart updates in the background; give it time before the next click or page.
     await pause(2_000, signal);
   }
   return price;
