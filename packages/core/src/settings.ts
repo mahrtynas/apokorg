@@ -15,7 +15,23 @@ export const Settings = z.object({
   /** Used by the checkout probe only. A plus-address is recommended. */
   probeEmail: z.email().optional(),
   probeEnabled: z.boolean().default(true),
-  /** Optional. Matching works without it. Stored locally only. */
+  /**
+   * Optional. Matching works without it. Stored locally only.
+   * GET returns it masked (`****` + last 4 characters, see `maskApiKey`). On PUT, an absent or
+   * still-masked value keeps the stored key, and `""` clears it.
+   */
   anthropicApiKey: z.string().optional(),
 });
 export type Settings = z.infer<typeof Settings>;
+
+export const MASKED_API_KEY_PREFIX = '****';
+
+/** How the server shows a stored API key: `****wxyz`. Keys under 12 characters are fully masked. */
+export function maskApiKey(key: string): string {
+  return key.length >= 12 ? MASKED_API_KEY_PREFIX + key.slice(-4) : MASKED_API_KEY_PREFIX;
+}
+
+/** true when a PUT sends the masked form back, which means "keep the stored key". */
+export function isMaskedApiKey(value: string): boolean {
+  return value.startsWith(MASKED_API_KEY_PREFIX);
+}
