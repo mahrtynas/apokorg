@@ -244,6 +244,12 @@ importers:
 
   packages/server:
     dependencies:
+      '@apokorg/catalog-index':
+        specifier: workspace:*
+        version: link:../catalog-index
+      '@apokorg/checkout-probe':
+        specifier: workspace:*
+        version: link:../checkout-probe
       '@apokorg/core':
         specifier: workspace:*
         version: link:../core

@@ -20,6 +20,8 @@ import { defaultNeedsConfirmation, type Matcher } from './matching';
 import type { Optimizer, ShippingPolicySource } from './optimizing';
 import { Repo } from './repo';
 import { createClaudeJudge, groupProducts, type LlmJudge } from '@apokorg/matcher';
+import { defaultCatalog, type CatalogService } from './catalog';
+import { defaultProbe, type ProbeService } from './probing';
 import {
   DEFAULT_SEARCH_TIMEOUT_MS,
   searchItem,
@@ -57,6 +59,10 @@ export interface AppOptions {
   logger?: boolean | Record<string, unknown>;
   /** Builds the LLM tie-breaker from the stored API key. Default: Claude via packages/matcher. */
   createJudge?: (settings: Pick<Settings, 'anthropicApiKey'>) => LlmJudge | undefined;
+  /** Sitemap catalog refreshes. Default: packages/catalog-index on `catalog.db`. */
+  catalog?: CatalogService;
+  /** Checkout probes. Default: packages/checkout-probe in headless Edge. */
+  probe?: ProbeService;
   /** Clock for cache TTLs; injectable for tests. */
   now?: () => number;
 }
@@ -90,6 +96,8 @@ export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
   const optimizer = opts.optimizer ?? defaultOptimizer;
   const baseShippingPolicies = opts.shippingPolicies ?? defaultShippingPolicies;
   const createJudge = opts.createJudge ?? createClaudeJudge;
+  const catalog = opts.catalog ?? defaultCatalog();
+  const probe = opts.probe ?? defaultProbe;
   const timeoutMs = opts.searchTimeoutMs ?? DEFAULT_SEARCH_TIMEOUT_MS;
   const repo = new Repo(opts.db, { now: opts.now });
   const adapters = new Map<MerchantId, MerchantAdapter>(opts.adapters.map((a) => [a.info.id, a]));
@@ -317,10 +325,35 @@ export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
     let split = await optimizer.optimize(candidates, policies, options);
 
     if (body.probe && settings.probeEnabled) {
-      // Running probes is packages/checkout-probe's job; until then reuse cached results.
-      const overrides: ProbeResult[] = split.perMerchant
-        .map((m) => repo.getCachedProbe(m.merchantId, settings.postcode, m.subtotal))
-        .filter((r): r is ProbeResult => r !== null);
+      const cache = {
+        get: (id: MerchantId, postcode: string, value: number) =>
+          repo.getCachedProbe(id, postcode, value),
+        set: (r: ProbeResult) => repo.cacheProbe(r),
+      };
+      // Stores in parallel; checkout-probe runs one probe at a time per store.
+      const results = await Promise.all(
+        split.perMerchant.map(async (m): Promise<ProbeResult | null> => {
+          const adapter = adapters.get(m.merchantId);
+          // Without a probe script (or a probe email) only an earlier cached result can help.
+          if (!adapter?.probe || !settings.probeEmail) {
+            return cache.get(m.merchantId, settings.postcode, m.subtotal);
+          }
+          const items = split.assignments
+            .filter((a) => a.merchantId === m.merchantId)
+            .map((a) => ({ url: a.offer.url, qty: a.qty }));
+          try {
+            return await probe(
+              adapter,
+              { items, postcode: settings.postcode, email: settings.probeEmail },
+              { cache, orderValue: m.subtotal },
+            );
+          } catch (err) {
+            req.log.warn({ err, merchantId: m.merchantId }, 'checkout probe failed');
+            return null;
+          }
+        }),
+      );
+      const overrides = results.filter((r): r is ProbeResult => r?.status === 'ok');
       if (overrides.length > 0) {
         split = await optimizer.optimize(candidates, policies, options, overrides);
       }
@@ -352,8 +385,17 @@ export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
 
   app.post('/api/catalog/refresh', async (req, reply) => {
     const body = api.CatalogRefreshRequest.parse(req.body ?? {});
-    // Stub until the catalog-index task (CI-x) lands.
-    const res: api.CatalogRefreshResponse = { accepted: true, merchants: body.merchants ?? [] };
+    // Only stores indexed from sitemaps; the refresh runs in the background, one store at a time.
+    const merchants = (body.merchants ?? catalog.merchants).filter((m) =>
+      catalog.merchants.includes(m),
+    );
+    for (const id of merchants) {
+      catalog.refresh(id).then(
+        (r) => app.log.info({ catalog: r }, 'catalog refreshed'),
+        (err: unknown) => app.log.error({ err, merchantId: id }, 'catalog refresh failed'),
+      );
+    }
+    const res: api.CatalogRefreshResponse = { accepted: true, merchants };
     return reply.code(202).send(res);
   });
 

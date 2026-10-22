@@ -3,6 +3,7 @@ import { loadAdapters } from '@apokorg/registry';
 import type { FastifyInstance } from 'fastify';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { buildApp, type AppOptions } from './app';
+import type { CatalogService } from './catalog';
 import type { MatchOptions } from './matching';
 import { openDb } from './db';
 import { OFFER_TTL_MS } from './repo';
@@ -12,10 +13,25 @@ afterEach(async () => {
   await Promise.all(apps.splice(0).map((a) => a.close()));
 });
 
+/** Never crawls: records which stores a refresh was started for. */
+function fakeCatalog(refreshed: string[] = []): CatalogService {
+  return {
+    merchants: ['apotea', 'doz', 'gymgrossisten'],
+    refresh: async (merchantId) => {
+      refreshed.push(merchantId);
+      return { merchantId, products: 1, sitemapsFetched: 1, sitemapsSkipped: 0, durationMs: 1 };
+    },
+  };
+}
+
 async function makeApp(overrides: Partial<AppOptions> = {}) {
   const app = await buildApp({
     db: openDb(':memory:'),
     adapters: loadAdapters({ mock: true }),
+    catalog: fakeCatalog(),
+    probe: async () => {
+      throw new Error('no probes in tests');
+    },
     ...overrides,
   });
   apps.push(app);
@@ -325,14 +341,28 @@ describe('settings', () => {
 });
 
 describe('POST /api/catalog/refresh', () => {
-  it('is accepted (stub)', async () => {
-    const app = await makeApp();
+  it('starts a background refresh for catalog stores only', async () => {
+    const refreshed: string[] = [];
+    const app = await makeApp({ catalog: fakeCatalog(refreshed) });
     const res = await app.inject({
       method: 'POST',
       url: '/api/catalog/refresh',
-      ...json({ merchants: ['apotea'] }),
+      ...json({ merchants: ['apotea', 'hjartat'] }),
     });
     expect(res.statusCode).toBe(202);
+    expect(api.CatalogRefreshResponse.parse(res.json())).toEqual({
+      accepted: true,
+      merchants: ['apotea'],
+    });
+    expect(refreshed).toEqual(['apotea']);
+  });
+
+  it('refreshes every catalog store when none are named', async () => {
+    const refreshed: string[] = [];
+    const app = await makeApp({ catalog: fakeCatalog(refreshed) });
+    const res = await app.inject({ method: 'POST', url: '/api/catalog/refresh', ...json({}) });
+    expect(res.json().merchants).toEqual(['apotea', 'doz', 'gymgrossisten']);
+    expect(refreshed).toEqual(['apotea', 'doz', 'gymgrossisten']);
   });
 });
 
@@ -532,5 +562,100 @@ describe('LLM judge', () => {
     expect(createJudge).toHaveBeenLastCalledWith({ anthropicApiKey: 'sk-ant-api03-test-key-wxyz' });
     expect(createJudge).toHaveBeenCalledTimes(2);
     expect(matchOffers.mock.calls[2]![2]).toMatchObject({ llm: { pick: expect.any(Function) } });
+  });
+});
+
+describe('store waiting room', () => {
+  it('reports a QueueError as unavailable, not error', async () => {
+    class QueueError extends Error {
+      override readonly name = 'QueueError';
+    }
+    const adapters = loadAdapters({ mock: true }).map((a): MerchantAdapter =>
+      a.info.id === 'lyko'
+        ? {
+            ...a,
+            search: async () => {
+              throw new QueueError('queued');
+            },
+          }
+        : a,
+    );
+    const app = await makeApp({ adapters });
+    const res = await app.inject({ method: 'POST', url: '/api/search', ...json({ query: 'x' }) });
+    const lyko = api.SearchResponse.parse(res.json()).merchants.find(
+      (m) => m.merchantId === 'lyko',
+    );
+    expect(lyko).toMatchObject({ status: 'unavailable', message: 'queued' });
+  });
+});
+
+describe('checkout probes in optimize', () => {
+  it('probes the stores in the split and uses ok results as verified shipping', async () => {
+    const adapters = loadAdapters({ mock: true }).map((a): MerchantAdapter => ({
+      ...a,
+      probe: async () => Promise.reject(new Error('unused')),
+    }));
+    const calls: { merchantId: string; items: unknown[]; orderValue: number }[] = [];
+    const app = await makeApp({
+      adapters,
+      probe: async (adapter, request, { orderValue }) => {
+        calls.push({ merchantId: adapter.info.id, items: request.items, orderValue });
+        return {
+          merchantId: adapter.info.id,
+          orderValue,
+          postcode: request.postcode,
+          options: [{ id: 'probed', name: 'Probed', kind: 'pickup-point', fee: 0 }],
+          probedAt: new Date().toISOString(),
+          status: 'ok',
+        };
+      },
+    });
+    const settings = (await app.inject({ method: 'GET', url: '/api/settings' })).json();
+    await app.inject({
+      method: 'PUT',
+      url: '/api/settings',
+      ...json({ ...settings, probeEmail: 'probe+apokorg@example.com' }),
+    });
+    await app.inject({
+      method: 'PUT',
+      url: '/api/baskets/p1',
+      ...json({ name: 'p', items: [{ id: 'i1', query: 'alvedon' }] }),
+    });
+    const res = await app.inject({
+      method: 'POST',
+      url: '/api/baskets/p1/optimize',
+      ...json({ probe: true }),
+    });
+    const body = api.OptimizeResponse.parse(res.json());
+    expect(calls.length).toBeGreaterThan(0);
+    expect(calls[0]!.items).toEqual([{ url: expect.stringMatching(/^https?:\/\//), qty: 1 }]);
+    expect(body.split.perMerchant.every((m) => m.probeVerified && m.shipping === 0)).toBe(true);
+  });
+
+  it('skips probing without a probe email', async () => {
+    const adapters = loadAdapters({ mock: true }).map((a): MerchantAdapter => ({
+      ...a,
+      probe: async () => Promise.reject(new Error('unused')),
+    }));
+    let called = false;
+    const app = await makeApp({
+      adapters,
+      probe: async () => {
+        called = true;
+        throw new Error('should not run');
+      },
+    });
+    await app.inject({
+      method: 'PUT',
+      url: '/api/baskets/p2',
+      ...json({ name: 'p', items: [{ id: 'i1', query: 'alvedon' }] }),
+    });
+    const res = await app.inject({
+      method: 'POST',
+      url: '/api/baskets/p2/optimize',
+      ...json({ probe: true }),
+    });
+    expect(res.statusCode).toBe(200);
+    expect(called).toBe(false);
   });
 });

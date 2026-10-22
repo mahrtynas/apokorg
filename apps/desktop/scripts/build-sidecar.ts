@@ -60,6 +60,10 @@ await build({
   target: 'node24',
   format: 'cjs',
   plugins: [highsPlugin],
+  // playwright-core can't live in a single executable (optional chromium-bidi modules, and it
+  // reads its own files at runtime). The server imports checkout-probe lazily, so without it
+  // a probe fails cleanly and the optimizer keeps the JSON shipping rules.
+  external: ['@apokorg/checkout-probe'],
   logLevel: 'warning',
 });
 // Lets `node dist/sidecar/server.cjs` run outside the SEA too, for debugging.

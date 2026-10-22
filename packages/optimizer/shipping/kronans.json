@@ -2,19 +2,48 @@
   "merchantId": "kronans",
   "options": [
     {
+      "id": "leverans-till-apotek",
+      "name": "Leverans till apotek",
+      "kind": "store-pickup",
+      "fee": 0
+    },
+    {
+      "id": "instabox",
+      "name": "Instabox paketskåp",
+      "kind": "parcel-box",
+      "fee": 19,
+      "freeFrom": 299
+    },
+    {
+      "id": "postnord-paketbox",
+      "name": "PostNord paketbox",
+      "kind": "parcel-box",
+      "fee": 19,
+      "freeFrom": 299
+    },
+    {
       "id": "postnord-ombud",
       "name": "PostNord ombud",
       "kind": "pickup-point",
-      "fee": 49
+      "fee": 19,
+      "freeFrom": 299
     },
     {
-      "id": "home",
-      "name": "Hemleverans",
+      "id": "postnord-brevlada",
+      "name": "PostNord brevlåda",
+      "kind": "mailbox",
+      "fee": 19,
+      "freeFrom": 299
+    },
+    {
+      "id": "budbee-home",
+      "name": "Budbee hemleverans",
       "kind": "home",
-      "fee": 79
+      "fee": 39,
+      "freeFrom": 299
     }
   ],
-  "lastVerified": "2026-10-21",
-  "source": "https://www.kronansapotek.se/",
-  "notes": "Unknown. The home page only says \"Fri frakt på receptbelagt\" (prescription items), and no public shipping page was found. These are conservative guesses with no free-shipping threshold. The A-kronans task or a checkout probe should replace them."
+  "lastVerified": "2026-10-22",
+  "source": "Guest checkout at https://www.kronansapotek.se/ (postcode 11738, 24 kr cart), see docs/stores/kronans.md",
+  "notes": "From the A-kronans checkout test on 2026-10-22: every paid option says \"Fri frakt från 299 kr eller vid receptköp\". Hämta Express på apotek (ready in about 2 h) is also free store pickup and is left out as a duplicate. Prescription orders ship free, which is not modelled."
 }
