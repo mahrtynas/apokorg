@@ -36,9 +36,32 @@
     >
       Köp
     </button>
+    <aside id="drawer" hidden>
+      <p>Varukorg</p>
+      <a href="/kassa/">Till kassan</a>
+    </aside>
+    <!-- Cookiebot covers the page until it is answered; clicks underneath don't reach the cart. -->
+    <div
+      id="CybotCookiebotDialog"
+      role="dialog"
+      aria-label="Samtycke"
+      style="position: fixed; inset: 0; background: rgb(0 0 0 / 50%)"
+    >
+      <p>Denna webbplats använder cookies</p>
+      <button type="button" id="CybotCookiebotDialogBodyButtonDecline">Neka</button>
+      <button type="button">Tillåt urval</button>
+      <button type="button">Tillåt alla</button>
+    </div>
     <script>
+      const dialog = document.getElementById('CybotCookiebotDialog');
+      document.getElementById('CybotCookiebotDialogBodyButtonDecline').addEventListener('click', () =>
+        dialog.remove(),
+      );
       document.querySelector('[data-testid="788053-buy-button"]').addEventListener('click', () => {
-        fetch('/cart/add?id=788053', { method: 'POST' });
+        if (document.body.contains(dialog)) return;
+        fetch('/cart/add?id=788053', { method: 'POST' }).then(() => {
+          document.getElementById('drawer').hidden = false;
+        });
       });
     </script>
   </body>
