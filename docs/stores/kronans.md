@@ -128,17 +128,38 @@ Tried on: 2026-10-22, Orca's embedded browser
 
 Steps:
 
-1. For each item: open the product page, read the price from JSON-LD (for `orderValue`), and click `[data-testid="<varunummer>-buy-button"]` once per unit, 2 s apart.
-2. Go to `/kassa/` and wait for the Ingrid iframe (`iframe[title*="leveransalternativ" i]`). Selectors step into it with `internal:control=enter-frame`.
-3. Fill the textbox "Postnummer" with the request's postcode and click "Fortsätt". No email is asked for here, because the email field belongs to the payment iframe, which the probe never touches.
-4. Wait for the radiogroup "Leveransalternativ", and click "Visa alla" if it is there.
-5. For each radio, read the text of the nearest ancestor containing "kr" (the option row) and parse it with `parseOptionText`. The text before the fee is the name. "Fri frakt från 299 kr" becomes `freeFrom`, and "Gratis" or "0kr" becomes fee 0. `kind` comes from the name (`deliveryKind`: apotek → store-pickup, brevlåda → mailbox, skåp/box → parcel-box, hem/Budbee → home, otherwise pickup-point).
-6. In `finally`, empty the cart: reload `/kassa/`, click "Ta bort …" until no row is left, and require "Din varukorg är tom". If the cart can't be emptied, the probe fails with `layout-changed`.
+1. For each item: open the product page, read the price from JSON-LD (for `orderValue`), and wait for the page's load event plus 2 s. A click on the server-rendered button before Gatsby hydrates the page does nothing.
+2. If the Cookiebot dialog ("Samtycke") is open, decline it by button id (`#CybotCookiebotDialogBodyButtonDecline`). While it is open, it covers the buy button and the click times out. Then wait for the page to settle again.
+3. Click `[data-testid="<varunummer>-buy-button"]` once per unit, 2 s apart. No cart drawer opens; only the header count ("1 Varukorg") changes. An add that didn't land shows up as an empty cart on `/kassa/`, and the failure message says so (`cartEmpty: true`).
+4. Go to `/kassa/` and wait for the Ingrid iframe (`iframe[title*="leveransalternativ" i]`). Selectors step into it with `internal:control=enter-frame`.
+5. Fill the textbox "Postnummer" with the request's postcode and click "Fortsätt". A Playwright `fill` registers here. No email is asked for, because the email field belongs to the payment iframe, which the probe never touches.
+6. Wait for the radiogroup "Leveransalternativ", and click "Visa alla" if it is there.
+7. For each radio, take its row (the nearest ancestor containing "kr") and read the row's text elements one by one (`parseOptionParts`). The row's text content runs together: a hidden screen-reader prefix ("Leveransalternativ", or "Vald leveransalternativ" on the selected option), the name, the delivery time and the fee, e.g. `Vald leveransalternativInstabox paketskåpLevereras imorgon runt 20:0019kr med Instabox`. Read as one string, "20:00" and "19kr" merge. So the name is the first visible text without the prefix, and the fee comes only from a text that starts with an amount ("19kr med Instabox", "0kr", "Gratis"). `kind` comes from the name (`deliveryKind`: apotek → store-pickup, brevlåda → mailbox, skåp/box → parcel-box, hem/Budbee → home, otherwise pickup-point).
+8. "Fri frakt från 299 kr eller vid receptköp" is stated once in the widget, not per row. It becomes `freeFrom` on every option with a fee.
+9. In `finally`, empty the cart: reload `/kassa/`, click "Ta bort …" until no row is left, and require "Din varukorg är tom". A Playwright click on "Ta bort" works here (the earlier embedded-browser test needed a DOM click). If the cart can't be emptied, the probe fails with `layout-changed`.
+
+Failure messages for a missing widget, a missing or covered buy button, and an unreadable row include the page's path, title, heading, iframes, visible consent buttons and the start of its text.
+
+### Live run (2026-10-22)
+
+`pnpm --filter @apokorg/adapter-kronans probe:live`: one Kronans Apotek Tandkräm Frisk Mint (24 kr), postcode 11738, headless Edge, about 26 s. Status `ok`, and the cart was emptied ("Din varukorg är tom"). No order was placed: the probe never reached the payment iframe or `/order/`.
+
+| Option                  | Kind         | Fee   | freeFrom |
+| ----------------------- | ------------ | ----- | -------- |
+| Hämta Express på apotek | store-pickup | 0 kr  |          |
+| Instabox paketskåp      | parcel-box   | 19 kr | 299      |
+| Postnord brevlåda       | mailbox      | 19 kr | 299      |
+| Budbee hemleverans      | home         | 39 kr | 299      |
+| Postnord paketbox       | parcel-box   | 19 kr | 299      |
+| Postnord ombud          | pickup-point | 19 kr | 299      |
+| Leverans till apotek    | store-pickup | 0 kr  |          |
+
+This matches the fees in "Shipping" above. The widget now spells it "Postnord", and it lists Hämta Express first.
 
 Limitations:
 
 - The guard's denylist matches the start of words, so an add-to-cart button named "Köp Nu…" (e.g. Nurofen, Nutrilett) or a product URL with "pay…" is refused. The probe then fails as `forbidden-action`. Use another item for those stores' probes; the guard is deliberately not weakened.
-- The offline fixtures (`fixtures/probe/`) are rebuilt from the accessibility names recorded in the checkout test above, not saved from the live DOM, because the exploration session couldn't be run (see the PR). The row text format ("19kr med Instabox" plus "Fri frakt från 299 kr…") is from that test. The row markup is a guess, which the live run (`pnpm --filter @apokorg/adapter-kronans probe:live`) confirms or corrects.
+- The offline fixtures (`fixtures/probe/`) are rebuilt by hand, not saved from the live DOM. They follow what the live runs showed: the texts and order of the options, the hidden prefix, the delivery time before the fee, the threshold once per widget and the Cookiebot dialog. The exact markup inside the Ingrid iframe is still an approximation.
 
 ## Quirks
 

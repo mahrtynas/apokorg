@@ -10,7 +10,7 @@ import { runProbe, type BrowserLaunch } from '@apokorg/checkout-probe';
 import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it } from 'vitest';
 import { testBrowser } from '../../../checkout-probe/test/browser';
 import adapter from './index';
-import { createProbe, deliveryKind, parseOptionText } from './probe';
+import { createProbe, deliveryKind, parseFreeFrom, parseOptionParts } from './probe';
 
 const FIXTURES = fileURLToPath(new URL('../fixtures/probe/', import.meta.url));
 
@@ -105,7 +105,14 @@ describe('kronans probe', () => {
     expect(result.message).toBeUndefined();
     expect(result.status).toBe('ok');
     expect(result.orderValue).toBe(48);
+    // As the live run of 2026-10-22 should read them (see the PR).
     expect(result.options).toEqual([
+      {
+        id: 'hamta-express-pa-apotek',
+        name: 'Hämta Express på apotek',
+        kind: 'store-pickup',
+        fee: 0,
+      },
       {
         id: 'instabox-paketskap',
         name: 'Instabox paketskåp',
@@ -114,10 +121,11 @@ describe('kronans probe', () => {
         freeFrom: 299,
       },
       {
-        id: 'hamta-express-pa-apotek',
-        name: 'Hämta Express på apotek',
-        kind: 'store-pickup',
-        fee: 0,
+        id: 'postnord-brevlada',
+        name: 'Postnord brevlåda',
+        kind: 'mailbox',
+        fee: 19,
+        freeFrom: 299,
       },
       {
         id: 'budbee-hemleverans',
@@ -127,23 +135,16 @@ describe('kronans probe', () => {
         freeFrom: 299,
       },
       {
-        id: 'postnord-ombud',
-        name: 'PostNord ombud',
-        kind: 'pickup-point',
-        fee: 19,
-        freeFrom: 299,
-      },
-      {
-        id: 'postnord-brevlada',
-        name: 'PostNord brevlåda',
-        kind: 'mailbox',
-        fee: 19,
-        freeFrom: 299,
-      },
-      {
         id: 'postnord-paketbox',
-        name: 'PostNord paketbox',
+        name: 'Postnord paketbox',
         kind: 'parcel-box',
+        fee: 19,
+        freeFrom: 299,
+      },
+      {
+        id: 'postnord-ombud',
+        name: 'Postnord ombud',
+        kind: 'pickup-point',
         fee: 19,
         freeFrom: 299,
       },
@@ -167,31 +168,42 @@ describe('kronans probe', () => {
   }, 90_000);
 });
 
-describe('parseOptionText', () => {
-  it('splits name, fee and free-shipping threshold', () => {
+describe('parseOptionParts', () => {
+  it('takes the name, and the fee only from a text that starts with an amount', () => {
     expect(
-      parseOptionText(
-        'Instabox paketskåp19kr med InstaboxImorgonFri frakt från 299 kr eller vid receptköp',
-      ),
+      parseOptionParts([
+        'Vald leveransalternativInstabox paketskåp',
+        'Vald leveransalternativ',
+        'Levereras imorgon runt 20:00',
+        '19kr med Instabox',
+      ]),
     ).toEqual({
       id: 'instabox-paketskap',
       name: 'Instabox paketskåp',
       kind: 'parcel-box',
       fee: 19,
-      freeFrom: 299,
     });
-    expect(parseOptionText('Leveransalternativ PostNord ombud 49 kr')).toMatchObject({
-      name: 'PostNord ombud',
-      fee: 49,
+    expect(parseOptionParts(['Budbee hemleverans', 'Ikväll 21:30', '39kr'])).toMatchObject({
+      fee: 39,
     });
-    expect(parseOptionText('Hämta på apotek Gratis')).toMatchObject({
+    expect(parseOptionParts(['Hämta på apotek', 'Gratis'])).toMatchObject({
       fee: 0,
       kind: 'store-pickup',
     });
+    expect(
+      parseOptionParts(['PostNord ombud', '49 kr', 'Fri frakt från 299 kr eller vid receptköp']),
+    ).toMatchObject({ fee: 49, freeFrom: 299 });
   });
 
   it('returns null without a fee', () => {
-    expect(parseOptionText('Instabox paketskåp')).toBeNull();
+    expect(parseOptionParts(['Instabox paketskåp', 'Levereras imorgon runt 20:00'])).toBeNull();
+  });
+});
+
+describe('parseFreeFrom', () => {
+  it('reads the threshold', () => {
+    expect(parseFreeFrom('…Fri frakt från 299 kr eller vid receptköp')).toBe(299);
+    expect(parseFreeFrom('Leveransalternativ')).toBeUndefined();
   });
 });
 

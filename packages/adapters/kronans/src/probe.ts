@@ -13,6 +13,9 @@ const FRAME = 'iframe[title*="leveransalternativ" i] >> internal:control=enter-f
 /** Every selector the probe uses, so they're easy to fix when the site changes. */
 export const SELECTORS = {
   checkoutPath: '/kassa/',
+  /** Cookiebot's dialog ("Samtycke"); declined, since items don't reach the cart while it's open. */
+  cookieDecline:
+    '#CybotCookiebotDialogBodyButtonDecline, #CybotCookiebotDialogBodyLevelButtonLevelOptinDeclineAll >> nth=0',
   /** Add-to-cart (accessible name "Köp <product>, <price> kronor"), not a purchase. */
   buyButton: (id: string) => `[data-testid="${id}-buy-button"] >> nth=0`,
   deliveryFrame: 'iframe[title*="leveransalternativ" i]',
@@ -24,6 +27,14 @@ export const SELECTORS = {
     `${FRAME}internal:role=radiogroup[name="Leveransalternativ"i] >> internal:role=radio >> nth=${i}`,
   /** The row around a radio: the nearest element that also holds the fee. */
   optionRow: `xpath=ancestor-or-self::*[contains(., 'kr')][1]`,
+  /**
+   * The k-th element in a row with text of its own (name, delivery time, fee, …), skipping
+   * the invisible screen-reader prefix "(Vald) leveransalternativ".
+   */
+  rowText: (k: number) =>
+    `xpath=.//*[text()[normalize-space()][1][not(starts-with(normalize-space(.), 'Leveransalternativ')) and not(starts-with(normalize-space(.), 'Vald '))]] >> nth=${k}`,
+  /** The whole widget, for the free-shipping threshold. */
+  widget: `${FRAME}body`,
   removeItem: 'internal:role=button[name=/^Ta bort/i] >> nth=0',
   emptyCart: 'internal:text="Din varukorg är tom"i',
 } as const;
@@ -46,6 +57,28 @@ const JSON_LD_PRICE = `(() => {
   return null;
 })()`;
 
+/** What the page shows, for failure messages. Read-only. */
+const PAGE_STATE = `(() => ({
+  url: location.pathname,
+  title: document.title,
+  h1: document.querySelector('h1')?.textContent?.trim() ?? null,
+  buyButtons: document.querySelectorAll('[data-testid$="-buy-button"]').length,
+  consentButtons: [...document.querySelectorAll('#CybotCookiebotDialog button')]
+    .filter((b) => b.offsetParent !== null)
+    .map((b) => b.id + ': ' + b.textContent.trim()),
+  cartEmpty: /Din varukorg är tom/i.test(document.body.innerText),
+  iframes: [...document.querySelectorAll('iframe')].map((f) => f.title || f.src).slice(0, 8),
+  text: document.body.innerText.replace(/\\s+/g, ' ').slice(0, 300),
+}))()`;
+
+async function describePage(page: GuardedPage): Promise<string> {
+  try {
+    return JSON.stringify(await page.evaluateJson(PAGE_STATE));
+  } catch {
+    return 'page state unreadable';
+  }
+}
+
 class LayoutChanged extends Error {
   readonly code = 'layout-changed';
 }
@@ -62,7 +95,9 @@ export function createProbe(base = BASE_URL): ProbeFn {
         orderValue += (await addToCart(page, item.url, item.qty, req.signal)) * item.qty;
       }
       await page.goto(new URL(SELECTORS.checkoutPath, base).href);
-      await page.waitFor(SELECTORS.deliveryFrame, 20_000);
+      if (!(await exists(page, SELECTORS.deliveryFrame, 20_000))) {
+        throw new LayoutChanged(`no delivery widget on /kassa/: ${await describePage(page)}`);
+      }
       await page.waitFor(SELECTORS.postcode, 15_000);
       await page.fill(SELECTORS.postcode, req.postcode);
       await page.click(SELECTORS.continue);
@@ -92,12 +127,31 @@ async function addToCart(
   const id = productIdFromUrl(url);
   if (!id) throw new LayoutChanged(`no product id in ${url}`);
   await page.goto(url);
-  await page.waitFor(SELECTORS.buyButton(id));
+  if (!(await exists(page, SELECTORS.buyButton(id), 15_000))) {
+    throw new LayoutChanged(`no buy button on the product page: ${await describePage(page)}`);
+  }
   const price = parsePrice((await page.evaluateJson<string | null>(JSON_LD_PRICE)) ?? undefined);
   if (price == null) throw new LayoutChanged(`no price on ${url}`);
+  // The button is server-rendered; a click before Gatsby hydrates the page does nothing.
+  await waitForLoad(page, signal);
+  if (await exists(page, SELECTORS.cookieDecline, 5_000)) {
+    await page.click(SELECTORS.cookieDecline);
+    await pause(2_000, signal);
+    await waitForLoad(page, signal);
+  }
   for (let i = 0; i < qty; i++) {
-    await page.click(SELECTORS.buyButton(id));
-    // The cart updates in the background; give it time before the next click or page.
+    if (!(await exists(page, SELECTORS.buyButton(id), 15_000))) {
+      throw new LayoutChanged(`no buy button: ${await describePage(page)}`);
+    }
+    try {
+      await page.click(SELECTORS.buyButton(id));
+    } catch (err) {
+      // A click that times out (something covers the button) reads as "selector not found".
+      if ((err as { code?: string }).code !== 'layout-changed') throw err;
+      throw new LayoutChanged(`buy button not clickable: ${await describePage(page)}`);
+    }
+    // No drawer opens, only the header count changes; an add that didn't land shows up as
+    // an empty cart on /kassa/. Give the cart time to update before the next click or page.
     await pause(2_000, signal);
   }
   return price;
@@ -109,16 +163,36 @@ async function readOptions(page: GuardedPage): Promise<DeliveryOption[]> {
   for (let i = 0; i < MAX_ROWS; i++) {
     const radio = SELECTORS.option(i);
     if (!(await exists(page, radio, i === 0 ? 10_000 : 500))) break;
-    const text = await page.textContent(`${radio} >> ${SELECTORS.optionRow}`);
-    const option = parseOptionText(text ?? '');
-    if (!option) throw new LayoutChanged(`can't read delivery option ${i}: ${text}`);
+    const row = `${radio} >> ${SELECTORS.optionRow}`;
+    const parts: string[] = [];
+    // Hidden elements count as missing; stop after two misses in a row.
+    for (let k = 0, misses = 0; k < MAX_ROWS && misses < 2; k++) {
+      const part = `${row} >> ${SELECTORS.rowText(k)}`;
+      if (!(await exists(page, part, 300))) {
+        misses++;
+        continue;
+      }
+      misses = 0;
+      parts.push((await page.textContent(part)) ?? '');
+    }
+    const option = parseOptionParts(parts);
+    if (!option) {
+      const text = await page.textContent(row);
+      throw new LayoutChanged(
+        `can't read delivery option ${i}: ${JSON.stringify(parts)} in ${JSON.stringify(text)}`,
+      );
+    }
     let id = option.id;
     for (let n = 2; ids.has(id); n++) id = `${option.id}-${n}`;
     ids.add(id);
     options.push({ ...option, id });
   }
   if (options.length === 0) throw new LayoutChanged('no delivery options shown');
-  return options;
+  // The threshold is stated once for the widget rather than in each row.
+  const freeFrom = parseFreeFrom((await page.textContent(SELECTORS.widget)) ?? '');
+  return options.map((o) =>
+    o.fee > 0 && o.freeFrom == null && freeFrom != null ? { ...o, freeFrom } : o,
+  );
 }
 
 /**
@@ -137,32 +211,38 @@ async function emptyCart(page: GuardedPage, base: string): Promise<void> {
   }
 }
 
+const THRESHOLD = /fri frakt (?:från|över) (\d[\d\s]*(?:[.,]\d+)?) ?(?:kr|:-)/i;
+const FEE = /^(?:(\d+(?:[.,]\d+)?) ?(?:kr|:-)|gratis|kostnadsfri)/i;
+
+/** "Fri frakt från 299 kr eller vid receptköp" -> 299. */
+export function parseFreeFrom(text: string): number | undefined {
+  const m = cleanText(text).match(THRESHOLD);
+  return m ? parsePrice(m[1]) : undefined;
+}
+
 /**
- * Reads one option row, e.g. "Instabox paketskåp 19 kr med Instabox Fri frakt från 299 kr
- * eller vid receptköp". The text before the fee is the name.
+ * Reads one option row from the texts of its elements, e.g. ["Leveransalternativ",
+ * "Instabox paketskåp", "Levereras imorgon runt 20:00", "19kr med Instabox"]. The name is the
+ * first text, without the screen-reader prefix "(Vald) leveransalternativ"; the fee is the
+ * first text that starts with an amount, so times like "20:00" are never read as a fee.
  */
-export function parseOptionText(raw: string): DeliveryOption | null {
-  let text = cleanText(raw.replace(/\s+/g, ' '));
-  let freeFrom: number | undefined;
-  const threshold = text.match(/fri frakt (?:från|över) (\d[\d\s]*(?:[.,]\d+)?) ?(?:kr|:-)/i);
-  if (threshold) {
-    freeFrom = parsePrice(threshold[1]);
-    text = cleanText(
-      text.slice(0, threshold.index) + ' ' + text.slice(threshold.index! + threshold[0].length),
-    );
-  }
-  const fee = text.match(/(\d+(?:[.,]\d+)?) ?(?:kr|:-)/i) ?? text.match(/gratis|kostnadsfri/i);
-  if (!fee) return null;
-  const name = cleanText(text.slice(0, fee.index)).replace(/^Leveransalternativ /i, '');
-  if (!name) return null;
-  const feeValue = fee[1] != null ? parsePrice(fee[1]) : 0;
-  if (feeValue == null) return null;
+export function parseOptionParts(raw: string[]): DeliveryOption | null {
+  const parts = raw
+    .map((p) => cleanText(p.replace(/\s+/g, ' ')).replace(/^(?:vald )?leveransalternativ\s*/i, ''))
+    .filter(Boolean);
+  const name = parts.find((p) => !THRESHOLD.test(p) && !FEE.test(p));
+  const feeText = parts.find((p) => FEE.test(p));
+  if (!name || !feeText) return null;
+  const m = feeText.match(FEE)!;
+  const fee = m[1] != null ? parsePrice(m[1]) : 0;
+  if (fee == null) return null;
+  const freeFrom = parts.map(parseFreeFrom).find((n) => n != null);
   return {
     id: slug(name),
     name,
     kind: deliveryKind(name),
-    fee: feeValue,
-    ...(freeFrom != null && feeValue > 0 ? { freeFrom } : {}),
+    fee,
+    ...(freeFrom != null && fee > 0 ? { freeFrom } : {}),
   };
 }
 
@@ -192,6 +272,17 @@ async function exists(page: GuardedPage, selector: string, timeoutMs: number): P
   } catch {
     return false;
   }
+}
+
+/** Waits for the page's load event, then a little longer for hydration to finish. */
+async function waitForLoad(page: GuardedPage, signal?: AbortSignal): Promise<void> {
+  for (let i = 0; i < 30; i++) {
+    // Throws while the page is navigating (e.g. reloading after the cookie choice).
+    const state = await page.evaluateJson<string>('document.readyState').catch(() => 'loading');
+    if (state === 'complete') break;
+    await pause(500, signal);
+  }
+  await pause(2_000, signal);
 }
 
 function pause(ms: number, signal?: AbortSignal): Promise<void> {
