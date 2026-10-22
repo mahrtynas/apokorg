@@ -271,9 +271,11 @@ export function SearchPanel({
               {!hasMatches && <p className="text-sm text-slate-500">{t.search.noResults}</p>}
               <div className="grid grid-cols-2 gap-3 xl:grid-cols-3">
                 {groups.map((g) => (
+                  // min-w-0: a fieldset's default min-width is its content, which would push long
+                  // titles past the grid column.
                   <fieldset
                     key={g.status.merchantId}
-                    className="rounded-md border border-slate-200 p-3"
+                    className="min-w-0 rounded-md border border-slate-200 p-3"
                   >
                     <legend className="flex items-center gap-2 px-1 text-sm font-semibold">
                       {merchantName(g.status.merchantId)}
@@ -303,7 +305,8 @@ export function SearchPanel({
                               />
                               <Thumb src={m.offer.imageUrl} alt="" size="h-10 w-10" />
                               <span className="min-w-0 flex-1">
-                                <span className="block truncate" title={m.offer.title}>
+                                {/* Two lines: the words that tell variants apart are often at the end. */}
+                                <span className="line-clamp-2 break-words" title={m.offer.title}>
                                   {m.offer.title}
                                 </span>
                                 <span className="flex flex-wrap items-center gap-1.5 text-xs text-slate-500">
