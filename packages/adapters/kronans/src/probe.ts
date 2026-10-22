@@ -13,6 +13,10 @@ const FRAME = 'iframe[title*="leveransalternativ" i] >> internal:control=enter-f
 /** Every selector the probe uses, so they're easy to fix when the site changes. */
 export const SELECTORS = {
   checkoutPath: '/kassa/',
+  /** Cookiebot's dialog ("Samtycke"); declined, since items don't reach the cart while it's open. */
+  cookieDecline: 'internal:role=button[name=/^Neka/i] >> nth=0',
+  /** The cart drawer that opens after add-to-cart. */
+  cartDrawer: 'internal:text=/Till kassan/i >> nth=0',
   /** Add-to-cart (accessible name "Köp <product>, <price> kronor"), not a purchase. */
   buyButton: (id: string) => `[data-testid="${id}-buy-button"] >> nth=0`,
   deliveryFrame: 'iframe[title*="leveransalternativ" i]',
@@ -46,16 +50,16 @@ const JSON_LD_PRICE = `(() => {
   return null;
 })()`;
 
-/** What /kassa/ shows instead of the delivery widget, for the failure message. Read-only. */
-const CHECKOUT_STATE = `(() => ({
+/** What the page shows, for failure messages. Read-only. */
+const PAGE_STATE = `(() => ({
   cartEmpty: /Din varukorg är tom/i.test(document.body.innerText),
   iframes: [...document.querySelectorAll('iframe')].map((f) => f.title || f.src).slice(0, 8),
   text: document.body.innerText.replace(/\\s+/g, ' ').slice(0, 300),
 }))()`;
 
-async function describeCheckout(page: GuardedPage): Promise<string> {
+async function describePage(page: GuardedPage): Promise<string> {
   try {
-    return JSON.stringify(await page.evaluateJson(CHECKOUT_STATE));
+    return JSON.stringify(await page.evaluateJson(PAGE_STATE));
   } catch {
     return 'page state unreadable';
   }
@@ -78,7 +82,7 @@ export function createProbe(base = BASE_URL): ProbeFn {
       }
       await page.goto(new URL(SELECTORS.checkoutPath, base).href);
       if (!(await exists(page, SELECTORS.deliveryFrame, 20_000))) {
-        throw new LayoutChanged(`no delivery widget on /kassa/: ${await describeCheckout(page)}`);
+        throw new LayoutChanged(`no delivery widget on /kassa/: ${await describePage(page)}`);
       }
       await page.waitFor(SELECTORS.postcode, 15_000);
       await page.fill(SELECTORS.postcode, req.postcode);
@@ -112,8 +116,15 @@ async function addToCart(
   await page.waitFor(SELECTORS.buyButton(id));
   const price = parsePrice((await page.evaluateJson<string | null>(JSON_LD_PRICE)) ?? undefined);
   if (price == null) throw new LayoutChanged(`no price on ${url}`);
+  if (await exists(page, SELECTORS.cookieDecline, 5_000)) {
+    await page.click(SELECTORS.cookieDecline);
+    await pause(1_000, signal);
+  }
   for (let i = 0; i < qty; i++) {
     await page.click(SELECTORS.buyButton(id));
+    if (!(await exists(page, SELECTORS.cartDrawer, 10_000))) {
+      throw new LayoutChanged(`add-to-cart showed no cart: ${await describePage(page)}`);
+    }
     // The cart updates in the background; give it time before the next click or page.
     await pause(2_000, signal);
   }
