@@ -9,6 +9,7 @@ export const MERCHANT_IDS = [
   'kronans',
   'gymgrossisten',
   'lyko',
+  'meds',
   // Phase 2
   'bangerhead',
   'kicks',

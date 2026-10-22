@@ -5,7 +5,7 @@
 import { z } from 'zod';
 import { Basket, BasketItem, OptimizeOptions, SplitResult } from './basket';
 import { MerchantId, MerchantInfo } from './merchants';
-import { MatchResult, ProductOffer, Size } from './product';
+import { MatchKind, MatchResult, ProductOffer, Size } from './product';
 import { ShippingPolicy } from './shipping';
 import { Settings } from './settings';
 
@@ -120,6 +120,26 @@ export const ConfirmMatchRequest = z.object({
 export type ConfirmMatchRequest = z.infer<typeof ConfirmMatchRequest>;
 export const ConfirmMatchResponse = z.object({ ok: z.literal(true) });
 export type ConfirmMatchResponse = z.infer<typeof ConfirmMatchResponse>;
+
+// GET /api/matches/history: every product the user accepted as the match for a query, newest
+// first. Kept for good (unlike the latest-only confirmed matches), so it can become labelled
+// test data for the matcher. Optional `?query=` filters to one query.
+export const MatchHistoryEntry = z.object({
+  query: z.string(),
+  merchantId: MerchantId,
+  merchantProductId: z.string(),
+  /** Snapshot of the offer when it was accepted, when the server still had it cached. */
+  title: z.string().optional(),
+  ean: z.string().optional(),
+  url: z.url().optional(),
+  price: z.number().nonnegative().optional(),
+  /** What the matcher had labelled it, when known. */
+  kind: MatchKind.optional(),
+  acceptedAt: z.iso.datetime(),
+});
+export type MatchHistoryEntry = z.infer<typeof MatchHistoryEntry>;
+export const MatchHistoryResponse = z.object({ entries: z.array(MatchHistoryEntry) });
+export type MatchHistoryResponse = z.infer<typeof MatchHistoryResponse>;
 
 // POST /api/baskets/:id/optimize
 export const OptimizeRequest = z.object({
