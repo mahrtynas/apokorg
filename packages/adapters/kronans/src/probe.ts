@@ -46,6 +46,21 @@ const JSON_LD_PRICE = `(() => {
   return null;
 })()`;
 
+/** What /kassa/ shows instead of the delivery widget, for the failure message. Read-only. */
+const CHECKOUT_STATE = `(() => ({
+  cartEmpty: /Din varukorg är tom/i.test(document.body.innerText),
+  iframes: [...document.querySelectorAll('iframe')].map((f) => f.title || f.src).slice(0, 8),
+  text: document.body.innerText.replace(/\\s+/g, ' ').slice(0, 300),
+}))()`;
+
+async function describeCheckout(page: GuardedPage): Promise<string> {
+  try {
+    return JSON.stringify(await page.evaluateJson(CHECKOUT_STATE));
+  } catch {
+    return 'page state unreadable';
+  }
+}
+
 class LayoutChanged extends Error {
   readonly code = 'layout-changed';
 }
@@ -62,7 +77,9 @@ export function createProbe(base = BASE_URL): ProbeFn {
         orderValue += (await addToCart(page, item.url, item.qty, req.signal)) * item.qty;
       }
       await page.goto(new URL(SELECTORS.checkoutPath, base).href);
-      await page.waitFor(SELECTORS.deliveryFrame, 20_000);
+      if (!(await exists(page, SELECTORS.deliveryFrame, 20_000))) {
+        throw new LayoutChanged(`no delivery widget on /kassa/: ${await describeCheckout(page)}`);
+      }
       await page.waitFor(SELECTORS.postcode, 15_000);
       await page.fill(SELECTORS.postcode, req.postcode);
       await page.click(SELECTORS.continue);
