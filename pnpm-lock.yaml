@@ -136,6 +136,15 @@ importers:
         specifier: workspace:*
         version: link:../../core
 
+  packages/catalog-index:
+    dependencies:
+      '@apokorg/adapter-kit':
+        specifier: workspace:*
+        version: link:../adapter-kit
+      '@apokorg/matcher':
+        specifier: workspace:*
+        version: link:../matcher
+
   packages/core:
     dependencies:
       zod:
