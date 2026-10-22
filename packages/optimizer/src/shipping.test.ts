@@ -33,11 +33,15 @@ describe('shipping JSON', () => {
 
   it('matches the researched thresholds', () => {
     const freeFrom = (id: Parameters<typeof getShippingPolicy>[0]) =>
-      getShippingPolicy(id)!.options.find((o) => o.kind === 'pickup-point')?.freeFrom;
+      getShippingPolicy(id)!.options.find((o) => o.kind === 'pickup-point' && o.fee > 0)?.freeFrom;
     expect(getShippingPolicy('apotea')!.options.every((o) => o.fee === 0)).toBe(true);
     expect(freeFrom('doz')).toBe(199);
     expect(freeFrom('hjartat')).toBe(299);
     expect(freeFrom('apoteket')).toBe(300);
+    // Apoteksombud is a free pickup point; pharmacy pickup is store pickup.
+    expect(getShippingPolicy('apoteket')!.options).toContainEqual(
+      expect.objectContaining({ id: 'apoteksombud', kind: 'pickup-point', fee: 0 }),
+    );
     expect(freeFrom('lyko')).toBe(300);
     expect(freeFrom('gymgrossisten')).toBe(499);
   });

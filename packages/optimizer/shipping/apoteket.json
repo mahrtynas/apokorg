@@ -3,8 +3,14 @@
   "options": [
     {
       "id": "hamta-pa-apotek",
-      "name": "Hämta på Apoteket eller apoteksombud",
+      "name": "Hämta på Apoteket",
       "kind": "store-pickup",
+      "fee": 0
+    },
+    {
+      "id": "apoteksombud",
+      "name": "Apoteksombud",
+      "kind": "pickup-point",
       "fee": 0
     },
     {
@@ -28,7 +34,7 @@
       "fee": 69
     }
   ],
-  "lastVerified": "2026-10-21",
+  "lastVerified": "2026-10-22",
   "source": "https://www.apoteket.se/villkor/leveransalternativ/",
-  "notes": "The page confirms free pickup at Apoteket/apoteksombud and free standard delivery over 300 kr, but shows the per-option fees only at checkout. The 39 kr standard fee and the 69 kr home fee (with no threshold) are conservative guesses until a checkout probe confirms them."
+  "notes": "The page confirms free pickup at an Apoteket pharmacy and at an apoteksombud, and free standard delivery over 300 kr, but shows the per-option fees only at checkout. An apoteksombud is an agent inside another shop (often a grocery store), so it is modelled as a free pickup point, while pickup at an Apoteket pharmacy is store pickup. The 39 kr standard fee and the 69 kr home fee (with no threshold) are conservative guesses until a checkout probe confirms them."
 }
