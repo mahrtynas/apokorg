@@ -1,0 +1,35 @@
+name: Desktop installer
+
+# Slow (Rust + Tauri + NSIS), so only on demand or for tags.
+on:
+  workflow_dispatch:
+  push:
+    tags: ['v*']
+
+jobs:
+  installer:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          # The sidecar is a copy of this node.exe (Node SEA), so this is the Node it ships.
+          node-version: 24
+          cache: pnpm
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: apps/desktop/src-tauri
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter @apokorg/desktop build
+      - name: Smoke test (mock mode, search, close, no orphaned sidecar)
+        shell: pwsh
+        run: apps/desktop/scripts/smoke.ps1
+      - name: Rust tests
+        run: cargo test --manifest-path apps/desktop/src-tauri/Cargo.toml
+      - uses: actions/upload-artifact@v4
+        with:
+          name: apokorg-installer
+          path: apps/desktop/src-tauri/target/release/bundle/nsis/*.exe
+          if-no-files-found: error
