@@ -78,24 +78,29 @@ Mirror in `packages/optimizer/shipping/apoteket.json` (owned by task O).
 
 ## Checkout test (probe feasibility)
 
-Not yet tested – needs a manual browser check. (No browser was available to the agent.)
-
-Steps for a manual test:
-
-1. Open https://www.apoteket.se/produkt/alvedon-filmdragerad-tablett-500-mg-20-st-blister-243170/ (34 kr) and click "Lägg i varukorgen".
-2. Open the cart and go to checkout ("Till kassan"). Note whether it asks for login or BankID before anything else, or offers guest checkout.
-3. If a postcode field appears, enter `11738`. If an email field is required before delivery options, use the probe email.
-4. Note whether delivery options and their fees (apoteksombud, Instabox, PostNord, Airmee, Bring…) appear **before** any payment, personal-number or BankID step. Record the selectors for the postcode field and the delivery-option list.
-5. Stop there. Do not fill in name, address, phone or payment, and do not click Slutför/Betala/Lägg order. Empty the cart.
-6. Fill in below:
+**probe-unsupported: delivery options and their fees are shown only after first name, last name, mobile number, street address and city have been filled in, and the probe may not fill those fields.**
 
 ```
-Tried on: YYYY-MM-DD
-- Guest checkout possible without login/BankID? yes/no
-- Shipping options and fees visible before payment? yes/no, after entering postcode/email?
-- Steps (selectors) to reach delivery options:
-- Verdict: probe supported / unsupported
+Tried on: 2026-10-22 (Orca embedded browser, not logged in, only necessary cookies)
+- Guest checkout possible without login/BankID? yes. Login is offered ("Logga in med BankID för medlemserbjudanden") but optional.
+- Shipping options and fees visible before payment? no, not with postcode/email alone.
+  Delivery options come before payment, but only after the full "Dina uppgifter" form passes validation.
+- Steps (selectors) to reach delivery options: see below
+- Verdict: probe unsupported
 ```
+
+Steps taken (item: Alvedon 500 mg 20 st, 34 kr; postcode 11738, probe email):
+
+1. Product page, button "Köp <product name>" (the add-to-cart button's text is "Köp" plus the product title, which the guard allows). The header cart link becomes "1 Varukorg".
+2. Cart at `/varukorg/` (robots.txt disallows only the old `/varukorg.aspx*`). Summary says "Frakt 0kr" before any delivery choice. Button "Fortsätt till kassan" goes to `/kassa/` (not in robots.txt).
+3. `/kassa/` is one page with three steps: "1. Varukorg", "2. Leverans", "3. Betalning". Button "Fortsätt till leverans" opens step 2. It needed a keyboard activation (focus + Enter) in the embedded browser; a plain click did nothing visible.
+4. Step 2 heading "Dina uppgifter" is one form with required fields Förnamn, Efternamn, E-postadress, Mobilnummer, Adress, Postnummer, Ort (plus optional C/O) and a "Fortsätt" button. Below it, "Leveransalternativ" only says "Ange din leveransadress ovan för att se tillgängliga leveransalternativ."
+5. Filling only Postnummer (`11738`) and E-postadress, then clicking "Fortsätt", shows the validation errors "Ange förnamn", "Ange efternamn", "Ange mobilnummer", "Ange adress", "Ange ort". No request was sent (only `GET /bff/v1/checkout/customer-details` and the cart reads), Ort is not filled from the postcode, and no delivery options appear.
+6. Stopped there. The item was removed with "Ta bort produkt" in the cart; the header then said "Du har 0 produkter i din varukorg." Step 3 (payment) was never opened and no order was placed.
+
+The checkout's data comes from `/bff/v1/checkout/*` JSON endpoints (`cart`, `cart/as-member`, `customer-details`, `checkout-coupon-codes`). A delivery-options endpoint was not seen because the page never asked for one. Calling such an endpoint directly would bypass the guarded page, so it is out of scope for the probe.
+
+Shipping fees therefore stay as published in `packages/optimizer/shipping/apoteket.json` (free over 300 kr, free apoteksombud and pharmacy pickup; the 39 kr and 69 kr fees are unverified guesses).
 
 ## Quirks
 
