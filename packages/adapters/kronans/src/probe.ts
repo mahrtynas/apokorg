@@ -14,7 +14,8 @@ const FRAME = 'iframe[title*="leveransalternativ" i] >> internal:control=enter-f
 export const SELECTORS = {
   checkoutPath: '/kassa/',
   /** Cookiebot's dialog ("Samtycke"); declined, since items don't reach the cart while it's open. */
-  cookieDecline: 'internal:role=button[name=/^Neka/i] >> nth=0',
+  cookieDecline:
+    '#CybotCookiebotDialogBodyButtonDecline, #CybotCookiebotDialogBodyLevelButtonLevelOptinDeclineAll >> nth=0',
   /** The cart drawer that opens after add-to-cart. */
   cartDrawer: 'internal:text=/Till kassan/i >> nth=0',
   /** Add-to-cart (accessible name "Köp <product>, <price> kronor"), not a purchase. */
@@ -56,6 +57,9 @@ const PAGE_STATE = `(() => ({
   title: document.title,
   h1: document.querySelector('h1')?.textContent?.trim() ?? null,
   buyButtons: document.querySelectorAll('[data-testid$="-buy-button"]').length,
+  consentButtons: [...document.querySelectorAll('#CybotCookiebotDialog button')]
+    .filter((b) => b.offsetParent !== null)
+    .map((b) => b.id + ': ' + b.textContent.trim()),
   cartEmpty: /Din varukorg är tom/i.test(document.body.innerText),
   iframes: [...document.querySelectorAll('iframe')].map((f) => f.title || f.src).slice(0, 8),
   text: document.body.innerText.replace(/\\s+/g, ' ').slice(0, 300),
@@ -133,7 +137,13 @@ async function addToCart(
     if (!(await exists(page, SELECTORS.buyButton(id), 15_000))) {
       throw new LayoutChanged(`no buy button: ${await describePage(page)}`);
     }
-    await page.click(SELECTORS.buyButton(id));
+    try {
+      await page.click(SELECTORS.buyButton(id));
+    } catch (err) {
+      // A click that times out (something covers the button) reads as "selector not found".
+      if ((err as { code?: string }).code !== 'layout-changed') throw err;
+      throw new LayoutChanged(`buy button not clickable: ${await describePage(page)}`);
+    }
     if (!(await exists(page, SELECTORS.cartDrawer, 10_000))) {
       throw new LayoutChanged(`add-to-cart showed no cart: ${await describePage(page)}`);
     }
