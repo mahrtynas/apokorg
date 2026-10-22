@@ -1,5 +1,6 @@
 /** Typed access to the tables in db.ts. Everything read back is re-validated with zod. */
 import {
+  api,
   Basket,
   BasketItem,
   MerchantId,
@@ -110,7 +111,31 @@ export class Repo {
     return out;
   }
 
-  confirmMatch(query: string, merchantId: MerchantId, merchantProductId: string): void {
+  /**
+   * Remembers the pick for the query and, when it is new or changed, appends it to the match
+   * history with a snapshot of the offer. Saving a basket again with the same pins adds nothing.
+   * Returns true when it was added to the history.
+   */
+  confirmMatch(query: string, merchantId: MerchantId, merchantProductId: string): boolean {
+    const previous = this.getConfirmedMatches(query)[merchantId];
+    const now = new Date(this.now()).toISOString();
+    if (previous !== merchantProductId) {
+      const offer = this.findCachedOffer(merchantId, merchantProductId);
+      this.db
+        .prepare(
+          `INSERT INTO match_history
+             (query, query_key, merchant_id, merchant_product_id, offer_json, accepted_at)
+           VALUES (?, ?, ?, ?, ?, ?)`,
+        )
+        .run(
+          query.trim(),
+          queryKey(query),
+          merchantId,
+          merchantProductId,
+          offer ? JSON.stringify(offer) : null,
+          now,
+        );
+    }
     this.db
       .prepare(
         `INSERT INTO confirmed_matches (query_key, merchant_id, merchant_product_id, confirmed_at)
@@ -118,7 +143,55 @@ export class Repo {
          ON CONFLICT(query_key, merchant_id) DO UPDATE SET
            merchant_product_id = excluded.merchant_product_id, confirmed_at = excluded.confirmed_at`,
       )
-      .run(queryKey(query), merchantId, merchantProductId, new Date(this.now()).toISOString());
+      .run(queryKey(query), merchantId, merchantProductId, now);
+    return previous !== merchantProductId;
+  }
+
+  /** Newest first. With a query, only that query (case and spacing ignored). */
+  getMatchHistory(query?: string, limit = 1000): api.MatchHistoryEntry[] {
+    const rows = (query === undefined
+      ? this.db.prepare('SELECT * FROM match_history ORDER BY id DESC LIMIT ?').all(limit)
+      : this.db
+          .prepare('SELECT * FROM match_history WHERE query_key = ? ORDER BY id DESC LIMIT ?')
+          .all(queryKey(query), limit)) as unknown as {
+      query: string;
+      merchant_id: string;
+      merchant_product_id: string;
+      offer_json: string | null;
+      accepted_at: string;
+    }[];
+    const out: api.MatchHistoryEntry[] = [];
+    for (const r of rows) {
+      const merchantId = MerchantId.safeParse(r.merchant_id);
+      if (!merchantId.success) continue;
+      const offer = r.offer_json ? ProductOffer.safeParse(JSON.parse(r.offer_json)) : undefined;
+      const o = offer?.success ? offer.data : undefined;
+      out.push({
+        query: r.query,
+        merchantId: merchantId.data,
+        merchantProductId: r.merchant_product_id,
+        ...(o
+          ? { title: o.title, url: o.url, price: o.price, ...(o.ean ? { ean: o.ean } : {}) }
+          : {}),
+        acceptedAt: r.accepted_at,
+      });
+    }
+    return out;
+  }
+
+  /** The most recently cached copy of one store product, whatever query found it, expired or not. */
+  private findCachedOffer(merchantId: MerchantId, merchantProductId: string): ProductOffer | null {
+    const rows = this.db
+      .prepare('SELECT offers_json FROM offer_cache WHERE merchant_id = ? ORDER BY fetched_at DESC')
+      .all(merchantId) as unknown as { offers_json: string }[];
+    for (const r of rows) {
+      const offers = z.array(ProductOffer).safeParse(JSON.parse(r.offers_json));
+      const hit = offers.success
+        ? offers.data.find((o) => o.merchantProductId === merchantProductId)
+        : undefined;
+      if (hit) return hit;
+    }
+    return null;
   }
 
   // ---- shipping overrides ----

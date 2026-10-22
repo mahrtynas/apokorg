@@ -8,6 +8,7 @@ export const keys = {
   baskets: ['baskets'] as const,
   settings: ['settings'] as const,
   catalogs: ['catalogs'] as const,
+  matchHistory: ['matchHistory'] as const,
   optimize: (basketId: string, req: unknown) => ['optimize', basketId, req] as const,
 };
 
@@ -40,6 +41,10 @@ export function useRefreshCatalogs() {
   });
 }
 
+export function useMatchHistory() {
+  return useQuery({ queryKey: keys.matchHistory, queryFn: client.matchHistory });
+}
+
 export function useSearch() {
   return useMutation({ mutationFn: client.search });
 }
@@ -66,6 +71,7 @@ export function useSaveBasket() {
         };
       });
       void qc.invalidateQueries({ queryKey: ['optimize', saved.id] });
+      void qc.invalidateQueries({ queryKey: keys.matchHistory });
     },
   });
 }

@@ -58,3 +58,33 @@ describe('product catalogs', () => {
     expect(within(card).getByText(/1[\s ]?600 products/)).toBeInTheDocument();
   });
 });
+
+describe('accepted matches', () => {
+  it('lists the match history, newest first', async () => {
+    const state = mockApi();
+    state.history = [
+      {
+        query: 'cerave spf50',
+        merchantId: 'apotea',
+        merchantProductId: 'apotea-p05',
+        title: 'CeraVe Facial Moisturising Lotion SPF50 52 ml',
+        acceptedAt: '2026-10-22T12:00:00.000Z',
+      },
+      {
+        query: 'alvedon 20 st',
+        merchantId: 'doz',
+        merchantProductId: 'doz-p01',
+        acceptedAt: '2026-10-21T12:00:00.000Z',
+      },
+    ];
+    renderApp('settings');
+
+    const heading = await screen.findByRole('heading', { name: t.settings.historyHeading });
+    const card = heading.parentElement!;
+    expect(await within(card).findByText(t.settings.historyCount(2))).toBeInTheDocument();
+    const rows = within(card).getAllByRole('row');
+    expect(rows[0]).toHaveTextContent('CeraVe Facial Moisturising Lotion SPF50 52 ml');
+    // Without a snapshot the store's product id is shown.
+    expect(rows[1]).toHaveTextContent('doz-p01');
+  });
+});

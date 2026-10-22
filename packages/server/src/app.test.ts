@@ -713,3 +713,66 @@ describe('catalog status and startup refresh', () => {
     expect(refreshed).toEqual([]);
   });
 });
+
+describe('match history', () => {
+  const history = async (app: FastifyInstance, query?: string) =>
+    api.MatchHistoryResponse.parse(
+      (
+        await app.inject({
+          method: 'GET',
+          url: `/api/matches/history${query ? `?query=${encodeURIComponent(query)}` : ''}`,
+        })
+      ).json(),
+    ).entries;
+
+  it('records each new or changed pick once, with an offer snapshot, and keeps old ones', async () => {
+    const app = await makeApp();
+    // A search caches the offers, so the history can snapshot title, price and URL.
+    await app.inject({
+      method: 'POST',
+      url: '/api/search',
+      ...json({ query: 'alvedon', merchants: ['apotea'] }),
+    });
+    const save = (pin: string) =>
+      app.inject({
+        method: 'PUT',
+        url: '/api/baskets/h1',
+        ...json({ name: 'h', items: [{ id: 'i1', query: 'Alvedon', pinned: { apotea: pin } }] }),
+      });
+
+    await save('apotea-p01');
+    await save('apotea-p01'); // same pick again: no new entry
+    await save('apotea-p02'); // changed pick: new entry, old one kept
+
+    const entries = await history(app);
+    expect(entries.map((e) => e.merchantProductId)).toEqual(['apotea-p02', 'apotea-p01']);
+    expect(entries[1]).toMatchObject({
+      query: 'Alvedon',
+      merchantId: 'apotea',
+      title: expect.stringMatching(/alvedon/i),
+      url: expect.stringMatching(/^https?:\/\//),
+      price: expect.any(Number),
+    });
+  });
+
+  it('records POST /api/matches/confirm and filters by query', async () => {
+    const app = await makeApp();
+    await app.inject({
+      method: 'POST',
+      url: '/api/matches/confirm',
+      ...json({ query: 'Alvedon', merchantId: 'doz', merchantProductId: 'doz-p01' }),
+    });
+    await app.inject({
+      method: 'POST',
+      url: '/api/matches/confirm',
+      ...json({ query: 'nivea creme', merchantId: 'doz', merchantProductId: 'doz-p09' }),
+    });
+    expect(await history(app)).toHaveLength(2);
+    const alvedon = await history(app, '  alvedon ');
+    expect(alvedon).toEqual([
+      expect.objectContaining({ merchantId: 'doz', merchantProductId: 'doz-p01' }),
+    ]);
+    // Never searched, so nothing to snapshot.
+    expect(alvedon[0]!.title).toBeUndefined();
+  });
+});

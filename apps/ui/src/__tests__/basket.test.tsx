@@ -45,6 +45,11 @@ describe('basket builder', () => {
       });
       expect(added.ean).toMatch(/^\d{13}$/);
     });
+    // Both confirmed stores are recorded as accepted matches.
+    expect(state.history.map((h) => h.merchantProductId).sort()).toEqual([
+      'apotea-p08',
+      'gymgrossisten-p08',
+    ]);
   });
 
   it('goes back from step 2, and edits quantity and substitutes', async () => {

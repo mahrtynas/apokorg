@@ -9,6 +9,7 @@ import {
 } from '@apokorg/core';
 import {
   useCatalogStatus,
+  useMatchHistory,
   useMerchants,
   useRefreshCatalogs,
   useSaveSettings,
@@ -32,6 +33,7 @@ export function SettingsPage() {
     <div className="flex flex-col gap-6">
       <SettingsForm initial={settings.data} merchants={merchants.data.merchants} />
       <CatalogsCard />
+      <MatchHistoryCard />
       <Card>
         <h2 className="mb-3 text-base font-semibold">{t.settings.shippingHeading}</h2>
         <div className="flex flex-col gap-4">
@@ -83,6 +85,48 @@ function CatalogsCard() {
           </li>
         ))}
       </ul>
+    </Card>
+  );
+}
+
+const HISTORY_SHOWN = 20;
+
+function MatchHistoryCard() {
+  const history = useMatchHistory();
+  const name = useMerchantName();
+  if (history.isPending) return null;
+  if (history.error) return <ErrorBox error={history.error} />;
+  const entries = history.data.entries;
+  return (
+    <Card>
+      <h2 className="mb-1 text-base font-semibold">{t.settings.historyHeading}</h2>
+      <p className="mb-3 text-sm text-slate-600">{t.settings.historyHint}</p>
+      {entries.length === 0 ? (
+        <p className="text-sm text-slate-500">{t.settings.historyEmpty}</p>
+      ) : (
+        <>
+          <p className="mb-2 text-sm">
+            {t.settings.historyCount(entries.length)}
+            {entries.length > HISTORY_SHOWN && ` ${t.settings.historyShowing(HISTORY_SHOWN)}`}
+          </p>
+          <table className="w-full text-sm">
+            <tbody>
+              {entries.slice(0, HISTORY_SHOWN).map((e, i) => (
+                <tr key={i} className="border-t border-slate-100 align-top">
+                  <td className="py-1 pr-3 font-medium">{e.query}</td>
+                  <td className="py-1 pr-3 whitespace-nowrap">{name(e.merchantId)}</td>
+                  <td className="py-1 pr-3 break-words text-slate-700">
+                    {e.title ?? e.merchantProductId}
+                  </td>
+                  <td className="py-1 whitespace-nowrap text-slate-500">
+                    {formatDate(e.acceptedAt)}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </>
+      )}
     </Card>
   );
 }
