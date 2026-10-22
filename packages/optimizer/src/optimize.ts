@@ -25,6 +25,8 @@ interface Offer {
   store: number;
   match: MatchResult;
   unitPrice: number;
+  /** Units of the offer bought: the item's qty times the match's packs. */
+  units: number;
   lineTotal: number;
 }
 
@@ -124,8 +126,9 @@ function buildProblem(
         members.has(offer.merchantId) && offer.memberPrice !== undefined
           ? Math.min(offer.memberPrice, offer.price)
           : offer.price;
-      const lineTotal = round2(lineCost(unitPrice, item.qty, offer.multiBuy));
-      offers.push({ item: i, store, match, unitPrice, lineTotal });
+      const units = item.qty * (match.packs ?? 1);
+      const lineTotal = round2(lineCost(unitPrice, units, offer.multiBuy));
+      offers.push({ item: i, store, match, unitPrice, units, lineTotal });
     }
   });
 
@@ -294,7 +297,7 @@ function toResult(problem: Problem, solution: Solution): SplitResult {
       merchantId: o.match.offer.merchantId,
       offer: o.match.offer,
       kind: o.match.kind,
-      qty: item.qty,
+      qty: o.units,
       lineTotal: o.lineTotal,
     });
     subtotals.set(o.store, round2((subtotals.get(o.store) ?? 0) + o.lineTotal));

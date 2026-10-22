@@ -14,6 +14,7 @@ export interface OfferSpec {
   multiBuy?: { qty: number; unitPrice: number };
   inStock?: boolean;
   kind?: MatchKind;
+  packs?: number;
 }
 
 export function match(itemId: string, spec: OfferSpec): MatchResult {
@@ -32,6 +33,7 @@ export function match(itemId: string, spec: OfferSpec): MatchResult {
     kind: spec.kind ?? 'exact',
     confidence: 1,
     reasons: [],
+    ...(spec.packs ? { packs: spec.packs } : {}),
   };
 }
 

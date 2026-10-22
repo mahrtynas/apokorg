@@ -159,6 +159,24 @@ describe('optimize', () => {
     expect(r.total).toBe(179);
   });
 
+  it('buys a single can 24 times for a 24-pack, with its multi-buy deal', async () => {
+    // Two 24-packs: 48 cans at 22 kr, "4 for 80" (20 each) → 960 kr, beating 2 × 499 = 998.
+    const candidates = [
+      item(
+        'nocco',
+        [
+          { merchantId: 'meds', price: 22, packs: 24, multiBuy: { qty: 4, unitPrice: 20 } },
+          { merchantId: 'gymgrossisten', price: 499 },
+        ],
+        { qty: 2 },
+      ),
+    ];
+    const free = [pickup(0)];
+    const r = await optimize(candidates, [policy('meds', free), policy('gymgrossisten', free)], {});
+    expect(r.assignments[0]).toMatchObject({ merchantId: 'meds', qty: 48, lineTotal: 960 });
+    expect(r.total).toBe(960);
+  });
+
   it('picks the cheaper option of one store, by kind', async () => {
     // hjartat item 100: pickup 29 beats home 49 under 'cheapest'.
     const candidates = [item('item1', [{ merchantId: 'hjartat', price: 100 }])];

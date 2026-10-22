@@ -424,6 +424,68 @@ describe('product-first search', () => {
     expect(body.needsConfirmation).toBe(false);
   });
 
+  it('scales a single can to the chosen 24-pack, in locate and optimize', async () => {
+    const mocks = loadAdapters({ mock: true });
+    const can = { value: 330, unit: 'ml' } as const;
+    const store = (id: 'apotea' | 'gymgrossisten', title: string, price: number, pack?: number) => {
+      const real = mocks.find((a) => a.info.id === id)!;
+      const offer = {
+        merchantId: id,
+        merchantProductId: `${id}-nocco`,
+        title,
+        brand: 'NOCCO',
+        size: can,
+        ...(pack ? { packCount: pack } : {}),
+        price,
+        inStock: true,
+        url: `https://example.com/${id}/nocco`,
+        fetchedAt: '2026-10-22T00:00:00.000Z',
+      };
+      return { ...real, search: async () => [offer] } satisfies MerchantAdapter;
+    };
+    const app = await makeApp({
+      adapters: [
+        store('apotea', 'NOCCO BCAA Arancia 330 ml', 22),
+        store('gymgrossisten', '24 x NOCCO BCAA, 330 ml, Arancia', 499, 24),
+      ],
+    });
+    const product = { title: '24 x NOCCO BCAA, 330 ml, Arancia', size: can, packCount: 24 };
+    const located = api.SearchResponse.parse(
+      (
+        await app.inject({
+          method: 'POST',
+          url: '/api/products/locate',
+          ...json({ query: 'nocco arancia', product }),
+        })
+      ).json(),
+    );
+    expect(located.results.find((r) => r.offer.merchantId === 'apotea')?.packs).toBe(24);
+
+    const item = {
+      id: 'n1',
+      query: 'nocco arancia',
+      pinned: { apotea: 'apotea-nocco', gymgrossisten: 'gymgrossisten-nocco' },
+      size: can,
+      packCount: 24,
+    };
+    await app.inject({
+      method: 'PUT',
+      url: '/api/baskets/n',
+      ...json({ name: 'Nocco', items: [item] }),
+    });
+    const body = api.OptimizeResponse.parse(
+      (await app.inject({ method: 'POST', url: '/api/baskets/n/optimize', ...json({}) })).json(),
+    );
+    // 24 × 22 = 528 kr is more than the 499 kr 24-pack, so it is no longer picked.
+    expect(body.split.assignments[0]).toMatchObject({
+      merchantId: 'gymgrossisten',
+      qty: 1,
+      lineTotal: 499,
+    });
+    const single = body.candidates[0]!.matches.find((m) => m.offer.merchantId === 'apotea');
+    expect(single?.packs).toBe(24);
+  });
+
   it('finds an item by EAN when its query alone does not list it', async () => {
     // A store whose search only finds CeraVe when asked for its EAN.
     const real = loadAdapters({ mock: true }).find((a) => a.info.id === 'doz')!;

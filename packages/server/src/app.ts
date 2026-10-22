@@ -16,7 +16,7 @@ import Fastify, { type FastifyInstance, type FastifyServerOptions } from 'fastif
 import { z } from 'zod';
 import type { Db } from './db';
 import { defaultMatcher, defaultOptimizer, defaultShippingPolicies } from './deps';
-import { defaultNeedsConfirmation, type Matcher } from './matching';
+import { defaultNeedsConfirmation, type Matcher, type MatchOptions } from './matching';
 import type { Optimizer, ShippingPolicySource } from './optimizing';
 import { Repo } from './repo';
 import { createClaudeJudge, groupProducts, type LlmJudge } from '@apokorg/matcher';
@@ -159,12 +159,14 @@ export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
     stores: StoreSearchResult[],
     acceptSubstitutes: boolean,
     pinned: Partial<Record<MerchantId, string>>,
+    want?: MatchOptions['want'],
   ): Promise<MatchResult[]> => {
     const offers = stores.flatMap((s) => s.offers);
     return matcher.matchOffers(query, offers, {
       acceptSubstitutes,
       pinned: { ...repo.getConfirmedMatches(query), ...pinned },
       llm: currentJudge(),
+      want,
     });
   };
 
@@ -219,7 +221,7 @@ export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
   app.post('/api/products/locate', async (req): Promise<api.SearchResponse> => {
     const body = api.LocateRequest.parse(req.body);
     const merchantIds = body.merchants ?? currentSettings().enabledMerchants;
-    const { ean, title } = body.product;
+    const { ean, title, size, packCount } = body.product;
     const stores = await searchItem(merchantIds, adapters, body.query, ean, repo, timeoutMs);
     // The chosen product's EAN identifies it exactly: pin it wherever a store lists it.
     const pinned: Partial<Record<MerchantId, string>> = {};
@@ -230,7 +232,11 @@ export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
       }
     }
     // Match against the product's title, not the loose query, so near-misses become substitutes.
-    const results = await matchForQuery(title, stores, body.acceptSubstitutes, pinned);
+    // A store selling the product only in smaller packs is scaled up to the chosen pack.
+    const results = await matchForQuery(title, stores, body.acceptSubstitutes, pinned, {
+      size,
+      packCount,
+    });
     return {
       query: body.query,
       results,
@@ -317,6 +323,7 @@ export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
           stores,
           item.acceptSubstitutes,
           item.pinned,
+          { size: item.size, packCount: item.packCount },
         );
         return { item, stores, matches };
       }),

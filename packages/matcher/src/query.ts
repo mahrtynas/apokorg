@@ -23,6 +23,15 @@ export interface ParsedQuery {
 }
 
 const STRENGTH_RE = /\b(\d+(?:\.\d+)?)(mg|ug|ie)\b/;
+/** A leading bundle count in normalized text, as in "24 x nocco bcaa 330ml". */
+const BUNDLE_RE = /^(\d+) x (?=\D)/;
+
+/** Splits off a leading bundle count: "24 x nocco bcaa" → 24 and "nocco bcaa". */
+function splitBundle(normalized: string): { count?: number; rest: string } {
+  const m = BUNDLE_RE.exec(normalized);
+  const count = m ? Number(m[1]) : 0;
+  return count >= 2 ? { count, rest: normalized.slice(m![0].length) } : { rest: normalized };
+}
 
 /** Finds a brand phrase in normalized text, longest first. */
 export function detectBrand(
@@ -56,9 +65,10 @@ export function parseQuery(query: string, extraBrands: Iterable<string> = []): P
   const ean = /^\d[\d\s]{6,16}$/.test(trimmed) ? normalizeEan(trimmed) : undefined;
   const normalized = normalize(trimmed);
   const brand = ean ? undefined : detectBrand(normalized, extraBrands);
+  const bundle = splitBundle(normalized);
   const parsed: ParsedQuery = {
     normalized,
-    tokens: ean ? [] : removeBrandTokens(tokenize(normalized), brand),
+    tokens: ean ? [] : removeBrandTokens(tokenize(bundle.rest), brand),
   };
   if (ean) parsed.ean = ean;
   if (brand) parsed.brand = brand;
@@ -67,7 +77,7 @@ export function parseQuery(query: string, extraBrands: Iterable<string> = []): P
   if (strength) parsed.strength = strength;
   const size = parseSize(trimmed);
   if (size) parsed.size = size;
-  const packCount = parsePackCount(trimmed) ?? parsePackCount(normalized);
+  const packCount = parsePackCount(trimmed) ?? parsePackCount(normalized) ?? bundle.count;
   if (packCount) parsed.packCount = packCount;
   return parsed;
 }
@@ -89,7 +99,8 @@ export function offerFeatures(
 ): OfferFeatures {
   const normalized = normalize(offer.title);
   const brand = offer.brand ? normalize(offer.brand) : detectBrand(normalized, extraBrands);
-  const tokens = tokenize(normalized);
+  const bundle = splitBundle(normalized);
+  const tokens = tokenize(bundle.rest);
   const f: OfferFeatures = {
     normalized,
     // Only strip the brand from the title when the title actually contains it.
@@ -101,7 +112,7 @@ export function offerFeatures(
   if (strength) f.strength = strength;
   const size = offer.size ?? parseSize(offer.title);
   if (size) f.size = size;
-  const packCount = offer.packCount ?? parsePackCount(offer.title);
+  const packCount = offer.packCount ?? parsePackCount(offer.title) ?? bundle.count;
   if (packCount) f.packCount = packCount;
   return f;
 }

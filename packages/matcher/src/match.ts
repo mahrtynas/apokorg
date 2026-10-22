@@ -1,4 +1,11 @@
-import type { BasketItem, MatchKind, MatchResult, MerchantId, ProductOffer } from '@apokorg/core';
+import type {
+  BasketItem,
+  MatchKind,
+  MatchResult,
+  MerchantId,
+  ProductOffer,
+  Size,
+} from '@apokorg/core';
 import { normalize, VARIANT_WORDS } from './normalize';
 import {
   formatSize,
@@ -22,6 +29,8 @@ export interface MatchOptions {
   ambiguityMargin?: number;
   /** Maximum substitutes kept per merchant. Default 5. */
   maxSubstitutesPerMerchant?: number;
+  /** The chosen product's container size and pack count; fills in what the query leaves out. */
+  want?: { size?: Size; packCount?: number };
 }
 
 /** Highest confidence an unresolved tie may keep, so the user is asked. */
@@ -77,6 +86,18 @@ function tokenMatches(q: string, offerTokens: string[]): string | undefined {
     if (q.length >= 5 && t.length >= 5 && levenshteinAtMostOne(q, t)) return t;
   }
   return undefined;
+}
+
+/**
+ * How many of an offer make up the wanted pack when the store sells the same container in
+ * smaller packs: 24 single cans, or four 6-packs, for a 24-pack. Only for containers (ml or g),
+ * since a listing without a pack count is then one container; tablets are left alone.
+ */
+export function packsFor(q: ParsedQuery, f: OfferFeatures): number | undefined {
+  if (!q.packCount || !q.size || !f.size || baseSize(q.size).unit === 'st') return undefined;
+  if (!sameSize(q.size, f.size)) return undefined;
+  const per = f.packCount ?? 1;
+  return per < q.packCount && q.packCount % per === 0 ? q.packCount / per : undefined;
 }
 
 function numericMatchesMeasure(token: string, f: OfferFeatures): boolean {
@@ -204,7 +225,16 @@ export function scoreOffer(
   }
 
   // Pack count
-  if (q.packCount) {
+  const packs = packsFor(q, f);
+  if (packs) {
+    kind = capKind(kind, 'equivalent');
+    confidence -= 0.1;
+    reasons.push(
+      f.packCount
+        ? `${packs} packs of ${f.packCount} make a pack of ${q.packCount}`
+        : `sold singly: ${packs} make a pack of ${q.packCount}`,
+    );
+  } else if (q.packCount) {
     if (!f.packCount) {
       kind = capKind(kind, 'equivalent');
       confidence -= 0.1;
@@ -270,10 +300,11 @@ function consensus<K>(groups: Map<K, Candidate[]>): K | undefined {
 
 interface Prepared {
   query: string;
+  parsed: ParsedQuery;
   candidates: Candidate[];
   /** Merchants whose top two primary candidates are near-tied, with those candidates. */
   ambiguous: Map<MerchantId, Candidate[]>;
-  opts: Required<Omit<MatchOptions, 'llm' | 'pinned'>> & { pinned: BasketItem['pinned'] };
+  opts: Required<Omit<MatchOptions, 'llm' | 'pinned' | 'want'>> & { pinned: BasketItem['pinned'] };
 }
 
 function prepare(query: string, offers: ProductOffer[], options: MatchOptions): Prepared {
@@ -286,6 +317,8 @@ function prepare(query: string, offers: ProductOffer[], options: MatchOptions): 
   const offerBrands = new Set<string>();
   for (const o of offers) if (o.brand) offerBrands.add(normalize(o.brand));
   const q = parseQuery(query, offerBrands);
+  if (options.want?.size) q.size ??= options.want.size;
+  if (options.want?.packCount) q.packCount ??= options.want.packCount;
 
   const features = offers.map((o) => offerFeatures(o, offerBrands));
   const scored = new Map<ProductOffer, Candidate>();
@@ -380,7 +413,7 @@ function prepare(query: string, offers: ProductOffer[], options: MatchOptions): 
     }
   }
 
-  return { query, candidates, ambiguous, opts };
+  return { query, parsed: q, candidates, ambiguous, opts };
 }
 
 function resolve(p: Prepared, decisions: Map<MerchantId, JudgeDecision | undefined>) {
@@ -420,7 +453,14 @@ function resolve(p: Prepared, decisions: Map<MerchantId, JudgeDecision | undefin
         if (!p.opts.acceptSubstitutes || subs >= p.opts.maxSubstitutesPerMerchant) continue;
         subs++;
       }
-      out.push({ offer: c.offer, kind: c.kind, confidence: c.confidence, reasons: c.reasons });
+      const packs = packsFor(p.parsed, c.features);
+      out.push({
+        offer: c.offer,
+        kind: c.kind,
+        confidence: c.confidence,
+        reasons: c.reasons,
+        ...(packs ? { packs } : {}),
+      });
     }
   }
   return out;
