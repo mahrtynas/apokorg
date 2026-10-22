@@ -1,0 +1,2969 @@
+{
+ "q": "c-vitamin brustabletter",
+ "primaryList": {
+  "totalHits": 27,
+  "productGroups": [
+   {
+    "key": "productGroup757388",
+    "products": [
+     {
+      "key": "757388",
+      "brand": "Kronans Apotek",
+      "title": "Kronans Apotek C-Vitamin Apelsin",
+      "link": "/Kronans-Apotek-C-Vitamin-Apelsin/p/757388/",
+      "rating": 4.5,
+      "sellingPrice": {
+       "min": 30,
+       "max": 30
+      },
+      "listPrice": {
+       "min": 30,
+       "max": 30
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "30.5",
+         "label": "30.5"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7312489998253",
+         "label": "7312489998253"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "30.5",
+         "label": "30.5"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "2 för 40:-",
+         "label": "2 för 40:-"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Brustabletter 20 st",
+         "label": "Brustabletter 20 st"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/757388/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "757388-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/Kronans-Apotek-C-Vitamin-Apelsin/p/757388/",
+        "listPrice": 30,
+        "sellingPrice": 30,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup757389",
+    "products": [
+     {
+      "key": "757389",
+      "brand": "Kronans Apotek",
+      "title": "Kronans Apotek C-Vitamin Blåbär",
+      "link": "/Kronans-Apotek-C-Vitamin-Blabar/p/757389/",
+      "rating": 4.8,
+      "sellingPrice": {
+       "min": 30,
+       "max": 30
+      },
+      "listPrice": {
+       "min": 30,
+       "max": 30
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "30.5",
+         "label": "30.5"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7312489998260",
+         "label": "7312489998260"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "30.5",
+         "label": "30.5"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "2 för 40:-",
+         "label": "2 för 40:-"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Brustabletter 20 st",
+         "label": "Brustabletter 20 st"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/757389/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "757389-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/Kronans-Apotek-C-Vitamin-Blabar/p/757389/",
+        "listPrice": 30,
+        "sellingPrice": 30,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup789234",
+    "products": [
+     {
+      "key": "789234",
+      "brand": "Kronans Apotek",
+      "title": "Kronans Apotek C-vitamin Hallon",
+      "link": "/kronans-apotek-c-vitamin-hallon/p/789234/",
+      "rating": 4.6,
+      "sellingPrice": {
+       "min": 30,
+       "max": 30
+      },
+      "listPrice": {
+       "min": 30,
+       "max": 30
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "30.5",
+         "label": "30.5"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7312489991667",
+         "label": "7312489991667"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "30.5",
+         "label": "30.5"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "2 för 40:-",
+         "label": "2 för 40:-"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Brustabletter 20 st",
+         "label": "Brustabletter 20 st"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/789234/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "789234-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/kronans-apotek-c-vitamin-hallon/p/789234/",
+        "listPrice": 30,
+        "sellingPrice": 30,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup757387",
+    "products": [
+     {
+      "key": "757387",
+      "brand": "Kronans Apotek",
+      "title": "Kronans Apotek C-Vitamin Citron",
+      "link": "/Kronans-Apotek-C-Vitamin-Citron/p/757387/",
+      "rating": 4.8,
+      "sellingPrice": {
+       "min": 30,
+       "max": 30
+      },
+      "listPrice": {
+       "min": 30,
+       "max": 30
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "30.5",
+         "label": "30.5"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7312489998246",
+         "label": "7312489998246"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "30.5",
+         "label": "30.5"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "2 för 40:-",
+         "label": "2 för 40:-"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Brustabletter 20 st",
+         "label": "Brustabletter 20 st"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/757387/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "757387-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/Kronans-Apotek-C-Vitamin-Citron/p/757387/",
+        "listPrice": 30,
+        "sellingPrice": 30,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup795401",
+    "products": [
+     {
+      "key": "795401",
+      "brand": "Kronans Apotek",
+      "title": "Kronans Apotek Vitamin C + Zink Citron/Lime",
+      "link": "/kronans-apotek-c-vitamin-zink-citron-lime/p/795401/",
+      "sellingPrice": {
+       "min": 33,
+       "max": 33
+      },
+      "listPrice": {
+       "min": 33,
+       "max": 33
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "42.5",
+         "label": "42.5"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7312489981231",
+         "label": "7312489981231"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "35",
+         "label": "35"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Brustabletter 20 st",
+         "label": "Brustabletter 20 st"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/795401/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "795401-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/kronans-apotek-c-vitamin-zink-citron-lime/p/795401/",
+        "listPrice": 33,
+        "sellingPrice": 33,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup789341",
+    "products": [
+     {
+      "key": "789341",
+      "brand": "BioSalma",
+      "title": "BioSalma C-vitamin 1000mg apelsin",
+      "link": "/biosalma-c-vitamin-1000mg-apelsin/p/789341/",
+      "rating": 4.5,
+      "sellingPrice": {
+       "min": 15.9,
+       "max": 15.9
+      },
+      "listPrice": {
+       "min": 15.9,
+       "max": 15.9
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "17",
+         "label": "17"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7350014910615",
+         "label": "7350014910615"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "16",
+         "label": "16"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Brustabletter 20 st",
+         "label": "Brustabletter 20 st"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/789341/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "789341-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/biosalma-c-vitamin-1000mg-apelsin/p/789341/",
+        "listPrice": 15.9,
+        "sellingPrice": 15.9,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup789319",
+    "products": [
+     {
+      "key": "789319",
+      "brand": "BioSalma",
+      "title": "BioSalma C-vitamin 1000mg jordgubbe",
+      "link": "/biosalma-c-vitamin-1000mg-jordgubbe/p/789319/",
+      "rating": 4.7,
+      "sellingPrice": {
+       "min": 15.9,
+       "max": 15.9
+      },
+      "listPrice": {
+       "min": 15.9,
+       "max": 15.9
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "19",
+         "label": "19"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7350014910592",
+         "label": "7350014910592"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "18",
+         "label": "18"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Brustabletter 20 st",
+         "label": "Brustabletter 20 st"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/789319/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "789319-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/biosalma-c-vitamin-1000mg-jordgubbe/p/789319/",
+        "listPrice": 15.9,
+        "sellingPrice": 15.9,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup789330",
+    "products": [
+     {
+      "key": "789330",
+      "brand": "BioSalma",
+      "title": "BioSalma C-vitamin 1000mg citron",
+      "link": "/biosalma-c-vitamin-1000mg-citron/p/789330/",
+      "rating": 4.7,
+      "sellingPrice": {
+       "min": 15.9,
+       "max": 15.9
+      },
+      "listPrice": {
+       "min": 15.9,
+       "max": 15.9
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "17",
+         "label": "17"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7350014910608",
+         "label": "7350014910608"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "16",
+         "label": "16"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Brustabletter 20 st",
+         "label": "Brustabletter 20 st"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/789330/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "789330-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/biosalma-c-vitamin-1000mg-citron/p/789330/",
+        "listPrice": 15.9,
+        "sellingPrice": 15.9,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup01305341",
+    "products": [
+     {
+      "key": "01305341",
+      "brand": "Kronans Apotek",
+      "title": "Kronans Apotek Järn + C",
+      "link": "/kronans-apotek-jarn-c-brus/p/01305341/",
+      "sellingPrice": {
+       "min": 75,
+       "max": 75
+      },
+      "listPrice": {
+       "min": 75,
+       "max": 75
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "75",
+         "label": "75"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7312489983907",
+         "label": "7312489983907"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "79",
+         "label": "79"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Brustabletter 20 st",
+         "label": "Brustabletter 20 st"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/01305341/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "01305341-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/kronans-apotek-jarn-c-brus/p/01305341/",
+        "listPrice": 75,
+        "sellingPrice": 75,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup795399",
+    "products": [
+     {
+      "key": "795399",
+      "brand": "Kronans Apotek",
+      "title": "Kronans Apotek Multi B Boost Hallon",
+      "link": "/kronans-apotek-multi-b-boost-hallon/p/795399/",
+      "rating": 3.5,
+      "sellingPrice": {
+       "min": 56,
+       "max": 56
+      },
+      "listPrice": {
+       "min": 56,
+       "max": 56
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "75",
+         "label": "75"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7312489981217",
+         "label": "7312489981217"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "59",
+         "label": "59"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Brustabletter 20 st",
+         "label": "Brustabletter 20 st"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/795399/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "795399-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/kronans-apotek-multi-b-boost-hallon/p/795399/",
+        "listPrice": 56,
+        "sellingPrice": 56,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup795398",
+    "products": [
+     {
+      "key": "795398",
+      "brand": "Kronans Apotek",
+      "title": "Kronans Apotek Multi B Performance Citron/Lime",
+      "link": "/kronans-apotek-performance-citron-lime/p/795398/",
+      "rating": 3,
+      "sellingPrice": {
+       "min": 46,
+       "max": 46
+      },
+      "listPrice": {
+       "min": 46,
+       "max": 46
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "59",
+         "label": "59"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7312489981200",
+         "label": "7312489981200"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "49",
+         "label": "49"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Brustabletter 20 st",
+         "label": "Brustabletter 20 st"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/795398/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "795398-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/kronans-apotek-performance-citron-lime/p/795398/",
+        "listPrice": 46,
+        "sellingPrice": 46,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup797468",
+    "products": [
+     {
+      "key": "797468",
+      "brand": "Berocca",
+      "title": "Berocca Boost",
+      "link": "/berocca-boost/p/797468/",
+      "rating": 4.9,
+      "sellingPrice": {
+       "min": 97.6,
+       "max": 97.6
+      },
+      "listPrice": {
+       "min": 122,
+       "max": 122
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-20%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "155",
+         "label": "155"
+        }
+       ],
+       "ean": [
+        {
+         "id": "6430013130670",
+         "label": "6430013130670"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "122",
+         "label": "122"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "97.6",
+         "label": "97.6"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "20%",
+         "label": "20%"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Brustabletter 30 st",
+         "label": "Brustabletter 30 st"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/797468/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "797468-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/berocca-boost/p/797468/",
+        "listPrice": 122,
+        "sellingPrice": 97.6,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup01504283",
+    "products": [
+     {
+      "key": "01504283",
+      "brand": "Berocca",
+      "title": "Berocca Orange",
+      "link": "/berocca-orange/p/01504283/",
+      "sellingPrice": {
+       "min": 108,
+       "max": 108
+      },
+      "listPrice": {
+       "min": 135,
+       "max": 135
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-20%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "179",
+         "label": "179"
+        }
+       ],
+       "ean": [
+        {
+         "id": "6430013130489",
+         "label": "6430013130489"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "135",
+         "label": "135"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "108",
+         "label": "108"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "20%",
+         "label": "20%"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Brustabletter 45 st",
+         "label": "Brustabletter 45 st"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/01504283/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "01504283-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/berocca-orange/p/01504283/",
+        "listPrice": 135,
+        "sellingPrice": 108,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup785652",
+    "products": [
+     {
+      "key": "785652",
+      "brand": "Berocca",
+      "title": "Berocca Energy Cassis & Berries",
+      "link": "/berocca-energy-cassis-berries/p/785652/",
+      "sellingPrice": {
+       "min": 108,
+       "max": 108
+      },
+      "listPrice": {
+       "min": 135,
+       "max": 135
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-20%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "179",
+         "label": "179"
+        }
+       ],
+       "ean": [
+        {
+         "id": "6430013130816",
+         "label": "6430013130816"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "135",
+         "label": "135"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "108",
+         "label": "108"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "20%",
+         "label": "20%"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Multivitamin brustabletter 45 st",
+         "label": "Multivitamin brustabletter 45 st"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/785652/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "785652-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/berocca-energy-cassis-berries/p/785652/",
+        "listPrice": 135,
+        "sellingPrice": 108,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup01504276",
+    "products": [
+     {
+      "key": "01504276",
+      "brand": "Berocca",
+      "title": "Berocca Immunity",
+      "link": "/berocca-immuni/p/01504276/",
+      "sellingPrice": {
+       "min": 87.2,
+       "max": 87.2
+      },
+      "listPrice": {
+       "min": 109,
+       "max": 109
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-20%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "155",
+         "label": "155"
+        }
+       ],
+       "ean": [
+        {
+         "id": "6430013130847",
+         "label": "6430013130847"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "109",
+         "label": "109"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "87.2",
+         "label": "87.2"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "20%",
+         "label": "20%"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Brustabletter 30 st",
+         "label": "Brustabletter 30 st"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/01504276/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "01504276-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/berocca-immuni/p/01504276/",
+        "listPrice": 109,
+        "sellingPrice": 87.2,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup01504279",
+    "products": [
+     {
+      "key": "01504279",
+      "brand": "Berocca",
+      "title": "Berocca Mango",
+      "link": "/berocca-mango/p/01504279/",
+      "sellingPrice": {
+       "min": 108,
+       "max": 108
+      },
+      "listPrice": {
+       "min": 135,
+       "max": 135
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-20%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "179",
+         "label": "179"
+        }
+       ],
+       "ean": [
+        {
+         "id": "6430013130991",
+         "label": "6430013130991"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "135",
+         "label": "135"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "108",
+         "label": "108"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "20%",
+         "label": "20%"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Brustabletter 45 st",
+         "label": "Brustabletter 45 st"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/01504279/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "01504279-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/berocca-mango/p/01504279/",
+        "listPrice": 135,
+        "sellingPrice": 108,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup771525",
+    "products": [
+     {
+      "key": "771525",
+      "brand": "Mivitotal",
+      "title": "Mivitotal Brus",
+      "link": "/mivitotal-brus/p/771525/",
+      "rating": 5,
+      "sellingPrice": {
+       "min": 45.6,
+       "max": 45.6
+      },
+      "listPrice": {
+       "min": 57,
+       "max": 57
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-20%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "64",
+         "label": "64"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7394098900124",
+         "label": "7394098900124"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "59",
+         "label": "59"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "45.6",
+         "label": "45.6"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "20%",
+         "label": "20%"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Brustablett, 15 st",
+         "label": "Brustablett, 15 st"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/771525/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "771525-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/mivitotal-brus/p/771525/",
+        "listPrice": 57,
+        "sellingPrice": 45.6,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup01504277",
+    "products": [
+     {
+      "key": "01504277",
+      "brand": "Berocca",
+      "title": "Berocca Immunity",
+      "link": "/berocca-immuni/p/01504277/",
+      "sellingPrice": {
+       "min": 61.6,
+       "max": 61.6
+      },
+      "listPrice": {
+       "min": 77,
+       "max": 77
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-20%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "90",
+         "label": "90"
+        }
+       ],
+       "ean": [
+        {
+         "id": "6430013130830",
+         "label": "6430013130830"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "77",
+         "label": "77"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "61.6",
+         "label": "61.6"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "20%",
+         "label": "20%"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Brustabletter 15 st",
+         "label": "Brustabletter 15 st"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/01504277/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "01504277-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/berocca-immuni/p/01504277/",
+        "listPrice": 77,
+        "sellingPrice": 61.6,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup01302201",
+    "products": [
+     {
+      "key": "01302201",
+      "brand": "BioSalma",
+      "title": "BioSalma Immun C+D Vitamin Zink",
+      "link": "/immun-vitamin-zink/p/01302201/",
+      "sellingPrice": {
+       "min": 79,
+       "max": 79
+      },
+      "listPrice": {
+       "min": 79,
+       "max": 79
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "79",
+         "label": "79"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7350014910721",
+         "label": "7350014910721"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Brustabletter 30 st",
+         "label": "Brustabletter 30 st"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/01302201/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "01302201-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/immun-vitamin-zink/p/01302201/",
+        "listPrice": 79,
+        "sellingPrice": 79,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup01504284",
+    "products": [
+     {
+      "key": "01504284",
+      "brand": "Berocca",
+      "title": "Berocca Orange",
+      "link": "/berocca-orange/p/01504284/",
+      "sellingPrice": {
+       "min": 84.8,
+       "max": 84.8
+      },
+      "listPrice": {
+       "min": 106,
+       "max": 106
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-20%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "129",
+         "label": "129"
+        }
+       ],
+       "ean": [
+        {
+         "id": "6430013130472",
+         "label": "6430013130472"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "106",
+         "label": "106"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "84.8",
+         "label": "84.8"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "20%",
+         "label": "20%"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Brustabletter 30 st",
+         "label": "Brustabletter 30 st"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/01504284/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "01504284-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/berocca-orange/p/01504284/",
+        "listPrice": 106,
+        "sellingPrice": 84.8,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup01504280",
+    "products": [
+     {
+      "key": "01504280",
+      "brand": "Berocca",
+      "title": "Berocca Mango",
+      "link": "/berocca-mango/p/01504280/",
+      "sellingPrice": {
+       "min": 48,
+       "max": 48
+      },
+      "listPrice": {
+       "min": 60,
+       "max": 60
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-20%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "75",
+         "label": "75"
+        }
+       ],
+       "ean": [
+        {
+         "id": "6430013130984",
+         "label": "6430013130984"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "61",
+         "label": "61"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "48",
+         "label": "48"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "20%",
+         "label": "20%"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Brustabletter 15 st",
+         "label": "Brustabletter 15 st"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/01504280/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "01504280-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/berocca-mango/p/01504280/",
+        "listPrice": 60,
+        "sellingPrice": 48,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup01504285",
+    "products": [
+     {
+      "key": "01504285",
+      "brand": "Berocca",
+      "title": "Berocca Orange",
+      "link": "/berocca-orange/p/01504285/",
+      "sellingPrice": {
+       "min": 50.4,
+       "max": 50.4
+      },
+      "listPrice": {
+       "min": 63,
+       "max": 63
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-20%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "75",
+         "label": "75"
+        }
+       ],
+       "ean": [
+        {
+         "id": "6430013130465",
+         "label": "6430013130465"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "64",
+         "label": "64"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "50.4",
+         "label": "50.4"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "20%",
+         "label": "20%"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Brustabletter 15 st",
+         "label": "Brustabletter 15 st"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/01504285/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "01504285-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/berocca-orange/p/01504285/",
+        "listPrice": 63,
+        "sellingPrice": 50.4,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup797467",
+    "products": [
+     {
+      "key": "797467",
+      "brand": "Berocca",
+      "title": "Berocca Boost",
+      "link": "/berocca-boost/p/797467/",
+      "rating": 4.5,
+      "sellingPrice": {
+       "min": 52.8,
+       "max": 52.8
+      },
+      "listPrice": {
+       "min": 66,
+       "max": 66
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-20%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "66",
+         "label": "66"
+        }
+       ],
+       "ean": [
+        {
+         "id": "6430013130663",
+         "label": "6430013130663"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "66",
+         "label": "66"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "52.8",
+         "label": "52.8"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "20%",
+         "label": "20%"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Brustabletter 15 st",
+         "label": "Brustabletter 15 st"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/797467/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "797467-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/berocca-boost/p/797467/",
+        "listPrice": 66,
+        "sellingPrice": 52.8,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup785648",
+    "products": [
+     {
+      "key": "785648",
+      "brand": "Berocca",
+      "title": "Berocca Energy Cassis & Berries",
+      "link": "/berocca-energy-cassis-berries/p/785648/",
+      "sellingPrice": {
+       "min": 49.6,
+       "max": 49.6
+      },
+      "listPrice": {
+       "min": 62,
+       "max": 62
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [
+        {
+         "theme": "DISCOUNT",
+         "label": "-20%"
+        }
+       ],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "75",
+         "label": "75"
+        }
+       ],
+       "ean": [
+        {
+         "id": "6430013130809",
+         "label": "6430013130809"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Ja",
+         "label": "Ja"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "62",
+         "label": "62"
+        }
+       ],
+       "promotionPrice": [
+        {
+         "id": "49.6",
+         "label": "49.6"
+        }
+       ],
+       "promotionRibbon": [
+        {
+         "id": "20%",
+         "label": "20%"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Multivitamin brustabletter 15 st",
+         "label": "Multivitamin brustabletter 15 st"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/785648/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "785648-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/berocca-energy-cassis-berries/p/785648/",
+        "listPrice": 62,
+        "sellingPrice": 49.6,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup785601",
+    "products": [
+     {
+      "key": "785601",
+      "brand": "Ester-C",
+      "title": "Ester-C C-vitamin 1000 mg",
+      "link": "/ester-c-c-vitamin-1000-mg/p/785601/",
+      "sellingPrice": {
+       "min": 79,
+       "max": 79
+      },
+      "listPrice": {
+       "min": 79,
+       "max": 79
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "84",
+         "label": "84"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7350049568492",
+         "label": "7350049568492"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "82",
+         "label": "82"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Brustabletter 20 st",
+         "label": "Brustabletter 20 st"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/785601/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "785601-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/ester-c-c-vitamin-1000-mg/p/785601/",
+        "listPrice": 79,
+        "sellingPrice": 79,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup781129",
+    "products": [
+     {
+      "key": "781129",
+      "brand": "Puori",
+      "title": "Puori C3 Vitamin C",
+      "link": "/puori-c3-vitamin-c/p/781129/",
+      "sellingPrice": {
+       "min": 119,
+       "max": 119
+      },
+      "listPrice": {
+       "min": 119,
+       "max": 119
+      },
+      "inStock": false,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "139",
+         "label": "139"
+        }
+       ],
+       "ean": [
+        {
+         "id": "5710789003196",
+         "label": "5710789003196"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "129",
+         "label": "129"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Brustabletter 20 st",
+         "label": "Brustabletter 20 st"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/781129/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "781129-v1",
+        "inStock": false,
+        "stockNumber": 0,
+        "link": "/puori-c3-vitamin-c/p/781129/",
+        "listPrice": 119,
+        "sellingPrice": 119,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 0
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup784327",
+    "products": [
+     {
+      "key": "784327",
+      "brand": "ReSport",
+      "title": "Natuvital ReSport Grapefrukt/Citrus",
+      "link": "/natuvital-resport-grapefrukt-citrus/p/784327/",
+      "sellingPrice": {
+       "min": 24.9,
+       "max": 24.9
+      },
+      "listPrice": {
+       "min": 24.9,
+       "max": 24.9
+      },
+      "inStock": false,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "36.9",
+         "label": "36.9"
+        }
+       ],
+       "ean": [
+        {
+         "id": "7350046950306",
+         "label": "7350046950306"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "25.9",
+         "label": "25.9"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Vätskeersättning, brustablett 20 st",
+         "label": "Vätskeersättning, brustablett 20 st"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/784327/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "784327-v1",
+        "inStock": false,
+        "stockNumber": 0,
+        "link": "/natuvital-resport-grapefrukt-citrus/p/784327/",
+        "listPrice": 24.9,
+        "sellingPrice": 24.9,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 0
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

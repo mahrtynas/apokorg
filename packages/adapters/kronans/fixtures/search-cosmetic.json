@@ -1,0 +1,2911 @@
+{
+ "q": "la roche-posay",
+ "primaryList": {
+  "totalHits": 90,
+  "productGroups": [
+   {
+    "key": "productGroup796303",
+    "products": [
+     {
+      "key": "796303",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay Cicaplast Baume B5+",
+      "link": "/la-roche-posay-cicaplast-baume-b5/p/796303/",
+      "rating": 4.8,
+      "sellingPrice": {
+       "min": 161,
+       "max": 161
+      },
+      "listPrice": {
+       "min": 161,
+       "max": 161
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "245",
+         "label": "245"
+        }
+       ],
+       "ean": [
+        {
+         "id": "3337875816847",
+         "label": "3337875816847"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Balm 100 ml",
+         "label": "Balm 100 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/796303/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "796303-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/la-roche-posay-cicaplast-baume-b5/p/796303/",
+        "listPrice": 161,
+        "sellingPrice": 161,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup793786",
+    "products": [
+     {
+      "key": "793786",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay Toleriane Dermallergo Eyes",
+      "link": "/la-roche-posay-toleriane-dermallergo-eyes/p/793786/",
+      "rating": 4.8,
+      "sellingPrice": {
+       "min": 229,
+       "max": 229
+      },
+      "listPrice": {
+       "min": 229,
+       "max": 229
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "285",
+         "label": "285"
+        }
+       ],
+       "ean": [
+        {
+         "id": "3337875757515",
+         "label": "3337875757515"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Ögonkräm 20 ml",
+         "label": "Ögonkräm 20 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/793786/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "793786-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/la-roche-posay-toleriane-dermallergo-eyes/p/793786/",
+        "listPrice": 229,
+        "sellingPrice": 229,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup784671",
+    "products": [
+     {
+      "key": "784671",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay Hyalu Suractivatd Serum",
+      "link": "/la-roche-posay-hyalu-suractivatd-serum/p/784671/",
+      "rating": 4.8,
+      "sellingPrice": {
+       "min": 542,
+       "max": 542
+      },
+      "listPrice": {
+       "min": 542,
+       "max": 542
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "595",
+         "label": "595"
+        }
+       ],
+       "ean": [
+        {
+         "id": "3337875920582",
+         "label": "3337875920582"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Ansiktsserum 30 ml",
+         "label": "Ansiktsserum 30 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/784671/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "784671-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/la-roche-posay-hyalu-suractivatd-serum/p/784671/",
+        "listPrice": 542,
+        "sellingPrice": 542,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup775670",
+    "products": [
+     {
+      "key": "775670",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay Toleriane Sensitive Creme",
+      "link": "/la-roche-posay-sensitive-creme/p/775670/",
+      "rating": 4.6,
+      "sellingPrice": {
+       "min": 189,
+       "max": 189
+      },
+      "listPrice": {
+       "min": 189,
+       "max": 189
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "229",
+         "label": "229"
+        }
+       ],
+       "ean": [
+        {
+         "id": "3337875578486",
+         "label": "3337875578486"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Ansiktskräm 40 ml",
+         "label": "Ansiktskräm 40 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/775670/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "775670-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/la-roche-posay-sensitive-creme/p/775670/",
+        "listPrice": 189,
+        "sellingPrice": 189,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup784662",
+    "products": [
+     {
+      "key": "784662",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay Hyalu B5 Suractivatd",
+      "link": "/la-roche-posay-hyalu-b5-suractivatd/p/784662/",
+      "rating": 4.3,
+      "sellingPrice": {
+       "min": 529,
+       "max": 529
+      },
+      "listPrice": {
+       "min": 529,
+       "max": 529
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "575",
+         "label": "575"
+        }
+       ],
+       "ean": [
+        {
+         "id": "3337875920698",
+         "label": "3337875920698"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Ansiktskräm 50 ml",
+         "label": "Ansiktskräm 50 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/784662/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "784662-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/la-roche-posay-hyalu-b5-suractivatd/p/784662/",
+        "listPrice": 529,
+        "sellingPrice": 529,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup781500",
+    "products": [
+     {
+      "key": "781500",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay UVMune 400 Dark Spots Fluid SPF50+",
+      "link": "/la-roche-posay-uvmune-400-dark-spots-fluid-spf50/p/781500/",
+      "rating": 4.8,
+      "sellingPrice": {
+       "min": 265,
+       "max": 265
+      },
+      "listPrice": {
+       "min": 265,
+       "max": 265
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "365",
+         "label": "365"
+        }
+       ],
+       "ean": [
+        {
+         "id": "3337875917407",
+         "label": "3337875917407"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "188.3",
+         "label": "188.3"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Solskydd för ansiktet 50 ml",
+         "label": "Solskydd för ansiktet 50 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/781500/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "781500-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/la-roche-posay-uvmune-400-dark-spots-fluid-spf50/p/781500/",
+        "listPrice": 265,
+        "sellingPrice": 265,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup797567",
+    "products": [
+     {
+      "key": "797567",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay Effaclar Duo+M",
+      "link": "/la-roche-posay-effaclar-duom/p/797567/",
+      "rating": 4.7,
+      "sellingPrice": {
+       "min": 209,
+       "max": 209
+      },
+      "listPrice": {
+       "min": 209,
+       "max": 209
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "229",
+         "label": "229"
+        }
+       ],
+       "ean": [
+        {
+         "id": "3337875863377",
+         "label": "3337875863377"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Ansiktskräm 40 ml",
+         "label": "Ansiktskräm 40 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/797567/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "797567-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/la-roche-posay-effaclar-duom/p/797567/",
+        "listPrice": 209,
+        "sellingPrice": 209,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup796979",
+    "products": [
+     {
+      "key": "796979",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay Toleriane Rosaliac AR SPF 30",
+      "link": "/la-roche-posay-toleriane-rosaliac-ar-spf-30/p/796979/",
+      "rating": 4.5,
+      "sellingPrice": {
+       "min": 228,
+       "max": 228
+      },
+      "listPrice": {
+       "min": 228,
+       "max": 228
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "329",
+         "label": "329"
+        }
+       ],
+       "ean": [
+        {
+         "id": "3337875806961",
+         "label": "3337875806961"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Ansiktskräm med SPF 50 ml",
+         "label": "Ansiktskräm med SPF 50 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/796979/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "796979-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/la-roche-posay-toleriane-rosaliac-ar-spf-30/p/796979/",
+        "listPrice": 228,
+        "sellingPrice": 228,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup793787",
+    "products": [
+     {
+      "key": "793787",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay Toleriane Dermallergo Night",
+      "link": "/la-roche-posay-toleriane-dermallergo-night/p/793787/",
+      "rating": 4.7,
+      "sellingPrice": {
+       "min": 291,
+       "max": 291
+      },
+      "listPrice": {
+       "min": 291,
+       "max": 291
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "379",
+         "label": "379"
+        }
+       ],
+       "ean": [
+        {
+         "id": "3337875800853",
+         "label": "3337875800853"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Lugnande nattkräm 40 ml",
+         "label": "Lugnande nattkräm 40 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/793787/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "793787-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/la-roche-posay-toleriane-dermallergo-night/p/793787/",
+        "listPrice": 291,
+        "sellingPrice": 291,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup785516",
+    "products": [
+     {
+      "key": "785516",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay Hyalu B5 Serum",
+      "link": "/la-roche-posay-hyalu-b5-serum/p/785516/",
+      "rating": 4.7,
+      "sellingPrice": {
+       "min": 389,
+       "max": 389
+      },
+      "listPrice": {
+       "min": 389,
+       "max": 389
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "529",
+         "label": "529"
+        }
+       ],
+       "ean": [
+        {
+         "id": "3337875583626",
+         "label": "3337875583626"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Anti-age ansiktsserum 30 ml",
+         "label": "Anti-age ansiktsserum 30 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/785516/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "785516-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/la-roche-posay-hyalu-b5-serum/p/785516/",
+        "listPrice": 389,
+        "sellingPrice": 389,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup793785",
+    "products": [
+     {
+      "key": "793785",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay Toleriane Dermallergo Creme",
+      "link": "/la-roche-posay-toleriane-dermallergo-creme/p/793785/",
+      "rating": 4.7,
+      "sellingPrice": {
+       "min": 235,
+       "max": 235
+      },
+      "listPrice": {
+       "min": 235,
+       "max": 235
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "309",
+         "label": "309"
+        }
+       ],
+       "ean": [
+        {
+         "id": "3337875757614",
+         "label": "3337875757614"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Dagkräm 40 ml",
+         "label": "Dagkräm 40 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/793785/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "793785-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/la-roche-posay-toleriane-dermallergo-creme/p/793785/",
+        "listPrice": 235,
+        "sellingPrice": 235,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup764393",
+    "products": [
+     {
+      "key": "764393",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay Nutritic Intense Rich",
+      "link": "/La-Roche-Posay/p/764393/",
+      "rating": 4.6,
+      "sellingPrice": {
+       "min": 251,
+       "max": 251
+      },
+      "listPrice": {
+       "min": 251,
+       "max": 251
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "329",
+         "label": "329"
+        }
+       ],
+       "ean": [
+        {
+         "id": "3337872413575",
+         "label": "3337872413575"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Ansiktskräm 50 ml",
+         "label": "Ansiktskräm 50 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/764393/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "764393-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/La-Roche-Posay/p/764393/",
+        "listPrice": 251,
+        "sellingPrice": 251,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup01504124",
+    "products": [
+     {
+      "key": "01504124",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay Lipikar Baume Light Ap+M",
+      "link": "/la-roche-posay-lipikar-baume-light-apm/p/01504124/",
+      "rating": 4.5,
+      "sellingPrice": {
+       "min": 399,
+       "max": 399
+      },
+      "listPrice": {
+       "min": 399,
+       "max": 399
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "469",
+         "label": "469"
+        }
+       ],
+       "ean": [
+        {
+         "id": "3337875930338",
+         "label": "3337875930338"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "469",
+         "label": "469"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Lugnande och stärkande kräm 400 ml",
+         "label": "Lugnande och stärkande kräm 400 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/01504124/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "01504124-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/la-roche-posay-lipikar-baume-light-apm/p/01504124/",
+        "listPrice": 399,
+        "sellingPrice": 399,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup798447",
+    "products": [
+     {
+      "key": "798447",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay Mela B3 Serum",
+      "link": "/la-roche-posay-mela-b3-serum/p/798447/",
+      "rating": 4.5,
+      "sellingPrice": {
+       "min": 519,
+       "max": 519
+      },
+      "listPrice": {
+       "min": 519,
+       "max": 519
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "605",
+         "label": "605"
+        }
+       ],
+       "ean": [
+        {
+         "id": "3337875890021",
+         "label": "3337875890021"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Ansiktsserum 30 ml",
+         "label": "Ansiktsserum 30 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/798447/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "798447-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/la-roche-posay-mela-b3-serum/p/798447/",
+        "listPrice": 519,
+        "sellingPrice": 519,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup01504123",
+    "products": [
+     {
+      "key": "01504123",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay Lipikar Baume Ap+Max",
+      "link": "/la-roche-posay-lipikar-baume-apmax/p/01504123/",
+      "rating": 5,
+      "sellingPrice": {
+       "min": 399,
+       "max": 399
+      },
+      "listPrice": {
+       "min": 399,
+       "max": 399
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "469",
+         "label": "469"
+        }
+       ],
+       "ean": [
+        {
+         "id": "3337875930239",
+         "label": "3337875930239"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "469",
+         "label": "469"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Kräm mot torr hud 400 ml",
+         "label": "Kräm mot torr hud 400 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/01504123/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "01504123-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/la-roche-posay-lipikar-baume-apmax/p/01504123/",
+        "listPrice": 399,
+        "sellingPrice": 399,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup775671",
+    "products": [
+     {
+      "key": "775671",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay Sensitive Riche",
+      "link": "/La-Roche-Posay-Sensitive-Riche/p/775671/",
+      "rating": 4.6,
+      "sellingPrice": {
+       "min": 189,
+       "max": 189
+      },
+      "listPrice": {
+       "min": 189,
+       "max": 189
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "229",
+         "label": "229"
+        }
+       ],
+       "ean": [
+        {
+         "id": "3337875588348",
+         "label": "3337875588348"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Ansiktskräm 40 ml",
+         "label": "Ansiktskräm 40 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/775671/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "775671-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/La-Roche-Posay-Sensitive-Riche/p/775671/",
+        "listPrice": 189,
+        "sellingPrice": 189,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup758140",
+    "products": [
+     {
+      "key": "758140",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay Cicaplast Levres Lips",
+      "link": "/La-Roche-Posay/p/758140/",
+      "rating": 4.3,
+      "sellingPrice": {
+       "min": 94,
+       "max": 94
+      },
+      "listPrice": {
+       "min": 94,
+       "max": 94
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "109",
+         "label": "109"
+        }
+       ],
+       "ean": [
+        {
+         "id": "30106659",
+         "label": "30106659"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Läppbalsam 7,5 ml",
+         "label": "Läppbalsam 7,5 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/758140/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "758140-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/La-Roche-Posay/p/758140/",
+        "listPrice": 94,
+        "sellingPrice": 94,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup794095",
+    "products": [
+     {
+      "key": "794095",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay Effaclar H Iso-Biome Anti-imperfections",
+      "link": "/la-roche-posay-effaclar-h-iso-biome-rengoringscreme/p/794095/",
+      "rating": 4.6,
+      "sellingPrice": {
+       "min": 194,
+       "max": 194
+      },
+      "listPrice": {
+       "min": 194,
+       "max": 194
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "235",
+         "label": "235"
+        }
+       ],
+       "ean": [
+        {
+         "id": "3337875777759",
+         "label": "3337875777759"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Rengöringskräm 200 ml",
+         "label": "Rengöringskräm 200 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/794095/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "794095-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/la-roche-posay-effaclar-h-iso-biome-rengoringscreme/p/794095/",
+        "listPrice": 194,
+        "sellingPrice": 194,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup799674",
+    "products": [
+     {
+      "key": "799674",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay Pure vitamin C12 serum",
+      "link": "/la-roche-posey-pure-vitamin-c12-serum/p/799674/",
+      "rating": 4.4,
+      "sellingPrice": {
+       "min": 469,
+       "max": 469
+      },
+      "listPrice": {
+       "min": 469,
+       "max": 469
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "565",
+         "label": "565"
+        }
+       ],
+       "ean": [
+        {
+         "id": "3337875909235",
+         "label": "3337875909235"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Anti-age serum 30 ml",
+         "label": "Anti-age serum 30 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/799674/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "799674-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/la-roche-posey-pure-vitamin-c12-serum/p/799674/",
+        "listPrice": 469,
+        "sellingPrice": 469,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup784550",
+    "products": [
+     {
+      "key": "784550",
+      "brand": "La Roche-Posay",
+      "title": "La Roche Posay Effaclar Serum Ultra Concentre",
+      "link": "/La-Roche-Posay-Ultra-Concentrated-Serum/p/784550/",
+      "rating": 4.7,
+      "sellingPrice": {
+       "min": 412,
+       "max": 412
+      },
+      "listPrice": {
+       "min": 412,
+       "max": 412
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "515",
+         "label": "515"
+        }
+       ],
+       "ean": [
+        {
+         "id": "3337875722827",
+         "label": "3337875722827"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Ansiktsserum 30 ml",
+         "label": "Ansiktsserum 30 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/784550/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "784550-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/La-Roche-Posay-Ultra-Concentrated-Serum/p/784550/",
+        "listPrice": 412,
+        "sellingPrice": 412,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup817664",
+    "products": [
+     {
+      "key": "817664",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay Effaclar Foaming Gel",
+      "link": "/la-roche-posay-effaclar-foaming-gel/p/817664/",
+      "sellingPrice": {
+       "min": 169,
+       "max": 169
+      },
+      "listPrice": {
+       "min": 169,
+       "max": 169
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "205",
+         "label": "205"
+        }
+       ],
+       "ean": [
+        {
+         "id": "3337872411083",
+         "label": "3337872411083"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Rengöringsgel 200 ml",
+         "label": "Rengöringsgel 200 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/817664/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "817664-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/la-roche-posay-effaclar-foaming-gel/p/817664/",
+        "listPrice": 169,
+        "sellingPrice": 169,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup783492",
+    "products": [
+     {
+      "key": "783492",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay Micro-peeling Purifying Gel",
+      "link": "/La-Roche-Posay-Micro-peeling-Purifying-Gel/p/783492/",
+      "rating": 4.6,
+      "sellingPrice": {
+       "min": 295,
+       "max": 295
+      },
+      "listPrice": {
+       "min": 295,
+       "max": 295
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "409",
+         "label": "409"
+        }
+       ],
+       "ean": [
+        {
+         "id": "3337875708289",
+         "label": "3337875708289"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Rengöringsgel 400 ml",
+         "label": "Rengöringsgel 400 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/783492/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "783492-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/La-Roche-Posay-Micro-peeling-Purifying-Gel/p/783492/",
+        "listPrice": 295,
+        "sellingPrice": 295,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup792598",
+    "products": [
+     {
+      "key": "792598",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay Cicaplast Baume B5+",
+      "link": "/la-roche-posay-cicaplast-baume-b5/p/792598/",
+      "rating": 4.7,
+      "sellingPrice": {
+       "min": 92,
+       "max": 92
+      },
+      "listPrice": {
+       "min": 92,
+       "max": 92
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "129",
+         "label": "129"
+        }
+       ],
+       "ean": [
+        {
+         "id": "3337875816809",
+         "label": "3337875816809"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Balm 40 ml",
+         "label": "Balm 40 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/792598/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "792598-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/la-roche-posay-cicaplast-baume-b5/p/792598/",
+        "listPrice": 92,
+        "sellingPrice": 92,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup784673",
+    "products": [
+     {
+      "key": "784673",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay Toleriane Serum",
+      "link": "/la-roche-posay-toleriane-serum/p/784673/",
+      "rating": 5,
+      "sellingPrice": {
+       "min": 509,
+       "max": 509
+      },
+      "listPrice": {
+       "min": 509,
+       "max": 509
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "549",
+         "label": "549"
+        }
+       ],
+       "ean": [
+        {
+         "id": "3337875921336",
+         "label": "3337875921336"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Ansiktsserum 30 ml",
+         "label": "Ansiktsserum 30 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/784673/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "784673-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/la-roche-posay-toleriane-serum/p/784673/",
+        "listPrice": 509,
+        "sellingPrice": 509,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup781501",
+    "products": [
+     {
+      "key": "781501",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay Cicaplast B5 Serum",
+      "link": "/la-roche-posay-cicaplast-b5-serum/p/781501/",
+      "rating": 4.3,
+      "sellingPrice": {
+       "min": 489,
+       "max": 489
+      },
+      "listPrice": {
+       "min": 489,
+       "max": 489
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "545",
+         "label": "545"
+        }
+       ],
+       "ean": [
+        {
+         "id": "3337875837804",
+         "label": "3337875837804"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Ansiktsserum 30 ml",
+         "label": "Ansiktsserum 30 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/781501/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "781501-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/la-roche-posay-cicaplast-b5-serum/p/781501/",
+        "listPrice": 489,
+        "sellingPrice": 489,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup818415",
+    "products": [
+     {
+      "key": "818415",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay Effaclar Micro-Exfoliante",
+      "link": "/la-roche-posay-effaclar-micro-exfoliante/p/818415/",
+      "rating": 4.4,
+      "sellingPrice": {
+       "min": 169,
+       "max": 169
+      },
+      "listPrice": {
+       "min": 169,
+       "max": 169
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "229",
+         "label": "229"
+        }
+       ],
+       "ean": [
+        {
+         "id": "3433422408159",
+         "label": "3433422408159"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Exfolierande ansiktsvatten 200 ml",
+         "label": "Exfolierande ansiktsvatten 200 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/818415/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "818415-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/la-roche-posay-effaclar-micro-exfoliante/p/818415/",
+        "listPrice": 169,
+        "sellingPrice": 169,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup794094",
+    "products": [
+     {
+      "key": "794094",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay Effaclar H Iso-Biome Creme",
+      "link": "/la-roche-posay-effaclar-h-iso-biome-creme/p/794094/",
+      "rating": 4.7,
+      "sellingPrice": {
+       "min": 199,
+       "max": 199
+      },
+      "listPrice": {
+       "min": 199,
+       "max": 199
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "245",
+         "label": "245"
+        }
+       ],
+       "ean": [
+        {
+         "id": "3337875777797",
+         "label": "3337875777797"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Ansiktskräm 40 ml",
+         "label": "Ansiktskräm 40 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/794094/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "794094-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/la-roche-posay-effaclar-h-iso-biome-creme/p/794094/",
+        "listPrice": 199,
+        "sellingPrice": 199,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup793687",
+    "products": [
+     {
+      "key": "793687",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay Anthelios Uvmune Ultra Light Creme SPF 50+",
+      "link": "/la-roche-posay-anthelios-uvmune-ultra-light-creme-spf-50/p/793687/",
+      "rating": 4.8,
+      "sellingPrice": {
+       "min": 216,
+       "max": 216
+      },
+      "listPrice": {
+       "min": 216,
+       "max": 216
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "269",
+         "label": "269"
+        }
+       ],
+       "ean": [
+        {
+         "id": "3337875797597",
+         "label": "3337875797597"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Solskydd för ansiktet  50 ml",
+         "label": "Solskydd för ansiktet  50 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/793687/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "793687-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/la-roche-posay-anthelios-uvmune-ultra-light-creme-spf-50/p/793687/",
+        "listPrice": 216,
+        "sellingPrice": 216,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup817653",
+    "products": [
+     {
+      "key": "817653",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay Soothing Lotion Sensitive Skin",
+      "link": "/la-roche-posay-soothing-lotion-sensitive-skin/p/817653/",
+      "rating": 4.7,
+      "sellingPrice": {
+       "min": 161,
+       "max": 161
+      },
+      "listPrice": {
+       "min": 161,
+       "max": 161
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "199",
+         "label": "199"
+        }
+       ],
+       "ean": [
+        {
+         "id": "3337872410321",
+         "label": "3337872410321"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Milt ansiktsvatten 200 ml",
+         "label": "Milt ansiktsvatten 200 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/817653/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "817653-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/la-roche-posay-soothing-lotion-sensitive-skin/p/817653/",
+        "listPrice": 161,
+        "sellingPrice": 161,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "key": "productGroup784661",
+    "products": [
+     {
+      "key": "784661",
+      "brand": "La Roche-Posay",
+      "title": "La Roche-Posay Lipikar Syndet Refill",
+      "link": "/la-roche-posay-lipikar-syndet-refill/p/784661/",
+      "rating": 5,
+      "sellingPrice": {
+       "min": 173,
+       "max": 173
+      },
+      "listPrice": {
+       "min": 173,
+       "max": 173
+      },
+      "inStock": true,
+      "badges": {
+       "primary": [],
+       "secondary": []
+      },
+      "custom": {
+       "basePrice": [
+        {
+         "id": "175",
+         "label": "175"
+        }
+       ],
+       "ean": [
+        {
+         "id": "3337875943901",
+         "label": "3337875943901"
+        }
+       ],
+       "hasPromotion": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "itemType": [
+        {
+         "id": "HR",
+         "label": "HR"
+        }
+       ],
+       "minPriceMonth": [
+        {
+         "id": "175",
+         "label": "175"
+        }
+       ],
+       "rX": [
+        {
+         "id": "Nej",
+         "label": "Nej"
+        }
+       ],
+       "subTitle": [
+        {
+         "id": "Duschkräm 400 ml",
+         "label": "Duschkräm 400 ml"
+        }
+       ]
+      },
+      "typedCustom": {
+       "lengths": {},
+       "json": {},
+       "numbers": {}
+      },
+      "sponsored": false,
+      "notifyImpression": false,
+      "imageInfo": {
+       "thumbnail": "https://www.kronansapotek.se/k2/images/784661/large/0.jpg"
+      },
+      "variants": [
+       {
+        "key": "784661-v1",
+        "inStock": true,
+        "stockNumber": 1,
+        "link": "/la-roche-posay-lipikar-syndet-refill/p/784661/",
+        "listPrice": 173,
+        "sellingPrice": 173,
+        "availability": [
+         {
+          "channel": "ONLINE",
+          "stockNumber": 1
+         }
+        ],
+        "prices": [],
+        "custom": {},
+        "typedCustom": {
+         "lengths": {},
+         "json": {},
+         "numbers": {}
+        }
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}
