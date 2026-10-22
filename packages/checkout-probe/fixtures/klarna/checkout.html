@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <title>Payment iframe (fixture)</title>
+    <script>
+      window.__clicks = [];
+      document.addEventListener(
+        'click',
+        (e) => {
+          const el = e.target.closest('[data-id]');
+          if (el) window.__clicks.push(el.dataset.id);
+        },
+        true,
+      );
+      document.addEventListener('submit', (e) => e.preventDefault());
+    </script>
+  </head>
+  <body>
+    <form action="/klarna/session">
+      <input id="k-email" type="email" name="email" />
+      <input id="k-postcode" name="postal_code" autocomplete="postal-code" />
+      <label data-id="k-shipping"><input type="radio" name="shipping" /> Hemleverans 59 kr</label>
+      <!-- Harmless text, but a submit button inside a payment frame. -->
+      <button data-id="k-submit" type="submit">Fortsätt</button>
+      <div data-id="k-role" role="button">Nästa</div>
+    </form>
+  </body>
+</html>
