@@ -16,6 +16,8 @@ export const MerchantsResponse = z.object({
       enabled: z.boolean(),
       shipping: ShippingPolicy.optional(),
       probeSupported: z.boolean(),
+      /** The store has a cart-fill script (POST /api/cart/fill). Absent means no. */
+      cartFillSupported: z.boolean().optional(),
     }),
   ),
 });
@@ -203,3 +205,31 @@ export type CatalogStatusResponse = z.infer<typeof CatalogStatusResponse>;
 
 export const ApiError = z.object({ error: z.string(), details: z.unknown().optional() });
 export type ApiError = z.infer<typeof ApiError>;
+
+// POST /api/cart/fill: put items in one store's cart in a visible browser and open its checkout.
+// The user finishes the order there; the app never pays or places it.
+export const FillCartRequest = z.object({
+  merchantId: MerchantId,
+  items: z
+    .array(
+      z.object({
+        url: z.url(),
+        merchantProductId: z.string().min(1),
+        qty: z.number().int().positive(),
+      }),
+    )
+    .min(1),
+});
+export type FillCartRequest = z.infer<typeof FillCartRequest>;
+
+export const FillCartResponse = z.object({
+  merchantId: MerchantId,
+  status: z.enum(['ok', 'unsupported', 'failed']),
+  /** Starts with an error code when the fill failed, e.g. "layout-changed: …". */
+  message: z.string().optional(),
+  /** The checkout page left open in the browser. */
+  url: z.url().optional(),
+  /** merchantProductIds already in the cart in the wanted quantity. */
+  skipped: z.array(z.string()).default([]),
+});
+export type FillCartResponse = z.infer<typeof FillCartResponse>;
