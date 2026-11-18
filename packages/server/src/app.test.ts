@@ -156,6 +156,36 @@ describe('POST /api/search', () => {
     expect(spy).toHaveBeenCalledTimes(2);
   });
 
+  it("falls back to a store's last answer, however old, when it doesn't answer", async () => {
+    let now = Date.parse('2026-10-21T10:00:00Z');
+    const adapters = loadAdapters({ mock: true });
+    const apotea = adapters.find((a) => a.info.id === 'apotea')!;
+    const app = await makeApp({ adapters, now: () => now, searchTimeoutMs: 50 });
+    const search = async () =>
+      api.SearchResponse.parse(
+        (
+          await app.inject({
+            method: 'POST',
+            url: '/api/search',
+            ...json({ query: 'Alvedon', merchants: ['apotea'] }),
+          })
+        ).json(),
+      );
+
+    const fresh = await search();
+    expect(fresh.results.length).toBeGreaterThan(0);
+
+    // A day later the store hangs: the day-old offers are used, and the status says why.
+    now += 24 * 60 * 60 * 1000;
+    vi.spyOn(apotea, 'search').mockImplementation(() => new Promise(() => {}));
+    const stale = await search();
+    expect(stale.results.map((r) => r.offer.merchantProductId)).toEqual(
+      fresh.results.map((r) => r.offer.merchantProductId),
+    );
+    expect(stale.merchants[0]).toMatchObject({ merchantId: 'apotea', status: 'timeout' });
+    expect(stale.merchants[0]!.message).toContain('showing prices from 2026-10-21T10:00:00.000Z');
+  });
+
   it('rejects an invalid body with 400', async () => {
     const app = await makeApp();
     const res = await app.inject({ method: 'POST', url: '/api/search', ...json({ query: '' }) });

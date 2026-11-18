@@ -4,6 +4,12 @@ import type { api } from '@apokorg/core';
 import type { Repo } from './repo';
 
 export const DEFAULT_SEARCH_TIMEOUT_MS = 8000;
+/**
+ * A refresh skips the cache, so every search goes to the stores at once, and politeFetch
+ * spaces them at one request per second per host: a five-item basket is about 40 requests
+ * to DOZ. The user asked for fresh prices and sees a spinner, so it gets longer.
+ */
+export const DEFAULT_REFRESH_TIMEOUT_MS = 90_000;
 
 export interface StoreSearchResult {
   offers: ProductOffer[];
@@ -61,12 +67,19 @@ export async function searchStore(
     const timedOut = err instanceof TimeoutError;
     // A store's waiting room (Lyko's Queue-it) means "try later", not a broken adapter.
     const queued = err instanceof Error && err.name === 'QueueError';
+    const message = err instanceof Error ? err.message : String(err);
+    // Rather than lose the store's products, fall back to its last answer, however old. The
+    // status stays non-ok so the UI shows the store didn't answer; each offer keeps its own
+    // fetchedAt, so "Prices fetched" shows how old they are.
+    const last = repo.getLastOffers(merchantId, query);
     return {
-      offers: [],
+      offers: last?.offers ?? [],
       status: {
         merchantId,
         status: timedOut ? 'timeout' : queued ? 'unavailable' : 'error',
-        message: err instanceof Error ? err.message : String(err),
+        message: last
+          ? `${message}; showing prices from ${new Date(last.fetchedAt).toISOString()}`
+          : message,
         tookMs: took(),
       },
     };

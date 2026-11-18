@@ -13,6 +13,8 @@ import { z } from 'zod';
 import type { Db } from './db';
 
 export const OFFER_TTL_MS = 6 * 60 * 60 * 1000;
+/** Expired offers are kept this long as a fallback for a store that doesn't answer. */
+export const OFFER_KEEP_MS = 30 * 24 * 60 * 60 * 1000;
 export const PROBE_TTL_MS = 24 * 60 * 60 * 1000;
 /** Probe results are cached per 100 kr order-value band. */
 export const PROBE_BAND_SEK = 100;
@@ -223,14 +225,26 @@ export class Repo {
   // ---- offer cache (TTL 6 h) ----
 
   getCachedOffers(merchantId: MerchantId, query: string): ProductOffer[] | null {
+    const last = this.getLastOffers(merchantId, query);
+    return last && this.now() - last.fetchedAt < OFFER_TTL_MS ? last.offers : null;
+  }
+
+  /**
+   * The last cached result for a query, however old, with when it was fetched (epoch ms).
+   * The fallback when the store doesn't answer.
+   */
+  getLastOffers(
+    merchantId: MerchantId,
+    query: string,
+  ): { offers: ProductOffer[]; fetchedAt: number } | null {
     const row = this.db
       .prepare(
         'SELECT offers_json, fetched_at FROM offer_cache WHERE merchant_id = ? AND query_key = ?',
       )
       .get(merchantId, queryKey(query)) as { offers_json: string; fetched_at: number } | undefined;
-    if (!row || this.now() - Number(row.fetched_at) >= OFFER_TTL_MS) return null;
+    if (!row) return null;
     const parsed = z.array(ProductOffer).safeParse(JSON.parse(row.offers_json));
-    return parsed.success ? parsed.data : null;
+    return parsed.success ? { offers: parsed.data, fetchedAt: Number(row.fetched_at) } : null;
   }
 
   cacheOffers(merchantId: MerchantId, query: string, offers: ProductOffer[]): void {
@@ -278,7 +292,7 @@ export class Repo {
   /** Deletes expired cache rows. */
   purgeExpired(): void {
     const now = this.now();
-    this.db.prepare('DELETE FROM offer_cache WHERE fetched_at <= ?').run(now - OFFER_TTL_MS);
+    this.db.prepare('DELETE FROM offer_cache WHERE fetched_at <= ?').run(now - OFFER_KEEP_MS);
     this.db.prepare('DELETE FROM probe_cache WHERE probed_at <= ?').run(now - PROBE_TTL_MS);
   }
 }
