@@ -154,6 +154,8 @@ export const OptimizeRequest = z.object({
   options: OptimizeOptions.optional(),
   /** Run checkout probes for the stores in the result (slower). */
   probe: z.boolean().default(false),
+  /** Ignore cached store results and search every store again. */
+  refresh: z.boolean().default(false),
 });
 export type OptimizeRequest = z.infer<typeof OptimizeRequest>;
 

@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import type { api, Basket, DeliveryPreference, MerchantTotal, SplitResult } from '@apokorg/core';
 import type { z } from 'zod';
-import { useOptimize, useSettings } from '../api/hooks';
+import { useOptimize, useRefreshOptimize, useSettings } from '../api/hooks';
+import { RefreshPrices } from '../components/RefreshPrices';
 import {
   Badge,
   Button,
@@ -39,6 +40,7 @@ export function SplitPage({ basket, loading }: { basket?: Basket; loading: boole
   const base = Object.keys(options).length ? { options } : {};
 
   const plain = useOptimize(basket?.id, { ...base, probe: false }, hasItems);
+  const refresh = useRefreshOptimize(basket?.id, { ...base, probe: false });
   const probed = useOptimize(basket?.id, { ...base, probe: true }, hasItems && probeRequested);
   const opt = probeRequested && probed.data ? probed : plain;
 
@@ -89,10 +91,16 @@ export function SplitPage({ basket, loading }: { basket?: Basket; loading: boole
           <Button
             variant="secondary"
             onClick={() => (probeRequested ? void probed.refetch() : setProbeRequested(true))}
-            disabled={probed.isFetching}
+            disabled={probed.isFetching || refresh.isPending}
           >
             ✓ {t.split.verify}
           </Button>
+          {/* Shipping verified against old prices no longer applies, so drop it. */}
+          <RefreshPrices
+            refresh={refresh}
+            data={plain.data}
+            onRefresh={() => setProbeRequested(false)}
+          />
         </div>
         {probed.isFetching && (
           <div className="mt-3">

@@ -1,5 +1,6 @@
 import type { Basket } from '@apokorg/core';
-import { useOptimize } from '../api/hooks';
+import { useOptimize, useRefreshOptimize } from '../api/hooks';
+import { RefreshPrices } from '../components/RefreshPrices';
 import {
   Badge,
   Card,
@@ -13,9 +14,13 @@ import { formatSek, formatUnitPrice } from '../format';
 import { buildComparison, packPrice } from '../lib/comparison';
 import { t } from '../strings';
 
+/** Same request as the Split page's unprobed split with default options, so they share it. */
+const REQUEST = { probe: false };
+
 export function ComparisonPage({ basket, loading }: { basket?: Basket; loading: boolean }) {
   const hasItems = !!basket && basket.items.length > 0;
-  const opt = useOptimize(basket?.id, { probe: false }, hasItems);
+  const opt = useOptimize(basket?.id, REQUEST, hasItems);
+  const refresh = useRefreshOptimize(basket?.id, REQUEST);
   const merchantName = useMerchantName();
 
   if (loading) return <Spinner />;
@@ -33,9 +38,12 @@ export function ComparisonPage({ basket, loading }: { basket?: Basket; loading: 
 
   return (
     <Card>
-      <div className="mb-3 flex items-baseline justify-between gap-4">
-        <h1 className="text-lg font-semibold">{t.compare.heading}</h1>
-        <p className="text-xs text-slate-500">{t.compare.legend}</p>
+      <div className="mb-3 flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <h1 className="text-lg font-semibold">{t.compare.heading}</h1>
+          <p className="text-xs text-slate-500">{t.compare.legend}</p>
+        </div>
+        <RefreshPrices refresh={refresh} data={opt.data} />
       </div>
       <div className="overflow-x-auto">
         <table className="w-full border-collapse text-sm">

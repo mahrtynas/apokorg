@@ -1,4 +1,4 @@
-import { screen, within } from '@testing-library/react';
+import { screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it } from 'vitest';
 import { t } from '../strings';
@@ -68,5 +68,21 @@ describe('recommended split', () => {
     for (const el of others) {
       expect(within(el).queryByRole('button', { name: t.fillCart.button })).toBeNull();
     }
+  });
+
+  it('refreshing prices drops shipping verified against the old prices', async () => {
+    mockApi();
+    const user = userEvent.setup();
+    renderApp('split');
+    await screen.findAllByTestId('store-split');
+    await user.click(screen.getByRole('button', { name: new RegExp(t.split.verify) }));
+    const doz = await screen.findByRole('article', { name: 'DOZ Apotek' });
+    await within(doz).findByText(t.split.verifiedBadge, { exact: false });
+
+    const refresh = screen.getByRole('button', { name: new RegExp(t.refresh.button) });
+    await user.click(refresh);
+    await waitFor(() => expect(refresh).toBeEnabled());
+    expect(screen.getAllByTestId('store-split').length).toBeGreaterThan(1);
+    expect(screen.queryByText(t.split.verifiedBadge, { exact: false })).toBeNull();
   });
 });
