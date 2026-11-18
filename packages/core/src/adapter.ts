@@ -22,6 +22,26 @@ export interface ProbeRequest {
  */
 export type ProbeFn = (req: ProbeRequest, page: GuardedPage) => Promise<ProbeResult>;
 
+export interface CartFillRequest {
+  /** Products to have in the cart, with the quantity wanted of each. */
+  items: { url: string; merchantProductId: string; qty: number }[];
+  signal?: AbortSignal;
+}
+
+export interface CartFillResult {
+  /** The page the script stopped on (the store's checkout), left open for the user. */
+  url: string;
+  /** Items already in the cart in at least the wanted quantity, so nothing was added. */
+  skipped: string[];
+}
+
+/**
+ * Cart filler provided by packages/checkout-probe. The script puts the items in the store's
+ * cart in a visible browser, opens the checkout and stops there; the user finishes the order.
+ * It gets the same guarded page as a probe, which also accepts quantities.
+ */
+export type CartFillFn = (req: CartFillRequest, page: GuardedPage) => Promise<CartFillResult>;
+
 /** Minimal page surface exposed to probe scripts. Implemented by checkout-probe. */
 export interface GuardedPage {
   goto(url: string): Promise<void>;
@@ -44,4 +64,6 @@ export interface MerchantAdapter {
   getProduct(url: string, opts?: { signal?: AbortSignal }): Promise<ProductOffer | null>;
   /** Present only when the store's checkout test showed guest checkout reveals shipping fees. */
   probe?: ProbeFn;
+  /** Present when a script can fill the store's cart and open its checkout for the user. */
+  fillCart?: CartFillFn;
 }
