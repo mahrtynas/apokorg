@@ -120,3 +120,25 @@ export function useOptimize(
     staleTime: 60_000,
   });
 }
+
+/**
+ * Runs optimize again with `refresh: true`, so the server searches every store instead of
+ * serving its cached offers, and puts the result under `useOptimize(basketId, req)`'s key.
+ * The basket's other optimize results are marked stale but not refetched, so a probed split
+ * is not probed again behind the user's back.
+ */
+export function useRefreshOptimize(
+  basketId: string | undefined,
+  req: z.input<typeof api.OptimizeRequest>,
+) {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: () => client.optimize(basketId!, { ...req, refresh: true }),
+    onSuccess: async (data) => {
+      const key = keys.optimize(basketId ?? '', req);
+      await qc.cancelQueries({ queryKey: key });
+      void qc.invalidateQueries({ queryKey: ['optimize', basketId], refetchType: 'none' });
+      qc.setQueryData(key, data);
+    },
+  });
+}
