@@ -22,6 +22,11 @@ export function formatDate(iso: string): string {
   return new Date(iso).toLocaleDateString('sv-SE');
 }
 
+/** "2026-11-18 14:02" in local time. */
+export function formatDateTime(iso: string): string {
+  return new Date(iso).toLocaleString('sv-SE', { dateStyle: 'short', timeStyle: 'short' });
+}
+
 /** Whole days between an ISO date and now. */
 export function daysSince(isoDate: string, now = new Date()): number {
   return Math.floor((now.getTime() - new Date(isoDate).getTime()) / 86_400_000);

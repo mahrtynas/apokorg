@@ -237,6 +237,48 @@ describe('baskets', () => {
     expect(body.merchants.some((m) => m.merchantId === 'doz')).toBe(false);
   });
 
+  it('optimize with refresh skips the offer cache and caches the fresh offers', async () => {
+    const adapters = loadAdapters({ mock: true });
+    const apotea = adapters.find((a) => a.info.id === 'apotea')!;
+    const search = apotea.search.bind(apotea);
+    // The store sells out after the first search; only a fresh search can see that.
+    let soldOut = false;
+    const spy = vi
+      .spyOn(apotea, 'search')
+      .mockImplementation(async (q, o) =>
+        (await search(q, o)).map((offer) => (soldOut ? { ...offer, inStock: false } : offer)),
+      );
+    const app = await makeApp({ adapters });
+    await app.inject({
+      method: 'PUT',
+      url: '/api/baskets/b1',
+      ...json({ name: 'Refresh', items: [{ id: 'i1', query: 'alvedon 500 20st', qty: 1 }] }),
+    });
+    const apoteaInStock = async (body: object) => {
+      const res = await app.inject({
+        method: 'POST',
+        url: '/api/baskets/b1/optimize',
+        ...json(body),
+      });
+      const matches = api.OptimizeResponse.parse(res.json()).candidates[0]!.matches;
+      const offers = matches.filter((m) => m.offer.merchantId === 'apotea');
+      expect(offers.length).toBeGreaterThan(0);
+      return offers.every((m) => m.offer.inStock);
+    };
+
+    expect(await apoteaInStock({})).toBe(true);
+    soldOut = true;
+    expect(await apoteaInStock({})).toBe(true); // served from cache
+    expect(spy).toHaveBeenCalledTimes(1);
+
+    expect(await apoteaInStock({ refresh: true })).toBe(false);
+    expect(spy).toHaveBeenCalledTimes(2);
+
+    // The fresh result replaced the cached one.
+    expect(await apoteaInStock({})).toBe(false);
+    expect(spy).toHaveBeenCalledTimes(2);
+  });
+
   it('optimize on a missing basket is 404', async () => {
     const app = await makeApp();
     const res = await app.inject({ method: 'POST', url: '/api/baskets/nope/optimize' });

@@ -1,9 +1,12 @@
 import { screen, within } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { delay, http } from 'msw';
 import { describe, expect, it } from 'vitest';
+import { API_URL } from '../api/client';
 import { buildComparison, packPrice } from '../lib/comparison';
 import { t } from '../strings';
 import { renderApp, sekText } from '../test/render';
-import { mockApi } from '../test/setup';
+import { mockApi, server } from '../test/setup';
 
 describe('comparison table', () => {
   it('highlights the cheapest offer per item and marks substitutes', async () => {
@@ -32,6 +35,37 @@ describe('comparison table', () => {
 
     const kronans = await screen.findByRole('columnheader', { name: /Kronans Apotek/ });
     expect(within(kronans).getByText(t.status.error)).toBeInTheDocument();
+  });
+
+  it('refreshes prices with refresh: true, showing a spinner while it runs', async () => {
+    mockApi();
+    const bodies: { refresh?: boolean }[] = [];
+    // Records each optimize body, slows refreshes down, then falls through to the mock API.
+    server.use(
+      http.post(`${API_URL}/api/baskets/:id/optimize`, async ({ request }) => {
+        const body = (await request.clone().json()) as { refresh?: boolean };
+        bodies.push(body);
+        if (body.refresh) await delay(50);
+      }),
+    );
+    const fetchedAt = new RegExp(`^${t.refresh.fetchedAt('')}`);
+    const user = userEvent.setup();
+    renderApp('compare');
+    await screen.findByRole('rowheader', { name: /alvedon 20 st/i });
+    expect(screen.getByText(fetchedAt)).toBeInTheDocument();
+    expect(bodies.map((b) => b.refresh)).toEqual([false]);
+
+    const button = screen.getByRole('button', { name: new RegExp(t.refresh.button) });
+    await user.click(button);
+    expect(await screen.findByText(t.refresh.running)).toBeInTheDocument();
+    expect(button).toBeDisabled();
+
+    await screen.findByText(fetchedAt);
+    expect(button).toBeEnabled();
+    expect(screen.queryByText(t.refresh.running)).not.toBeInTheDocument();
+    // One refresh, and the refreshed result is shown without another plain request.
+    expect(bodies.map((b) => b.refresh)).toEqual([false, true]);
+    expect(screen.getByRole('rowheader', { name: /alvedon 20 st/i })).toBeInTheDocument();
   });
 });
 

@@ -317,6 +317,7 @@ export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
           item.ean,
           repo,
           timeoutMs,
+          { refresh: body.refresh },
         );
         const matches = await matchForQuery(
           item.query,

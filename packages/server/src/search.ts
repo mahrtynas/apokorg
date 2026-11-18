@@ -10,15 +10,24 @@ export interface StoreSearchResult {
   status: api.MerchantSearchStatus;
 }
 
+export interface SearchOptions {
+  /** Skip the offer cache and search the store again; the fresh result is cached. */
+  refresh?: boolean;
+}
+
 class TimeoutError extends Error {}
 
-/** Searches one store, serving from the 6 h offer cache when possible. Never throws. */
+/**
+ * Searches one store, serving from the 6 h offer cache when possible (unless `refresh`).
+ * Never throws.
+ */
 export async function searchStore(
   merchantId: MerchantId,
   adapter: MerchantAdapter | undefined,
   query: string,
   repo: Repo,
   timeoutMs: number,
+  opts: SearchOptions = {},
 ): Promise<StoreSearchResult> {
   const started = performance.now();
   const took = () => Math.round(performance.now() - started);
@@ -28,7 +37,7 @@ export async function searchStore(
       status: { merchantId, status: 'unavailable', message: 'No adapter', tookMs: 0 },
     };
   }
-  const cached = repo.getCachedOffers(merchantId, query);
+  const cached = opts.refresh ? null : repo.getCachedOffers(merchantId, query);
   if (cached) return { offers: cached, status: { merchantId, status: 'ok', tookMs: took() } };
 
   const controller = new AbortController();
@@ -73,9 +82,10 @@ export async function searchStores(
   query: string,
   repo: Repo,
   timeoutMs: number = DEFAULT_SEARCH_TIMEOUT_MS,
+  opts: SearchOptions = {},
 ): Promise<StoreSearchResult[]> {
   return Promise.all(
-    merchantIds.map((id) => searchStore(id, adapters.get(id), query, repo, timeoutMs)),
+    merchantIds.map((id) => searchStore(id, adapters.get(id), query, repo, timeoutMs, opts)),
   );
 }
 
@@ -91,10 +101,11 @@ export async function searchItem(
   ean: string | undefined,
   repo: Repo,
   timeoutMs: number = DEFAULT_SEARCH_TIMEOUT_MS,
+  opts: SearchOptions = {},
 ): Promise<StoreSearchResult[]> {
   const queries = ean && ean !== query ? [query, ean] : [query];
   const runs = await Promise.all(
-    queries.map((q) => searchStores(merchantIds, adapters, q, repo, timeoutMs)),
+    queries.map((q) => searchStores(merchantIds, adapters, q, repo, timeoutMs, opts)),
   );
   return merchantIds.map((_, i) => {
     const results = runs.map((run) => run[i]!);
