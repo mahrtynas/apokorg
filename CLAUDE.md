@@ -52,3 +52,7 @@ The probe may only add items to a cart, open guest checkout, and enter the postc
 - click anything whose text matches the denylist (Slutför, Betala, Lägg order, Bekräfta köp, Köp nu, Place order, Pay, …).
 
 It must empty the cart afterwards. These rules are enforced in `packages/checkout-probe`, and probe scripts only get the guarded page (`GuardedPage` in core). If a store requires login or BankID to show delivery options, mark it probe-unsupported.
+
+## Cart fill (hard rules)
+
+A store's `fillCart` script puts the user's split in that store's cart in a visible Edge window (its own profile under the data directory) and stops on the checkout; the user places the order. It gets the same guarded page as a probe, so it may only open pages, click add-to-cart and type quantities. It must **never** pay, place an order, or fill payment, personal-number, name, phone or address fields, and it leaves the cart filled. The request guard is on only while the script runs. Scripts top the cart up to the wanted quantities (they never add twice) and check the cart before opening the checkout. Cart automation runs only for stores the user opted in to: DOZ so far, although its robots.txt disallows `/checkout/`, because the user is present and finishes the order.

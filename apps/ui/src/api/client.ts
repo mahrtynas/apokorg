@@ -103,6 +103,9 @@ export const client = {
 
   matchHistory: () => request(api.MatchHistoryResponse, 'GET', '/api/matches/history'),
 
+  fillCart: (req: api.FillCartRequest) =>
+    request(api.FillCartResponse, 'POST', '/api/cart/fill', api.FillCartRequest.parse(req)),
+
   confirmMatch: (req: api.ConfirmMatchRequest) =>
     request(
       api.ConfirmMatchResponse,

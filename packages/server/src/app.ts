@@ -21,7 +21,7 @@ import type { Optimizer, ShippingPolicySource } from './optimizing';
 import { Repo } from './repo';
 import { createClaudeJudge, groupProducts, type LlmJudge } from '@apokorg/matcher';
 import { defaultCatalog, type CatalogService } from './catalog';
-import { defaultProbe, type ProbeService } from './probing';
+import { defaultCartFill, defaultProbe, type CartFillService, type ProbeService } from './probing';
 import {
   DEFAULT_SEARCH_TIMEOUT_MS,
   searchItem,
@@ -65,6 +65,8 @@ export interface AppOptions {
   refreshStaleCatalogsOnStart?: boolean;
   /** Checkout probes. Default: packages/checkout-probe in headless Edge. */
   probe?: ProbeService;
+  /** Cart fills. Default: packages/checkout-probe in a visible Edge window. */
+  cartFill?: CartFillService;
   /** Clock for cache TTLs; injectable for tests. */
   now?: () => number;
 }
@@ -100,6 +102,7 @@ export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
   const createJudge = opts.createJudge ?? createClaudeJudge;
   const catalog = opts.catalog ?? defaultCatalog();
   const probe = opts.probe ?? defaultProbe;
+  const cartFill = opts.cartFill ?? defaultCartFill();
   const timeoutMs = opts.searchTimeoutMs ?? DEFAULT_SEARCH_TIMEOUT_MS;
   const repo = new Repo(opts.db, { now: opts.now });
   const adapters = new Map<MerchantId, MerchantAdapter>(opts.adapters.map((a) => [a.info.id, a]));
@@ -180,6 +183,7 @@ export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
         enabled: enabled.has(a.info.id),
         shipping: policies.get(a.info.id),
         probeSupported: typeof a.probe === 'function',
+        cartFillSupported: typeof a.fillCart === 'function',
       })),
     };
   });
@@ -243,6 +247,29 @@ export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
       needsConfirmation: (matcher.needsConfirmation ?? defaultNeedsConfirmation)(results),
       merchants: stores.map((s) => s.status),
     };
+  });
+
+  // Puts the items in one store's cart in a visible browser and opens its checkout. The user
+  // finishes the order there; nothing here pays or places it.
+  app.post('/api/cart/fill', async (req): Promise<api.FillCartResponse> => {
+    const body = api.FillCartRequest.parse(req.body);
+    const adapter = adapters.get(body.merchantId);
+    if (!adapter) throw new NotFound(`Unknown store ${body.merchantId}`);
+    if (!adapter.fillCart) {
+      return {
+        merchantId: body.merchantId,
+        status: 'unsupported',
+        message: 'no cart script for this store',
+        skipped: [],
+      };
+    }
+    try {
+      return { merchantId: body.merchantId, ...(await cartFill(adapter, { items: body.items })) };
+    } catch (err) {
+      req.log.warn({ err, merchantId: body.merchantId }, 'cart fill failed');
+      const message = err instanceof Error ? err.message : String(err);
+      return { merchantId: body.merchantId, status: 'failed', message, skipped: [] };
+    }
   });
 
   app.get('/api/baskets', async (): Promise<api.BasketsResponse> => ({

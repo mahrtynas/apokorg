@@ -880,3 +880,60 @@ describe('match history', () => {
     expect(alvedon[0]!.title).toBeUndefined();
   });
 });
+
+describe('POST /api/cart/fill', () => {
+  const items = [{ url: 'https://dozapotek.se/x-779716', merchantProductId: '779716', qty: 2 }];
+
+  it('runs the store script through the cart-fill service and reports where it stopped', async () => {
+    const real = loadAdapters({ mock: true }).find((a) => a.info.id === 'doz')!;
+    const doz: MerchantAdapter = {
+      ...real,
+      fillCart: async () => ({ url: 'https://dozapotek.se/checkout/', skipped: [] }),
+    };
+    const calls: unknown[] = [];
+    const app = await makeApp({
+      adapters: [doz],
+      cartFill: async (adapter, request) => {
+        calls.push(request);
+        return { status: 'ok', ...(await adapter.fillCart!(request, {} as never)) };
+      },
+    });
+    const merchants = api.MerchantsResponse.parse(
+      (await app.inject({ method: 'GET', url: '/api/merchants' })).json(),
+    );
+    expect(merchants.merchants[0]!.cartFillSupported).toBe(true);
+
+    const res = await app.inject({
+      method: 'POST',
+      url: '/api/cart/fill',
+      ...json({ merchantId: 'doz', items }),
+    });
+    expect(api.FillCartResponse.parse(res.json())).toEqual({
+      merchantId: 'doz',
+      status: 'ok',
+      url: 'https://dozapotek.se/checkout/',
+      skipped: [],
+    });
+    expect(calls).toEqual([{ items }]);
+  });
+
+  it('answers unsupported for a store without a script, and 404 for an unknown store', async () => {
+    const app = await makeApp({
+      cartFill: async () => {
+        throw new Error('must not run');
+      },
+    });
+    const res = await app.inject({
+      method: 'POST',
+      url: '/api/cart/fill',
+      ...json({ merchantId: 'apotea', items }),
+    });
+    expect(res.json()).toMatchObject({ status: 'unsupported' });
+    const missing = await app.inject({
+      method: 'POST',
+      url: '/api/cart/fill',
+      ...json({ merchantId: 'meds', items }),
+    });
+    expect(missing.statusCode).toBe(404);
+  });
+});

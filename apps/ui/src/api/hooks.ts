@@ -41,6 +41,10 @@ export function useRefreshCatalogs() {
   });
 }
 
+export function useFillCart() {
+  return useMutation({ mutationFn: client.fillCart });
+}
+
 export function useMatchHistory() {
   return useQuery({ queryKey: keys.matchHistory, queryFn: client.matchHistory });
 }

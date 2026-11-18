@@ -16,6 +16,7 @@ import {
   parseSize,
 } from '@apokorg/adapter-kit';
 import { CATALOG_SOURCES, searchCandidates, type CatalogDb } from '@apokorg/catalog-index';
+import { fillCart } from './cart';
 
 export const BASE_URL = 'https://dozapotek.se';
 export const MERCHANT_ID = 'doz';
@@ -190,6 +191,7 @@ export function createDozAdapter(opts: DozAdapterOptions = {}): MerchantAdapter 
       return offers.slice(0, limit);
     },
     getProduct,
+    fillCart,
   };
 }
 

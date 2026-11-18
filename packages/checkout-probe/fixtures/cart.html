@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <title>Cart fixture</title>
+  </head>
+  <body>
+    <form id="product" action="/cart/add" method="post" onsubmit="event.preventDefault(); document.getElementById('added').textContent = document.getElementById('qty').value;">
+      <label for="qty">Antal</label>
+      <input id="qty" name="qty" type="number" value="1" />
+      <button id="buy" type="submit">Köp</button>
+    </form>
+    <p>Added: <span id="added">0</span></p>
+    <label>Personnummer <input id="pnr" type="number" /></label>
+    <label>Meddelande <input id="note" type="text" /></label>
+    <button id="pay" type="button">Betala</button>
+  </body>
+</html>

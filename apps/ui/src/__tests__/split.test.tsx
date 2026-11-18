@@ -55,6 +55,21 @@ describe('recommended split', () => {
     expect(within(lyko).queryByText(t.split.verifiedBadge, { exact: false })).toBeNull();
   });
 
+  it('fills the cart at a store with a cart script, and only there', async () => {
+    mockApi();
+    const user = userEvent.setup();
+    renderApp('split');
+
+    const doz = await screen.findByRole('article', { name: /DOZ/ });
+    await user.click(await within(doz).findByRole('button', { name: t.fillCart.button }));
+    expect(await within(doz).findByText(new RegExp(t.fillCart.done))).toBeInTheDocument();
+
+    const others = screen.getAllByTestId('store-split').filter((el) => el !== doz);
+    for (const el of others) {
+      expect(within(el).queryByRole('button', { name: t.fillCart.button })).toBeNull();
+    }
+  });
+
   it('refreshing prices drops shipping verified against the old prices', async () => {
     mockApi();
     const user = userEvent.setup();

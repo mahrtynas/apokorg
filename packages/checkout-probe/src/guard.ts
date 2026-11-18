@@ -1,9 +1,16 @@
 import type { GuardedPage } from '@apokorg/core';
-import { errors, type BrowserContext, type ElementHandle, type Page } from 'playwright-core';
+import {
+  errors,
+  type BrowserContext,
+  type ElementHandle,
+  type Page,
+  type Route,
+} from 'playwright-core';
 import { ForbiddenActionError, ProbeError, type GuardedAction } from './errors';
 import {
   blockedRequest,
   forbiddenField,
+  isQuantityField,
   matchDenylist,
   paymentProvider,
   urlWords,
@@ -11,9 +18,11 @@ import {
 } from './rules';
 
 export interface GuardOptions {
-  /** The only two values `fill` accepts. */
-  postcode: string;
-  email: string;
+  /** The only two text values `fill` accepts. A cart fill passes neither. */
+  postcode?: string;
+  email?: string;
+  /** Also accept a quantity (1 to 999) in a quantity field. For cart fills only. */
+  allowQuantity?: boolean;
   /** Called for every refused action, even when the probe script catches the error. */
   onViolation?: (err: ForbiddenActionError) => void;
   /** Timeout for resolving a selector. Default 10 s. */
@@ -138,7 +147,9 @@ function asLayoutChanged(err: unknown, selector: string): unknown {
  */
 export function createGuardedPage(page: Page, opts: GuardOptions): GuardedPage {
   const timeout = opts.actionTimeoutMs ?? 10_000;
-  const allowed = new Set([compact(opts.postcode), opts.email.trim().toLowerCase()]);
+  const allowed = new Set(
+    [opts.postcode && compact(opts.postcode), opts.email?.trim().toLowerCase()].filter(Boolean),
+  );
 
   const refuse = (action: GuardedAction, target: string, reason: string): never => {
     const err = new ForbiddenActionError(action, target, reason);
@@ -200,13 +211,18 @@ export function createGuardedPage(page: Page, opts: GuardOptions): GuardedPage {
 
     async fill(selector, value) {
       const v = value.includes('@') ? value.trim().toLowerCase() : compact(value);
-      if (!allowed.has(v)) {
+      const quantity = opts.allowQuantity === true && /^[1-9]\d{0,2}$/.test(v);
+      if (!quantity && !allowed.has(v)) {
         refuse('fill', selector, 'value is neither the probe postcode nor the probe email');
       }
       const el = await resolve(selector);
       try {
-        const reason = forbiddenField(await el.evaluate(inspectField));
+        const info = await el.evaluate(inspectField);
+        const reason = forbiddenField(info);
         if (reason) refuse('fill', selector, reason);
+        if (quantity && !allowed.has(v) && !isQuantityField(info)) {
+          refuse('fill', selector, 'a number may only go in a quantity field');
+        }
         await el.fill(value, { timeout }).catch((err) => {
           throw asLayoutChanged(err, selector);
         });
@@ -261,12 +277,15 @@ export interface BlockedRequest {
   reason: string;
 }
 
-/** The second safety net: aborts every request to an order or payment endpoint. */
+/**
+ * The second safety net: aborts every request to an order or payment endpoint. Resolves with a
+ * function that removes it again, for when a cart fill hands the browser to the user.
+ */
 export async function installRequestGuard(
   context: BrowserContext,
   onBlocked: (req: BlockedRequest) => void,
-): Promise<void> {
-  await context.route('**/*', (route) => {
+): Promise<() => Promise<void>> {
+  const handler = (route: Route) => {
     const req = route.request();
     const reason = blockedRequest(req.url(), req.method());
     if (reason) {
@@ -274,5 +293,7 @@ export async function installRequestGuard(
       return route.abort('blockedbyclient');
     }
     return route.fallback();
-  });
+  };
+  await context.route('**/*', handler);
+  return () => context.unroute('**/*', handler);
 }
