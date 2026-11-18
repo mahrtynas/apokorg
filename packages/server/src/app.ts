@@ -23,6 +23,7 @@ import { createClaudeJudge, groupProducts, type LlmJudge } from '@apokorg/matche
 import { defaultCatalog, type CatalogService } from './catalog';
 import { defaultCartFill, defaultProbe, type CartFillService, type ProbeService } from './probing';
 import {
+  DEFAULT_REFRESH_TIMEOUT_MS,
   DEFAULT_SEARCH_TIMEOUT_MS,
   searchItem,
   searchStores,
@@ -55,6 +56,8 @@ export interface AppOptions {
   shippingPolicies?: ShippingPolicySource;
   /** Per-store search timeout. Default 8 s. */
   searchTimeoutMs?: number;
+  /** Per-store search timeout for a price refresh. Default `searchTimeoutMs`, else 90 s. */
+  refreshTimeoutMs?: number;
   /** Fastify logger config. Redaction of the API key is always added. Default: off. */
   logger?: boolean | Record<string, unknown>;
   /** Builds the LLM tie-breaker from the stored API key. Default: Claude via packages/matcher. */
@@ -104,6 +107,8 @@ export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
   const probe = opts.probe ?? defaultProbe;
   const cartFill = opts.cartFill ?? defaultCartFill();
   const timeoutMs = opts.searchTimeoutMs ?? DEFAULT_SEARCH_TIMEOUT_MS;
+  const refreshTimeoutMs =
+    opts.refreshTimeoutMs ?? opts.searchTimeoutMs ?? DEFAULT_REFRESH_TIMEOUT_MS;
   const repo = new Repo(opts.db, { now: opts.now });
   const adapters = new Map<MerchantId, MerchantAdapter>(opts.adapters.map((a) => [a.info.id, a]));
   /** JSON rules, with the user's edits from settings on top. */
@@ -343,7 +348,7 @@ export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
           item.query,
           item.ean,
           repo,
-          timeoutMs,
+          body.refresh ? refreshTimeoutMs : timeoutMs,
           { refresh: body.refresh },
         );
         const matches = await matchForQuery(
