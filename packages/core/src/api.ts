@@ -16,8 +16,8 @@ export const MerchantsResponse = z.object({
       enabled: z.boolean(),
       shipping: ShippingPolicy.optional(),
       probeSupported: z.boolean(),
-      /** The store has a cart-fill script (POST /api/cart/fill). */
-      cartFillSupported: z.boolean().default(false),
+      /** The store has a cart-fill script (POST /api/cart/fill). Absent means no. */
+      cartFillSupported: z.boolean().optional(),
     }),
   ),
 });
