@@ -94,6 +94,13 @@ const en = {
     noOffer: '—',
     legend: 'Cheapest price per item is highlighted. Substitutes are marked, out-of-stock greyed.',
   },
+  refresh: {
+    button: 'Refresh prices',
+    running: 'Searching every store again…',
+    hint: 'Ignore prices saved in the last 6 hours and search every store again.',
+    fetchedAt: (when: string) => `Prices fetched ${when}`,
+    fetchedAtHint: 'When the oldest price shown was fetched from its store.',
+  },
   split: {
     heading: 'Recommended split',
     maxStores: 'Max stores',
