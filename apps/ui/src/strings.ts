@@ -94,6 +94,17 @@ const en = {
     noOffer: '—',
     legend: 'Cheapest price per item is highlighted. Substitutes are marked, out-of-stock greyed.',
   },
+  fillCart: {
+    button: 'Fill cart and open checkout',
+    hint: 'Opens the store in a browser window, puts these items in its cart and stops at the checkout. You place the order yourself.',
+    filling: 'Filling the cart in the browser window…',
+    done: 'Done: finish the order in the browser window.',
+    skipped: (n: number) =>
+      n === 1 ? '1 item was already in the cart.' : `${n} items were already in the cart.`,
+    unsupported: 'This store has no cart script yet.',
+    failed: (message: string) =>
+      `Could not fill the cart (${message}). The browser window shows where it stopped.`,
+  },
   split: {
     heading: 'Recommended split',
     maxStores: 'Max stores',

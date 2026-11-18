@@ -71,3 +71,12 @@ Tried on: 2026-10-22
 - Product slugs say "styck" and "tablett(er)" where other stores say "st" and "tabletter".
 - Product pages are large (~1.8 MB), so a 5-page search transfers ~9 MB.
 - robots.txt gives `Claude-User` a 3 s crawl delay. Manual exploration for this doc kept at least 3 s between requests. The app itself uses the project-wide `politeFetch` default of 1 request/s with a browser user agent.
+
+## Cart fill (2026-11-18)
+
+The user opted in to cart automation for DOZ ("since I am about to order from Doz"), although robots.txt disallows `/checkout/`: they are at the computer and place the order themselves. The script is `packages/adapters/doz/src/cart.ts`.
+
+- **Cart contents:** `GET /customer/section/load/?sections=cart` (Magento customer data, what the minicart reads) returns `{"cart":{"summary_count":…,"items":[{"product_sku":"779716","qty":2,…}]}}`. `product_sku` is the DOZ article number, which is our `merchantProductId`.
+- **Add to cart:** the product page has a hidden `#product_addtocart_form` (POST `/checkout/cart/add/uenc/…/product/<id>/` with `form_key`). The visible quantity box is `input[name="qty"][form="product_addtocart_form"]`, and the button `#product-addtocart-button` (title "Köp") submits it by fetch. The button has the class `is-loading` from the click until about a second after the add. Magento adds to the existing quantity, so the script adds only what is missing.
+- **Checkout:** `/checkout/` opens as a guest. A store-finder dialog ("Hitta apotek nära mig") can be open on product pages but does not block the button. The Cookiesaur consent banner did not block anything in headless Edge.
+- Checked live on 2026-11-18 with `pnpm --filter @apokorg/adapter-doz cart:live` (headless, throwaway profile): two shampoos reached the cart and the checkout opened.

@@ -12,6 +12,7 @@ import {
   Spinner,
   useMerchantName,
 } from '../components/ui';
+import { FillCartButton } from '../components/FillCartButton';
 import { formatSek } from '../format';
 import { t } from '../strings';
 
@@ -175,6 +176,7 @@ export function SplitView({ basket, split }: { basket: Basket; split: SplitResul
                     {t.split.toFreeShipping(formatSek(left))}
                   </p>
                 )}
+                <FillCartButton merchantId={m.merchantId} lines={lines} />
               </article>
             </Card>
           );

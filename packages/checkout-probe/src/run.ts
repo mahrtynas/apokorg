@@ -107,16 +107,19 @@ export async function runProbe(
   }
 }
 
-async function launch(
+export async function launch(
   profileDir: string,
   opts: BrowserLaunch = { channel: 'msedge' },
   timeout: number,
+  headless = true,
 ): Promise<BrowserContext> {
   try {
     return await chromium.launchPersistentContext(profileDir, {
       channel: opts.channel,
       executablePath: opts.executablePath,
-      headless: true,
+      headless,
+      // A visible window keeps the size the user gives it.
+      ...(headless ? {} : { viewport: null }),
       // Requests from service workers would bypass the route interceptor.
       serviceWorkers: 'block',
       acceptDownloads: false,
@@ -130,7 +133,7 @@ async function launch(
 }
 
 /** Resolves with `fn`, or rejects with the signal's reason as soon as it aborts. */
-function untilAborted<T>(signal: AbortSignal, fn: () => Promise<T>): Promise<T> {
+export function untilAborted<T>(signal: AbortSignal, fn: () => Promise<T>): Promise<T> {
   if (signal.aborted) return Promise.reject(signal.reason);
   const work = fn();
   // Once aborted, closing the browser makes `work` reject; nobody is listening by then.

@@ -125,6 +125,15 @@ export function forbiddenField(field: FieldInfo): string | null {
   return null;
 }
 
+const QUANTITY_RE = /(?:^| )(?:qty|antal|quantity|kvantitet|amount)(?: |$|\[)/;
+
+/** A cart quantity box: a number input, or a field named or labelled as a quantity. */
+export function isQuantityField(field: FieldInfo): boolean {
+  if (field.tag !== 'input') return false;
+  const text = field.descriptors.map(normalize).filter(Boolean).join(' | ');
+  return QUANTITY_RE.test(text) || (field.type.toLowerCase() === 'number' && text === '');
+}
+
 /** Payment providers whose iframes the probe must never submit. */
 export const PAYMENT_PROVIDERS: readonly string[] = [
   'klarna',

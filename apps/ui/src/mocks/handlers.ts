@@ -56,6 +56,8 @@ export function createHandlers(state: MockState = createMockState(), opts: Handl
         merchants: mockMerchants.map(({ probeSupported, ...info }) => ({
           ...info,
           probeSupported,
+          // Like the real app, where only DOZ has a cart script so far.
+          cartFillSupported: info.id === 'doz',
           enabled: state.settings.enabledMerchants.includes(info.id),
           shipping: state.shipping.get(info.id),
         })),
@@ -270,6 +272,19 @@ export function createHandlers(state: MockState = createMockState(), opts: Handl
       const body = api.ConfirmMatchRequest.safeParse(await request.json());
       if (!body.success) return badRequest(body.error);
       return HttpResponse.json({ ok: true } satisfies api.ConfirmMatchResponse);
+    }),
+
+    // No browser in the mock: pretend the cart was filled and the checkout opened.
+    http.post(url('/api/cart/fill'), async ({ request }) => {
+      await wait();
+      const body = api.FillCartRequest.safeParse(await request.json());
+      if (!body.success) return badRequest(body.error);
+      return HttpResponse.json<api.FillCartResponse>({
+        merchantId: body.data.merchantId,
+        status: body.data.merchantId === 'doz' ? 'ok' : 'unsupported',
+        url: body.data.merchantId === 'doz' ? 'https://dozapotek.se/checkout/' : undefined,
+        skipped: [],
+      });
     }),
   ];
 }

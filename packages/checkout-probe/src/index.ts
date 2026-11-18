@@ -5,6 +5,7 @@ export {
   PAYMENT_PROVIDERS,
   blockedRequest,
   forbiddenField,
+  isQuantityField,
   matchDenylist,
   normalize,
   paymentProvider,
@@ -15,4 +16,6 @@ export type { BlockedRequest, GuardOptions } from './guard';
 export { runProbe, PROBE_TIMEOUT_MS } from './run';
 export type { BrowserLaunch, RunProbeOptions } from './run';
 export { probeWithCache } from './cache';
+export { runCartFill, closeCartBrowsers, CART_FILL_TIMEOUT_MS } from './fill';
+export type { CartFillOutcome, RunCartFillOptions } from './fill';
 export type { ProbeCache, ProbeWithCacheOptions } from './cache';
